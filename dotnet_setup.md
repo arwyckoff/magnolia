@@ -4,7 +4,7 @@
   + 1.0.0
 1. clone the repo
   + https://github.com/chris-nimmons/project
-2. `$ dotnet restore`
-  + fetches project deps
-3. `$ dotnet build`
-  + 
+2. In terminal: `$ dotnet restore`
+  + fetches project dependencies
+3. In terminal: `$ dotnet run`
+  + Will run the database and a webserver on http://localhost:5000
