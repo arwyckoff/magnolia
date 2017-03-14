@@ -72,6 +72,7 @@ namespace Magnolia.Web
                             }
 
                             fc.Characteristic = ch;
+
                             f.FamilyCharacteristics.Add(fc);
                         }
 
@@ -87,24 +88,28 @@ namespace Magnolia.Web
                     {
                         var p = new Plant();
                         p.CommonName = plant.CommonName;
-                        var fam = context.Families.Include(f => f.FamilyCharacteristics).FirstOrDefault(f => f.CommonName == plant.FamilyName);
+                        p.LatinName = plant.LatinName;
+                        p.ImageRef = plant.ImageRef;
+
+                        var fam = context.Families.Include(f => f.FamilyCharacteristics)
+                                                  .FirstOrDefault(f => f.CommonName == plant.FamilyName);
                         if (fam == null)
                         {
                             throw new Exception("Family name not found! " + plant);
                         }
-                        p.Family = fam;
 
-                        p.LatinName = plant.LatinName;
-                        p.ImageRef = plant.ImageRef;
+                        p.Family = fam;
 
                         foreach (var stateCode in plant.Characteristics)
                         {
                             var pc = new PlantCharacteristics();
+
                             var st = context.States.FirstOrDefault(s => s.Code == stateCode);
                             if (st == null)
                             {
                                 throw new Exception("Invalid state code: " + stateCode);
                             }
+
                             pc.State = st;
 
                             var ch = context.Characteristics.FirstOrDefault(c => c.Id == pc.State.CharactaristicId);
@@ -112,6 +117,7 @@ namespace Magnolia.Web
                             {
                                 throw new Exception("Invalid state code: " + stateCode);
                             }
+
                             pc.Characteristic = ch;
 
                             p.PlantCharacteristics.Add(pc);
@@ -120,11 +126,13 @@ namespace Magnolia.Web
                         foreach (var st in p.Family.FamilyCharacteristics)
                         {
                             var pc = new PlantCharacteristics();
+
                             var state = context.States.FirstOrDefault(s => s.Id == st.Id);
                             if (state == null)
                             {
                                 throw new Exception("Invalid state code: " + st);
                             }
+
                             pc.State = state;
 
                             var ch = context.Characteristics.FirstOrDefault(c => c.Id == pc.State.CharactaristicId);
@@ -132,6 +140,7 @@ namespace Magnolia.Web
                             {
                                 throw new Exception("Invalid state code: " + st);
                             }
+
                             pc.Characteristic = ch;
 
                             p.PlantCharacteristics.Add(pc);
