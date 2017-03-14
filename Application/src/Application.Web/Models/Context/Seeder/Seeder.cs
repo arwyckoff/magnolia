@@ -145,6 +145,8 @@ namespace Magnolia.Web
 
                             p.PlantCharacteristics.Add(pc);
                         }
+
+                        context.Plants.Add(p);
                     }
                 }
 
