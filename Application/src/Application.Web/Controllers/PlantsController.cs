@@ -1,4 +1,5 @@
-﻿using Magnolia.Models;
+﻿using Application.Web.Models.Api;
+using Magnolia.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +23,38 @@ namespace Magnolia.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok((await _context.Plants.ToListAsync()));
+            var plants = await _context.Plants.Include(p => p.PlantCharacteristics)
+                                              .Include(p => p.Family)
+                                              .ToListAsync();
+
+            var plantViewModels = new List<PlantViewModel>();
+            foreach (var plant in plants)
+            {
+                var p = new PlantViewModel();
+                p.CommonName = plant.CommonName;
+                p.LatinName = plant.LatinName;
+                p.Family = new PlantsFamilyViewModel()
+                {
+                    CommonName = plant.Family.CommonName,
+                    LatinName = plant.Family.LatinName
+                };
+
+                foreach (var characteristic in plant.PlantCharacteristics)
+                {
+                    var state = await _context.States.Include(s => s.Charactaristic)
+                                                     .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
+                    p.Characteristics.Add(new CharacteristicViewModel()
+                    {
+                        Characteristic = state.Charactaristic.Value,
+                        State = state.Value,
+                        Code = state.Code
+                    });
+                }
+
+                plantViewModels.Add(p);
+            }
+
+            return Ok(plantViewModels);
         }
 
         [Route("~/api/plants/{id}")]
