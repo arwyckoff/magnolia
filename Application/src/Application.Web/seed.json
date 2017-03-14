@@ -1,0 +1,172 @@
+﻿{
+  "Characteristics": [
+    {
+      "Value": "Leaf type",
+      "States": [
+        {
+          "Value": "Simple",
+          "Code": "Aa",
+          "ImageRef": "http://some.image.com/image.png",
+          "Description": "Leaf blade in one continuous section, without leaflets"
+        },
+        {
+          "Value": "Palmate",
+          "Code": "Ab",
+          "ImageRef": "http://some.image.com/palm.jpg",
+          "Description": "Consisting of leaflets all radiating from one point"
+        },
+        {
+          "VAlue": "Bipinnate",
+          "Code": "Ac",
+          "ImageRef": "",
+          "Description": "Leaflets are themselves pinnately-compound, i.e., like a fern"
+        },
+        {
+          "Value": "Pinnate",
+          "Code": "Ad",
+          "ImageRef": "",
+          "Description": "Having two rows of leaflets on opposite sides of a central axis"
+        },
+        {
+          "Value": "Trifoliolate",
+          "Code": "Ae",
+          "ImageRef": "",
+          "Description": "With three leaflets"
+        }
+      ]
+    },
+    {
+      "Value": "Leaf shape",
+      "States": [
+        {
+          "Value": "Needle",
+          "Code": "Ba",
+          "ImageRef": "http://some.image.com/needle.jpg",
+          "Description": "Slender and pointed"
+        },
+        {
+          "Value": "Awl",
+          "Code": "Bb",
+          "ImageRef": "http://some.image.com/awl.jpg",
+          "Description": "Awl-shaped with a tapering point"
+        },
+        {
+          "Value": "Scale",
+          "Code": "Bc",
+          "ImageRef": "http://some.image.com/scale.jpg",
+          "Description": "Layered scales"
+        },
+        {
+          "Value": "Linear",
+          "Code": "Bd",
+          "ImageRef": "",
+          "Description": "Long and very narrow like a blade of grass"
+        },
+        {
+          "Value": "Oblong",
+          "Code": "Be",
+          "ImageRef": "",
+          "Description": "Having an elongated form with slightly parallel sides, roughly rectangular"
+        },
+        {
+          "Value": "Lanceolate",
+          "Code": "Bf",
+          "ImageRef": "",
+          "Description": "Long, wider in the middle, shaped like a lance tip"
+        },
+        {
+          "Value": "Oblanceolate",
+          "Code": "Bg",
+          "ImageRef": "",
+          "Description": "Much longer than wide and with the widest portion near the tip"
+        },
+        {
+          "Value": "Ovate",
+          "Code": "Bh",
+          "ImageRef": "",
+          "Description": "Oval, egg-shaped, with a tapering point and the widest portion near the petiole"
+        },
+        {
+          "Value": "Obovate",
+          "Code": "Bi",
+          "ImageRef": "",
+          "Description": "Teardrop-shaped, stem attaches to the tapering end"
+        },
+        {
+          "Value": "Spatulate",
+          "Code": "Bj",
+          "ImageRef": "",
+          "Description": "Spoon-shaped; having a broad flat end which tapers to the base"
+        },
+        {
+          "Value": "Oval",
+          "Code": "Bk",
+          "ImageRef": "",
+          "Description": "Regular oval shape, widest in the middle"
+        },
+        {
+          "Value": "Elliptical",
+          "Code": "Bl",
+          "ImageRef": "",
+          "Description": "Oval, with a short point or none at all"
+        },
+        {
+          "Value": "Cordate",
+          "Code": "Bm",
+          "ImageRef": "",
+          "Description": "Heart shaped, stem attaches at the tapering end"
+        },
+        {
+          "Value": "Deltoid",
+          "Code": "Bn",
+          "ImageRef": "",
+          "Description": "Triangular, like the Grek letter Delta; stem attaches to side"
+        },
+        {
+          "Value": "Rhomboid",
+          "Code": "Bo",
+          "ImageRef": "",
+          "Description": "Diamond-shaped"
+        }
+      ]
+    }
+  ],
+  "Families": [
+    {
+      "CommonName": "Maple",
+      "GenusName": "Acer",
+      "Characteristics": [
+        "Aa",
+        "Bc"
+      ]
+    },
+    {
+      "CommonName": "Cashew",
+      "GenusName": "Anacardiaceae",
+      "Characteristics": [
+        "Ac",
+        "Ba"
+      ]
+    }
+  ],
+  "Trees": [
+    {
+      "CommonName": "Chalk Maple",
+      "LatinName": "Acer leucoderme",
+      "FamilyName": "Maple",
+      "ImageRef": "",
+      "Characteristics": [
+        "Ba"
+      ]
+    },
+    {
+      "CommonName": "Smoketree",
+      "LatinName": "Cotinus obovatus",
+      "FamilyName": "Cashew",
+      "ImageRef": "",
+      "Characteristics": [
+        "Ab"
+      ]
+    }
+  ]
+}
