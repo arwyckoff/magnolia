@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace Magnolia.Models
 {
-    public class FamilyCharacteristics
+    public class GenusCharacteristics
     {
         public int Id { get; set; }
-        public int FamilyId { get; set; }
+        public int GenusId { get; set; }
         public int CharacteristicId { get; set; }
         public int StateId { get; set; }
 
-        public Family Family { get; set; }
+        public Genus Genus { get; set; }
         public Characteristic Characteristic { get; set; }
         public State State { get; set; }
     }
