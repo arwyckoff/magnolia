@@ -10,10 +10,11 @@ namespace Magnolia.Models
     {
         public DbSet<Characteristic> Characteristics { get; set; }
         public DbSet<State> States { get; set; }
+        public DbSet<Family> Families { get; set; }
+        public DbSet<Genus> Genus { get; set; }
+        public DbSet<GenusCharacteristics> GenusCharacteristics { get; set; }
         public DbSet<Plant> Plants { get; set; }
         public DbSet<PlantCharacteristics> PlantCharacteristics { get; set; }
-        public DbSet<Family> Families { get; set; }
-        public DbSet<FamilyCharacteristics> FamilyCharacteristics { get; set; }
         public DbSet<UserPlants> UserPlants { get; set; }
 
         public MagnoliaContext() : base()
