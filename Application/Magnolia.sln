@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{91063077-524
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{60880B49-EE0F-4F1D-A4F5-715B1DFBA8F3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Web", "src\Application.Web\Application.Web.csproj", "{769FA200-B022-4FD7-A802-B1446FFB2883}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magnolia.Web", "src\Application.Web\Magnolia.Web.csproj", "{769FA200-B022-4FD7-A802-B1446FFB2883}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

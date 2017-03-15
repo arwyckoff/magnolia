@@ -9,6 +9,7 @@ namespace Magnolia.Web.Models.Context.Seeder
     {
         public List<CharacteristicSeeder> Characteristics { get; set; }
         public List<FamilySeeder> Families { get; set; }
+        public List<GenusSeeder> Genus { get; set; }
         public List<TreeSeeder> Trees { get; set; }
     }
 }
