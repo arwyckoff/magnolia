@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Magnolia.Web
@@ -26,12 +27,12 @@ namespace Magnolia.Web
                     {
                         var c = new Characteristic();
                         c.Permutations = characteristic.States.Count();
-                        c.Value = characteristic.Value;
+                        c.Value = characteristic.Value.ToLower();
 
                         foreach (var state in characteristic.States)
                         {
                             var s = new State();
-                            s.Value = state.Value;
+                            s.Value = state.Value.ToLower();
                             s.Description = state.Description;
                             s.ImageRef = state.ImageRef;
                             s.Code = state.Code;
@@ -48,35 +49,36 @@ namespace Magnolia.Web
                 {
                     foreach (var family in model.Families)
                     {
-                        var f = new Family();
-                        f.CommonName = family.CommonName;
-                        f.LatinName = family.GenusName;
-
-                        foreach (var state in family.Characteristics)
+                        context.Families.Add(new Family()
                         {
-                            var fc = new FamilyCharacteristics();
-                            fc.Family = f;
+                            CommonName = family.CommonName,
+                            LatinName = family.LatinName
+                        });
+                    }
+                }
 
-                            var st = context.States.FirstOrDefault(s => s.Code == state);
-                            if (st == null)
-                            {
-                                throw new Exception("Invalid state code: " + state);
-                            }
+                context.SaveChanges();
 
-                            fc.State = st;
+                if (!context.Genus.Any())
+                {
+                    foreach (var genus in model.Genus)
+                    {
+                        var g = new Genus();
+                        g.CommonName = genus.CommonName;
+                        g.LatinName = genus.LatinName;
+                        g.Family = context.Families.FirstOrDefault(f => f.CommonName == genus.FamilyName) ?? throw new Exception("Family name not found " + genus.ToString());
 
-                            var ch = context.Characteristics.FirstOrDefault(c => c.Id == st.CharactaristicId);
-                            if (ch == null)
-                            {
-                                throw new Exception("Characteristic not found! " + state);
-                            }
+                        foreach (var state in genus.Characteristics)
+                        {
+                            var gc = new GenusCharacteristics();
+                            gc.Genus = g;
 
-                            fc.Characteristic = ch;
-
-                            f.FamilyCharacteristics.Add(fc);
+                            gc.State = context.States.FirstOrDefault(s => s.Code == state) ?? throw new Exception("State code not found " + state);
+                            gc.Characteristic = context.Characteristics.FirstOrDefault(c => c.Id == gc.State.CharactaristicId);
+                            g.GenusCharacteristics.Add(gc);
                         }
 
-                        context.Families.Add(f);
+                        context.Genus.Add(g);
                     }
                 }
 
@@ -89,59 +91,31 @@ namespace Magnolia.Web
                         var p = new Plant();
                         p.CommonName = plant.CommonName;
                         p.LatinName = plant.LatinName;
+                        p.Family = context.Families.FirstOrDefault(f => f.CommonName == plant.FamilyName) ?? throw new Exception("Family name not found " + plant);
                         p.ImageRef = plant.ImageRef;
 
-                        var fam = context.Families.Include(f => f.FamilyCharacteristics)
-                                                  .FirstOrDefault(f => f.CommonName == plant.FamilyName);
-                        if (fam == null)
-                        {
-                            throw new Exception("Family name not found! " + plant);
-                        }
-
-                        p.Family = fam;
+                        var g = new StringBuilder().Append(p.LatinName.TakeWhile(c => c != ' ').ToArray()).ToString();
+                        p.Genus = context.Genus.Include(gen => gen.GenusCharacteristics)
+                                               .FirstOrDefault(gen => gen.LatinName == g) ?? throw new Exception("Genus name not found " + plant);
 
                         foreach (var stateCode in plant.Characteristics)
                         {
                             var pc = new PlantCharacteristics();
 
-                            var st = context.States.FirstOrDefault(s => s.Code == stateCode);
-                            if (st == null)
-                            {
-                                throw new Exception("Invalid state code: " + stateCode);
-                            }
+                            pc.State = context.States.FirstOrDefault(s => s.Code == stateCode) ?? throw new Exception("Invalid state code: " + stateCode);
 
-                            pc.State = st;
-
-                            var ch = context.Characteristics.FirstOrDefault(c => c.Id == pc.State.CharactaristicId);
-                            if (ch == null)
-                            {
-                                throw new Exception("Invalid state code: " + stateCode);
-                            }
-
-                            pc.Characteristic = ch;
+                            pc.Characteristic = context.Characteristics.FirstOrDefault(c => c.Id == pc.State.CharactaristicId) ?? throw new Exception("Invalid state code: " + stateCode);
 
                             p.PlantCharacteristics.Add(pc);
                         }
 
-                        foreach (var st in p.Family.FamilyCharacteristics)
+                        foreach (var st in p.Genus.GenusCharacteristics)
                         {
                             var pc = new PlantCharacteristics();
 
-                            var state = context.States.FirstOrDefault(s => s.Id == st.Id);
-                            if (state == null)
-                            {
-                                throw new Exception("Invalid state code: " + st);
-                            }
+                            pc.State = context.States.FirstOrDefault(s => s.Id == st.Id) ?? throw new Exception("Invalid state code: " + st);
 
-                            pc.State = state;
-
-                            var ch = context.Characteristics.FirstOrDefault(c => c.Id == pc.State.CharactaristicId);
-                            if (ch == null)
-                            {
-                                throw new Exception("Invalid state code: " + st);
-                            }
-
-                            pc.Characteristic = ch;
+                            pc.Characteristic = context.Characteristics.FirstOrDefault(c => c.Id == pc.State.CharactaristicId) ?? throw new Exception("Invalid state code: " + st);
 
                             p.PlantCharacteristics.Add(pc);
                         }

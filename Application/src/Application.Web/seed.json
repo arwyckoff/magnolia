@@ -1,34 +1,34 @@
 ﻿{
   "Characteristics": [
     {
-      "Value": "Leaf type",
+      "Value": "leaf type",
       "States": [
         {
-          "Value": "Simple",
+          "Value": "simple",
           "Code": "Aa",
-          "ImageRef": "http://some.image.com/image.png",
+          "ImageRef": "",
           "Description": "Leaf blade in one continuous section, without leaflets"
         },
         {
-          "Value": "Palmate",
+          "Value": "pinnately-compound",
           "Code": "Ab",
-          "ImageRef": "http://some.image.com/palm.jpg",
-          "Description": "Consisting of leaflets all radiating from one point"
-        },
-        {
-          "VAlue": "Bipinnate",
-          "Code": "Ac",
-          "ImageRef": "",
-          "Description": "Leaflets are themselves pinnately-compound, i.e., like a fern"
-        },
-        {
-          "Value": "Pinnate",
-          "Code": "Ad",
           "ImageRef": "",
           "Description": "Having two rows of leaflets on opposite sides of a central axis"
         },
         {
-          "Value": "Trifoliolate",
+          "Value": "bipinnately-compound",
+          "Code": "Ac",
+          "ImageRef": "",
+          "Description": "Leaflets are themselves pinnately compound, i.e., each with their own leaflets"
+        },
+        {
+          "Value": "palmately-compound",
+          "Code": "Ad",
+          "ImageRef": "",
+          "Description": "Consisting of leaflets all radiating from one point"
+        },
+        {
+          "Value": "trifoliolately-compound",
           "Code": "Ae",
           "ImageRef": "",
           "Description": "With three leaflets"
@@ -36,97 +36,1769 @@
       ]
     },
     {
-      "Value": "Leaf shape",
+      "Value": "leaf shape",
       "States": [
         {
-          "Value": "Needle",
+          "Value": "Needle-like",
           "Code": "Ba",
-          "ImageRef": "http://some.image.com/needle.jpg",
+          "ImageRef": "",
           "Description": "Slender and pointed"
         },
         {
-          "Value": "Awl",
+          "Value": "awl-like",
           "Code": "Bb",
-          "ImageRef": "http://some.image.com/awl.jpg",
+          "ImageRef": "",
           "Description": "Awl-shaped with a tapering point"
         },
         {
-          "Value": "Scale",
+          "Value": "scale-like",
           "Code": "Bc",
-          "ImageRef": "http://some.image.com/scale.jpg",
-          "Description": "Layered scales"
+          "ImageRef": "",
+          "Description": "Layered scale-like leaves"
         },
         {
-          "Value": "Linear",
+          "Value": "linear",
           "Code": "Bd",
           "ImageRef": "",
           "Description": "Long and very narrow like a blade of grass"
         },
         {
-          "Value": "Oblong",
+          "Value": "oblong",
           "Code": "Be",
           "ImageRef": "",
-          "Description": "Having an elongated form with slightly parallel sides, roughly rectangular"
+          "Description": "Having an elongated form with slightly parallel sides; roughly rectangular"
         },
         {
-          "Value": "Lanceolate",
+          "Value": "lanceolate",
           "Code": "Bf",
           "ImageRef": "",
-          "Description": "Long, wider in the middle, shaped like a lance tip"
+          "Description": "Long, wider in the middle; shaped like a lance tip."
         },
         {
-          "Value": "Oblanceolate",
+          "Value": "oblanceolate",
           "Code": "Bg",
           "ImageRef": "",
           "Description": "Much longer than wide and with the widest portion near the tip"
         },
         {
-          "Value": "Ovate",
+          "Value": "ovate",
           "Code": "Bh",
           "ImageRef": "",
           "Description": "Oval, egg-shaped, with a tapering point and the widest portion near the petiole"
         },
         {
-          "Value": "Obovate",
-          "Code": "Bi",
+          "Value": "obovate",
+          "Code": "Ba",
           "ImageRef": "",
-          "Description": "Teardrop-shaped, stem attaches to the tapering end"
+          "Description": "Teardrop-shaped; stem attaches to the tapering end"
         },
         {
-          "Value": "Spatulate",
-          "Code": "Bj",
+          "Value": "spatulate",
+          "Code": "Bi",
           "ImageRef": "",
           "Description": "Spoon-shaped; having a broad flat end which tapers to the base"
         },
         {
-          "Value": "Oval",
-          "Code": "Bk",
+          "Value": "oval",
+          "Code": "Bj",
           "ImageRef": "",
           "Description": "Regular oval shape, widest in the middle"
         },
         {
-          "Value": "Elliptical",
+          "Value": "elliptical",
+          "Code": "Bk",
+          "ImageRef": "",
+          "Description": "Ovular with a short point or sometimes none at all"
+        },
+        {
+          "Value": "cordate (heart-shaped)",
           "Code": "Bl",
           "ImageRef": "",
-          "Description": "Oval, with a short point or none at all"
+          "Description": "Heart shaped; stem attaches at the tapering end"
         },
         {
-          "Value": "Cordate",
+          "Value": "deltoid",
           "Code": "Bm",
           "ImageRef": "",
-          "Description": "Heart shaped, stem attaches at the tapering end"
+          "Description": "Triangular, like the Greek letter Delta; stem attaches to side"
         },
         {
-          "Value": "Deltoid",
+          "Value": "rhomboid",
           "Code": "Bn",
           "ImageRef": "",
-          "Description": "Triangular, like the Grek letter Delta; stem attaches to side"
+          "Description": "Diamond-shaped"
+        }
+      ]
+    },
+    {
+      "Value": "leaf Arrangement",
+      "States": [
+        {
+          "Value": "alternate",
+          "Code": "Ca",
+          "ImageRef": "",
+          "Description": "Only one leaf on each node"
         },
         {
-          "Value": "Rhomboid",
-          "Code": "Bo",
+          "Value": "opposite",
+          "Code": "Cb",
           "ImageRef": "",
-          "Description": "Diamond-shaped"
+          "Description": "Two leaves on each node"
+        },
+        {
+          "Value": "whorled",
+          "Code": "Cc",
+          "ImageRef": "",
+          "Description": "Cyclic arrangement of three or more leaves around a twig"
+        }
+      ]
+    },
+    {
+      "Value": "leaf Venation",
+      "States": [
+        {
+          "Value": "parallel",
+          "Code": "Da",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pinnate",
+          "Code": "Db",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "palmate",
+          "Code": "Dc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "arcuate",
+          "Code": "Dd",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf Apex",
+      "States": [
+        {
+          "Value": "acuminate",
+          "Code": "Ea",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "acute",
+          "Code": "Eb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "obtuse",
+          "Code": "Ec",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "round",
+          "Code": "Ed",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "truncate",
+          "Code": "Ee",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "emerginate",
+          "Code": "Ef",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "murconate",
+          "Code": "Eg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "cuspidate",
+          "Code": "Eh",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf base",
+      "States": [
+        {
+          "Value": "acuminate",
+          "Code": "Fa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "acute",
+          "Code": "Fb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "obtuse",
+          "Code": "Fc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "round",
+          "Code": "Fd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "truncate",
+          "Code": "Fe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "heart-shaped",
+          "Code": "Ff",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "articulate",
+          "Code": "Fg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "inequilateral",
+          "Code": "Fh",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf Margin",
+      "States": [
+        {
+          "Value": "entire",
+          "Code": "Ga",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "revolute",
+          "Code": "Gb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "undulate",
+          "Code": "Gc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "serrate",
+          "Code": "Gd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "doubly-serrate",
+          "Code": "Ge",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "dentate",
+          "Code": "Gf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "crenate",
+          "Code": "Gg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pinnately-lobed",
+          "Code": "Gh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "palmately-lobed",
+          "Code": "Gi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "inwardly sloping sides",
+          "Code": "Gj",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "outwardly sloping sides",
+          "Code": "Gk",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "serrulate",
+          "Code": "Gl",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not serrulate",
+          "Code": "Gm",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf scar",
+      "States": [
+        {
+          "Value": "crescent-shaped",
+          "Code": "Ha",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "broadly-crescent",
+          "Code": "Hb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "shield-shaped",
+          "Code": "Hc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "half-round",
+          "Code": "Hd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "circular",
+          "Code": "He",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "triangular",
+          "Code": "Hf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "three-lobed",
+          "Code": "Hg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "heart-shaped",
+          "Code": "Hh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "U-shaped",
+          "Code": "Hi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "V-shaped",
+          "Code": "Hj",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "Leaf mobility",
+      "States": [
+        {
+          "Value": "mobile",
+          "Code": "Ia",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "sessile (fixed or immobile)",
+          "Code": "Ib",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf odor/taste",
+      "States": [
+        {
+          "Value": "aromatic, spicy",
+          "Code": "Pa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "sweet to taste",
+          "Code": "Pb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "none",
+          "Code": "Pc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf gland",
+      "States": [
+        {
+          "Value": "gland dotted",
+          "Code": "Ka",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not gland dotted",
+          "Code": "Kb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf size",
+      "States": [
+        {
+          "Value": "greater than 4 inches long",
+          "Code": "La",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "less than 4 inches long",
+          "Code": "Lb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "needle growth pattern",
+      "States": [
+        {
+          "Value": "clusters of 2-5 at base",
+          "Code": "Ma",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "separately along branches",
+          "Code": "Mb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "needle shape",
+      "States": [
+        {
+          "Value": "flat",
+          "Code": "Na",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "round",
+          "Code": "Nb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "needle size",
+      "States": [
+        {
+          "Value": "1/2 long or more",
+          "Code": "Oa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "less than 1/2 inch long",
+          "Code": "Ob",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "petiole",
+      "States": [
+        {
+          "Value": "red",
+          "Code": "Qa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not red",
+          "Code": "Qb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "twig outgrowth",
+      "States": [
+        {
+          "Value": "prickles",
+          "Code": "Ra",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stipular-spines",
+          "Code": "Rb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "thorns",
+          "Code": "Rc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "thorn branch",
+      "States": [
+        {
+          "Value": "thorns branched",
+          "Code": "Sa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not branched",
+          "Code": "Sb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "twig Pith",
+      "States": [
+        {
+          "Value": "solid",
+          "Code": "Ta",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "diaphragmed",
+          "Code": "Tb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "chambered",
+          "Code": "Tc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "pith size",
+      "States": [
+        {
+          "Value": "small",
+          "Code": "Ua",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "large",
+          "Code": "Ub",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "twig color",
+      "States": [
+        {
+          "Value": "greenish yellow",
+          "Code": "Va",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "gray to brown",
+          "Code": "Vb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "green, red, or maroon",
+          "Code": "Vc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "purplish green",
+          "Code": "Vd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "blueish-gray/glaucous",
+          "Code": "Ve",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not blueish-gray/ not glaucous",
+          "Code": "Vf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not green or reddish",
+          "Code": "Vg",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "twig shape",
+      "States": [
+        {
+          "Value": "flat",
+          "Code": "Wa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "rounded/4 sided",
+          "Code": "Wb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "infloresence",
+      "States": [
+        {
+          "Value": "catkin",
+          "Code": "Xa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "spike",
+          "Code": "Xb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "raceme",
+          "Code": "Xc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "panicle",
+          "Code": "Xd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "cyme",
+          "Code": "Xe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "umbrel",
+          "Code": "Xf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "head",
+          "Code": "Xg",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "Fruit type",
+      "States": [
+        {
+          "Value": "Aggregate",
+          "Code": "Ya",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "Multiple",
+          "Code": "Yb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "Simple",
+          "Code": "Yc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "Aggregate Fruit",
+      "States": [
+        {
+          "Value": "cone-like cluster of nutlets",
+          "Code": "Za",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "samaras",
+          "Code": "Zb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "follicles",
+          "Code": "Zc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "multiple Fruit",
+      "States": [
+        {
+          "Value": "capsules",
+          "Code": "AAa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "achenes",
+          "Code": "AAb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "drupes",
+          "Code": "AAc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "simple fruit",
+      "States": [
+        {
+          "Value": "samaras",
+          "Code": "ABa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "achenes",
+          "Code": "ABb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "nuts",
+          "Code": "ABc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "capsules",
+          "Code": "ABd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "legume",
+          "Code": "ABe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "follicle",
+          "Code": "ABf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pome",
+          "Code": "ABg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "drupes",
+          "Code": "ABh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "berry",
+          "Code": "ABi",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "fruit color",
+      "States": [
+        {
+          "Value": "blue-black",
+          "Code": "ACa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "reddish",
+          "Code": "ACb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "olive-brown",
+          "Code": "ACc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "black",
+          "Code": "ACd",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "fruit persistence in winter",
+      "States": [
+        {
+          "Value": "persists all winter",
+          "Code": "ADa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "petals",
+      "States": [
+        {
+          "Value": "united",
+          "Code": "AEa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "separate",
+          "Code": "AEb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "flower cluster",
+      "States": [
+        {
+          "Value": "terminal cluster",
+          "Code": "AFa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "sepals",
+      "States": [
+        {
+          "Value": "enlarged",
+          "Code": "AGa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not enlarged",
+          "Code": "AGb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "seed cone",
+      "States": [
+        {
+          "Value": "fleshy",
+          "Code": "AHa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "woody",
+          "Code": "AHb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "nearly round",
+          "Code": "AHc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "ellipsoid",
+          "Code": "AHd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "woody or enclosed in leathery structure",
+          "Code": "AHe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "leathery dark green purple",
+          "Code": "AHf",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "tree season",
+      "States": [
+        {
+          "Value": "summer",
+          "Code": "AIa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "winter",
+          "Code": "AIb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf shed",
+      "States": [
+        {
+          "Value": "evergreen",
+          "Code": "AJa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "deciduous",
+          "Code": "AJb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "terminal bud",
+      "States": [
+        {
+          "Value": "present",
+          "Code": "AKa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "absent",
+          "Code": "AKb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "terminal bud length",
+      "States": [
+        {
+          "Value": "more than 1/2 inch long",
+          "Code": "ALa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "1/4 to 1/2 inch long",
+          "Code": "ALb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "less than 1/4 inch",
+          "Code": "ALc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "terminal bud shape",
+      "States": [
+        {
+          "Value": "flattened",
+          "Code": "AMa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stalked",
+          "Code": "AMb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "curved lip",
+          "Code": "AMc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "rounded to acute",
+          "Code": "AMd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "long stalked",
+          "Code": "AMe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "sessile to slightly stalked",
+          "Code": "AMf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "sharply pointed",
+          "Code": "AMg",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "lateral bud",
+      "States": [
+        {
+          "Value": "1/4 in long or more",
+          "Code": "ANa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "minute, rounded",
+          "Code": "ANb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "enclosed within twig or petiole",
+          "Code": "ANc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "lateral bud characteristics",
+      "States": [
+        {
+          "Value": "encolsed/embedded in twig, petiole, or bark",
+          "Code": "AOa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "globose and conical ",
+          "Code": "AOb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "all the same shape",
+          "Code": "AOc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "wooly or silky",
+          "Code": "AOd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "naked",
+          "Code": "AOe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "superposed",
+          "Code": "AOf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "asymmetrical ",
+          "Code": "AOg",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "stem",
+      "States": [
+        {
+          "Value": "branched",
+          "Code": "APa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "unbranched",
+          "Code": "APb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "roots",
+      "States": [
+        {
+          "Value": "visible above soil",
+          "Code": "AQa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "trunk buttressed",
+      "States": [
+        {
+          "Value": "buttressed",
+          "Code": "ARa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not buttressed ",
+          "Code": "ARb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "bundle scar number",
+      "States": [
+        {
+          "Value": "single",
+          "Code": "ASa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "numerous",
+          "Code": "ASb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "spur shoots",
+      "States": [
+        {
+          "Value": "present",
+          "Code": "ATa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "absent",
+          "Code": "ATb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "bundle scar number",
+      "States": [
+        {
+          "Value": "single",
+          "Code": "AUa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "numerous",
+          "Code": "AUb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "numerous bundle scars",
+          "Code": "AUc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "single (sometimes broken into several)",
+          "Code": "AUd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "3 bundle scars",
+          "Code": "AUe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "single bundle scar",
+          "Code": "AUf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "bundle scars 3,5, or 7",
+          "Code": "AUg",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "sap characteristics",
+      "States": [
+        {
+          "Value": "gummy sap",
+          "Code": "AVa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "watery sap",
+          "Code": "AVb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "milky",
+          "Code": "AVc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "black when exposed to air",
+          "Code": "AVd",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "branched stipular spines",
+      "States": [
+        {
+          "Value": "branched",
+          "Code": "AWa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "stipule number/growth pattern",
+      "States": [
+        {
+          "Value": "paired at nodes",
+          "Code": "AXa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "single at nodes",
+          "Code": "AXb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "single at spur shoots",
+          "Code": "AXc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "general tree type",
+      "States": [
+        {
+          "Value": "conifer",
+          "Code": "AZa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "broadleaf",
+          "Code": "AZb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "needle-point quality",
+      "States": [
+        {
+          "Value": "sharp",
+          "Code": "BAa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "rounded/notched",
+          "Code": "BAb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf feel",
+      "States": [
+        {
+          "Value": "fleshy or leathery",
+          "Code": "BBa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pubescent (hairy)",
+          "Code": "BBb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "glabrous (smooth)",
+          "Code": "BBc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "Seed type",
+      "States": [
+        {
+          "Value": "gymnosperm",
+          "Code": "BCa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "angiosperm",
+          "Code": "BCb",
+          "ImageRef": "enclosed in ovary",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "fruit size",
+      "States": [
+        {
+          "Value": "less than 1 inch",
+          "Code": "BDa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "flower color",
+      "States": [
+        {
+          "Value": "pink",
+          "Code": "BEa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "red or reddish",
+          "Code": "BEb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "deep red to purple",
+          "Code": "BEc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "fruit shape",
+      "States": [
+        {
+          "Value": "elliptical",
+          "Code": "BFa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "knee formation",
+      "States": [
+        {
+          "Value": "formed",
+          "Code": "BGa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not formed",
+          "Code": "BGb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaves appressed to twig",
+      "States": [
+        {
+          "Value": "appressed",
+          "Code": "BHa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not appressed",
+          "Code": "BHb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "branch quality",
+      "States": [
+        {
+          "Value": "flattened",
+          "Code": "BIa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not flattened",
+          "Code": "BIb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "spray like",
+          "Code": "BIc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "not spray like",
+          "Code": "BId",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "Leaf rigidity",
+      "States": [
+        {
+          "Value": "rigid",
+          "Code": "BJa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "flexible",
+          "Code": "BJb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "fruit an acorn",
+      "States": [
+        {
+          "Value": "fruit an acorn",
+          "Code": "BKa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "fruit not an acorn",
+          "Code": "BKb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "Needle tip",
+      "States": [
+        {
+          "Value": "sharp",
+          "Code": "BLa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "soft",
+          "Code": "BLb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "Seed enclosure",
+      "States": [
+        {
+          "Value": "leathery",
+          "Code": "BMa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "fleshy",
+          "Code": "BMb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "needle length",
+      "States": [
+        {
+          "Value": "greater than 1 inch",
+          "Code": "BNa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "less than 1 inch",
+          "Code": "BNb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "flower size",
+      "States": [
+        {
+          "Value": "less than 1 inch in diameter",
+          "Code": "BOa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "greater than 1 inch in diameter",
+          "Code": "BOb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "twig scent when crushed",
+      "States": [
+        {
+          "Value": "rank odor when crushed",
+          "Code": "BPa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "lacking odor when crushed",
+          "Code": "BPb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf breadth",
+      "States": [
+        {
+          "Value": "1.5 to 3.5 inches across",
+          "Code": "BQa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "3 to 6 inches across",
+          "Code": "BQb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf underside",
+      "States": [
+        {
+          "Value": "greenish yellow",
+          "Code": "BRa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "whitish",
+          "Code": "BRb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "densely hairy",
+          "Code": "BRc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "golden or coppery pubesence",
+          "Code": "BRd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "rusty or whitish pubescence ",
+          "Code": "BRe",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "bud  characteristics",
+      "States": [
+        {
+          "Value": "more than 2 scales",
+          "Code": "BSa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "sessile",
+          "Code": "BSb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "2 scales",
+          "Code": "BSc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stalked",
+          "Code": "BSd",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "pubescence of mature leaves",
+      "States": [
+        {
+          "Value": "very short",
+          "Code": "BTa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "shaggy",
+          "Code": "BTb",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     }
@@ -134,38 +1806,3467 @@
   "Families": [
     {
       "CommonName": "Maple",
-      "GenusName": "Acer",
-      "Characteristics": [
-        "Aa",
-        "Bc"
-      ]
+      "LatinName": "Aceraceae"
     },
     {
       "CommonName": "Cashew",
-      "GenusName": "Anacardiaceae",
+      "LatinName": "Anacardiaceae"
+    },
+    {
+      "CommonName": "Custard Apple",
+      "LatinName": "Annonaceae"
+    },
+    {
+      "CommonName": "Holly",
+      "LatinName": "Aquifoliaceae"
+    },
+    {
+      "CommonName": "Ginseng",
+      "LatinName": "Araliaceae"
+    },
+    {
+      "CommonName": "Palm",
+      "LatinName": "Arecaceae"
+    },
+    {
+      "CommonName": "Birch",
+      "LatinName": "Betulaceae"
+    },
+    {
+      "CommonName": "Catalpa",
+      "LatinName": "Bignoniaceae"
+    },
+    {
+      "CommonName": "Honeysuckle",
+      "LatinName": "Caprifoliaceae"
+    },
+    {
+      "CommonName": "Spindle Tree",
+      "LatinName": "Celastraceae"
+    },
+    {
+      "CommonName": "Pepperbush",
+      "LatinName": "Clethraceae"
+    },
+    {
+      "CommonName": "Dogwood",
+      "LatinName": "Cornaceae"
+    },
+    {
+      "CommonName": "Cypress",
+      "LatinName": "Cupressaceae"
+    },
+    {
+      "CommonName": "Titi",
+      "LatinName": "Cyrillaceae"
+    },
+    {
+      "CommonName": "Ebony",
+      "LatinName": "Ebenaceae"
+    },
+    {
+      "CommonName": "Heath",
+      "LatinName": "Ericaceae"
+    },
+    {
+      "CommonName": "Bean",
+      "LatinName": "Fabaceae"
+    },
+    {
+      "CommonName": "Beech",
+      "LatinName": "Fagaceae"
+    },
+    {
+      "CommonName": "Witchhazel",
+      "LatinName": "Hamamelidaceae"
+    },
+    {
+      "CommonName": "Buckeye",
+      "LatinName": "Hippocastanaceae"
+    },
+    {
+      "CommonName": "Anisetree",
+      "LatinName": "Illiciaceae"
+    },
+    {
+      "CommonName": "Walnut",
+      "LatinName": "Juglandaceae"
+    },
+    {
+      "CommonName": "Laurel",
+      "LatinName": "Lauraceae"
+    },
+    {
+      "CommonName": "Corkwood",
+      "LatinName": "Leitneriaceae"
+    },
+    {
+      "CommonName": "Magnolia",
+      "LatinName": "Magnoliaceae"
+    },
+    {
+      "CommonName": "Mulberry",
+      "LatinName": "Moraceae"
+    },
+    {
+      "CommonName": "Waxmyrtle",
+      "LatinName": "Myricaceae"
+    },
+    {
+      "CommonName": "Olive",
+      "LatinName": "Oleaceae"
+    },
+    {
+      "CommonName": "Pine",
+      "LatinName": "Pinaceae"
+    },
+    {
+      "CommonName": "Sycamore",
+      "LatinName": "Platanaceae"
+    },
+    {
+      "CommonName": "Buckthorn",
+      "LatinName": "Rhamnaceae"
+    },
+    {
+      "CommonName": "Rose",
+      "LatinName": "Rosaceae"
+    },
+    {
+      "CommonName": "Madder",
+      "LatinName": "Rubiaceae"
+    },
+    {
+      "CommonName": "Rue",
+      "LatinName": "Rutaceae"
+    },
+    {
+      "CommonName": "Willow",
+      "LatinName": "Salicaceae"
+    },
+    {
+      "CommonName": "Soapberry",
+      "LatinName": "Sapindaceae"
+    },
+    {
+      "CommonName": "Sapodilla",
+      "LatinName": "Sapotaceae"
+    },
+    {
+      "CommonName": "Bladdernut",
+      "LatinName": "Staphyleaceae"
+    },
+    {
+      "CommonName": "Storax",
+      "LatinName": "Styracaceae"
+    },
+    {
+      "CommonName": "Sweetleaf",
+      "LatinName": "Symplocaceae"
+    },
+    {
+      "CommonName": "Yew",
+      "LatinName": "Taxaceae"
+    },
+    {
+      "CommonName": "Tea",
+      "LatinName": "Theaceae"
+    },
+    {
+      "CommonName": "Basswood",
+      "LatinName": "Tiliaceae"
+    },
+    {
+      "CommonName": "Elm",
+      "LatinName": "Ulmaceae"
+    }
+  ],
+  "Genus": [
+    {
+      "CommonName": "Maple",
+      "LatinName": "Acer",
+      "FamilyName": "Maple",
       "Characteristics": [
-        "Ac",
-        "Ba"
+        "BCb",
+        "APa",
+        "Yc",
+        "ABa",
+        "Ad",
+        "Dc"
+      ]
+    },
+    {
+      "CommonName": "Smoketree",
+      "LatinName": "Cotinus",
+      "FamilyName": "Cashew",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sumac",
+      "LatinName": "Rhus",
+      "FamilyName": "Cashew",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pawpaw",
+      "LatinName": "Asimina",
+      "FamilyName": "Custard Apple",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Holly",
+      "LatinName": "Ilex",
+      "FamilyName": "Holly",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Ginseng",
+      "LatinName": "Aralia",
+      "FamilyName": "Ginseng",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Palmetto",
+      "LatinName": "Sabal",
+      "FamilyName": "Palm",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Alder",
+      "LatinName": "Alnus",
+      "FamilyName": "Birch",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Birch",
+      "LatinName": "Betula",
+      "FamilyName": "Birch",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Hornbeam",
+      "LatinName": "Carpinus",
+      "FamilyName": "Birch",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Hophornbeam",
+      "LatinName": "Ostrya",
+      "FamilyName": "Birch",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Elder",
+      "LatinName": "Sambucus",
+      "FamilyName": "Honeysuckle",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Viburnum",
+      "LatinName": "Viburnum",
+      "FamilyName": "Honeysuckle",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Spindle Tree",
+      "LatinName": "Euonymus",
+      "FamilyName": "Spindle Tree",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pepperbush",
+      "LatinName": "Clethra",
+      "FamilyName": "Pepperbush",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Dogwood",
+      "LatinName": "Cornus",
+      "FamilyName": "Dogwood",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Tupelo",
+      "LatinName": "Nyssa",
+      "FamilyName": "Dogwood",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "False Cypress",
+      "LatinName": "Chamaecyparis",
+      "FamilyName": "Cypress",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Juniper",
+      "LatinName": "Juniperus",
+      "FamilyName": "Cypress",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Cypress",
+      "LatinName": "Taxodium",
+      "FamilyName": "Cypress",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Thuja",
+      "LatinName": "Thuja",
+      "FamilyName": "Cypress",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Buckwheat",
+      "LatinName": "Cliftonia",
+      "FamilyName": "Titi",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Swamp Titi",
+      "LatinName": "Cyrilla",
+      "FamilyName": "Titi",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Persimmon",
+      "LatinName": "Diospyros",
+      "FamilyName": "Ebony",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Elliottia",
+      "LatinName": "Elliottia",
+      "FamilyName": "Heath",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Kalmia",
+      "LatinName": "Kalmia",
+      "FamilyName": "Heath",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Staggerbush",
+      "LatinName": "Lyonia",
+      "FamilyName": "Heath",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sourwood",
+      "LatinName": "Oxydendrum",
+      "FamilyName": "Heath",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Rhododendron",
+      "LatinName": "Rhododendron",
+      "FamilyName": "Heath",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Redbud",
+      "LatinName": "Cercis",
+      "FamilyName": "Bean",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Yellowwood",
+      "LatinName": "Cladrastis",
+      "FamilyName": "Bean",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Honeylocusts",
+      "LatinName": "Gleditsia",
+      "FamilyName": "Bean",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Coffeetree",
+      "LatinName": "Gymnocladus",
+      "FamilyName": "Bean",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Locust",
+      "LatinName": "Robinia",
+      "FamilyName": "Bean",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Chestnut",
+      "LatinName": "Castanea",
+      "FamilyName": "Beech",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Oak",
+      "LatinName": "Quercus",
+      "FamilyName": "Beech",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Whitchhazel",
+      "LatinName": "Hamamelis",
+      "FamilyName": "Witchhazel",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sweetgum",
+      "LatinName": "Liquidambar",
+      "FamilyName": "Witchhazel",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Buckeye",
+      "LatinName": "Aesculus",
+      "FamilyName": "Buckeye",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Anisetree",
+      "LatinName": "Illicium",
+      "FamilyName": "Anisetree",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Hickory",
+      "LatinName": "Carya",
+      "FamilyName": "Walnut",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Walnut",
+      "LatinName": "Juglans",
+      "FamilyName": "Walnut",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bay",
+      "LatinName": "Persea",
+      "FamilyName": "Laurel",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sassafras",
+      "LatinName": "Sassafras",
+      "FamilyName": "Laurel",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Corkwood",
+      "LatinName": "Leitneria",
+      "FamilyName": "Corkwood",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Tulip Tree",
+      "LatinName": "Liriodendron",
+      "FamilyName": "Magnolia",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Magnolia",
+      "LatinName": "Magnolia",
+      "FamilyName": "Magnolia",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Osage",
+      "LatinName": "Maclura",
+      "FamilyName": "Mulberry",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Mulberry",
+      "LatinName": "Morus",
+      "FamilyName": "Mulberry",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Waxmyrtle",
+      "LatinName": "Myrica",
+      "FamilyName": "Waxmyrtle",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Fringetree",
+      "LatinName": "Chionanthus",
+      "FamilyName": "Olive",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Swampprivets",
+      "LatinName": "Forestiera",
+      "FamilyName": "Olive",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Ash",
+      "LatinName": "Fraxinus",
+      "FamilyName": "Olive",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Devilwood",
+      "LatinName": "Osmanthus",
+      "FamilyName": "Olive",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Fir",
+      "LatinName": "Abies",
+      "FamilyName": "Pine",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Spruce",
+      "LatinName": "Picea",
+      "FamilyName": "Pine",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pine",
+      "LatinName": "Pinus",
+      "FamilyName": "Pine",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Hemlock",
+      "LatinName": "Tsuga",
+      "FamilyName": "Pine",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sycamore",
+      "LatinName": "Platanus",
+      "FamilyName": "Sycamore",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Buckthorn",
+      "LatinName": "Frangula",
+      "FamilyName": "Buckthorn",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Serviceberry",
+      "LatinName": "Amelanchier",
+      "FamilyName": "Rose",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Hawthorn",
+      "LatinName": "Crataegus",
+      "FamilyName": "Rose",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Apple",
+      "LatinName": "Malus",
+      "FamilyName": "Rose",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Cherry",
+      "LatinName": "Prunus",
+      "FamilyName": "Rose",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Whitebeam",
+      "LatinName": "Sorbus",
+      "FamilyName": "Rose",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Buttonbush",
+      "LatinName": "Cephalanthus",
+      "FamilyName": "Madder",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Fevertree",
+      "LatinName": "Pinckneya",
+      "FamilyName": "Madder",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Hoptree",
+      "LatinName": "Ptelea",
+      "FamilyName": "Rue",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pricklyash",
+      "LatinName": "Zanthoxylum",
+      "FamilyName": "Rue",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Poplar",
+      "LatinName": "Populus",
+      "FamilyName": "Willow",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Willow",
+      "LatinName": "Salix",
+      "FamilyName": "Willow",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Soapberry",
+      "LatinName": "Sapindus",
+      "FamilyName": "Soapberry",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bumelia",
+      "LatinName": "Sideroxylon",
+      "FamilyName": "Sapodilla",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bladdernut",
+      "LatinName": "Staphylea",
+      "FamilyName": "Bladdernut",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Silverbell",
+      "LatinName": "Halesia",
+      "FamilyName": "Storax",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Snowbell",
+      "LatinName": "Styrax",
+      "FamilyName": "Storax",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sweetleaf",
+      "LatinName": "Symplocos",
+      "FamilyName": "Sweetleaf",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Yew",
+      "LatinName": "Taxus",
+      "FamilyName": "Yew",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Nutmeg Yew",
+      "LatinName": "Torreya",
+      "FamilyName": "Yew",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Franklin",
+      "LatinName": "Franklinia",
+      "FamilyName": "Tea",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Gordonia",
+      "LatinName": "Gordonia",
+      "FamilyName": "Tea",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Stewartia",
+      "LatinName": "Stewartia",
+      "FamilyName": "Tea",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Basswood",
+      "LatinName": "Tilia",
+      "FamilyName": "Basswood",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Hackberry",
+      "LatinName": "Celtis",
+      "FamilyName": "Elm",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Water Elm",
+      "LatinName": "Planera",
+      "FamilyName": "Elm",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Elm",
+      "LatinName": "Ulmus",
+      "FamilyName": "Elm",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Toxicodendron",
+      "LatinName": "Toxicodendron",
+      "FamilyName": "Cashew",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Catawba",
+      "LatinName": "Catalpa",
+      "FamilyName": "Catalpa",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Farkleberry",
+      "LatinName": "Vaccinium",
+      "FamilyName": "Heath",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Beech",
+      "LatinName": "Fagus",
+      "FamilyName": "Beech",
+      "Characteristics": [
+
       ]
     }
   ],
   "Trees": [
     {
+      "CommonName": "Florida Maple",
+      "SecondaryName": "Southern Sugar Maple",
+      "TertiaryName": "",
+      "LatinName": "Acer barbatum",
+      "FamilyName": "Maple",
+      "ImageRef": "",
+      "Characteristics": [
+        "Aa",
+        "Gc",
+        "BQa",
+        "BRb",
+        "Vg",
+        "Vf",
+        "AMg"
+      ]
+    },
+    {
       "CommonName": "Chalk Maple",
+      "SecondaryName": "",
+      "TertiaryName": "",
       "LatinName": "Acer leucoderme",
       "FamilyName": "Maple",
       "ImageRef": "",
       "Characteristics": [
-        "Ba"
+        "Aa",
+        "Gc",
+        "Ga",
+        "BQa",
+        "BRa",
+        "Vg",
+        "Vf",
+        "AMg"
+      ]
+    },
+    {
+      "CommonName": "Boxelder",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Acer negundo",
+      "FamilyName": "Maple",
+      "ImageRef": "",
+      "Characteristics": [
+        "Ab",
+        "Vc",
+        "Ve",
+        "BSa"
+      ]
+    },
+    {
+      "CommonName": "Black Maple",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Acer nigrum",
+      "FamilyName": "Maple",
+      "ImageRef": "",
+      "Characteristics": [
+        "Aa",
+        "Ga",
+        "BQb",
+        "Gc",
+        "Vg",
+        "Vf",
+        "AMg"
+      ]
+    },
+    {
+      "CommonName": "Striped Maple",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Acer pensylvanicum",
+      "FamilyName": "Maple",
+      "ImageRef": "",
+      "Characteristics": [
+        "Aa",
+        "Gd",
+        "Gl",
+        "BSd",
+        "BSc",
+        "AMe"
+      ]
+    },
+    {
+      "CommonName": "Red Maple",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Acer rubrum",
+      "FamilyName": "Maple",
+      "ImageRef": "",
+      "Characteristics": [
+        "Aa",
+        "Gd",
+        "Gk",
+        "BSb",
+        "BSa",
+        "AMd",
+        "Vg",
+        "Vf",
+        "BPb"
+      ]
+    },
+    {
+      "CommonName": "Silver Maple",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Acer saccharinum",
+      "FamilyName": "Maple",
+      "ImageRef": "",
+      "Characteristics": [
+        "Aa",
+        "Gd",
+        "Gj",
+        "BSb",
+        "BSa",
+        "Vg",
+        "Vf",
+        "BPa",
+        "AMd"
+      ]
+    },
+    {
+      "CommonName": "Sugar Maple",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Acer saccharum",
+      "FamilyName": "Maple",
+      "ImageRef": "",
+      "Characteristics": [
+        "Aa",
+        "Ga",
+        "BQb",
+        "Vg",
+        "Vf"
+      ]
+    },
+    {
+      "CommonName": "Mountain Maple",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Acer spicatum",
+      "FamilyName": "Maple",
+      "ImageRef": "",
+      "Characteristics": [
+        "Aa",
+        "Gd",
+        "Gm",
+        "BSd",
+        "BSc",
+        "AMf"
       ]
     },
     {
       "CommonName": "Smoketree",
+      "SecondaryName": "",
+      "TertiaryName": "",
       "LatinName": "Cotinus obovatus",
       "FamilyName": "Cashew",
       "ImageRef": "",
       "Characteristics": [
-        "Ab"
+
+      ]
+    },
+    {
+      "CommonName": "Winged Sumac",
+      "SecondaryName": "Dwarf Sumac",
+      "TertiaryName": "Shining Sumac",
+      "LatinName": "Rhus copallina",
+      "FamilyName": "Cashew",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Smooth Sumac",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Rhus glabra",
+      "FamilyName": "Cashew",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Staghorn Sumac",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Rhus typhina",
+      "FamilyName": "Cashew",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Poison Sumac",
+      "SecondaryName": "Thunderwood",
+      "TertiaryName": "",
+      "LatinName": "Toxicodendron vernix",
+      "FamilyName": "Cashew",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pawpaw",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Asimina triloba",
+      "FamilyName": "Custard Apple",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Carolina Holly",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ilex ambiqua",
+      "FamilyName": "Holly",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sarvis Holly",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ilex amelanchier",
+      "FamilyName": "Holly",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Dahoon",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ilex cassine",
+      "FamilyName": "Holly",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Large Gallberry",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ilex coriacea",
+      "FamilyName": "Holly",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Possumhaw",
+      "SecondaryName": "Deciduous Holly",
+      "TertiaryName": "",
+      "LatinName": "Ilex decidua",
+      "FamilyName": "Holly",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Georgia Holly",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ilex longipes",
+      "FamilyName": "Holly",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Mountain Winterberry",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ilex montana",
+      "FamilyName": "Holly",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Myrtle-leaved Dahoon",
+      "SecondaryName": "Myrtle-leaved Holly",
+      "TertiaryName": "",
+      "LatinName": "Ilex myrtifolia",
+      "FamilyName": "Holly",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "American Holly",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ilex opaca",
+      "FamilyName": "Holly",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Common Winterberry",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ilex verticillata",
+      "FamilyName": "Holly",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Yaupon",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ilex vomitoria",
+      "FamilyName": "Holly",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Devil's Walkingstick",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Aralia spinosa",
+      "FamilyName": "Ginseng",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Cabbage Palmetto",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Sabal palmetto",
+      "FamilyName": "Palm",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Hazel Alder",
+      "SecondaryName": "Tag Alder",
+      "TertiaryName": "",
+      "LatinName": "Alnus serrulata",
+      "FamilyName": "Birch",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Yellow Birch",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Betula alleghaniensis",
+      "FamilyName": "Birch",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Black Birch",
+      "SecondaryName": "Sweet Birch",
+      "TertiaryName": "",
+      "LatinName": "Betula lenta",
+      "FamilyName": "Birch",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "River Birch",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Betula nigra",
+      "FamilyName": "Birch",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Paper Birch",
+      "SecondaryName": "Canoe Birch",
+      "TertiaryName": "White Birch",
+      "LatinName": "Betula papyrifera",
+      "FamilyName": "Birch",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Gray Birch",
+      "SecondaryName": "White Birch",
+      "TertiaryName": "Fire Birch",
+      "LatinName": "Betula populifolia",
+      "FamilyName": "Birch",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Virginia Round Leaf Birch",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Betula uber",
+      "FamilyName": "Birch",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "American Hornbeam",
+      "SecondaryName": "Ironwood",
+      "TertiaryName": "Musclewood",
+      "LatinName": "Carpinus caroliniana",
+      "FamilyName": "Birch",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Eastern Hophornbeam",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ostrya virginiana",
+      "FamilyName": "Birch",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Southern Catalpa",
+      "SecondaryName": "Indian-Bean",
+      "TertiaryName": "",
+      "LatinName": "Catalpa bignonioides",
+      "FamilyName": "Catalpa",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Elderberry",
+      "SecondaryName": "American Elder",
+      "TertiaryName": "",
+      "LatinName": "Sambucus canadensis",
+      "FamilyName": "Honeysuckle",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Possumhaw Viburnum",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Viburnum nudum",
+      "FamilyName": "Honeysuckle",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Viburnum",
+      "SecondaryName": "Small-Leaf Viburnum",
+      "TertiaryName": "",
+      "LatinName": "Viburnum obovatum",
+      "FamilyName": "Honeysuckle",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Blackhaw",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Viburnum prunifolium",
+      "FamilyName": "Honeysuckle",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Rusty Blackhaw",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Viburnum rufidulum",
+      "FamilyName": "Honeysuckle",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Eastern Wahoo",
+      "SecondaryName": "Burning Bush",
+      "TertiaryName": "",
+      "LatinName": "Euonymus atropurpureus",
+      "FamilyName": "Spindle Tree",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Cinnamon Clethra",
+      "SecondaryName": "Sweet Pepperbush",
+      "TertiaryName": "",
+      "LatinName": "Clethra acuminata",
+      "FamilyName": "Pepperbush",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Alternateleaf Dogwood",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Cornus alternifolia",
+      "FamilyName": "Dogwood",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Roughleaf Dogwood",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Cornus drummondii",
+      "FamilyName": "Dogwood",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Flowering Dogwood",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Cornus florida",
+      "FamilyName": "Dogwood",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Swamp Dogwood",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Cornus foemina",
+      "FamilyName": "Dogwood",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Water Tupelo",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Nyssa aquatica",
+      "FamilyName": "Dogwood",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Ogeechee Tupelo",
+      "SecondaryName": "Ogeechee-Lime",
+      "TertiaryName": "",
+      "LatinName": "Nyssa ogeche",
+      "FamilyName": "Dogwood",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Swamp Tupelo",
+      "SecondaryName": "Swamp Blackgum",
+      "TertiaryName": "",
+      "LatinName": "Nyssa sylvatica var. biflora",
+      "FamilyName": "Dogwood",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Blackgum",
+      "SecondaryName": "Black Tupelo",
+      "TertiaryName": "",
+      "LatinName": "Nyssa sylvatica var. sylvatica",
+      "FamilyName": "Dogwood",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Atlantic White Cedar",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Chamaecyparis thyoides",
+      "FamilyName": "Cypress",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Eastern Red Cedar",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Juniperus virginiana",
+      "FamilyName": "Cypress",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bald Cypress",
+      "SecondaryName": "Pond Cypress",
+      "TertiaryName": "",
+      "LatinName": "Taxodium distichum",
+      "FamilyName": "Cypress",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Arborvitae",
+      "SecondaryName": "Northern White Cedar",
+      "TertiaryName": "",
+      "LatinName": "Thuja occidentalis",
+      "FamilyName": "Cypress",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Titi",
+      "SecondaryName": "Buckwheat Tree",
+      "TertiaryName": "",
+      "LatinName": "Cliftonia",
+      "FamilyName": "Titi",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Swamp Titi",
+      "SecondaryName": "Swamp Cyrilla",
+      "TertiaryName": "Red Titi",
+      "LatinName": "Cyrilla racemiflora",
+      "FamilyName": "Titi",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Persimmon",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Diospyros virginiana",
+      "FamilyName": "Ebony",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Elliottia",
+      "SecondaryName": "Georgia Plume",
+      "TertiaryName": "",
+      "LatinName": "Elliottia racemosa",
+      "FamilyName": "Heath",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Mountain Laurel",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Kalmia latifolia",
+      "FamilyName": "Heath",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Tree Lyonia",
+      "SecondaryName": "Staggerbush",
+      "TertiaryName": "Rusty Staggerbush",
+      "LatinName": "Lyonia ferruginea",
+      "FamilyName": "Heath",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sourwood",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Oxydendrum arboreum",
+      "FamilyName": "Heath",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Purple Rhododendron",
+      "SecondaryName": "Catawba Rhododendron",
+      "TertiaryName": "",
+      "LatinName": "Rhododendron catawbiense",
+      "FamilyName": "Heath",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Rosebay Rhododendron",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Rhododendron maximum",
+      "FamilyName": "Heath",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sparkleberry",
+      "SecondaryName": "Farkleberry",
+      "TertiaryName": "",
+      "LatinName": "Vaccinium arboreum",
+      "FamilyName": "Heath",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Eastern Redbud",
+      "SecondaryName": "Judas Tree",
+      "TertiaryName": "",
+      "LatinName": "Cercis canadensis",
+      "FamilyName": "Bean",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Yellowwood",
+      "SecondaryName": "Kentucky Yellowwood",
+      "TertiaryName": "",
+      "LatinName": "Cladrastis kentukea",
+      "FamilyName": "Bean",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Water Locust",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Gleditsia aquatica",
+      "FamilyName": "Bean",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Honeylocust",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Gleditsia triacanthos",
+      "FamilyName": "Bean",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Kentucky Coffeetree",
+      "SecondaryName": "Coffeetree",
+      "TertiaryName": "",
+      "LatinName": "Gymnocladus dioicus",
+      "FamilyName": "Bean",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Black Locust",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Robinia pseudoacacia",
+      "FamilyName": "Bean",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Clammy Locust",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Robinia viscosa",
+      "FamilyName": "Bean",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "American Chestnut",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Castanea dentata",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Allegheny Chinquapin",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Castanea pumila",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "American Beech",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Fagus grandifolia",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "White Oak",
+      "SecondaryName": "Stave Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus alba",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Arkansas Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus arkansana",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bluff Oak",
+      "SecondaryName": "Bastard White Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus austrina",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Swamp White Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus bicolor",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Chapman Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus chapmanii",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Scarlet Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus coccinea",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Southern Red Oak",
+      "SecondaryName": "Spanish Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus falcata",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sand Live Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus geminata",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Georgia Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus georgiana",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Laurel Oak",
+      "SecondaryName": "Darlington Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus hemisphaerica",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bear Oak",
+      "SecondaryName": "Scrub Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus ilicifolia",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Shingle Oak",
+      "SecondaryName": "Laurel Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus imbricaria",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bluejack Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus incana",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Turkey Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus laevis",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Diamond Leaf Oak",
+      "SecondaryName": "Swamp Laurel Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus laurifolia",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Overcup Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus lyrata",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bur Oak",
+      "SecondaryName": "Mossy-Cup Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus macrocarpa",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sand Post Oak",
+      "SecondaryName": "Scrub Post Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus margaretta",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Blackjack Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus marilandica",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Swamp Chestnut Oak",
+      "SecondaryName": "Basket Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus michauxii",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Chestnut Oak",
+      "SecondaryName": "Rock Chestnut Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus montana",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Chinkapin Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus muehlenbergii",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Myrtle Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus myrtifolia",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Water Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus nigra",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Oglethorpe Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus oglethorpensis",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Cherrybark Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus pagoda",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pin Oak",
+      "SecondaryName": "Swamp Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus palustris",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Willow Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus phellos",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Northern Red Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus rubra",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Shumard Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus shumardii",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Durand Oak",
+      "SecondaryName": "Bastard Oak",
+      "TertiaryName": "Bastard White Oak",
+      "LatinName": "Quercus sinuata",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Post Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus stellata",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Texas Red Oak",
+      "SecondaryName": "Nuttall's Oak",
+      "TertiaryName": "",
+      "LatinName": "Quercus texana",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Black Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus velutina",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Live Oak",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Quercus virginiana",
+      "FamilyName": "Beech",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Witchhazel",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Hamamelis virginiana",
+      "FamilyName": "Witchhazel",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sweetgum",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Liquidambar styraciflua",
+      "FamilyName": "Witchhazel",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Yellow Buckeye",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Aesculus flava",
+      "FamilyName": "Buckeye",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Ohio Buckeye",
+      "SecondaryName": "Fetid Buckeye",
+      "TertiaryName": "",
+      "LatinName": "Aesculus glabra",
+      "FamilyName": "Buckeye",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bottlebrush Buckeye",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Aesculus parviflora",
+      "FamilyName": "Buckeye",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Red Buckeye",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Aesculus pavia",
+      "FamilyName": "Buckeye",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Georgia Buckeye",
+      "SecondaryName": "Painted Buckeye",
+      "TertiaryName": "",
+      "LatinName": "Aesculus sylvatica",
+      "FamilyName": "Buckeye",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Anisetree",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Illicium floridanum",
+      "FamilyName": "Anisetree",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Water Hickory",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Carya aquatica",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bitternut Hickory",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Carya cordiformis",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pignut Hickory",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Carya glabra",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pecan",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Carya illinoinensis",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Shellbark Hickory",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Carya laciniosa",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Nutmeg Hickory",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Carya myristiciformis",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Southern Shagbark Hickory",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Carya ovata var. australis",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Shagbark Hickory",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Carya ovata var. ovata",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sand Hickory",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Carya pallida",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Black Hickory",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Carya texana",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Mockernut Hickory",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Carya tomentosa",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Butternut",
+      "SecondaryName": "White Walnut",
+      "TertiaryName": "",
+      "LatinName": "Juglans cinerea",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Black Walnut",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Juglans nigra",
+      "FamilyName": "Walnut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Redbay",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Persea borbonia",
+      "FamilyName": "Laurel",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Swamp Bay",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Persea palustris",
+      "FamilyName": "Laurel",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sassafras",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Sassafras albidum",
+      "FamilyName": "Laurel",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Corkwood",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Leitneria floridana",
+      "FamilyName": "Corkwood",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Yellow-Poplar",
+      "SecondaryName": "Tulip-Poplar",
+      "TertiaryName": "Tuliptree",
+      "LatinName": "Liriodendron tulipifera",
+      "FamilyName": "Magnolia",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Cucumber-Tree",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Magnolia acuminata",
+      "FamilyName": "Magnolia",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Fraser Magnolia",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Magnolia fraseri",
+      "FamilyName": "Magnolia",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Southern Magnolia",
+      "SecondaryName": "Bull Bay",
+      "TertiaryName": "",
+      "LatinName": "Magnolia grandiflora",
+      "FamilyName": "Magnolia",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bigleaf Magnolia",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Magnolia macrophylla",
+      "FamilyName": "Magnolia",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pyramid Magnolia",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Magnolia pyramidata",
+      "FamilyName": "Magnolia",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Umbrella Magnolia",
+      "SecondaryName": "Umbrella-Tree",
+      "TertiaryName": "",
+      "LatinName": "Magnolia tripetala",
+      "FamilyName": "Magnolia",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sweetbay",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Magnolia virginiana",
+      "FamilyName": "Magnolia",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Osage Orange",
+      "SecondaryName": "Bodark",
+      "TertiaryName": "Hedge-Apple",
+      "LatinName": "Maclura pomifera",
+      "FamilyName": "Mulberry",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Red Mulberry",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Morus rubra",
+      "FamilyName": "Mulberry",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Waxmyrtle",
+      "SecondaryName": "Southern Bayberru",
+      "TertiaryName": "",
+      "LatinName": "Myrica cerifera",
+      "FamilyName": "Waxmyrtle",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Evergreen Bayberry",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Myrica heterophylla",
+      "FamilyName": "Waxmyrtle",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Odorless Bayberry",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Myrica inodora",
+      "FamilyName": "Waxmyrtle",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Fringe Tree",
+      "SecondaryName": "Old-Man's-Beard",
+      "TertiaryName": "Grandsie Gray-Beard",
+      "LatinName": "Chionanthus virginicus",
+      "FamilyName": "Olive",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Swampprivet",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Forestiera acuminata",
+      "FamilyName": "Olive",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "White Ash",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Fraxinus americana",
+      "FamilyName": "Olive",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Carolina Ash",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Fraxinus caroliniana",
+      "FamilyName": "Olive",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Green Ash",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Fraxinus pennsylvanica",
+      "FamilyName": "Olive",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pumpkin Ash",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Fraxinus profunda",
+      "FamilyName": "Olive",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Blue Ash",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Fraxinus quadrangulata",
+      "FamilyName": "Olive",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Devilwood",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Fraxinus americanus",
+      "FamilyName": "Olive",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Balsam Fir",
+      "SecondaryName": "Balsam",
+      "TertiaryName": "",
+      "LatinName": "Abies balsamea",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Fraser Fir",
+      "SecondaryName": "She-Balsam",
+      "TertiaryName": "",
+      "LatinName": "Abies fraseri",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Red Spruce",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Picea rubens",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sand Pine",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Pinus clausa",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Shortleaf Pine",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Pinus echinata",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Slash Pine",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Pinus elliottii",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Spruce Pine",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Pinus glabra",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Longleaf Pine",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Pinus palustris",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Table Mountain Pine",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Pinus pungens",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pitch Pine",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Pinus rigida",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pond Pine",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Pinus serotina",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Eastern White Pine",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Pinus strobus",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Loblolly Pine",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Pinus taeda",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Virginia Pine",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Pinus virginiana",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Eastern Hemlock",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Tsuga canadensis",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Carolina Hemlock",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Tsuga caroliniana",
+      "FamilyName": "Pine",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sycamore",
+      "SecondaryName": "Plantree",
+      "TertiaryName": "",
+      "LatinName": "Platanus occidentalis",
+      "FamilyName": "Sycamore",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Carolina Buckthorn",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Frangula caroliniana",
+      "FamilyName": "Buckthorn",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Downy Serviceberry",
+      "SecondaryName": "Shadbush",
+      "TertiaryName": "",
+      "LatinName": "Amelanchier arborea",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Roundleaf Serviceberry",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Amelanchier sanguinea",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Hawthorn",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Crataegus",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Southern Crab Apple",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Malus angustifolia",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sweet Crab Apple",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Malus coronaria",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "American Plum",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Prunus americana",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Chickasaw Plum",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Prunus angustifolia",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Carolina Laurel Cherry",
+      "SecondaryName": "Cherry-Laurel",
+      "TertiaryName": "",
+      "LatinName": "Prunus caroliniana",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pin Cherry",
+      "SecondaryName": "Fire Cherry",
+      "TertiaryName": "",
+      "LatinName": "Prunus pensylvanica",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Black Cherry",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Prunus serotina",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Flatwoods Plum",
+      "SecondaryName": "Hog Plum",
+      "TertiaryName": "",
+      "LatinName": "Prunus umbellata",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Chokecherry",
+      "SecondaryName": "Eastern Chokecherry",
+      "TertiaryName": "",
+      "LatinName": "Prunus virginiana",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "American Mountain Ash",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Sorbus americana",
+      "FamilyName": "Rose",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Buttonbush",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Cephalanthus occidentalis",
+      "FamilyName": "Madder",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pinckneya",
+      "SecondaryName": "Fevertree",
+      "TertiaryName": "",
+      "LatinName": "Pinckneya bracteata",
+      "FamilyName": "Madder",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Common Hoptree",
+      "SecondaryName": "Wafer Ash",
+      "TertiaryName": "",
+      "LatinName": "Ptelea trifoliata",
+      "FamilyName": "Rue",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Pricklyash",
+      "SecondaryName": "Toothache-Tree",
+      "TertiaryName": "",
+      "LatinName": "Zanthoxylum americanum",
+      "FamilyName": "Rue",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Hercules' Club",
+      "SecondaryName": "Toothache-Tree",
+      "TertiaryName": "",
+      "LatinName": "Zanthoxylum clava-herculis",
+      "FamilyName": "Rue",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Eastern Cottonwood",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Populus deltoides",
+      "FamilyName": "Willow",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bigtooth Aspen",
+      "SecondaryName": "Poplar",
+      "TertiaryName": "Popple",
+      "LatinName": "Populus grandidentata",
+      "FamilyName": "Willow",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Swamp Cottonwood",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Populus heterophylla",
+      "FamilyName": "Willow",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Carolina Willow",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Salix caroliniana",
+      "FamilyName": "Willow",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Florida Willow",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Salix floridana",
+      "FamilyName": "Willow",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Black Willow",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Salix nigra",
+      "FamilyName": "Willow",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Silky Willow",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Salix sericea",
+      "FamilyName": "Willow",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Florida Soapberry",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Sapindus saponaria",
+      "FamilyName": "Soapberry",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Gum Bumelia",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Sideroxylon lanuginosum",
+      "FamilyName": "Sapodilla",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Buckthorn Bumelia",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Sideroxylon lycioides",
+      "FamilyName": "Sapodilla",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Tough Bumelia",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Sideroxylon tenax",
+      "FamilyName": "Sapodilla",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bladdernut",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Staphylea trifolia",
+      "FamilyName": "Bladdernut",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Carolina Silverbell",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Halesia carolina",
+      "FamilyName": "Storax",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Two-Wing Silverbell",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Halesia diptera",
+      "FamilyName": "Storax",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "American Snowbell",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Styrax americanus",
+      "FamilyName": "Storax",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Bigleaf Snowbell",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Styrax grandifolius",
+      "FamilyName": "Storax",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Horse-Sugar",
+      "SecondaryName": "Sweetleaf",
+      "TertiaryName": "",
+      "LatinName": "Symplocos tinctoria",
+      "FamilyName": "Sweetleaf",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Florida Yew",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Taxus floridana",
+      "FamilyName": "Yew",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Florida Torreya",
+      "SecondaryName": "Stinking Cedar",
+      "TertiaryName": "Gopher Wood",
+      "LatinName": "Torreya taxifloria",
+      "FamilyName": "Yew",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Franklinia",
+      "SecondaryName": "Franklin-Tree",
+      "TertiaryName": "",
+      "LatinName": "Franklinia alatamaha",
+      "FamilyName": "Tea",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Loblolly Bay",
+      "SecondaryName": "Gordonia",
+      "TertiaryName": "",
+      "LatinName": "Gordonia lasianthus",
+      "FamilyName": "Tea",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Virginia Stewartia",
+      "SecondaryName": "Silky Camellia",
+      "TertiaryName": "",
+      "LatinName": "Stewartia malacodendron",
+      "FamilyName": "Tea",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Mountain Stewartia",
+      "SecondaryName": "Mountain Camellia",
+      "TertiaryName": "",
+      "LatinName": "Stewartia ovata",
+      "FamilyName": "Tea",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Basswood",
+      "SecondaryName": "Linden",
+      "TertiaryName": "",
+      "LatinName": "Tilia americana",
+      "FamilyName": "Basswood",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Sugarberry",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Celtis laevigata",
+      "FamilyName": "Elm",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Hackberry",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Celtis occidentalis",
+      "FamilyName": "Elm",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Dwarf Hackberry",
+      "SecondaryName": "Georgia Hackberry",
+      "TertiaryName": "",
+      "LatinName": "Celtis tenuifolia",
+      "FamilyName": "Elm",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Water Elm",
+      "SecondaryName": "Planertree",
+      "TertiaryName": "",
+      "LatinName": "Planera aquatica",
+      "FamilyName": "Elm",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Winged Elm",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ulmus alata",
+      "FamilyName": "Elm",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "American Elm",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ulmus americana",
+      "FamilyName": "Elm",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Cedar Elm",
+      "SecondaryName": "Basket Elm",
+      "TertiaryName": "",
+      "LatinName": "Ulmus crassifolia",
+      "FamilyName": "Elm",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Slippery Elm",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ulmus rubra",
+      "FamilyName": "Elm",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "September Elm",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ulmus serotina",
+      "FamilyName": "Elm",
+      "ImageRef": "",
+      "Characteristics": [
+
+      ]
+    },
+    {
+      "CommonName": "Rock Elm",
+      "SecondaryName": "",
+      "TertiaryName": "",
+      "LatinName": "Ulmus thomasii",
+      "FamilyName": "Elm",
+      "ImageRef": "",
+      "Characteristics": [
+
       ]
     }
   ]
