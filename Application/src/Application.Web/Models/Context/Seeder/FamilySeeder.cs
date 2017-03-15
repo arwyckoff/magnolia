@@ -7,8 +7,7 @@ namespace Magnolia.Web.Models.Context.Seeder
 {
     public class FamilySeeder
     {
-        public List<string> Characteristics { get; set; }
         public string CommonName { get; set; }
-        public string GenusName { get; set; }
+        public string LatinName { get; set; }
     }
 }
