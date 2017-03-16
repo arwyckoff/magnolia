@@ -7,6 +7,7 @@ namespace Application.Web.Models.Api
 {
     public class PlantViewModel
     {
+        public int Id { get; set; }
         public string CommonName { get; set; }
         public string LatinName { get; set; }
         public PlantsFamilyViewModel Family { get; set; }
