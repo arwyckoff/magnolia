@@ -1,7 +1,4 @@
 import Backbone from 'backbone'
-import {WikiModel, WikiCollection} from '../models/wiki-model.js'
-import {TreeModel, TreeCollection} from '../models/tree-model.js'
-import {PlantViewModel} from '../Models/Api/PlantViewModel.cs'
 import {STORE} from './store.js'
 
 

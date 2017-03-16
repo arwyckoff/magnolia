@@ -1,7 +1,6 @@
 import Backbone from 'backbone';
 import ReactDOM from 'react-dom'
 import React from 'react'
-import {WikiModel, WikiCollection} from './models/wiki-model.js'
 import {TreeModel, TreeCollection} from './models/tree-model.js'
 import {TreeListComponent} from './components/tree-component.js'
 console.log(TreeListComponent)
