@@ -62,7 +62,43 @@ namespace Magnolia.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Get(int id)
         {
-            return Ok((await _context.Plants.FirstOrDefaultAsync(p => p.Id == id)));
+            var plant = await _context.Plants.Include(p => p.PlantCharacteristics)
+                                             .Include(p => p.Family)
+                                             .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (plant == null)
+            {
+                return NotFound(id);
+            }
+
+            var plantViewModel = new PlantViewModel()
+            {
+                Id = plant.Id,
+                CommonName = plant.CommonName,
+                LatinName = plant.LatinName,
+                Family = new PlantsFamilyViewModel()
+                {
+                    CommonName = plant.Family.CommonName,
+                    LatinName = plant.Family.LatinName
+                }
+            };
+
+            foreach (var characteristic in plant.PlantCharacteristics)
+            {
+                var state = await _context.States.Include(s => s.Charactaristic)
+                                                 .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
+
+                plantViewModel.Characteristics.Add(new CharacteristicViewModel()
+                {
+                    Characteristic = state.Charactaristic.Value,
+                    State = state.Value,
+                    Code = state.Code
+                });
+            }
+
+            return Ok(plantViewModel);
+        }
+
         }
     }
 }
