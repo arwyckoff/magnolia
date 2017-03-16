@@ -90,6 +90,8 @@ namespace Magnolia.Web
                     {
                         var p = new Plant();
                         p.CommonName = plant.CommonName;
+                        p.SecondaryName = plant.SecondaryName;
+                        p.TertiaryName = plant.TertiaryName;
                         p.LatinName = plant.LatinName;
                         p.Family = context.Families.FirstOrDefault(f => f.CommonName == plant.FamilyName) ?? throw new Exception("Family name not found " + plant);
                         p.ImageRef = plant.ImageRef;
