@@ -1,24 +1,26 @@
 import Backbone from 'backbone';
 import ReactDOM from 'react-dom'
 import React from 'react'
-import {WikiModel, WikiCollection} from './models/wiki-model.js'
-import {TreeModel, TreeCollection} from './models/tree-model.js'
-import {TreeListComponent} from './components/tree-component.js'
-console.log(TreeListComponent)
+import {TreeCollection} from './models/tree-model.js'
+import {HomeView} from './views/home-view.js'
+import ViewController from './viewController.js'
+import {BrowseView} from './views/browse-view.js'
+
+
 const AppRouter = Backbone.Router.extend({
 	initialize: function(){
 		Backbone.history.start()
 	},
 
 	routes: {
-		'':'showHomePage',
-		'tree/:id' :'showTreePage',
+		'':'showHomePage'
 },
+
 showHomePage: function(){
-	ReactDOM.render(<TreeView />, document.querySelector('#app-container'))
-},
+	console.log('mISter HomeView')
+	ReactDOM.render(<HomeView />, document.querySelector('#app-container'))
 
-
+}
 })
 
-new AppRouter()
+let newApp = new AppRouter()

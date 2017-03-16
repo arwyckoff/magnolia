@@ -115,7 +115,7 @@ namespace Magnolia.Web.Controllers
                 ModelState.AddModelError("Codes", "Invalid format; not comma delimited yet longer than one code. ");
                 return BadRequest(ModelState);
             }
-            
+
             var characteristics = codes.Split(',').ToList();
 
             if (characteristics.Exists(ch => ch.ToList().Exists(c => c < 65 || (c > 90 && c < 97) || c > 122)))
