@@ -35,6 +35,8 @@ namespace Magnolia.Web.Controllers
                 {
                     Id = plant.Id,
                     CommonName = plant.CommonName,
+                    SecondaryName = plant.SecondaryName ?? "",
+                    TertiaryName = plant.TertiaryName ?? "",
                     LatinName = plant.LatinName,
                     Family = new PlantsFamilyViewModel()
                     {
@@ -78,6 +80,8 @@ namespace Magnolia.Web.Controllers
             {
                 Id = plant.Id,
                 CommonName = plant.CommonName,
+                SecondaryName = plant.SecondaryName ?? "",
+                TertiaryName = plant.TertiaryName ?? "",
                 LatinName = plant.LatinName,
                 Family = new PlantsFamilyViewModel()
                 {
@@ -148,6 +152,8 @@ namespace Magnolia.Web.Controllers
                 var p = new PlantViewModel();
                 p.Id = plant.Id;
                 p.CommonName = plant.CommonName;
+                p.SecondaryName = plant.SecondaryName ?? "";
+                p.TertiaryName = plant.TertiaryName ?? "";
                 p.LatinName = plant.LatinName;
                 p.Family = new PlantsFamilyViewModel()
                 {
@@ -199,6 +205,8 @@ namespace Magnolia.Web.Controllers
                 {
                     Id = plant.Id,
                     CommonName = plant.CommonName,
+                    SecondaryName = plant.SecondaryName ?? "",
+                    TertiaryName = plant.TertiaryName ?? "",
                     LatinName = plant.LatinName,
                     Family = new PlantsFamilyViewModel()
                     {
@@ -251,6 +259,8 @@ namespace Magnolia.Web.Controllers
                 {
                     Id = plant.Id,
                     CommonName = plant.CommonName,
+                    SecondaryName = plant.SecondaryName ?? "",
+                    TertiaryName = plant.TertiaryName ?? "",
                     LatinName = plant.LatinName,
                     Family = new PlantsFamilyViewModel()
                     {
