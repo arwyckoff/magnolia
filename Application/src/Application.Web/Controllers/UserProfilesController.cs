@@ -77,6 +77,11 @@ namespace Magnolia.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> PostPlant([FromBody]UserPlantRequestModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var plant = await _context.Plants.FirstOrDefaultAsync(p => p.Id == model.PlantId);
 
             if (plant == null)
