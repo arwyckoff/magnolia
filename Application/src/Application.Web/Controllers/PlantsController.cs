@@ -145,6 +145,50 @@ namespace Magnolia.Web.Controllers
             return Ok(plantViewModels);
         }
 
+        [Route("~/api/genus/common/{genus}/plants")]
+        [HttpGet]
+        public async Task<IActionResult> GetCommonGenus(string genus)
+        {
+            genus = genus.ToLower();
+            var genusId = (await _context.Genus.FirstOrDefaultAsync(g => g.CommonName.ToLower() == genus)).Id;
+
+            var plants = await _context.Plants.Include(p => p.PlantCharacteristics)
+                                              .Include(p => p.Family)
+                                              .Where(p => p.GenusId == genusId).ToListAsync();
+
+            var plantViewModels = new List<PlantViewModel>();
+
+            foreach (var plant in plants)
+            {
+                var p = new PlantViewModel()
+                {
+                    Id = plant.Id,
+                    CommonName = plant.CommonName,
+                    LatinName = plant.LatinName,
+                    Family = new PlantsFamilyViewModel()
+                    {
+                        CommonName = plant.Family.CommonName,
+                        LatinName = plant.Family.LatinName
+                    }
+                };
+
+                foreach (var characteristic in plant.PlantCharacteristics)
+                {
+                    var state = await _context.States.Include(s => s.Charactaristic)
+                                                     .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
+
+                    p.Characteristics.Add(new CharacteristicViewModel()
+                    {
+                        Characteristic = state.Charactaristic.Value,
+                        State = state.Value,
+                        Code = state.Code
+                    });
+                }
+
+                plantViewModels.Add(p);
+            }
+
+            return Ok(plantViewModels);
         }
     }
 }
