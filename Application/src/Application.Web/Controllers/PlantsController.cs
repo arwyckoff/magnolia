@@ -31,6 +31,7 @@ namespace Magnolia.Web.Controllers
             foreach (var plant in plants)
             {
                 var p = new PlantViewModel();
+                p.Id = plant.Id;
                 p.CommonName = plant.CommonName;
                 p.LatinName = plant.LatinName;
                 p.Family = new PlantsFamilyViewModel()
