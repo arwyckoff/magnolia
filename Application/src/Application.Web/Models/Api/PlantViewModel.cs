@@ -9,6 +9,8 @@ namespace Application.Web.Models.Api
     {
         public int Id { get; set; }
         public string CommonName { get; set; }
+        public string SecondaryName { get; set; }
+        public string TertiaryName { get; set; }
         public string LatinName { get; set; }
         public PlantsFamilyViewModel Family { get; set; }
         public List<CharacteristicViewModel> Characteristics { get; set; }
