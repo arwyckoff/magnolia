@@ -1,6 +1,11 @@
 import Backbone from 'backbone'
+// import {PlantViewModel} from '../../../Models/Api/PlantViewModel.cs'
+
 export const TreeModel = Backbone.Model.extend({
-	urlRoot: '/api/plants/',
+	initialize: function(){
+	},
+
+	urlRoot: '/api/plants',
 	idAttribute: 'id'
 })
 

@@ -1,7 +1,6 @@
 export const STORE = {
   _data:{
-    treeListData: [],
-    wikiData: '',
+    treeListData: []
   },
   getStoreData: function(){
 		return this._data
@@ -12,7 +11,7 @@ export const STORE = {
       throw new Error('cannot pass undefined property to .setStore() ')
       		}
 	   this._data[storeProp] = payload
-    if (typeof this._callMeLaterPls === 'function'){
+    if (typeof this.callBackFunc === 'function'){
 		this.callBackFunc()
     }
 	},
