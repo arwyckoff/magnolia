@@ -1,6 +1,7 @@
 export const STORE = {
   _data:{
-    treeListData: []
+    treeListData: [],
+    filterChars: "Aa"
   },
   getStoreData: function(){
 		return this._data

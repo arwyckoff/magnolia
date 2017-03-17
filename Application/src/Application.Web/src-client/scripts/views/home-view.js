@@ -17,7 +17,7 @@ export const HomeView = React.createClass({
       component.setState( STORE.getStoreData() )
     })
 
-    console.log("FECTHY FETCH??")
+    // console.log("FECTHY FETCH??")
     ACTIONS.fetchAllTrees()
 
   },
