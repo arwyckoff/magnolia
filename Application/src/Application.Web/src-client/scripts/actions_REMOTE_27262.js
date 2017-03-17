@@ -10,13 +10,10 @@ export const ACTIONS = {
   fetchAllTrees: function(){
     let TreeCollInstance = new TreeCollection()
     TreeCollInstance.fetch().then(function(serverRes){
+      console.log('tree data', serverRes)
       STORE.setStore('treeListData', serverRes)
     })
   },
-
-  changeFilter: function(filterVal){
-  STORE.setStore('filterChars', filterVal)
-  }
 
     fetchMyTree: function(id){
     let TreeModelInstance = new TreeModel(id)

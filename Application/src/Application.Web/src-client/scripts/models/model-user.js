@@ -5,7 +5,7 @@ export const UserModel = Backbone.Model.extend({
 	initialize: function(){
 
 	},
-	urlRoot: '/api/users',
+	urlRoot: '/api/accounts',
 	idAttribute: '_id'
 })
 
@@ -18,7 +18,7 @@ UserModel.logIn =  function(username, password){
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		url: '/auth/login'
+		url: '/api/accounts/login'
 	})
 }
 
@@ -32,7 +32,7 @@ UserModel.register =  function(dataObj){
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		url: '/auth/register'
+		url: '/api/accounts/register'
 	})
 }
 
@@ -42,7 +42,7 @@ UserModel.getCurrentUser =  function(){
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		url: '/auth/current'
+		url: '/api/authentication'
 	})
 }
 
@@ -50,6 +50,6 @@ UserModel.logOut =  function(){
 	// console.log('logging in!')
 	return $.ajax({
 		method: 'GET',
-		url: '/auth/logout'
+		url: '/api/accounts/logout'
 	})
 }

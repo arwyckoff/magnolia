@@ -31,7 +31,7 @@ namespace Magnolia.Web.Controllers
 
             foreach (var plant in plants)
             {
-                var p = new PlantViewModel()
+                var plantViewModel = new PlantViewModel()
                 {
                     Id = plant.Id,
                     CommonName = plant.CommonName,
@@ -49,15 +49,21 @@ namespace Magnolia.Web.Controllers
                 {
                     var state = await _context.States.Include(s => s.Charactaristic)
                                                      .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
-                    p.Characteristics.Add(new CharacteristicViewModel()
+
+                    if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
+                        continue;
+
+                    plantViewModel.Characteristics.Add(new CharacteristicViewModel()
                     {
                         Characteristic = state.Charactaristic.Value,
                         State = state.Value,
                         Code = state.Code
                     });
+
+                    plantViewModel.CharacteristicsHash.Add(state.Code, null);
                 }
 
-                plantViewModels.Add(p);
+                plantViewModels.Add(plantViewModel);
             }
 
             return Ok(plantViewModels);
@@ -95,12 +101,17 @@ namespace Magnolia.Web.Controllers
                 var state = await _context.States.Include(s => s.Charactaristic)
                                                  .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
 
+                if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
+                    continue;
+
                 plantViewModel.Characteristics.Add(new CharacteristicViewModel()
                 {
                     Characteristic = state.Charactaristic.Value,
                     State = state.Value,
                     Code = state.Code
                 });
+
+                plantViewModel.CharacteristicsHash.Add(state.Code, null);
             }
 
             return Ok(plantViewModel);
@@ -149,13 +160,13 @@ namespace Magnolia.Web.Controllers
 
             foreach (var plant in plants)
             {
-                var p = new PlantViewModel();
-                p.Id = plant.Id;
-                p.CommonName = plant.CommonName;
-                p.SecondaryName = plant.SecondaryName ?? "";
-                p.TertiaryName = plant.TertiaryName ?? "";
-                p.LatinName = plant.LatinName;
-                p.Family = new PlantsFamilyViewModel()
+                var plantViewModel = new PlantViewModel();
+                plantViewModel.Id = plant.Id;
+                plantViewModel.CommonName = plant.CommonName;
+                plantViewModel.SecondaryName = plant.SecondaryName ?? "";
+                plantViewModel.TertiaryName = plant.TertiaryName ?? "";
+                plantViewModel.LatinName = plant.LatinName;
+                plantViewModel.Family = new PlantsFamilyViewModel()
                 {
                     CommonName = plant.Family.CommonName,
                     LatinName = plant.Family.LatinName
@@ -165,15 +176,21 @@ namespace Magnolia.Web.Controllers
                 {
                     var state = await _context.States.Include(s => s.Charactaristic)
                                                      .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
-                    p.Characteristics.Add(new CharacteristicViewModel()
+
+                    if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
+                        continue;
+
+                    plantViewModel.Characteristics.Add(new CharacteristicViewModel()
                     {
                         Characteristic = state.Charactaristic.Value,
                         State = state.Value,
                         Code = state.Code
                     });
+
+                    plantViewModel.CharacteristicsHash.Add(state.Code, null);
                 }
 
-                plantViewModels.Add(p);
+                plantViewModels.Add(plantViewModel);
             }
 
             return Ok(plantViewModels);
@@ -201,7 +218,7 @@ namespace Magnolia.Web.Controllers
 
             foreach (var plant in plants)
             {
-                var p = new PlantViewModel()
+                var plantViewModel = new PlantViewModel()
                 {
                     Id = plant.Id,
                     CommonName = plant.CommonName,
@@ -220,15 +237,20 @@ namespace Magnolia.Web.Controllers
                     var state = await _context.States.Include(s => s.Charactaristic)
                                                      .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
 
-                    p.Characteristics.Add(new CharacteristicViewModel()
+                    if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
+                        continue;
+
+                    plantViewModel.Characteristics.Add(new CharacteristicViewModel()
                     {
                         Characteristic = state.Charactaristic.Value,
                         State = state.Value,
                         Code = state.Code
                     });
+
+                    plantViewModel.CharacteristicsHash.Add(state.Code, null);
                 }
 
-                plantViewModels.Add(p);
+                plantViewModels.Add(plantViewModel);
             }
 
             return Ok(plantViewModels);
@@ -255,7 +277,7 @@ namespace Magnolia.Web.Controllers
 
             foreach (var plant in plants)
             {
-                var p = new PlantViewModel()
+                var plantViewModel = new PlantViewModel()
                 {
                     Id = plant.Id,
                     CommonName = plant.CommonName,
@@ -274,15 +296,20 @@ namespace Magnolia.Web.Controllers
                     var state = await _context.States.Include(s => s.Charactaristic)
                                                      .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
 
-                    p.Characteristics.Add(new CharacteristicViewModel()
+                    if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
+                        continue;
+
+                    plantViewModel.Characteristics.Add(new CharacteristicViewModel()
                     {
                         Characteristic = state.Charactaristic.Value,
                         State = state.Value,
                         Code = state.Code
                     });
+
+                    plantViewModel.CharacteristicsHash.Add(state.Code, null);
                 }
 
-                plantViewModels.Add(p);
+                plantViewModels.Add(plantViewModel);
             }
 
             return Ok(plantViewModels);

@@ -3,10 +3,9 @@ import React from 'react'
 import {ACTIONS} from '../actions.js'
 import {STORE} from '../store.js'
 import {TreeListComponent} from '../components/tree-component.js'
-import {FilterComponent} from '../components/filter-component.js'
 
 
-export const HomeView = React.createClass({
+export const LandingView = React.createClass({
   getInitialState: function(){
     return STORE.getStoreData()
   },
@@ -18,18 +17,13 @@ export const HomeView = React.createClass({
       component.setState( STORE.getStoreData() )
     })
 
-    // console.log("FECTHY FETCH??")
     ACTIONS.fetchAllTrees()
-ACTIONS.fetchMyWiki()
-  },
 
+  },
 
   render: function(){
     return(
       <div className = "container">
-        <h1>hey!</h1>
-        <FilterComponent {...this.props}/>
-        <TreeListComponent {...this.props}/>
       </div>
     )
   }
