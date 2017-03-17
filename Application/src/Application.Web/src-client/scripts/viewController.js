@@ -7,6 +7,7 @@ import {ProfileView} from './views/profile-view.js'
 import {RegisterView} from './views/register-view.js'
 import {LoginView} from './views/login-view.js'
 import {LogoutView} from './views/logout-view.js'
+import {BrowseView} from './views/browse-view.js'
 
 export const ViewController = React.createClass({
 
@@ -46,6 +47,9 @@ export const ViewController = React.createClass({
         break;
       case "LOGOUT":
         componentToRender = <LogoutView {...this.state}/>
+        break;
+      case "BROWSE":
+        componentToRender = <BrowseView {...this.state}/>
         break;
         default:
     }
