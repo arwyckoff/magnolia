@@ -3,14 +3,23 @@ import {ACTIONS} from '../actions.js'
 import {STORE} from '../store.js'
 export const NavBar = React.createClass({
   _getMenuOptions: function(currentUserOnStore){
-       let routeList = [
+    let routeList
+    if(typeof currentUserOnStore.id ==='undefined'){
+       routeList = [
         {appRouteName: 'HOME', displayText: 'home',  hashRoute: ''},
         {appRouteName: 'PROFILE', displayText: 'profile', hashRoute: ':id/:latinName'},
         {appRouteName: 'REGISTER', displayText: 'register', hashRoute: 'register'},
+        {appRouteName: 'LOGIN', displayText: 'login', hashRoute: 'login'}
       ]
-    return routeList
-  },
-
+    }
+      else {
+        routeList = [
+          {appRouteName: 'HOME', displayText: 'Chirp',  hashRoute: ''},
+          {appRouteName: 'LOGOUT', displayText: 'logout',  hashRoute: 'logout'}
+        ]
+      }
+      return routeList
+    },
   _showNavOptionsJSX: function(currentNavRoute, currentUser){
     let theMenuRoutes = this._getMenuOptions(currentUser)
 

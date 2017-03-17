@@ -19,6 +19,8 @@ const AppRouter = Backbone.Router.extend({
 		'':'showHomePage',
 		':id/:latinName': 'showProfilePage',
     'register': 'showRegisterPage',
+		'logout': 'showLogoutPage',
+		'login': 'showLoginPage'
 },
 
 showHomePage: function(){
@@ -40,7 +42,13 @@ $.when(treeModel.fetch(),
 },
 showRegisterPage: function(){
 		ReactDOM.render(<ViewController fromRoute = {'REGISTER'} />, document.querySelector('#app-container'))
-}
+},
+showLoginPage: function(){
+		ReactDOM.render(<ViewController fromRoute = {'LOGIN'} />, document.querySelector('#app-container'))
+},
+showLogoutPage: function(){
+		ReactDOM.render(<ViewController fromRoute = {'LOGOUT'} />, document.querySelector('#app-container'))
+},
 })
 
 new AppRouter()

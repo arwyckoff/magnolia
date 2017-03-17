@@ -5,8 +5,8 @@ export const UserModel = Backbone.Model.extend({
 	initialize: function(){
 
 	},
-	urlRoot: '/api/accounts',
-	idAttribute: '_id'
+	urlRoot: '/api/authentication',
+	idAttribute: 'id'
 })
 
 UserModel.logIn =  function(username, password){
