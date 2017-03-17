@@ -3,7 +3,8 @@ import {NavBar} from './components/nav-component.js';
 import {STORE} from './store.js'
 import {ACTIONS} from './actions.js'
 import {HomeView} from './views/home-view.js'
-import {BrowseView} from './views/browse-view.js'
+import {ProfileView} from './views/profile-view.js'
+import {RegisterView} from './views/register-view.js'
 
 export const ViewController = React.createClass({
 
@@ -14,11 +15,13 @@ export const ViewController = React.createClass({
   },
 
   componentWillMount: function(){
-    let component = this
+    let component = this;
     STORE.onStoreChange(function(){
+      console.log('state changed')
       let newStoreObj = STORE.getStoreData()
       component.setState(newStoreObj)
     })
+    ACTIONS.fetchCurrentUser()
 
   },
 
@@ -30,6 +33,13 @@ export const ViewController = React.createClass({
       case "HOME":
         componentToRender = <HomeView {...this.state}/>
         break;
+      case "PROFILE":
+        componentToRender = <ProfileView {...this.state}/>
+        break;
+      case "REGISTER":
+        componentToRender = <RegisterView {...this.state}/>
+        break;
+        default:
     }
 
     return(

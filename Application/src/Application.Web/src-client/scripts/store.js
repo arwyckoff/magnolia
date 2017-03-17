@@ -1,6 +1,13 @@
 export const STORE = {
   _data:{
-    treeListData: []
+    treeListData: [],
+    myTree: {},
+    currentNavRoute: '',
+    latinName: '',
+    myWiki: {},
+    id: '',
+    currentUser: {},
+
   },
   getStoreData: function(){
 		return this._data

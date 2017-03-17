@@ -5,23 +5,25 @@ import {STORE} from '../store.js'
 import {TreeListComponent} from '../components/tree-component.js'
 
 
-export const HomeView = React.createClass({
+export const LandingView = React.createClass({
   getInitialState: function(){
     return STORE.getStoreData()
   },
 
   componentDidMount: function(){
     let component = this;
-    ACTIONS.fetchAllTrees()
-ACTIONS.fetchMyWiki()
-  },
 
+    STORE.onStoreChange(function(){
+      component.setState( STORE.getStoreData() )
+    })
+
+    ACTIONS.fetchAllTrees()
+
+  },
 
   render: function(){
     return(
       <div className = "container">
-        <h1>hey!</h1>
-        <TreeListComponent {...this.props}/>
       </div>
     )
   }

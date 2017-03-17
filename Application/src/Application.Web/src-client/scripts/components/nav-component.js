@@ -1,17 +1,18 @@
 import React from 'react'
 import {ACTIONS} from '../actions.js'
-
+import {STORE} from '../store.js'
 export const NavBar = React.createClass({
   _getMenuOptions: function(currentUserOnStore){
-    let routeList = [
+       let routeList = [
         {appRouteName: 'HOME', displayText: 'home',  hashRoute: ''},
-        {appRouteName: 'PROFILE', displayText: 'profile', hashRoute: 'profile/:id'}
+        {appRouteName: 'PROFILE', displayText: 'profile', hashRoute: ':id/:latinName'},
+        {appRouteName: 'REGISTER', displayText: 'register', hashRoute: 'register'},
       ]
-          return routeList
-    },
+    return routeList
+  },
 
-  _showNavOptionsJSX: function(currentNavRoute){
-    let theMenuRoutes = this._getMenuOptions()
+  _showNavOptionsJSX: function(currentNavRoute, currentUser){
+    let theMenuRoutes = this._getMenuOptions(currentUser)
 
 
     let componentsList = theMenuRoutes.map(function(routeObj, i){
@@ -21,10 +22,9 @@ export const NavBar = React.createClass({
   },
 
   render: function(){
-
     return(
       <nav>
-        {this._showNavOptionsJSX(this.props.currentNavRoute)}
+        {this._showNavOptionsJSX(this.props.currentNavRoute, this.props.currentUser)}
       </nav>
     )
   }
