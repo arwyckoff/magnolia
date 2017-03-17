@@ -45,13 +45,10 @@ export const TreeItem = React.createClass({
         <div className = "container-tree">
                    <p className= "single-tree">{this.props.treeData.commonName}</p>
                     {/* <p className= "single-tree prop">{statesArray}</p> */}
-           return (
         <div className = "container-tree" onClick = {this._handleProfClick} data-route = {this.props.treeData.id} data-id = {this.props.treeData.latinName}>
           <h4>this tree</h4>
                    <p>{this.props.treeData.commonName}</p>
-         </div>
-
-
+         </div></div>
       )
    }
 })

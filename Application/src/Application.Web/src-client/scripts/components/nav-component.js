@@ -9,13 +9,15 @@ export const NavBar = React.createClass({
         {appRouteName: 'HOME', displayText: 'home',  hashRoute: ''},
         {appRouteName: 'PROFILE', displayText: 'profile', hashRoute: ':id/:latinName'},
         {appRouteName: 'REGISTER', displayText: 'register', hashRoute: 'register'},
-        {appRouteName: 'LOGIN', displayText: 'login', hashRoute: 'login'}
+        {appRouteName: 'LOGIN', displayText: 'login', hashRoute: 'login'},
+        {appRouteName: 'BROWSE', displayText: 'browse', hashRoute: 'browse'}
       ]
     }
       else {
         routeList = [
           {appRouteName: 'HOME', displayText: 'Chirp',  hashRoute: ''},
-          {appRouteName: 'LOGOUT', displayText: 'logout',  hashRoute: 'logout'}
+          {appRouteName: 'LOGOUT', displayText: 'logout',  hashRoute: 'logout'},
+                  {appRouteName: 'BROWSE', displayText: 'browse', hashRoute: 'browse'}
         ]
       }
       return routeList
