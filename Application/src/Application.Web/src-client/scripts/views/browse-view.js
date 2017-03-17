@@ -1,32 +1,42 @@
+import Backbone from 'backbone'
 import React from 'react'
-import {STORE} from "../store.js"
-import {ACTIONS} from "../actions.js"
-import {TreeListComponent} from "../components/tree-component.js"
+import {ACTIONS} from '../actions.js'
+import {STORE} from '../store.js'
+import {TreeListComponent} from '../components/tree-component.js'
+import {FilterComponent} from '../components/filter-component.js'
+
 
 export const BrowseView = React.createClass({
+  getInitialState: function(){
+    return STORE.getStoreData()
+  },
 
-getInitialState: function(){
-  return STORE.getStoreData()
-},
+  componentDidMount: function(){
+    let component = this;
 
-componentDidMount: function(){
-   let component = this;
-   STORE.onStoreChange(function(){
-     component.setState( STORE.getStoreData() )
-   })
-   ACTIONS.fetchAllTrees()
- },
+    STORE.onStoreChange(function(){
+      component.setState( STORE.getStoreData() )
+    })
+
+    // console.log("FECTHY FETCH??")
+    ACTIONS.fetchAllTrees()
+
+  },
+
+
 
   render: function(){
+// console.log("hello")
+    return(
+      <div>
+        <h1>BROWSE</h1>
+      <div className= "container">
+        <FilterComponent {...this.state}/>
 
-    return (
-      <div className ="container-browse">
-      <h1>Browse</h1>
-      <TreeListComponent treeListData={this.state.treeList}/>
+        <TreeListComponent {...this.state}/>
       </div>
-
+    </div>
     )
   }
-
 
 })
