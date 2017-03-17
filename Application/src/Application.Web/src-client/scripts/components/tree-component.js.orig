@@ -1,9 +1,14 @@
 import React from 'react'
 import {TreeModel, TreeCollection} from '../models/tree-model.js'
 import {STORE} from '../store.js'
+<<<<<<< HEAD
+
+=======
 import {ACTIONS} from '../actions.js'
+>>>>>>> 70a67a7e046ed1ec0d87b6f757cb313312090028
 export const TreeListComponent = React.createClass({
   _makeTreeComponents: function(treeList){
+    // console.log(treeList)
    let arrayOfTreeComponents = treeList.map(function(smod, i){
         return (
            <TreeItem treeData={smod} key={i}/>
@@ -16,6 +21,22 @@ export const TreeListComponent = React.createClass({
     //  console.log(this.props.filterChars)
       let self = this
       let allTheTrees = this.props.treeListData
+
+<<<<<<< HEAD
+
+      // console.log(this.props.treeListData)
+      // let statesArray = []
+      // let treeDataChars = this.props.treeListData.characteristics
+      //
+      // for (var i = 0, len = treeDataChars.length; i < len; i++) {
+      //       statesArray.push(treeDataChars[i].state)
+      //   console.log(statesArray);
+      // }
+      //
+
+
+=======
+>>>>>>> 70a67a7e046ed1ec0d87b6f757cb313312090028
       return (
         <div className = "trees container-browse">
                {this._makeTreeComponents(allTheTrees)}
@@ -33,6 +54,8 @@ export const TreeItem = React.createClass({
     ACTIONS.changeCurrentNav ('PROFILE', `${id}/${latinName}`)
   },
    render: function(){
+<<<<<<< HEAD
+
      let statesArray = []
      let treeDataCommonNames = this.props.treeData.commonName
 
@@ -45,10 +68,12 @@ export const TreeItem = React.createClass({
         <div className = "container-tree">
                    <p className= "single-tree">{this.props.treeData.commonName}</p>
                     {/* <p className= "single-tree prop">{statesArray}</p> */}
+=======
            return (
         <div className = "container-tree" onClick = {this._handleProfClick} data-route = {this.props.treeData.id} data-id = {this.props.treeData.latinName}>
           <h4>this tree</h4>
                    <p>{this.props.treeData.commonName}</p>
+>>>>>>> 70a67a7e046ed1ec0d87b6f757cb313312090028
          </div>
 
 

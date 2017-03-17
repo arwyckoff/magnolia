@@ -10,14 +10,17 @@ export const ACTIONS = {
   fetchAllTrees: function(){
     let TreeCollInstance = new TreeCollection()
     TreeCollInstance.fetch().then(function(serverRes){
+      // console.log('tree data', serverRes)
       STORE.setStore('treeListData', serverRes)
     })
   },
 
+<<<<<<< HEAD
   changeFilter: function(filterVal){
   STORE.setStore('filterChars', filterVal)
   }
 
+=======
     fetchMyTree: function(id){
     let TreeModelInstance = new TreeModel(id)
     TreeModelInstance.fetch().then(function(serverRes){
@@ -63,4 +66,5 @@ logoutUser: function(){
     ACTIONS.changeCurrentNav('HOME', '')
   })
 }
+>>>>>>> 70a67a7e046ed1ec0d87b6f757cb313312090028
 }

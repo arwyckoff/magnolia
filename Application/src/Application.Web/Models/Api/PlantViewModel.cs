@@ -14,10 +14,12 @@ namespace Application.Web.Models.Api
         public string LatinName { get; set; }
         public PlantsFamilyViewModel Family { get; set; }
         public List<CharacteristicViewModel> Characteristics { get; set; }
+        public Dictionary<string, object> CharacteristicsHash { get; set; }
 
         public PlantViewModel()
         {
             Characteristics = new List<CharacteristicViewModel>();
+            CharacteristicsHash = new Dictionary<string, object>();
         }
     }
 }
