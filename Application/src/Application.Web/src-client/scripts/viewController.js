@@ -5,6 +5,8 @@ import {ACTIONS} from './actions.js'
 import {HomeView} from './views/home-view.js'
 import {ProfileView} from './views/profile-view.js'
 import {RegisterView} from './views/register-view.js'
+import {LoginView} from './views/login-view.js'
+import {LogoutView} from './views/logout-view.js'
 
 export const ViewController = React.createClass({
 
@@ -38,6 +40,12 @@ export const ViewController = React.createClass({
         break;
       case "REGISTER":
         componentToRender = <RegisterView {...this.state}/>
+        break;
+      case "LOGIN":
+        componentToRender = <LoginView {...this.state}/>
+        break;
+      case "LOGOUT":
+        componentToRender = <LogoutView {...this.state}/>
         break;
         default:
     }

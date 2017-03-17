@@ -19,9 +19,7 @@ export const ProfileComponent = React.createClass({
 })
 
 export const ProfileItem = React.createClass({
-  getInitialState: function(latinName:
-  )
-  STORE.setStore('latinName', this.props.profileData.latinName),
+
    render: function(){
      let self = this
      let allTheChars = this.props.profileData.characteristics
