@@ -37,7 +37,7 @@ export const RegisterComponent = React.createClass({
         <form onSubmit={this._handleNewUser}>
           <h4>Choose a username</h4>
           <input type = "text" className = "form-control" name = "usernameField" />
-                <p class = "flash-msg"></p>
+                <p className = "flash-msg"></p>
           <h4>Choose a unique password</h4>
           <input type = "password" className = "form-control" name = "passwordField" />
 
