@@ -49,7 +49,11 @@ namespace Magnolia.Web.Controllers
 
                 foreach (var userPlant in plants)
                 {
-                    var userPlantViewModel = new UserPlantViewModel();
+                    var userPlantViewModel = new UserPlantViewModel()
+                    {
+                        Comment = userPlant.Comment
+                    };
+
                     userPlantViewModel.Plant = new PlantViewModel()
                     {
                         Id = userPlant.Plant.Id,
