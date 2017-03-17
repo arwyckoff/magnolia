@@ -122,10 +122,10 @@ namespace Magnolia.Web.Controllers
 
             if (signInResult.Succeeded)
             {
-                return Ok(AccountsResponse.SignInSuccess);
+                return Ok(model);
             }
 
-            return BadRequest(AccountsResponse.SignInFailure);
+            return Unauthorized();
         }
 
         [Route("~/api/accounts/login")]
@@ -142,17 +142,17 @@ namespace Magnolia.Web.Controllers
 
             if (user == null)
             {
-                return BadRequest(AccountsResponse.UserNull);
+                return NotFound(model);
             }
 
             var signInResult = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false);
 
             if (signInResult.Succeeded)
             {
-                return Ok(AccountsResponse.SignInSuccess);
+                return Ok();
             }
 
-            return BadRequest(AccountsResponse.SignInFailure);
+            return Unauthorized();
         }
 
         [Route("~/api/accounts/logout")]
