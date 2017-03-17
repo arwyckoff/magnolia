@@ -7,16 +7,14 @@ import {STORE} from './store.js'
 // import {PlantViewModel} from '../../Models/Api/PlantViewModel.cs'
 
 export const ACTIONS = {
-<<<<<<< HEAD
     fetchAllTrees: function(){
       let TreeCollInstance = new TreeCollection()
       TreeCollInstance.fetch().then(function(serverRes){
       console.log('tree data', serverRes)
-=======
+
   fetchAllTrees: function(){
     let TreeCollInstance = new TreeCollection()
     TreeCollInstance.fetch().then(function(serverRes){
->>>>>>> 7d8a0e460730a9e172c7441e7f8c9926baa4d78c
       STORE.setStore('treeListData', serverRes)
     })
   },
