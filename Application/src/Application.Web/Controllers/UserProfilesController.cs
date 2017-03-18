@@ -57,11 +57,11 @@ namespace Magnolia.Web.Controllers
 
                 foreach (var state in plant.Plant.PlantCharacteristics)
                 {
-                    var st = await _context.States.Include(s => s.Charactaristic)
+                    var st = await _context.States.Include(s => s.Characteristic)
                                                   .FirstOrDefaultAsync(s => s.Id == state.StateId);
                     p.Plant.Characteristics.Add(new CharacteristicViewModel()
                     {
-                        Characteristic = st.Charactaristic.Value,
+                        Characteristic = st.Characteristic.Value,
                         State = st.Value,
                         Code = st.Code
                     });
