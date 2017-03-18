@@ -68,7 +68,7 @@ namespace Magnolia.Web.Controllers
 
                     foreach (var plantCharacteristic in userPlant.Plant.PlantCharacteristics)
                     {
-                        var state = await _context.States.Include(s => s.Charactaristic)
+                        var state = await _context.States.Include(s => s.Characteristic)
                                                          .FirstOrDefaultAsync(s => s.Id == plantCharacteristic.StateId);
 
                         if (userPlantViewModel.Plant.Characteristics.Any(c => c.Code == state.Code))
@@ -76,7 +76,7 @@ namespace Magnolia.Web.Controllers
 
                         userPlantViewModel.Plant.Characteristics.Add(new CharacteristicViewModel()
                         {
-                            Characteristic = state.Charactaristic.Value,
+                            Characteristic = state.Characteristic.Value,
                             State = state.Value,
                             Code = state.Code
                         });
