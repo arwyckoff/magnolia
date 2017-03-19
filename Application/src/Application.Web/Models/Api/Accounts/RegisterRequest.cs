@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Magnolia.Web.Models.Api.Accounts
+namespace Magnolia.Api.Models.Accounts
 {
     public class RegisterRequest
     {

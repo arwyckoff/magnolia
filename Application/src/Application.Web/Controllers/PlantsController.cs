@@ -1,5 +1,5 @@
-﻿using Application.Web.Models.Api;
-using Magnolia.Models;
+﻿using Magnolia.Api.Models;
+using Magnolia.Context.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Magnolia.Web.Controllers
+namespace Magnolia.Controllers
 {
     public class PlantsController : Controller
     {

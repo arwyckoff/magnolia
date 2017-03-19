@@ -1,5 +1,5 @@
-﻿using Magnolia.Models;
-using Magnolia.Web.Models.Context.Seeder;
+﻿using Magnolia.Context.Models;
+using Magnolia.Context.Seeder.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Magnolia.Web
+namespace Magnolia.Context.Seeder
 {
     public class Seeder
     {
