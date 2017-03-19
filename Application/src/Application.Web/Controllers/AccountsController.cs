@@ -1,7 +1,6 @@
-﻿using Application.Web.Models.Api;
-using Magnolia.Models;
-using Magnolia.Web.Models.Api;
-using Magnolia.Web.Models.Api.Accounts;
+﻿using Magnolia.Api.Models;
+using Magnolia.Api.Models.Accounts;
+using Magnolia.Context.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Magnolia.Web.Controllers
+namespace Magnolia.Controllers
 {
     [Authorize]
     public class AccountsController : Controller
@@ -158,7 +157,7 @@ namespace Magnolia.Web.Controllers
         public async Task<IActionResult> LogOut()
         {
             await _signInManager.SignOutAsync();
-            return Ok(AccountsResponse.SignOutSuccess);
+            return Ok(new UserViewModel());
         }
     }
 }

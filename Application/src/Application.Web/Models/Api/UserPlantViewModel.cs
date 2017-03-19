@@ -1,10 +1,9 @@
-﻿using Application.Web.Models.Api;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Magnolia.Web.Models.Api
+namespace Magnolia.Api.Models
 {
     public class UserPlantViewModel
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Magnolia.Models
+namespace Magnolia.Context.Models
 {
     public class Characteristic
     {
