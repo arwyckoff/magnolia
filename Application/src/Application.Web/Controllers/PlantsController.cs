@@ -53,7 +53,7 @@ namespace Magnolia.Web.Controllers
                     if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
                         continue;
 
-                    plantViewModel.Characteristics.Add(new CharacteristicViewModel()
+                    plantViewModel.Characteristics.Add(new StateViewModel()
                     {
                         Characteristic = state.Characteristic.Value,
                         State = state.Value,
@@ -104,7 +104,7 @@ namespace Magnolia.Web.Controllers
                 if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
                     continue;
 
-                plantViewModel.Characteristics.Add(new CharacteristicViewModel()
+                plantViewModel.Characteristics.Add(new StateViewModel()
                 {
                     Characteristic = state.Characteristic.Value,
                     State = state.Value,
@@ -180,7 +180,7 @@ namespace Magnolia.Web.Controllers
                     if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
                         continue;
 
-                    plantViewModel.Characteristics.Add(new CharacteristicViewModel()
+                    plantViewModel.Characteristics.Add(new StateViewModel()
                     {
                         Characteristic = state.Characteristic.Value,
                         State = state.Value,
@@ -240,7 +240,7 @@ namespace Magnolia.Web.Controllers
                     if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
                         continue;
 
-                    plantViewModel.Characteristics.Add(new CharacteristicViewModel()
+                    plantViewModel.Characteristics.Add(new StateViewModel()
                     {
                         Characteristic = state.Characteristic.Value,
                         State = state.Value,
@@ -299,7 +299,7 @@ namespace Magnolia.Web.Controllers
                     if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
                         continue;
 
-                    plantViewModel.Characteristics.Add(new CharacteristicViewModel()
+                    plantViewModel.Characteristics.Add(new StateViewModel()
                     {
                         Characteristic = state.Characteristic.Value,
                         State = state.Value,

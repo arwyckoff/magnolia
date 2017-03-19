@@ -74,7 +74,7 @@ namespace Magnolia.Web.Controllers
                         if (userPlantViewModel.Plant.Characteristics.Any(c => c.Code == state.Code))
                             continue;
 
-                        userPlantViewModel.Plant.Characteristics.Add(new CharacteristicViewModel()
+                        userPlantViewModel.Plant.Characteristics.Add(new StateViewModel()
                         {
                             Characteristic = state.Characteristic.Value,
                             State = state.Value,
