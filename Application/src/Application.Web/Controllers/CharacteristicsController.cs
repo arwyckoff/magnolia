@@ -29,9 +29,21 @@ namespace Magnolia.Web.Controllers
 
             foreach (var state in states)
             {
+        [Route("~/api/characteristics/codes")]
+        [HttpGet]
+        public async Task<IActionResult> GetCodes()
+        {
+            var states = await _context.States.Include(s => s.Characteristic)
+                                              .ToListAsync();
+
+            var characteristicViewModels = new Dictionary<string, StateViewModel>();
+
+            foreach (var state in states)
+            {
                 if (!characteristicViewModels.Keys.Any(k => k == state.Code))
                 {
                     characteristicViewModels.Add(state.Code, new CharacteristicViewModel()
+                    characteristicViewModels.Add(state.Code, new StateViewModel()
                     {
                         Characteristic = state.Characteristic.Value,
                         State = state.Value,
@@ -44,8 +56,10 @@ namespace Magnolia.Web.Controllers
         }
 
         [Route("~/api/characteristics/{code}")]
+        [Route("~/api/characteristics/codes/{code}")]
         [HttpGet]
         public async Task<IActionResult> Get(string code)
+        public async Task<IActionResult> GetCodes(string code)
         {
             var state = await _context.States.Include(s => s.Characteristic)
                                              .FirstOrDefaultAsync(s => s.Code == code);
@@ -56,6 +70,7 @@ namespace Magnolia.Web.Controllers
             }
 
             return Ok(new CharacteristicViewModel()
+            return Ok(new StateViewModel()
             {
                 Characteristic = state.Characteristic.Value,
                 State = state.Value,
