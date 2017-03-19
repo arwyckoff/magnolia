@@ -42,7 +42,6 @@ namespace Magnolia.Web.Controllers
             {
                 if (!characteristicViewModels.Keys.Any(k => k == state.Code))
                 {
-                    characteristicViewModels.Add(state.Code, new CharacteristicViewModel()
                     characteristicViewModels.Add(state.Code, new StateViewModel()
                     {
                         Characteristic = state.Characteristic.Value,
@@ -55,10 +54,8 @@ namespace Magnolia.Web.Controllers
             return Ok(characteristicViewModels);
         }
 
-        [Route("~/api/characteristics/{code}")]
         [Route("~/api/characteristics/codes/{code}")]
         [HttpGet]
-        public async Task<IActionResult> Get(string code)
         public async Task<IActionResult> GetCodes(string code)
         {
             var state = await _context.States.Include(s => s.Characteristic)
@@ -69,7 +66,6 @@ namespace Magnolia.Web.Controllers
                 return NotFound(code);
             }
 
-            return Ok(new CharacteristicViewModel()
             return Ok(new StateViewModel()
             {
                 Characteristic = state.Characteristic.Value,
