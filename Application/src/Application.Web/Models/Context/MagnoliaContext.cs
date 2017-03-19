@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Magnolia.Models
+namespace Magnolia.Context.Models
 {
     public class MagnoliaContext : IdentityDbContext
     {

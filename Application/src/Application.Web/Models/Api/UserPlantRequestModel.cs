@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Magnolia.Web.Models.Api
+namespace Magnolia.Api.Models
 {
     public class UserPlantRequestModel
     {
