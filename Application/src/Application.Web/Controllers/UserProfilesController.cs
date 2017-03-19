@@ -59,7 +59,7 @@ namespace Magnolia.Web.Controllers
                 {
                     var st = await _context.States.Include(s => s.Characteristic)
                                                   .FirstOrDefaultAsync(s => s.Id == state.StateId);
-                    p.Plant.Characteristics.Add(new CharacteristicViewModel()
+                    p.Plant.Characteristics.Add(new StateViewModel()
                     {
                         Characteristic = st.Characteristic.Value,
                         State = st.Value,
