@@ -1,5 +1,5 @@
-﻿using Magnolia.Models;
-using Magnolia.Web.Models.Context.Seeder;
+﻿using Magnolia.Context.Models;
+using Magnolia.Context.Seeder.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Magnolia.Web
+namespace Magnolia.Context.Seeder
 {
     public class Seeder
     {
@@ -74,7 +74,7 @@ namespace Magnolia.Web
                             gc.Genus = g;
 
                             gc.State = context.States.FirstOrDefault(s => s.Code == state) ?? throw new Exception("State code not found " + state);
-                            gc.Characteristic = context.Characteristics.FirstOrDefault(c => c.Id == gc.State.CharactaristicId);
+                            gc.Characteristic = context.Characteristics.FirstOrDefault(c => c.Id == gc.State.CharacteristicId);
                             g.GenusCharacteristics.Add(gc);
                         }
 
@@ -106,7 +106,7 @@ namespace Magnolia.Web
 
                             pc.State = context.States.FirstOrDefault(s => s.Code == stateCode) ?? throw new Exception("Invalid state code: " + stateCode);
 
-                            pc.Characteristic = context.Characteristics.FirstOrDefault(c => c.Id == pc.State.CharactaristicId) ?? throw new Exception("Invalid state code: " + stateCode);
+                            pc.Characteristic = context.Characteristics.FirstOrDefault(c => c.Id == pc.State.CharacteristicId) ?? throw new Exception("Invalid state code: " + stateCode);
 
                             p.PlantCharacteristics.Add(pc);
                         }
@@ -117,7 +117,7 @@ namespace Magnolia.Web
 
                             pc.State = context.States.FirstOrDefault(s => s.Id == st.Id) ?? throw new Exception("Invalid state code: " + st);
 
-                            pc.Characteristic = context.Characteristics.FirstOrDefault(c => c.Id == pc.State.CharactaristicId) ?? throw new Exception("Invalid state code: " + st);
+                            pc.Characteristic = context.Characteristics.FirstOrDefault(c => c.Id == pc.State.CharacteristicId) ?? throw new Exception("Invalid state code: " + st);
 
                             p.PlantCharacteristics.Add(pc);
                         }

@@ -1,6 +1,5 @@
-﻿using Application.Web.Models.Api;
-using Magnolia.Models;
-using Magnolia.Web.Models.Api;
+﻿using Magnolia.Api.Models;
+using Magnolia.Context.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -10,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Magnolia.Web.Controllers
+namespace Magnolia.Controllers
 {
     [Authorize]
     public class UserProfilesController : Controller
@@ -57,11 +56,11 @@ namespace Magnolia.Web.Controllers
 
                 foreach (var state in plant.Plant.PlantCharacteristics)
                 {
-                    var st = await _context.States.Include(s => s.Charactaristic)
+                    var st = await _context.States.Include(s => s.Characteristic)
                                                   .FirstOrDefaultAsync(s => s.Id == state.StateId);
-                    p.Plant.Characteristics.Add(new CharacteristicViewModel()
+                    p.Plant.Characteristics.Add(new StateViewModel()
                     {
-                        Characteristic = st.Charactaristic.Value,
+                        Characteristic = st.Characteristic.Value,
                         State = st.Value,
                         Code = st.Code
                     });

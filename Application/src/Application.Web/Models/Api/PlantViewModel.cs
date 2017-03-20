@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Application.Web.Models.Api
+namespace Magnolia.Api.Models
 {
     public class PlantViewModel
     {
@@ -13,12 +13,12 @@ namespace Application.Web.Models.Api
         public string TertiaryName { get; set; }
         public string LatinName { get; set; }
         public PlantsFamilyViewModel Family { get; set; }
-        public List<CharacteristicViewModel> Characteristics { get; set; }
+        public List<StateViewModel> Characteristics { get; set; }
         public Dictionary<string, object> CharacteristicsHash { get; set; }
 
         public PlantViewModel()
         {
-            Characteristics = new List<CharacteristicViewModel>();
+            Characteristics = new List<StateViewModel>();
             CharacteristicsHash = new Dictionary<string, object>();
         }
     }
