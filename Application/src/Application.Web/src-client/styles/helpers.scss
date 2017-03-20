@@ -1,0 +1,78 @@
+
+	.nav-option{
+		display: inline-block;
+		width: 20%;
+	}
+
+	.tree-profile{
+		width: 70%;
+		margin: auto;
+		.container-tree{
+			width: 100%;
+		}
+
+		p{
+			color: black;
+			text-align: left;
+			letter-spacing: 2px;
+		}
+	}
+.hero-img{
+min-height: 100%;
+min-width: 1024px;
+
+/* Set up proportionate scaling */
+width: 100%;
+height: auto;
+
+/* Set up positioning */
+position: fixed;
+top: 0;
+left: 0;
+}
+.landing-container h1{
+	color: #ECF0F1;
+	font-size: 72px;
+	font-weight: 500;
+	font-family: 'Quattrocento Sans', sans-serif;
+	text-align: center;
+	text-shadow: 0px 3px 5px #5D6D7E;
+}
+.landing-container{
+
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	padding: 50px;
+}
+.landing-options {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	i{
+		padding-right: 5px;
+	}
+}
+.landing-options button{
+	border-radius: 25px;
+	border: none;
+	padding: 20px 0;
+	background-color: rgba(236, 240, 241, .5);
+	color: rgb(40, 41, 44);
+}
+.button-nav{
+	margin: 0 20px 10px 20px;
+	font-size: 20px;
+	width: 200px;
+}
+.landing-options button:hover{
+		background-color: rgba(340, 244, 245, .6);
+	}
+	.button-login{
+		display: block;
+		margin: 10px auto;
+		width: 200px;
+		font-size: 18px;
+	}
