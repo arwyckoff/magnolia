@@ -1,3 +1,4 @@
+@import './helpers.scss';
 * {
 	box-sizing: border-box;
 }
@@ -6,14 +7,6 @@ img {
 	width: 100%;
 	display: block;
 }
-
-h1 {
-	color: limegreen;
-	font-size: 13vw;
-	text-align: center;
-	font-family: 'Helvetica';
-}
-
 p {
 	text-align: center;
 	color: #aaa;
