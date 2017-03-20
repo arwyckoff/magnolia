@@ -2,17 +2,16 @@ import Backbone from 'backbone';
 
 export const WikiModel = Backbone.Model.extend({
   initialize: function(latinName){
-    this.url = `${this.url}${latinName}&prop=text&section=0&format=json&callback=?`
+    this.url = `${this.url}${latinName}`
   },
-  url:'https://en.wikipedia.org/w/api.php?action=parse&page=',
-
+url:"https://en.wikipedia.org/api/rest_v1/page/summary/"
 })
 
 export const WikiCollection = Backbone.Collection.extend({
   initialize: function(familyName){
-    this.url = `${this.url}${latinName}&callback=?`
+    this.url = `${this.url}${latinName}`
   },
 
-    url:'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=',
+    url:"https://en.wikipedia.org/api/rest_v1/page/summary/",
     model: WikiModel
 })

@@ -8,6 +8,7 @@ import {RegisterView} from './views/register-view.js'
 import {LoginView} from './views/login-view.js'
 import {LogoutView} from './views/logout-view.js'
 import {BrowseView} from './views/browse-view.js'
+import {LandingView} from './views/landing-view.js'
 
 export const ViewController = React.createClass({
 
@@ -35,6 +36,9 @@ export const ViewController = React.createClass({
     switch(this.state.currentNavRoute){
       case "HOME":
         componentToRender = <HomeView {...this.state}/>
+        break;
+      case "LANDING":
+        componentToRender = <LandingView {...this.state}/>
         break;
       case "PROFILE":
         componentToRender = <ProfileView {...this.state}/>

@@ -3,25 +3,17 @@ import {ACTIONS} from '../actions.js'
 import {STORE} from '../store.js'
 export const NavBar = React.createClass({
   _getMenuOptions: function(currentUserOnStore){
-    let routeList
-    if(typeof currentUserOnStore.id ==='undefined'){
-       routeList = [
-        {appRouteName: 'HOME', displayText: 'home',  hashRoute: ''},
-        {appRouteName: 'PROFILE', displayText: 'profile', hashRoute: ':id/:latinName'},
-        {appRouteName: 'REGISTER', displayText: 'register', hashRoute: 'register'},
-        {appRouteName: 'LOGIN', displayText: 'login', hashRoute: 'login'},
-        {appRouteName: 'BROWSE', displayText: 'browse', hashRoute: 'browse'}
-      ]
-    }
-      else {
-        routeList = [
-          {appRouteName: 'HOME', displayText: 'Chirp',  hashRoute: ''},
-          {appRouteName: 'LOGOUT', displayText: 'logout',  hashRoute: 'logout'},
-                  {appRouteName: 'BROWSE', displayText: 'browse', hashRoute: 'browse'}
+      let routeList = [
+          {appRouteName: 'HOME', displayText: 'home',  hashRoute: ''},
+          {appRouteName: 'LANDING', displayText: 'landing-demo',  hashRoute: 'landing'},
+          {appRouteName: 'PROFILE', displayText: 'profile', hashRoute: ':latinName'},
+          {appRouteName: 'REGISTER', displayText: 'register', hashRoute: 'register'},
+          {appRouteName: 'LOGIN', displayText: 'login', hashRoute: 'login'},
+          {appRouteName: 'BROWSE', displayText: 'browse', hashRoute: 'browse'}
         ]
-      }
-      return routeList
-    },
+
+        return routeList
+      },
   _showNavOptionsJSX: function(currentNavRoute, currentUser){
     let theMenuRoutes = this._getMenuOptions(currentUser)
 
