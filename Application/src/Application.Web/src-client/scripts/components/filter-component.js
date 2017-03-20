@@ -2,6 +2,7 @@ import React from 'react'
 import {TreeModel, TreeCollection} from '../models/tree-model.js'
 import {STORE} from '../store.js'
 import {ACTIONS} from '../actions.js'
+import {BROWSE_ACTIONS} from '../browse_actions.js'
 
 export const FilterComponent = React.createClass({
 
@@ -11,7 +12,7 @@ export const FilterComponent = React.createClass({
     let formEl = evt.target
     let filterChar = formEl.leafType.value
       // console.log(filterChar)
-    ACTIONS.changeFilter(filterChar)
+  ACTIONS.changeFilter(filterChar)
 
     // console.log(this.props)
 

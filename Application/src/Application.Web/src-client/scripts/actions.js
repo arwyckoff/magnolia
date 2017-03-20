@@ -11,7 +11,7 @@ export const ACTIONS = {
   fetchAllTrees: function(){
     let TreeCollInstance = new TreeCollection()
     TreeCollInstance.fetch().then(function(serverRes){
-      console.log(serverRes)
+      // console.log(serverRes)
       STORE.setStore('treeListData', serverRes)
     })
   },
@@ -26,7 +26,7 @@ export const ACTIONS = {
 fetchMyWiki: function(latinName){
   let WikiModelInstance = new WikiModel(latinName)
   WikiModelInstance.fetch().then(function(serverRes){
-    console.log(serverRes)
+    // console.log(serverRes)
     if (serverRes.originalimage ==='undefined'){
       STORE.setStore('myImage', '')
     }
