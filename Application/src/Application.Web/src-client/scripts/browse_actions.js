@@ -10,15 +10,28 @@ export const BROWSE_ACTIONS = {
 
   changeFilter: function(filterVal){
     let filterArray = [...STORE.getStoreData().filterChars]
-    // console.log(filterArray)
-    filterArray.push(filterVal)
-  STORE.setStore('filterChars', filterArray)
-    let filters = STORE.getStoreData().filterChars
-    let allTrees = STORE.getStoreData().treeListData
 
-    let filteredTrees = _getFilteredTrees(filters, allTrees)
+    let index = filterArray.indexOf(filterVal)
+    if(index === -1){
+      filterArray.push(filterVal)
+      STORE.setStore('filterChars', filterArray)
+      let filters = STORE.getStoreData().filterChars
+      let allTrees = STORE.getStoreData().treeListData
+      let filteredTrees = _getFilteredTrees(filters, allTrees)
+      STORE.setStore("filteredTrees",filteredTrees )
+    } else {
+      let filtersMinusOne = filterArray.splice(index, 1)
+      STORE.setStore('filterChars', filterArray)
 
-    STORE.setStore("filteredTrees",filteredTrees )
+      let newChars = STORE.getStoreData().filterChars;
+      let allTrees = STORE.getStoreData().treeListData;
+
+
+      let filteredTrees = _getFilteredTrees(newChars, allTrees);
+
+      STORE.setStore("filteredTrees",filteredTrees )
+  }
+  // console.log(filtersMinusOne)
     // console.log(STORE.getStoreData().filteredTrees)
     // console.log(filteredTrees)
   },
