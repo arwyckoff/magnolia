@@ -5,12 +5,12 @@ import {UserModel} from './models/model-user.js'
 import {STORE} from './store.js'
 
 
-export const ACTIONS = {
+export const BROWSE_ACTIONS = {
 
   changeFilter: function(filterVal){
   STORE.setStore('filterChars', filterVal)
   },
 
 
-  
+
 }
