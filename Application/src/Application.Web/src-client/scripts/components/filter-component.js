@@ -11,12 +11,13 @@ export const FilterComponent = React.createClass({
 
     let filterChar = evt.target.value
     let FilterList = this.props.filterChars
-    let index = FilterList.indexOf(filterChar)
+    // let index = FilterList.indexOf(filterChar)
 
-    if(index === -1){
+
   BROWSE_ACTIONS.changeFilter(filterChar)
+
   // console.log(index)
-}
+
 //     let NewFilterList = FilterList.splice(index, 1)
 //     BROWSE_ACTIONS.changeFilter(NewFilterList)
 // }
