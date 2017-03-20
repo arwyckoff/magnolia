@@ -16,3 +16,5 @@ const _getFilteredCharacteristics = (filters, allCharacteristics) => {
     }
     return filteredCharacteristics;
 }
+
+export default _getFilteredCharacteristics;
