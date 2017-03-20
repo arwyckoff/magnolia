@@ -1,7 +1,9 @@
 import Backbone from 'backbone'
 import {TreeModel, TreeCollection} from './models/tree-model.js'
 import {WikiModel, WikiCollection} from './models/wiki-model.js'
+import {ImageModel, ImageCollection} from './models/image-model.js'
 import {UserModel} from './models/model-user.js'
+import {TreeNameModel} from './models/tree-name-model.js'
 
 import {STORE} from './store.js'
 // import {PlantViewModel} from '../../Models/Api/PlantViewModel.cs'
@@ -10,28 +12,32 @@ export const ACTIONS = {
   fetchAllTrees: function(){
     let TreeCollInstance = new TreeCollection()
     TreeCollInstance.fetch().then(function(serverRes){
+      console.log(serverRes)
       STORE.setStore('treeListData', serverRes)
     })
   },
 
-  changeFilter: function(filterVal){
-  STORE.setStore('filterChars', filterVal)
-  },
-
-    fetchMyTree: function(id){
-      let TreeModelInstance = new TreeModel(id)
-      TreeModelInstance.fetch().then(function(serverRes){
+    fetchMyLatinTree: function(latinName){
+      let LatinModelInstance = new TreeNameModel(latinName)
+      LatinModelInstance.fetch().then(function(serverRes){
       STORE.setStore('myTree', serverRes)
-    })
-  },
+      })
+    },
 
-    fetchMyWiki: function(latinName){
-      let WikiModelInstance = new WikiModel(latinName)
-      WikiModelInstance.fetch().then(function(serverRes){
-      STORE.setStore('myWiki', serverRes)
-        console.log(serverRes.parse.text)
+fetchMyWiki: function(latinName){
+  let WikiModelInstance = new WikiModel(latinName)
+  WikiModelInstance.fetch().then(function(serverRes){
+    console.log(serverRes)
+    if (serverRes.originalimage ==='undefined'){
+      STORE.setStore('myImage', '')
+    }
+    else if (serverRes.originalimage !=='undefined' && serverRes.originalimage.source !== 'undefined'){
+      STORE.setStore('myImage', serverRes.originalimage.source)
+    }
+    STORE.setStore('myWiki', serverRes.extract)
   })
-},
+    },
+
     changeCurrentNav: function(selectedAppRoute, urlRoute){
       STORE.setStore('currentNavRoute', selectedAppRoute)
       window.location.hash = urlRoute

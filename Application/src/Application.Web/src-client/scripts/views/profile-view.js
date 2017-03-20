@@ -10,19 +10,18 @@ export const ProfileView = React.createClass({
     return STORE.getStoreData()
   },
 
+
   componentDidMount: function(){
+        console.log('2asdasd')
     let component = this
-
-    ACTIONS.fetchMyTree(window.location.hash.slice(1, 2))
-    console.log(this.props)
-ACTIONS.fetchMyWiki(window.location.hash.slice(3))
-
+        console.log('3asdasd')
+ACTIONS.fetchMyLatinTree(window.location.hash.slice(1))
+ACTIONS.fetchMyWiki(window.location.hash.slice(1))
   },
 
   render: function(){
     return(
       <div className = "container">
-        <h1>Profile page</h1>
         <ProfileComponent {...this.state}/>
       </div>
     )
