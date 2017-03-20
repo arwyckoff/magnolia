@@ -38,15 +38,15 @@ export const TreeItem = React.createClass({
 
      if(statesArray.indexOf(this.props.filterChars) === -1){
        statesArray.push(treeDataCommonNames)
-       console.log(statesArray)
+      //  console.log(statesArray)
      }
       return (
 
         <div className = "container-tree">
                    <p className= "single-tree">{this.props.treeData.commonName}</p>
                     {/* <p className= "single-tree prop">{statesArray}</p> */}
-        <div className = "container-tree" onClick = {this._handleProfClick} data-route = {this.props.treeData.id} data-id = {this.props.treeData.latinName}>
-          <h4>this tree</h4>
+        <div className = "container-tree" onClick = {this._handleProfClick} data-route = {this.props.treeData} data-id = {this.props.treeData.latinName}>
+
                    <p>{this.props.treeData.commonName}</p>
          </div></div>
       )
