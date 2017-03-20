@@ -14,10 +14,6 @@ export const ACTIONS = {
     })
   },
 
-  changeFilter: function(filterVal){
-  STORE.setStore('filterChars', filterVal)
-  },
-
     fetchMyTree: function(id){
       let TreeModelInstance = new TreeModel(id)
       TreeModelInstance.fetch().then(function(serverRes){
