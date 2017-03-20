@@ -32,7 +32,7 @@ export const TreeItem = React.createClass({
     let profileEl = evt.currentTarget
     let id = this.props.treeData.id
     let latinName = this.props.treeData.latinName
-    ACTIONS.changeCurrentNav ('PROFILE', `${id}/${latinName}`)
+    ACTIONS.changeCurrentNav ('PROFILE', latinName)
   },
    render: function(){
     //  let statesArray = []
@@ -42,7 +42,6 @@ export const TreeItem = React.createClass({
     //    statesArray.push(treeDataCommonNames)
     //    console.log(statesArray)
     //  }
-
 
       return (
 
