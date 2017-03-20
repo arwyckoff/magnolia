@@ -8,11 +8,19 @@ export const FilterComponent = React.createClass({
 
 
   _handleFilterSelect: function(evt){
-    evt.preventDefault()
-    let formEl = evt.target
-    let filterChar = formEl.leafType.value
-      // console.log(filterChar)
-  ACTIONS.changeFilter(filterChar)
+
+    let filterChar = evt.target.value
+    let FilterList = this.props.filterChars
+    let index = FilterList.indexOf(filterChar)
+
+    if(index === -1){
+  BROWSE_ACTIONS.changeFilter(filterChar)
+  // console.log(index)
+}
+//     let NewFilterList = FilterList.splice(index, 1)
+//     BROWSE_ACTIONS.changeFilter(NewFilterList)
+// }
+  // console.log(filterChar)
 
     // console.log(this.props)
 
@@ -26,19 +34,17 @@ render: function(){
 
           <div className="MG-md-6-of-12 MG-form-group field_leaf_type" >
             <strong><label>Leaf Type</label></strong>
-            <form onSubmit={this._handleFilterSelect}>
-            <select name = "leafType">
+
+            <select name = "leafType" onChange={this._handleFilterSelect}>
             <option default></option>
-              <option value = "simple">simple</option>
-              <option value = "pinnately-compound">pinnately compound</option>
-              <option value = "bipinnately-compound">bipinnately compound</option>
-              <option value = "palmately-compound">palmately compound</option>
-              <option value = "trifoliolately-compound">trifoliolately compound</option>
+
+              <option value = "Aa">simple</option>
+              <option value = "Gc">deciduous</option>
             </select>
-            <button className="btn btn-block btn-success btn-lg" type="submit">Submit</button>
-          </form>
+
           </div>
         </div>
+
 
 )}
 
