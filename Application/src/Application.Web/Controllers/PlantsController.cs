@@ -69,7 +69,7 @@ namespace Magnolia.Controllers
             return Ok(plantViewModels);
         }
 
-        [Route("~/api/plants/{id}")]
+        [Route("~/api/plants/byid/{id}")]
         [HttpGet]
         public async Task<IActionResult> Get(int id)
         {
@@ -112,6 +112,55 @@ namespace Magnolia.Controllers
                 });
 
                 plantViewModel.CharacteristicsHash.Add(state.Code, null);
+            }
+
+            return Ok(plantViewModel);
+        }
+
+        [Route("~/api/plants/byname/{latin}")]
+        [HttpGet]
+        public async Task<IActionResult> GetByLatin(string latin)
+        {
+            var l = latin.ToLower();
+            var plant = await _context.Plants.Include(p => p.Family)
+                                             .Include(p => p.PlantCharacteristics)
+                                             .FirstOrDefaultAsync(p => p.LatinName.ToLower() == l);
+
+            if (plant == null)
+            {
+                return NotFound(latin);
+            }
+
+            var plantViewModel = new PlantViewModel()
+            {
+                Id = plant.Id,
+                CommonName = plant.CommonName,
+                SecondaryName = plant.SecondaryName,
+                TertiaryName = plant.TertiaryName,
+                LatinName = plant.LatinName,
+                Family = new PlantsFamilyViewModel()
+                {
+                    CommonName = plant.Family.CommonName,
+                    LatinName = plant.Family.LatinName
+                }
+            };
+
+            foreach (var characteristic in plant.PlantCharacteristics)
+            {
+                var state = await _context.States.Include(s => s.Characteristic)
+                                                 .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
+
+                if (!plantViewModel.Characteristics.Any(c => c.Code == state.Code))
+                {
+                    plantViewModel.Characteristics.Add(new StateViewModel()
+                    {
+                        Characteristic = state.Characteristic.Value,
+                        State = state.Value,
+                        Code = state.Code
+                    });
+
+                    plantViewModel.CharacteristicsHash.Add(state.Code, null);
+                }
             }
 
             return Ok(plantViewModel);
