@@ -6,6 +6,7 @@ namespace Magnolia.Context.Models
     public class Characteristic
     {
         public int Id { get; set; }
+        public string Depends { get; set; }
         public string Value { get; set; }
         public int Permutations { get; set; }
 
