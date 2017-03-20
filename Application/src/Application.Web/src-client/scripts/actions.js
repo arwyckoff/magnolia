@@ -11,7 +11,6 @@ export const ACTIONS = {
   fetchAllTrees: function(){
     let TreeCollInstance = new TreeCollection()
     TreeCollInstance.fetch().then(function(serverRes){
-      console.log(serverRes)
       STORE.setStore('treeListData', serverRes)
     })
   },
