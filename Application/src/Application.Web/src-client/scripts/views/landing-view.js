@@ -17,8 +17,8 @@ export const LandingView = React.createClass({
 
           <div className = "landing-container">             <h1>Magnolia TreeID</h1>
             <div className = "landing-options">
-              <button className = "button-nav"><i className="fa fa-search" aria-hidden="true"></i>IDentify</button>
-              <button className = "button-nav"><i className="fa fa-book" aria-hidden="true"></i>Browse all plants</button>
+              <button className = "button-nav"><i className="fa fa-search fa-2x" aria-hidden="true"></i><span className = "btn-description">IDentify</span></button>
+              <button className = "button-nav"><i className="fa fa-book fa-2x" aria-hidden="true"></i><span className = "btn-description">Browse all plants</span></button>
               <button className = "button-login">Login</button>
               <button className = "button-login">Register</button>
           </div>
