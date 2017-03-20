@@ -5,9 +5,10 @@ export const STORE = {
     myTree: {},
     currentNavRoute: '',
     latinName: '',
-    myWiki: {},
+    myWiki: '',
     id: '',
     currentUser: {},
+    myImage: ''
   },
   getStoreData: function(){
 		return this._data
