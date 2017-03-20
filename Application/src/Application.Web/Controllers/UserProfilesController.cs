@@ -29,7 +29,7 @@ namespace Magnolia.Controllers
         {
             var userId = _userManager.GetUserId(User);
 
-            var plants = await _context.UserPlants.Include(p => p.Plant)
+            var usersPlants = await _context.UserPlants.Include(p => p.Plant)
                                                   .Include(p => p.Plant.Family)
                                                   .Include(p => p.Plant.PlantCharacteristics)
                                                   .Where(p => p.UserId == userId)
@@ -37,40 +37,99 @@ namespace Magnolia.Controllers
 
             var userPlantViewModels = new List<UserPlantViewModel>();
 
-            foreach (var plant in plants)
+            foreach (var userPlant in usersPlants)
             {
-                var p = new UserPlantViewModel();
-                p.Comment = plant.Comment;
-                p.Plant = new PlantViewModel()
+                var up = new UserPlantViewModel();
+                up.Comment = userPlant.Comment;
+                up.Plant = new PlantViewModel()
                 {
-                    Id = plant.Plant.Id,
-                    CommonName = plant.Plant.CommonName,
-                    SecondaryName = plant.Plant.SecondaryName ?? "",
-                    TertiaryName = plant.Plant.TertiaryName ?? "",
-                    LatinName = plant.Plant.LatinName,
+                    Id = userPlant.Plant.Id,
+                    CommonName = userPlant.Plant.CommonName,
+                    SecondaryName = userPlant.Plant.SecondaryName ?? "",
+                    TertiaryName = userPlant.Plant.TertiaryName ?? "",
+                    LatinName = userPlant.Plant.LatinName,
                     Family = new PlantsFamilyViewModel()
                     {
-                        CommonName = plant.Plant.Family.CommonName,
-                        LatinName = plant.Plant.Family.LatinName
+                        CommonName = userPlant.Plant.Family.CommonName,
+                        LatinName = userPlant.Plant.Family.LatinName
                     }
                 };
 
-                foreach (var state in plant.Plant.PlantCharacteristics)
+                foreach (var characteristic in userPlant.Plant.PlantCharacteristics)
                 {
-                    var st = await _context.States.Include(s => s.Characteristic)
-                                                  .FirstOrDefaultAsync(s => s.Id == state.StateId);
-                    p.Plant.Characteristics.Add(new StateViewModel()
+                    var state = await _context.States.Include(s => s.Characteristic)
+                                                     .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
+                    up.Plant.Characteristics.Add(new StateViewModel()
                     {
-                        Characteristic = st.Characteristic.Value,
-                        State = st.Value,
-                        Code = st.Code
+                        Characteristic = state.Characteristic.Value,
+                        State = state.Value,
+                        Code = state.Code
                     });
+
+                    up.Plant.CharacteristicsHash.Add(state.Code, null);
                 }
 
-                userPlantViewModels.Add(p);
+                userPlantViewModels.Add(up);
             }
 
             return Ok(userPlantViewModels);
+        }
+
+        [Route("~/api/users/{id}/plants")]
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> Get(string id)
+        {
+            if (!_context.Users.Any(u => u.Id == id))
+            {
+                return NotFound(id);
+            }
+
+            var usersPlants = await _context.UserPlants.Include(p => p.Plant)
+                                                  .Include(p => p.Plant.Family)
+                                                  .Include(p => p.Plant.PlantCharacteristics)
+                                                  .Where(p => p.UserId == id)
+                                                  .ToListAsync();
+
+            var usersPlantsViewModels = new List<UserPlantViewModel>();
+
+            foreach (var userPlant in usersPlants)
+            {
+                var up = new UserPlantViewModel()
+                {
+                    Comment = userPlant.Comment
+                };
+                up.Plant = new PlantViewModel()
+                {
+                    Id = userPlant.Plant.Id,
+                    CommonName = userPlant.Plant.CommonName,
+                    SecondaryName = userPlant.Plant.SecondaryName ?? "",
+                    TertiaryName = userPlant.Plant.TertiaryName ?? "",
+                    LatinName = userPlant.Plant.LatinName,
+                    Family = new PlantsFamilyViewModel()
+                    {
+                        CommonName = userPlant.Plant.Family.CommonName,
+                        LatinName = userPlant.Plant.Family.LatinName
+                    }
+                };
+
+                foreach (var characteristic in userPlant.Plant.PlantCharacteristics)
+                {
+                    var state = await _context.States.Include(s => s.Characteristic)
+                                                     .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
+
+                    up.Plant.Characteristics.Add(new StateViewModel()
+                    {
+                        Characteristic = state.Characteristic.Value,
+                        State = state.Value,
+                        Code = state.Code
+                    });
+
+                    up.Plant.CharacteristicsHash.Add(state.Code, null);
+                }
+            }
+
+            return Ok(usersPlantsViewModels);
         }
 
         [Route("~/api/user/plants")]
