@@ -53,15 +53,22 @@ left: 0;
 	transform: translateX(-50%);
 	i{
 		padding-right: 5px;
+		color: white;
+			text-shadow: 0px 3px 5px #5D6D7E;
 	}
 }
 .landing-options button{
 	border-radius: 25px;
 	border: none;
-	padding: 20px 0;
+	padding: 10px 0;
 	background-color: rgba(236, 240, 241, .5);
 	color: rgb(40, 41, 44);
+	.btn-description{
+		display: none;
+
+	}
 }
+
 .button-nav{
 	margin: 0 20px 10px 20px;
 	font-size: 20px;
@@ -69,6 +76,15 @@ left: 0;
 }
 .landing-options button:hover{
 		background-color: rgba(340, 244, 245, .6);
+		padding: 20px 0;
+		.btn-description{
+			display: inherit;
+			color: white;
+				text-shadow: 0px 3px 5px #5D6D7E;
+		}
+		i{
+			display: none;
+		}
 	}
 	.button-login{
 		display: block;
