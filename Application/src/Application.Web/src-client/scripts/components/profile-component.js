@@ -11,8 +11,11 @@ export const ProfileComponent = React.createClass({
       let self = this
       let allTheTrees = this.props.myTree
       return (
-        <div className = {this._getTreeCLassName}>
+        <div className = "tree-profile">
            <ProfileItem profileData={allTheTrees}/>
+                <img src = {this.props.myImage}/>
+                     <p> {this.props.myWiki}</p>
+
         </div>
       )
    }
@@ -22,17 +25,16 @@ export const ProfileItem = React.createClass({
 
    render: function(){
      let self = this
-     let allTheChars = this.props.profileData.characteristics
-           let currentLatinName = this.props.profileData.latinName
 
 
       return (
         <div className = "container-tree" >
+
           <h4>{this.props.profileData.commonName}({this.props.profileData.latinName})</h4>
           <p>also known as: {this.props.profileData.secondaryName}</p>
 
        </div>
 
-     ).bind(this)
+     )
    }
 })
