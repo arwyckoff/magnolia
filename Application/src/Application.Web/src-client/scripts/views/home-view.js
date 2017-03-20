@@ -14,13 +14,9 @@ export const HomeView = React.createClass({
   componentDidMount: function(){
     let component = this;
 
-    STORE.onStoreChange(function(){
-      component.setState( STORE.getStoreData() )
-    })
 
-    // console.log("FECTHY FETCH??")
     ACTIONS.fetchAllTrees()
-ACTIONS.fetchMyWiki()
+    // ACTIONS.fetchOneTree(this.props.treeListData)
   },
 
 
@@ -28,7 +24,6 @@ ACTIONS.fetchMyWiki()
     return(
       <div className = "container">
         <h1>hey!</h1>
-        <FilterComponent {...this.props}/>
         <TreeListComponent {...this.props}/>
       </div>
     )

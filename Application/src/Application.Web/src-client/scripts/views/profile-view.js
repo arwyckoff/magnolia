@@ -12,11 +12,9 @@ export const ProfileView = React.createClass({
 
 
   componentDidMount: function(){
-        console.log('2asdasd')
     let component = this
-        console.log('3asdasd')
-ACTIONS.fetchMyLatinTree(window.location.hash.slice(1))
-ACTIONS.fetchMyWiki(window.location.hash.slice(1))
+    ACTIONS.fetchMyLatinTree(window.location.hash.slice(1))
+    ACTIONS.fetchMyWiki(window.location.hash.slice(1))
   },
 
   render: function(){

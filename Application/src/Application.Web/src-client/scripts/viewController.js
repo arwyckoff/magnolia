@@ -21,7 +21,6 @@ export const ViewController = React.createClass({
   componentWillMount: function(){
     let component = this;
     STORE.onStoreChange(function(){
-      console.log('state changed')
       let newStoreObj = STORE.getStoreData()
       component.setState(newStoreObj)
     })
