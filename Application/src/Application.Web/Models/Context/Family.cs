@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Magnolia.Models
+namespace Magnolia.Context.Models
 {
     public class Family
     {

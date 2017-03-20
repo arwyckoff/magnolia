@@ -7,12 +7,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Magnolia.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System.IO;
+using Magnolia.Context.Models;
+using Magnolia.Context.Seeder;
 
-namespace Magnolia.Web
+namespace Magnolia
 {
     public class Startup
     {
