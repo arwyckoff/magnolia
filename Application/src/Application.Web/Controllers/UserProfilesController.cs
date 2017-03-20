@@ -23,19 +23,16 @@ namespace Magnolia.Controllers
             _userManager = userManager;
         }
 
-        [Route("~/api/users/{id}/plants")]
+        [Route("~/api/user/plants")]
         [HttpGet]
-        public async Task<IActionResult> Get(string id)
+        public async Task<IActionResult> Get()
         {
-            if (!_context.Users.Any(u => u.Id == id))
-            {
-                return NotFound(id);
-            }
+            var userId = _userManager.GetUserId(User);
 
             var plants = await _context.UserPlants.Include(p => p.Plant)
                                                   .Include(p => p.Plant.Family)
                                                   .Include(p => p.Plant.PlantCharacteristics)
-                                                  .Where(p => p.UserId == id)
+                                                  .Where(p => p.UserId == userId)
                                                   .ToListAsync();
 
             var userPlantViewModels = new List<UserPlantViewModel>();
@@ -76,9 +73,9 @@ namespace Magnolia.Controllers
             return Ok(userPlantViewModels);
         }
 
-        [Route("~/api/users/{id}/plants")]
+        [Route("~/api/user/plants")]
         [HttpPost]
-        public async Task<IActionResult> PostPlant([FromRoute]string id, [FromBody]UserPlantRequestModel model)
+        public async Task<IActionResult> PostPlant([FromBody]UserPlantRequestModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -93,11 +90,6 @@ namespace Magnolia.Controllers
             }
 
             var userId = _userManager.GetUserId(User);
-
-            if (id != userId)
-            {
-                return Unauthorized();
-            }
 
             _context.UserPlants.Add(new UserPlants()
             {
