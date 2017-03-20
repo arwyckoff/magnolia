@@ -28,6 +28,7 @@ namespace Magnolia.Context.Seeder
                         var c = new Characteristic();
                         c.Permutations = characteristic.States.Count();
                         c.Value = characteristic.Value.ToLower();
+                        c.Depends = characteristic.Depends;
 
                         foreach (var state in characteristic.States)
                         {
