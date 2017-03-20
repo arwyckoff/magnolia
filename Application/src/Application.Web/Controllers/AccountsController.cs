@@ -1,7 +1,6 @@
-﻿using Application.Web.Models.Api;
-using Magnolia.Models;
-using Magnolia.Web.Models.Api;
-using Magnolia.Web.Models.Api.Accounts;
+﻿using Magnolia.Api.Models;
+using Magnolia.Api.Models.Accounts;
+using Magnolia.Context.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Magnolia.Web.Controllers
+namespace Magnolia.Controllers
 {
     [Authorize]
     public class AccountsController : Controller
@@ -68,15 +67,15 @@ namespace Magnolia.Web.Controllers
 
                     foreach (var plantCharacteristic in userPlant.Plant.PlantCharacteristics)
                     {
-                        var state = await _context.States.Include(s => s.Charactaristic)
+                        var state = await _context.States.Include(s => s.Characteristic)
                                                          .FirstOrDefaultAsync(s => s.Id == plantCharacteristic.StateId);
 
                         if (userPlantViewModel.Plant.Characteristics.Any(c => c.Code == state.Code))
                             continue;
 
-                        userPlantViewModel.Plant.Characteristics.Add(new CharacteristicViewModel()
+                        userPlantViewModel.Plant.Characteristics.Add(new StateViewModel()
                         {
-                            Characteristic = state.Charactaristic.Value,
+                            Characteristic = state.Characteristic.Value,
                             State = state.Value,
                             Code = state.Code
                         });
@@ -158,7 +157,7 @@ namespace Magnolia.Web.Controllers
         public async Task<IActionResult> LogOut()
         {
             await _signInManager.SignOutAsync();
-            return Ok(AccountsResponse.SignOutSuccess);
+            return Ok(new UserViewModel());
         }
     }
 }

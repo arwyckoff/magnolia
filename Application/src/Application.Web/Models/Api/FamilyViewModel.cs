@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Application.Web.Models.Api
+namespace Magnolia.Api.Models
 {
     public class PlantsFamilyViewModel
     {
