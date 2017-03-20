@@ -13,6 +13,7 @@ export const ACTIONS = {
     TreeCollInstance.fetch().then(function(serverRes){
 
       STORE.setStore('treeListData', serverRes)
+      STORE.setStore("filteredTrees", serverRes)
     })
   },
 
