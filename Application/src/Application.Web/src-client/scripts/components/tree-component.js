@@ -30,16 +30,16 @@ export const TreeItem = React.createClass({
     let profileEl = evt.currentTarget
     let id = this.props.treeData.id
     let latinName = this.props.treeData.latinName
-    ACTIONS.changeCurrentNav ('PROFILE', `${id}/${latinName}`)
+    ACTIONS.changeCurrentNav ('PROFILE', latinName)
   },
    render: function(){
-     let statesArray = []
-     let treeDataCommonNames = this.props.treeData.commonName
-
-     if(statesArray.indexOf(this.props.filterChars) === -1){
-       statesArray.push(treeDataCommonNames)
-       console.log(statesArray)
-     }
+    //  let statesArray = []
+    //  let treeDataCommonNames = this.props.treeData.commonName
+     //
+    //  if(statesArray.indexOf(this.props.filterChars) === -1){
+    //    statesArray.push(treeDataCommonNames)
+    //    console.log(statesArray)
+    //  }
       return (
 
         <div className = "container-tree">
