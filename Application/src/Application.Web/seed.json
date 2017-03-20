@@ -2,6 +2,7 @@
   "Characteristics": [
     {
       "Value": "leaf type",
+      "Depends": "",
       "States": [
         {
           "Value": "simple",
@@ -10,32 +11,8 @@
           "Description": "Leaf blade in one continuous section, without leaflets"
         },
         {
-          "Value": "pinnately-compound",
-          "Code": "Ab",
-          "ImageRef": "",
-          "Description": "Having two rows of leaflets on opposite sides of a central axis"
-        },
-        {
-          "Value": "bipinnately-compound",
-          "Code": "Ac",
-          "ImageRef": "",
-          "Description": "Leaflets are themselves pinnately compound, i.e., each with their own leaflets"
-        },
-        {
-          "Value": "palmately-compound",
-          "Code": "Ad",
-          "ImageRef": "",
-          "Description": "Consisting of leaflets all radiating from one point"
-        },
-        {
-          "Value": "trifoliolately-compound",
-          "Code": "Ae",
-          "ImageRef": "",
-          "Description": "With three leaflets"
-        },
-        {
           "Value": "compound",
-          "Code": "Af",
+          "Code": "Ab",
           "ImageRef": "",
           "Description": "Generally compound"
         }
@@ -43,6 +20,7 @@
     },
     {
       "Value": "leaf shape",
+      "Depends": "",
       "States": [
         {
           "Value": "Needle-like",
@@ -138,6 +116,7 @@
     },
     {
       "Value": "leaf Arrangement",
+      "Depends": "",
       "States": [
         {
           "Value": "alternate",
@@ -161,6 +140,7 @@
     },
     {
       "Value": "leaf Venation",
+      "Depends": "",
       "States": [
         {
           "Value": "parallel",
@@ -190,6 +170,7 @@
     },
     {
       "Value": "leaf Apex",
+      "Depends": "",
       "States": [
         {
           "Value": "acuminate",
@@ -243,6 +224,7 @@
     },
     {
       "Value": "leaf base",
+      "Depends": "",
       "States": [
         {
           "Value": "cuneate",
@@ -296,6 +278,7 @@
     },
     {
       "Value": "leaf Margin",
+      "Depends": "",
       "States": [
         {
           "Value": "entire",
@@ -385,6 +368,7 @@
     },
     {
       "Value": "leaf scar",
+      "Depends": "",
       "States": [
         {
           "Value": "crescent-shaped",
@@ -449,7 +433,8 @@
       ]
     },
     {
-      "Value": "Leaf mobility",
+      "Value": "leaf mobility",
+      "Depends": "",
       "States": [
         {
           "Value": "mobile",
@@ -467,6 +452,7 @@
     },
     {
       "Value": "leaf gland",
+      "Depends": "",
       "States": [
         {
           "Value": "gland dotted",
@@ -484,6 +470,7 @@
     },
     {
       "Value": "leaf size",
+      "Depends": "",
       "States": [
         {
           "Value": "greater than 4 inches long",
@@ -501,6 +488,7 @@
     },
     {
       "Value": "needle growth pattern",
+      "Depends": "Ba",
       "States": [
         {
           "Value": "clusters of 2-5 at base",
@@ -518,6 +506,7 @@
     },
     {
       "Value": "needle shape",
+      "Depends": "Ba",
       "States": [
         {
           "Value": "flat",
@@ -535,6 +524,7 @@
     },
     {
       "Value": "needle size",
+      "Depends": "Ba",
       "States": [
         {
           "Value": "1/2 long or more",
@@ -552,6 +542,7 @@
     },
     {
       "Value": "leaf odor/taste",
+      "Depends": "",
       "States": [
         {
           "Value": "aromatic, spicy",
@@ -575,6 +566,7 @@
     },
     {
       "Value": "petiole",
+      "Depends": "",
       "States": [
         {
           "Value": "red",
@@ -592,6 +584,7 @@
     },
     {
       "Value": "twig outgrowth",
+      "Depends": "",
       "States": [
         {
           "Value": "prickles",
@@ -615,6 +608,7 @@
     },
     {
       "Value": "thorn branch",
+      "Depends": "Rc",
       "States": [
         {
           "Value": "thorns branched",
@@ -632,6 +626,7 @@
     },
     {
       "Value": "twig Pith",
+      "Depends": "",
       "States": [
         {
           "Value": "solid",
@@ -655,6 +650,7 @@
     },
     {
       "Value": "pith size",
+      "Depends": "T",
       "States": [
         {
           "Value": "small",
@@ -672,6 +668,7 @@
     },
     {
       "Value": "twig color",
+      "Depends": "W",
       "States": [
         {
           "Value": "greenish yellow",
@@ -725,6 +722,7 @@
     },
     {
       "Value": "twig shape",
+      "Depends": "",
       "States": [
         {
           "Value": "flat",
@@ -748,6 +746,7 @@
     },
     {
       "Value": "infloresence",
+      "Depends": "",
       "States": [
         {
           "Value": "catkin",
@@ -795,6 +794,7 @@
     },
     {
       "Value": "Fruit type",
+      "Depends": "CUa",
       "States": [
         {
           "Value": "Aggregate",
@@ -824,6 +824,7 @@
     },
     {
       "Value": "Aggregate Fruit",
+      "Depends": "Ya",
       "States": [
         {
           "Value": "cone-like cluster of nutlets",
@@ -847,6 +848,7 @@
     },
     {
       "Value": "multiple Fruit",
+      "Depends": "Yb",
       "States": [
         {
           "Value": "capsules",
@@ -870,6 +872,7 @@
     },
     {
       "Value": "simple fruit",
+      "Depends": "Yc",
       "States": [
         {
           "Value": "samaras",
@@ -929,6 +932,7 @@
     },
     {
       "Value": "fruit color",
+      "Depends": "CUa",
       "States": [
         {
           "Value": "blue-black",
@@ -994,6 +998,7 @@
     },
     {
       "Value": "fruit persistence in winter",
+      "Depends": "CUa",
       "States": [
         {
           "Value": "persists all winter",
@@ -1011,6 +1016,7 @@
     },
     {
       "Value": "petals",
+      "Depends": "",
       "States": [
         {
           "Value": "united",
@@ -1028,6 +1034,7 @@
     },
     {
       "Value": "flower cluster",
+      "Depends": "",
       "States": [
         {
           "Value": "terminal cluster",
@@ -1039,6 +1046,7 @@
     },
     {
       "Value": "sepals",
+      "Depends": "",
       "States": [
         {
           "Value": "enlarged",
@@ -1062,6 +1070,7 @@
     },
     {
       "Value": "seed cone",
+      "Depends": "",
       "States": [
         {
           "Value": "fleshy",
@@ -1103,6 +1112,7 @@
     },
     {
       "Value": "tree season",
+      "Depends": "",
       "States": [
         {
           "Value": "summer",
@@ -1120,6 +1130,7 @@
     },
     {
       "Value": "leaf shed",
+      "Depends": "",
       "States": [
         {
           "Value": "evergreen",
@@ -1137,6 +1148,7 @@
     },
     {
       "Value": "terminal bud",
+      "Depends": "",
       "States": [
         {
           "Value": "present",
@@ -1154,6 +1166,7 @@
     },
     {
       "Value": "terminal bud length",
+      "Depends": "",
       "States": [
         {
           "Value": "more than 1/2 inch long",
@@ -1177,6 +1190,7 @@
     },
     {
       "Value": "terminal bud shape",
+      "Depends": "",
       "States": [
         {
           "Value": "flattened",
@@ -1224,6 +1238,7 @@
     },
     {
       "Value": "lateral bud",
+      "Depends": "",
       "States": [
         {
           "Value": "1/4 in long or more",
@@ -1253,6 +1268,7 @@
     },
     {
       "Value": "lateral bud characteristics",
+      "Depends": "",
       "States": [
         {
           "Value": "encolsed/embedded in twig, petiole, or bark",
@@ -1324,6 +1340,7 @@
     },
     {
       "Value": "stem",
+      "Depends": "",
       "States": [
         {
           "Value": "branched",
@@ -1341,6 +1358,7 @@
     },
     {
       "Value": "roots",
+      "Depends": "",
       "States": [
         {
           "Value": "visible above soil",
@@ -1352,6 +1370,7 @@
     },
     {
       "Value": "trunk buttressed",
+      "Depends": "",
       "States": [
         {
           "Value": "buttressed",
@@ -1369,6 +1388,7 @@
     },
     {
       "Value": "spur shoots",
+      "Depends": "",
       "States": [
         {
           "Value": "present",
@@ -1386,6 +1406,7 @@
     },
     {
       "Value": "bundle scar number",
+      "Depends": "",
       "States": [
         {
           "Value": "single",
@@ -1433,6 +1454,7 @@
     },
     {
       "Value": "sap characteristics",
+      "Depends": "",
       "States": [
         {
           "Value": "gummy sap",
@@ -1468,6 +1490,7 @@
     },
     {
       "Value": "branched stipular spines",
+      "Depends": "",
       "States": [
         {
           "Value": "branched",
@@ -1479,6 +1502,7 @@
     },
     {
       "Value": "stipule number/growth pattern",
+      "Depends": "",
       "States": [
         {
           "Value": "paired at nodes",
@@ -1502,6 +1526,7 @@
     },
     {
       "Value": "general tree type",
+      "Depends": "",
       "States": [
         {
           "Value": "conifer",
@@ -1519,6 +1544,7 @@
     },
     {
       "Value": "needle-point quality",
+      "Depends": "Ba",
       "States": [
         {
           "Value": "sharp",
@@ -1536,6 +1562,7 @@
     },
     {
       "Value": "leaf feel",
+      "Depends": "",
       "States": [
         {
           "Value": "fleshy or leathery",
@@ -1571,6 +1598,7 @@
     },
     {
       "Value": "Seed type",
+      "Depends": "",
       "States": [
         {
           "Value": "gymnosperm",
@@ -1588,6 +1616,7 @@
     },
     {
       "Value": "fruit size",
+      "Depends": "CUa",
       "States": [
         {
           "Value": "less than 1 inch",
@@ -1599,6 +1628,7 @@
     },
     {
       "Value": "flower color",
+      "Depends": "",
       "States": [
         {
           "Value": "pink",
@@ -1628,6 +1658,7 @@
     },
     {
       "Value": "fruit shape",
+      "Depends": "CUa",
       "States": [
         {
           "Value": "elliptical",
@@ -1663,6 +1694,7 @@
     },
     {
       "Value": "knee formation",
+      "Depends": "",
       "States": [
         {
           "Value": "formed",
@@ -1680,6 +1712,7 @@
     },
     {
       "Value": "leaves appressed to twig",
+      "Depends": "",
       "States": [
         {
           "Value": "appressed",
@@ -1697,6 +1730,7 @@
     },
     {
       "Value": "branch quality",
+      "Depends": "",
       "States": [
         {
           "Value": "flattened",
@@ -1726,6 +1760,7 @@
     },
     {
       "Value": "Leaf rigidity",
+      "Depends": "",
       "States": [
         {
           "Value": "rigid",
@@ -1743,6 +1778,7 @@
     },
     {
       "Value": "fruit an acorn",
+      "Depends": "CUa",
       "States": [
         {
           "Value": "fruit an acorn",
@@ -1760,6 +1796,7 @@
     },
     {
       "Value": "Needle tip",
+      "Depends": "Ba",
       "States": [
         {
           "Value": "sharp",
@@ -1777,6 +1814,7 @@
     },
     {
       "Value": "Seed enclosure",
+      "Depends": "",
       "States": [
         {
           "Value": "leathery",
@@ -1794,6 +1832,7 @@
     },
     {
       "Value": "needle length",
+      "Depends": "Ba",
       "States": [
         {
           "Value": "greater than 1 inch",
@@ -1811,6 +1850,7 @@
     },
     {
       "Value": "flower size",
+      "Depends": "",
       "States": [
         {
           "Value": "less than 1 inch in diameter",
@@ -1828,6 +1868,7 @@
     },
     {
       "Value": "twig scent when crushed",
+      "Depends": "",
       "States": [
         {
           "Value": "rank odor when crushed",
@@ -1845,6 +1886,7 @@
     },
     {
       "Value": "leaf breadth",
+      "Depends": "",
       "States": [
         {
           "Value": "1.5 to 3.5 inches across",
@@ -1862,6 +1904,7 @@
     },
     {
       "Value": "leaf underside",
+      "Depends": "",
       "States": [
         {
           "Value": "greenish yellow",
@@ -1897,6 +1940,7 @@
     },
     {
       "Value": "bud characteristics",
+      "Depends": "",
       "States": [
         {
           "Value": "more than 2 scales",
@@ -1926,6 +1970,7 @@
     },
     {
       "Value": "Pubescence of mature leaves",
+      "Depends": "",
       "States": [
         {
           "Value": "very short",
@@ -1943,6 +1988,7 @@
     },
     {
       "Value": "leaf enumeration",
+      "Depends": "",
       "States": [
         {
           "Value": "5 or more",
@@ -1954,6 +2000,7 @@
     },
     {
       "Value": "leaflet type",
+      "Depends": "Ab",
       "States": [
         {
           "Value": "simple",
@@ -1983,6 +2030,7 @@
     },
     {
       "Value": "leaflet shape",
+      "Depends": "Ab",
       "States": [
         {
           "Value": "Needle-like",
@@ -2078,6 +2126,7 @@
     },
     {
       "Value": "leaflet arrangement",
+      "Depends": "Ab",
       "States": [
         {
           "Value": "alternate",
@@ -2101,6 +2150,7 @@
     },
     {
       "Value": "leaflet margin",
+      "Depends": "Ab",
       "States": [
         {
           "Value": "entire",
@@ -2190,6 +2240,7 @@
     },
     {
       "Value": "twig touch",
+      "Depends": "",
       "States": [
         {
           "Value": "smooth",
@@ -2219,6 +2270,7 @@
     },
     {
       "Value": "bark color",
+      "Depends": "",
       "States": [
         {
           "Value": "gray",
@@ -2254,6 +2306,7 @@
     },
     {
       "Value": "bark touch",
+      "Depends": "",
       "States": [
         {
           "Value": "smooth",
@@ -2277,6 +2330,7 @@
     },
     {
       "Value": "lenticles",
+      "Depends": "",
       "States": [
         {
           "Value": "raised",
@@ -2324,6 +2378,7 @@
     },
     {
       "Value": "flower season",
+      "Depends": "",
       "States": [
         {
           "Value": "early summer",
@@ -2341,6 +2396,7 @@
     },
     {
       "Value": "fruit touch",
+      "Depends": "CUa",
       "States": [
         {
           "Value": "smooth",
@@ -2370,6 +2426,7 @@
     },
     {
       "Value": "autumnal colors",
+      "Depends": "",
       "States": [
         {
           "Value": "red",
@@ -2405,6 +2462,7 @@
     },
     {
       "Value": "leaf upper color",
+      "Depends": "",
       "States": [
         {
           "Value": "dark green",
@@ -2422,6 +2480,7 @@
     },
     {
       "Value": "bark thickness",
+      "Depends": "",
       "States": [
         {
           "Value": "thin",
@@ -2439,6 +2498,7 @@
     },
     {
       "Value": "leaf lower color",
+      "Depends": "",
       "States": [
         {
           "Value": "pale",
@@ -2468,6 +2528,7 @@
     },
     {
       "Value": "leaf rachis",
+      "Depends": "",
       "States": [
         {
           "Value": "winged",
@@ -2479,6 +2540,7 @@
     },
     {
       "Value": "lateral bud color",
+      "Depends": "",
       "States": [
         {
           "Value": "tan",
@@ -2496,6 +2558,7 @@
     },
     {
       "Value": "twig thickness",
+      "Depends": "",
       "States": [
         {
           "Value": "slender",
@@ -2525,6 +2588,7 @@
     },
     {
       "Value": "leaf lower feel",
+      "Depends": "",
       "States": [
         {
           "Value": "glabrous (smooth)",
@@ -2554,6 +2618,7 @@
     },
     {
       "Value": "flower petals",
+      "Depends": "",
       "States": [
         {
           "Value": "6 petals",
@@ -2589,6 +2654,7 @@
     },
     {
       "Value": "seed shape",
+      "Depends": "",
       "States": [
         {
           "Value": "bean",
@@ -2600,6 +2666,7 @@
     },
     {
       "Value": "seed quality",
+      "Depends": "",
       "States": [
         {
           "Value": "shiny",
@@ -2623,6 +2690,7 @@
     },
     {
       "Value": "leaf upper quality",
+      "Depends": "",
       "States": [
         {
           "Value": "shiny",
@@ -2640,6 +2708,7 @@
     },
     {
       "Value": "fruit flavor",
+      "Depends": "CUa",
       "States": [
         {
           "Value": "bitter",
@@ -2657,10 +2726,59 @@
     },
     {
       "Value": "tree shape",
+      "Depends": "",
       "States": [
         {
           "Value": "conical",
           "Code": "CSa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "compound leaf type",
+      "Depends": "Ab",
+      "States": [
+        {
+          "Value": "pinnately-compound",
+          "Code": "CTa",
+          "ImageRef": "",
+          "Description": "Having two rows of leaflets on opposite sides of a central axis"
+        },
+        {
+          "Value": "bipinnately-compound",
+          "Code": "CTb",
+          "ImageRef": "",
+          "Description": "Leaflets are themselves pinnately compound, i.e., each with their own leaflets"
+        },
+        {
+          "Value": "palmately-compound",
+          "Code": "CTc",
+          "ImageRef": "",
+          "Description": "Consisting of leaflets all radiating from one point"
+        },
+        {
+          "Value": "trifoliolately-compound",
+          "Code": "CTd",
+          "ImageRef": "",
+          "Description": "With three leaflets"
+        }
+      ]
+    },
+    {
+      "Value": "fruit visible",
+      "Depends": "",
+      "States": [
+        {
+          "Value": "yes",
+          "Code": "CUa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "no",
+          "Code": "CUb",
           "ImageRef": "",
           "Description": ""
         }
@@ -2855,7 +2973,7 @@
         "APa",
         "Yc",
         "ABa",
-        "Ad",
+        "Ab",
         "Dc"
       ]
     },
@@ -2878,7 +2996,7 @@
         "AJb",
         "Gh",
         "Ca",
-        "Ae",
+        "CTd",
         "CGa",
         "CCc",
         "CCd",
@@ -3632,7 +3750,7 @@
       "FamilyName": "Maple",
       "ImageRef": "",
       "Characteristics": [
-        "Ab",
+        "CTa",
         "Vc",
         "Ve",
         "BSa"
