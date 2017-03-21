@@ -26,7 +26,7 @@ render: function(){
             <strong><label>Leaf Type</label></strong>
 
             <select name = "leafType" onChange={this._handleFilterSelect}>
-            
+
               <option value = "all">All</option>
               <option value = "Aa">simple</option>
               <option value = "Ab">compound</option>
@@ -35,7 +35,19 @@ render: function(){
             </select>
 
           </div>
+
+
+          <div className="checkbox">
+              <label><input type="checkbox" value=""/>Option 1</label>
+            </div>
+          <div className="checkbox">
+              <label><input type="checkbox" value=""/>Option 2</label>
+            </div>
+          <div className="checkbox disabled">
+              <label><input type="checkbox" value="" disabled/>Option 3</label>
+            </div>
         </div>
+
 
 
 )}

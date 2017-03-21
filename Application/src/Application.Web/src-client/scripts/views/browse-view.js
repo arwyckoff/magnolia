@@ -12,7 +12,7 @@ export const BrowseView = React.createClass({
     return STORE.getStoreData()
   },
 
-  componentDidMount: function(){
+  componentWillMount: function(){
     let component = this;
 
     // STORE.onStoreChange(function(){
@@ -20,7 +20,7 @@ export const BrowseView = React.createClass({
     // })
 
     // console.log("FECTHY FETCH??")
-    ACTIONS.fetchAllTrees()
+    // ACTIONS.fetchAllTrees()
 
   },
 
