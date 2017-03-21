@@ -11,19 +11,8 @@ export const FilterComponent = React.createClass({
 
     let filterChar = evt.target.value
     let FilterList = this.props.filterChars
-    // let index = FilterList.indexOf(filterChar)
-
 
   BROWSE_ACTIONS.changeFilter(filterChar)
-
-  // console.log(index)
-
-//     let NewFilterList = FilterList.splice(index, 1)
-//     BROWSE_ACTIONS.changeFilter(NewFilterList)
-// }
-  // console.log(filterChar)
-
-    // console.log(this.props)
 
 },
 
@@ -37,14 +26,28 @@ render: function(){
             <strong><label>Leaf Type</label></strong>
 
             <select name = "leafType" onChange={this._handleFilterSelect}>
-            <option default></option>
 
+              <option value = "all">All</option>
               <option value = "Aa">simple</option>
-              <option value = "Gc">deciduous</option>
+              <option value = "Ab">compound</option>
+              <option value = "Gc">undulate</option>
+              <option value = "Vg">not green or reddish</option>
             </select>
 
           </div>
+
+
+          <div className="checkbox">
+              <label><input type="checkbox" value=""/>Option 1</label>
+            </div>
+          <div className="checkbox">
+              <label><input type="checkbox" value=""/>Option 2</label>
+            </div>
+          <div className="checkbox disabled">
+              <label><input type="checkbox" value="" disabled/>Option 3</label>
+            </div>
         </div>
+
 
 
 )}
