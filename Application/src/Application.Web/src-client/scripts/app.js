@@ -24,7 +24,7 @@ const AppRouter = Backbone.Router.extend({
 
 	routes: {
 		'':'showHomePage',
-		':latinName': 'showProfilePage',
+		'tree/:latinName': 'showProfilePage',
     'register': 'showRegisterPage',
 		'logout': 'showLogoutPage',
 		'login': 'showLoginPage',
@@ -41,22 +41,12 @@ showLandingDemo: function(){
 	ReactDOM.render(<ViewController fromRoute = {'LANDING'} />, document.querySelector('#app-container'))
 },
 showBrowsePage: function(){
-  	ReactDOM.render(<BrowseView fromRoute = {'BROWSE'} />, document.querySelector('#app-container'))
+  	ReactDOM.render(<ViewController fromRoute = {'BROWSE'} />, document.querySelector('#app-container'))
 },
 showProfilePage: function(latinName){
 		ReactDOM.render(<ViewController fromRoute = {'PROFILE'} />, document.querySelector('#app-container'))
 },
 
-// showProfilePage: function(id, currentLatinName){
-//   let treeModel = new TreeModel(id)
-//   let wikiModel = new WikiModel(currentLatinName)
-// $.when(treeModel.fetch(),
-//       wikiModel.fetch()
-// ).then(function(serverRes){
-//   let profileObj = new ProfileView()
-//   profileObj.render(treeModel, wikiModel)
-// })
-// },
 showRegisterPage: function(){
 		ReactDOM.render(<ViewController fromRoute = {'REGISTER'} />, document.querySelector('#app-container'))
 },
