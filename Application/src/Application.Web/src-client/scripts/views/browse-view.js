@@ -27,6 +27,7 @@ export const BrowseView = React.createClass({
 
 
   render: function(){
+
 // console.log("hello")
     return(
       <div>

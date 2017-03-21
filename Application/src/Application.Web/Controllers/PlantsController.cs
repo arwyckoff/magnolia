@@ -50,17 +50,10 @@ namespace Magnolia.Controllers
                     var state = await _context.States.Include(s => s.Characteristic)
                                                      .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
 
-                    if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
+                    if (plantViewModel.Characteristics.Keys.Any(k => k == state.Code))
                         continue;
 
-                    plantViewModel.Characteristics.Add(new StateViewModel()
-                    {
-                        Characteristic = state.Characteristic.Value,
-                        State = state.Value,
-                        Code = state.Code
-                    });
-
-                    plantViewModel.CharacteristicsHash.Add(state.Code, null);
+                    plantViewModel.Characteristics.Add(state.Code, null);
                 }
 
                 plantViewModels.Add(plantViewModel);
@@ -101,17 +94,10 @@ namespace Magnolia.Controllers
                 var state = await _context.States.Include(s => s.Characteristic)
                                                  .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
 
-                if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
+                if (plantViewModel.Characteristics.Keys.Any(k => k == state.Code))
                     continue;
 
-                plantViewModel.Characteristics.Add(new StateViewModel()
-                {
-                    Characteristic = state.Characteristic.Value,
-                    State = state.Value,
-                    Code = state.Code
-                });
-
-                plantViewModel.CharacteristicsHash.Add(state.Code, null);
+                plantViewModel.Characteristics.Add(state.Code, null);
             }
 
             return Ok(plantViewModel);
@@ -150,17 +136,10 @@ namespace Magnolia.Controllers
                 var state = await _context.States.Include(s => s.Characteristic)
                                                  .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
 
-                if (!plantViewModel.Characteristics.Any(c => c.Code == state.Code))
-                {
-                    plantViewModel.Characteristics.Add(new StateViewModel()
-                    {
-                        Characteristic = state.Characteristic.Value,
-                        State = state.Value,
-                        Code = state.Code
-                    });
+                if (plantViewModel.Characteristics.Keys.Any(k => k == state.Code))
+                    continue;
 
-                    plantViewModel.CharacteristicsHash.Add(state.Code, null);
-                }
+                plantViewModel.Characteristics.Add(state.Code, null);
             }
 
             return Ok(plantViewModel);
@@ -226,17 +205,10 @@ namespace Magnolia.Controllers
                     var state = await _context.States.Include(s => s.Characteristic)
                                                      .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
 
-                    if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
+                    if (plantViewModel.Characteristics.Keys.Any(k => k == state.Code))
                         continue;
 
-                    plantViewModel.Characteristics.Add(new StateViewModel()
-                    {
-                        Characteristic = state.Characteristic.Value,
-                        State = state.Value,
-                        Code = state.Code
-                    });
-
-                    plantViewModel.CharacteristicsHash.Add(state.Code, null);
+                    plantViewModel.Characteristics.Add(state.Code, null);
                 }
 
                 plantViewModels.Add(plantViewModel);
@@ -286,17 +258,10 @@ namespace Magnolia.Controllers
                     var state = await _context.States.Include(s => s.Characteristic)
                                                      .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
 
-                    if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
+                    if (plantViewModel.Characteristics.Keys.Any(k => k == state.Code))
                         continue;
 
-                    plantViewModel.Characteristics.Add(new StateViewModel()
-                    {
-                        Characteristic = state.Characteristic.Value,
-                        State = state.Value,
-                        Code = state.Code
-                    });
-
-                    plantViewModel.CharacteristicsHash.Add(state.Code, null);
+                    plantViewModel.Characteristics.Add(state.Code, null);
                 }
 
                 plantViewModels.Add(plantViewModel);
@@ -345,17 +310,10 @@ namespace Magnolia.Controllers
                     var state = await _context.States.Include(s => s.Characteristic)
                                                      .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
 
-                    if (plantViewModel.Characteristics.Any(c => c.Code == state.Code))
+                    if (plantViewModel.Characteristics.Keys.Any(k => k == state.Code))
                         continue;
 
-                    plantViewModel.Characteristics.Add(new StateViewModel()
-                    {
-                        Characteristic = state.Characteristic.Value,
-                        State = state.Value,
-                        Code = state.Code
-                    });
-
-                    plantViewModel.CharacteristicsHash.Add(state.Code, null);
+                    plantViewModel.Characteristics.Add(state.Code, null);
                 }
 
                 plantViewModels.Add(plantViewModel);

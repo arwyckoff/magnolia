@@ -1,6 +1,7 @@
 import Backbone from 'backbone'
 import _getFilteredTrees from "./utils/getFilteredTrees"
 import {TreeModel, TreeCollection} from './models/tree-model.js'
+import {CodeModel, CodeCollection} from './models/code-model.js'
 import {WikiModel, WikiCollection} from './models/wiki-model.js'
 import {UserModel} from './models/model-user.js'
 import {STORE} from './store.js'
@@ -30,7 +31,7 @@ export const BROWSE_ACTIONS = {
 
 
       let filteredTrees = _getFilteredTrees(newChars, allTrees);
-      
+
       STORE.setStore("filteredTrees",filteredTrees )
 
   } else if(filterVal === "all"){

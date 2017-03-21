@@ -1,6 +1,7 @@
 export const STORE = {
   _data:{
     treeListData: [],
+    codeList: [],
     filteredListData: [],
     filterChars: [],
     filteredTrees: [],

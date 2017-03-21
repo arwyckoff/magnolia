@@ -11,7 +11,6 @@ export const TreeListComponent = React.createClass({
   componentDidMount: function (){
 
     let self = this
-    ACTIONS.fetchAllTrees()
     console.log(this.props.treeListData)
   },
 
