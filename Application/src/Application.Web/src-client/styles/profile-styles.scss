@@ -27,3 +27,22 @@
     vertical-align: top;
   }
 }
+.genus-container{
+  width: 100%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.genus-box{
+  display: inline-block;
+  width: 30%;
+  margin: 10px;
+  border: 1px solid gray;
+  padding: 5px;
+  font-size: 16px;
+  img{
+    display: block;
+  }
+  p{
+    margin: 0;
+  }
+}
