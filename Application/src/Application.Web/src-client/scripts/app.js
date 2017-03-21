@@ -1,12 +1,10 @@
 import Backbone from 'backbone';
 import ReactDOM from 'react-dom'
 import React from 'react'
-import {TreeModel, TreeCollection} from './models/tree-model.js'
 import {HomeView} from './views/home-view.js'
 import {ViewController} from './viewController.js'
 import{ProfileView} from './views/profile-view.js'
 import {BrowseView} from './views/browse-view.js'
-import {WikiModel} from './models/wiki-model.js'
 import $ from 'jquery'
 
 
