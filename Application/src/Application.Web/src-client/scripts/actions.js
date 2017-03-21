@@ -4,12 +4,18 @@ import {WikiModel, WikiCollection} from './models/wiki-model.js'
 import {CodeModel, CodeCollection} from './models/code-model.js'
 import {UserModel} from './models/model-user.js'
 import {TreeNameModel} from './models/tree-name-model.js'
+import {GenusModel, GenusCollection} from './models/model-genus.js'
 
 import {STORE} from './store.js'
 
 
 export const ACTIONS = {
-
+fetchGenusTrees: function(genusName){
+  let GenusCollInstance = new GenusCollection(genusName)
+  GenusCollInstance.fetch().then(function(serverRes){
+    STORE.setStore('genusTrees', serverRes)
+  })
+},
 fetchAllTrees: function(){
   let TreeCollInstance = new TreeCollection()
   TreeCollInstance.fetch().then(function(serverRes){
