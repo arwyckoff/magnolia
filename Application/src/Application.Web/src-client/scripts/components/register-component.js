@@ -40,7 +40,8 @@ export const RegisterComponent = React.createClass({
                 <p className = "flash-msg"></p>
           <h4>Choose a unique password</h4>
           <input type = "password" className = "form-control" name = "passwordField" />
-
+          <h4>confirm password</h4>
+          <input type = "password" className = "form-control" name = "passwordFieldConfirm" />
           <h4> Add profile image</h4>
           <input type = "text" className = "form-control" name = "imgLinkField" ref="imgPreviewEl"/>
           <button onClick = {this._handlePreviewClick}
@@ -62,10 +63,12 @@ export const RegisterComponent = React.createClass({
     evt.preventDefault()
     let formEl = evt.target
     let formValsObj = {
-      username: formEl.usernameField.value,
+      email: formEl.usernameField.value,
       password: formEl.passwordField.value,
-      avatarUrl: formEl.imgLinkField.value
+      confirmPassword: formEl.passwordFieldConfirm.value
+
     }
-    ACTIONS.registerNewUser(formValsObj)
-  },
+    ACTIONS.registerNewUserM(formValsObj)
+
+}
 })

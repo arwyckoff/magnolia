@@ -2,8 +2,7 @@ import Backbone from 'backbone'
 import React from 'react'
 import {ACTIONS} from '../actions.js'
 import {STORE} from '../store.js'
-import {TreeListComponent} from '../components/tree-component.js'
-import {FilterComponent} from '../components/filter-component.js'
+import {TreeProfileComponent} from '../components/tree-profile-component.js'
 
 
 export const HomeView = React.createClass({
@@ -14,20 +13,15 @@ export const HomeView = React.createClass({
   componentDidMount: function(){
     let component = this;
 
-    // STORE.onStoreChange(function(){
-    //   component.setState( STORE.getStoreData() )
-    // })
-
     ACTIONS.fetchAllTrees()
     // ACTIONS.fetchOneTree(this.props.treeListData)
   },
-
 
   render: function(){
     return(
       <div className = "container">
         <h1>hey!</h1>
-        <TreeListComponent {...this.props}/>
+        <TreeProfileComponent {...this.props}/>
       </div>
     )
   }
