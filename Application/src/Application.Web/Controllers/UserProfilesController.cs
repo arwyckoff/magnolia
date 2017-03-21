@@ -59,14 +59,11 @@ namespace Magnolia.Controllers
                 {
                     var state = await _context.States.Include(s => s.Characteristic)
                                                      .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
-                    up.Plant.Characteristics.Add(new StateViewModel()
-                    {
-                        Characteristic = state.Characteristic.Value,
-                        State = state.Value,
-                        Code = state.Code
-                    });
 
-                    up.Plant.CharacteristicsHash.Add(state.Code, null);
+                    if (up.Plant.Characteristics.Keys.Any(k => k == state.Code))
+                        continue;
+
+                    up.Plant.Characteristics.Add(state.Code, null);
                 }
 
                 userPlantViewModels.Add(up);
@@ -118,14 +115,10 @@ namespace Magnolia.Controllers
                     var state = await _context.States.Include(s => s.Characteristic)
                                                      .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
 
-                    up.Plant.Characteristics.Add(new StateViewModel()
-                    {
-                        Characteristic = state.Characteristic.Value,
-                        State = state.Value,
-                        Code = state.Code
-                    });
+                    if (up.Plant.Characteristics.Keys.Any(k => k == state.Code))
+                        continue;
 
-                    up.Plant.CharacteristicsHash.Add(state.Code, null);
+                    up.Plant.Characteristics.Add(state.Code, null);
                 }
             }
 

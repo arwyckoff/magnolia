@@ -13,13 +13,11 @@ namespace Magnolia.Api.Models
         public string TertiaryName { get; set; }
         public string LatinName { get; set; }
         public PlantsFamilyViewModel Family { get; set; }
-        public List<StateViewModel> Characteristics { get; set; }
-        public Dictionary<string, object> CharacteristicsHash { get; set; }
+        public Dictionary<string, object> Characteristics { get; set; }
 
         public PlantViewModel()
         {
-            Characteristics = new List<StateViewModel>();
-            CharacteristicsHash = new Dictionary<string, object>();
+            Characteristics = new Dictionary<string, object>();
         }
     }
 }

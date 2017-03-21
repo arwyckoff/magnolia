@@ -70,17 +70,10 @@ namespace Magnolia.Controllers
                         var state = await _context.States.Include(s => s.Characteristic)
                                                          .FirstOrDefaultAsync(s => s.Id == plantCharacteristic.StateId);
 
-                        if (userPlantViewModel.Plant.Characteristics.Any(c => c.Code == state.Code))
+                        if (userPlantViewModel.Plant.Characteristics.Keys.Any(k => k == state.Code))
                             continue;
 
-                        userPlantViewModel.Plant.Characteristics.Add(new StateViewModel()
-                        {
-                            Characteristic = state.Characteristic.Value,
-                            State = state.Value,
-                            Code = state.Code
-                        });
-
-                        userPlantViewModel.Plant.CharacteristicsHash.Add(state.Code, null);
+                        userPlantViewModel.Plant.Characteristics.Add(state.Code, null);
                     }
 
                     userViewModel.Plants.Add(userPlantViewModel);
