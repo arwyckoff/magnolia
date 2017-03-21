@@ -22,41 +22,39 @@ namespace Magnolia.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var states = await _context.States.Include(s => s.Characteristic)
-                                              .ToListAsync();
+            var characteristics = await _context.Characteristics.Include(s => s.States)
+                                                                .Include(s => s.Category)
+                                                                .ToListAsync();
 
-            var characteristicViewModels = new Dictionary<string, CharacteristicViewModel>();
+            var characteristicViewModels = new Dictionary<string, List<CharacteristicViewModel>>();
 
-            foreach (var state in states)
+            foreach (var characteristic in characteristics)
             {
-                if (!characteristicViewModels.Keys.Any(k => k == state.Characteristic.Value))
+                var category = characteristic.Category.Value;
+                if (!characteristicViewModels.Keys.Any(k => k == category))
                 {
-                    var c = new CharacteristicViewModel()
-                    {
-                        Id = state.Characteristic.Id,
-                        Characteristic = state.Characteristic.Value,
-                        Depends = state.Characteristic.Depends,
-                        Permutations = state.Characteristic.Permutations
-                    };
-                    c.States.Add(new StateViewModel()
-                    {
-                        Characteristic = state.Characteristic.Value,
-                        State = state.Value,
-                        Code = state.Code
-                    });
+                    characteristicViewModels.Add(category, new List<CharacteristicViewModel>());
+                }
 
-                    characteristicViewModels.Add(c.Characteristic, c);
-                }
-                else
+                var characteristicViewModel = new CharacteristicViewModel()
                 {
-                    var c = characteristicViewModels[state.Characteristic.Value];
-                    c.States.Add(new StateViewModel()
+                    Id = characteristic.Id,
+                    Characteristic = characteristic.Value,
+                    Depends = characteristic.Depends,
+                    Permutations = characteristic.Permutations
+                };
+
+                foreach (var state in characteristic.States)
+                {
+                    characteristicViewModel.States.Add(new StateViewModel()
                     {
-                        Characteristic = c.Characteristic,
+                        Characteristic = characteristic.Value,
                         State = state.Value,
                         Code = state.Code
                     });
                 }
+
+                characteristicViewModels[category].Add(characteristicViewModel);
             }
 
             return Ok(characteristicViewModels);

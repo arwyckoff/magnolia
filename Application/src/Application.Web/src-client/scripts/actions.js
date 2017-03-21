@@ -13,13 +13,7 @@ fetchAllTrees: function(){
   let TreeCollInstance = new TreeCollection()
   TreeCollInstance.fetch().then(function(serverRes){
     STORE.setStore('treeListData', serverRes)
-  fetchAllTrees: function(){
-    let TreeCollInstance = new TreeCollection()
-    TreeCollInstance.fetch().then(function(serverRes){
-
-      STORE.setStore('treeListData', serverRes)
-      STORE.setStore("filteredTrees", serverRes)
-    })
+  })
   },
 
 fetchMyLatinTree: function(latinName){

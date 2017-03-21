@@ -1,0 +1,11 @@
+
+@import "./mixins.scss";
+
+.login-box input, button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-box{
+  @include absolute-center;
+}
