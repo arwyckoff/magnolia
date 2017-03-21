@@ -8,6 +8,7 @@ namespace Magnolia.Context.Seeder.Models
     public class CharacteristicSeeder
     {
         public string Value { get; set; }
+        public string Depends { get; set; }
         public List<StateSeeder> States { get; set; }
     }
 }

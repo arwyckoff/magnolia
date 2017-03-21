@@ -35,6 +35,7 @@ namespace Magnolia.Controllers
                     {
                         Id = state.Characteristic.Id,
                         Characteristic = state.Characteristic.Value,
+                        Depends = state.Characteristic.Depends,
                         Permutations = state.Characteristic.Permutations
                     };
                     c.States.Add(new StateViewModel()
@@ -77,6 +78,7 @@ namespace Magnolia.Controllers
             {
                 Id = characteristic.Id,
                 Characteristic = characteristic.Value,
+                Depends = characteristic.Depends,
                 Permutations = characteristic.Permutations
             };
 
@@ -110,6 +112,7 @@ namespace Magnolia.Controllers
             {
                 Id = characteristic.Id,
                 Characteristic = characteristic.Value,
+                Depends = characteristic.Depends,
                 Permutations = characteristic.Permutations
             };
 
