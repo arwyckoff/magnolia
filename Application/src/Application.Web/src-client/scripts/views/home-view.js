@@ -1,10 +1,8 @@
 import Backbone from 'backbone'
 import React from 'react'
 import {ACTIONS} from '../actions.js'
-import {BROWSE_ACTIONS} from '../browse_actions.js'
 import {STORE} from '../store.js'
-import {TreeListComponent} from '../components/tree-component.js'
-import {FilterComponent} from '../components/filter-component.js'
+import {TreeProfileComponent} from '../components/tree-profile-component.js'
 
 
 export const HomeView = React.createClass({
@@ -23,7 +21,7 @@ export const HomeView = React.createClass({
     return(
       <div className = "container">
         <h1>hey!</h1>
-        <TreeListComponent {...this.props}/>
+        <TreeProfileComponent {...this.props}/>
       </div>
     )
   }
