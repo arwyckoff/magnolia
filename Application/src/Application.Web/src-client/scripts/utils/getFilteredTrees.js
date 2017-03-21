@@ -10,7 +10,7 @@ const _getFilteredTrees = (filters, allTrees) => {
                 intersection++;
             }
         }
-        if (intersection == filterLength) {
+        if (intersection === filterLength) {
             filteredTrees.push(tree);
         }
     }
