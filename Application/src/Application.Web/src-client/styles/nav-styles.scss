@@ -3,17 +3,23 @@ nav{
 	width: 100%;
 }
 .navbar-styles{
-	background-color: rgba(236, 240, 241, .9);
+	background-color: rgba(71, 74, 44, .5);
+	// background-color: rgba(236, 240, 241, .9);
 	padding-right: 40px;
 	ul{
 		margin-bottom: 0;
-		height: 100%;
+			height: 50px;
+	}
+	i{
+		color: white;
+		font-size: 20px;
 	}
 
 	li{
   display: inline-block;
-  font-size: 16px;
-  padding: 10px;
+			line-height: 50px;
+  padding-left: 10px;
+	padding-right: 10px;
   cursor: pointer;
 	position: relative;
 	text-align: right;
@@ -23,12 +29,12 @@ nav{
   }
 }
   .nav-option:hover{
-    color: white;
+    i{color: #474a2c;}
 
 		 .arrow_box {
 	@include xcenter;
 	bottom: -15px;
-	background: #515151;
+	background: #474a2c;
 	display: inherit;
 	text-align: center;
 	margin-left: auto;
@@ -49,7 +55,7 @@ nav{
 	position: absolute;
 	pointer-events: none;
 	border-color: rgba(136, 183, 213, 0);
-	border-bottom-color: #515151;
+	border-bottom-color: #474a2c;
 	border-width: 5px;
 	margin-left: -5px;
 }
