@@ -2,8 +2,8 @@ export const STORE = {
   _data:{
     treeListData: [],
     filteredListData: [],
-    filterChar: '',
     filterChars: [],
+    filteredTrees: [],
     myTree: {},
     currentNavRoute:'',
     latinName: '',
