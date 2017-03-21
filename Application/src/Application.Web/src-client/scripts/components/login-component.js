@@ -14,7 +14,9 @@ export const LoginComponent = React.createClass({
 
   render: function(){
       return (
-         <div className="auth-form">
+        <div className = "hero">
+              <img className = "hero-img" src = 'http://i64.tinypic.com/2lthudd.jpg'/>
+         <div className="auth-form login-box">
 				<form onSubmit = {this._handleLogin}>
 					<input type="text" className="form-control" name="emailField" placeholder="Username"/>
 	            <input type="password" className="form-control" name="passwordField" placeholder= "Password"/>
@@ -24,6 +26,7 @@ export const LoginComponent = React.createClass({
 				</form>
 
 			</div>
+    </div>
       )
    }
 })
