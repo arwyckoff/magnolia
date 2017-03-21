@@ -135,8 +135,8 @@ namespace Magnolia.Controllers
             {
                 Id = plant.Id,
                 CommonName = plant.CommonName,
-                SecondaryName = plant.SecondaryName,
-                TertiaryName = plant.TertiaryName,
+                SecondaryName = plant.SecondaryName ?? "",
+                TertiaryName = plant.TertiaryName ?? "",
                 LatinName = plant.LatinName,
                 Family = new PlantsFamilyViewModel()
                 {
