@@ -8,9 +8,11 @@ import {BROWSE_ACTIONS} from '../browse_actions.js'
 
 export const TreeListComponent = React.createClass({
 
-  componentWillMount: function (){
+  componentDidMount: function (){
 
     let self = this
+    ACTIONS.fetchAllTrees()
+    console.log(this.props.treeListData)
   },
 
 
