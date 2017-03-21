@@ -7,18 +7,18 @@ import {TreeNameModel} from './models/tree-name-model.js'
 import {STORE} from './store.js'
 // import {PlantViewModel} from '../../Models/Api/PlantViewModel.cs'
 
-export const ACTIONS = {
-  fetchAllTrees: function(){
-    let TreeCollInstance = new TreeCollection()
-    TreeCollInstance.fetch().then(function(serverRes){
-      STORE.setStore('treeListData', serverRes)
+
+fetchAllTrees: function(){
+  let TreeCollInstance = new TreeCollection()
+  TreeCollInstance.fetch().then(function(serverRes){
+    STORE.setStore('treeListData', serverRes)
     })
   },
 
-    fetchMyLatinTree: function(latinName){
-      let LatinModelInstance = new TreeNameModel(latinName)
-      LatinModelInstance.fetch().then(function(serverRes){
-      STORE.setStore('myTree', serverRes)
+fetchMyLatinTree: function(latinName){
+  let LatinModelInstance = new TreeNameModel(latinName)
+    LatinModelInstance.fetch().then(function(serverRes){
+    STORE.setStore('myTree', serverRes)
       })
     },
 
@@ -36,34 +36,52 @@ fetchMyWiki: function(latinName){
   })
     },
 
-    changeCurrentNav: function(selectedAppRoute, urlRoute){
-      STORE.setStore('currentNavRoute', selectedAppRoute)
-      window.location.hash = urlRoute
+  changeCurrentNav: function(selectedAppRoute, urlRoute){
+    STORE.setStore('currentNavRoute', selectedAppRoute)
+    window.location.hash = urlRoute
 },
+
   registerNewUser: function(usrObj){
-      UserModel.register(usrObj).then(function(serverRes){
-        ACTIONS.changeCurrentNav('HOME', '')
+    UserModel.register(usrObj).then(function(serverRes){
+    ACTIONS.changeCurrentNav('HOME', '')
 })
 },
 
-  loginUser: function(u, p){
-    UserModel.logIn(u, p).then(function(serverRes){
+  loginUser: function(email, password){
+    UserModel.logIn(email, password).then(function(serverRes){
     STORE.setStore('currentUser', serverRes )
     ACTIONS.changeCurrentNav('HOME', '')
   })
 },
+  fetchCurrentUser: function(){
+    let currentUserInstance = new UserModel()
+    currentUserInstance.fetch().then(function(serverRes){
+    STORE.setStore('currentUser', serverRes)
 
-fetchCurrentUser: function(){
-  UserModel.getCurrentUser().then(function(serverRes){
-    if(serverRes.user !== null){
-    STORE.setStore('currentUser', serverRes.user)
-  }
   })
 },
-logoutUser: function(){
-  UserModel.logOut().then(function(serverRes){
-    STORE.setStore('currentUser', {})
+registerNewUser: function(dataObj){
+    let newUserInstance= new UserModel()
+    newUserInstance.set(dataObj)
+    newUserInstance.save().then(function(serverRes){
     ACTIONS.changeCurrentNav('HOME', '')
+
+  })
+},
+registerNewUserM: function(dataObj){
+    UserModel.register(dataObj).then(function(serverRes){
+    ACTIONS.changeCurrentNav('HOME', '')
+
+  })
+},
+
+logoutUser: function(){
+    UserModel.logOut().then(function(){
+    STORE.setStore('currentUser', {id: null,
+                  email: null,
+                  password: null})
+    ACTIONS.changeCurrentNav('HOME', '')
+    console.log(this.props)
   })
 }
 }
