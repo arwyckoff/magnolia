@@ -13,8 +13,9 @@ export const ProfileView = React.createClass({
 
   componentDidMount: function(){
     let component = this
-    ACTIONS.fetchMyLatinTree(window.location.hash.slice(1))
-    ACTIONS.fetchMyWiki(window.location.hash.slice(1))
+    console.log(this.state)
+    ACTIONS.fetchMyLatinTree(window.location.hash.slice(6))
+    ACTIONS.fetchMyWiki(window.location.hash.slice(6))
   },
 
   render: function(){
