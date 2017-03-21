@@ -1,14 +1,18 @@
 export const STORE = {
   _data:{
     treeListData: [],
-    filterChars: ["Aa"],
+    filteredListData: [],
+    filterChar: '',
+    filterChars: [],
     myTree: {},
-    currentNavRoute: '',
+    currentNavRoute:'',
     latinName: '',
     myWiki: '',
     id: '',
-    currentUser: {},
-    myImage: ''
+    currentUser: {id: null,
+                  email: null,
+                  password: null},
+    myImage: '',
   },
   getStoreData: function(){
 		return this._data
