@@ -6,7 +6,7 @@ const _getFilteredTrees = (filters, allTrees) => {
         let intersection = 0;
         for (let f = 0, fLen = filterLength; f < fLen; f++) {
             let filter = filters[f];
-            if (tree.characteristicsHash[filter] !== undefined) {
+            if (tree.characteristics[filter] !== undefined) {
                 intersection++;
             }
         }

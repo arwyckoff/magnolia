@@ -43,6 +43,11 @@ namespace Magnolia
                 .AddEntityFrameworkStores<MagnoliaContext>()
                 .AddDefaultTokenProviders();
 
+            services.Configure<IdentityOptions>(config =>
+            {
+                config.Password.RequireNonAlphanumeric = false;
+            });
+
             services.AddMvc();
         }
 
