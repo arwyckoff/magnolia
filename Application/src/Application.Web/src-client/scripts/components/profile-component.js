@@ -13,8 +13,12 @@ export const ProfileComponent = React.createClass({
       return (
         <div className = "tree-profile">
            <ProfileItem profileData={allTheTrees}/>
+           <div className = "profile-half">
                 <img src = {this.props.myImage}/>
-                     <p> {this.props.myWiki}</p>
+            </div>
+            <div className = "profile-half">
+                <p> {this.props.myWiki}</p>
+            </div>
 
         </div>
       )
@@ -30,7 +34,7 @@ export const ProfileItem = React.createClass({
       return (
         <div className = "container-tree" >
 
-          <h4>{this.props.profileData.commonName}({this.props.profileData.latinName})</h4>
+          <h3>{this.props.profileData.commonName}({this.props.profileData.latinName})</h3>
           <p>also known as: {this.props.profileData.secondaryName}</p>
 
        </div>

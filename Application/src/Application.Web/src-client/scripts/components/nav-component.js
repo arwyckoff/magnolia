@@ -7,18 +7,18 @@ export const NavBar = React.createClass({
 		let routeList
 		if( currentUserOnStore.id === 'undefined' || currentUserOnStore.id === null){
        routeList = [
-          {appRouteName: 'HOME', displayText: 'home',  hashRoute: ''},
+          {appRouteName: 'HOME', displayText: <i className="fa fa-tree"><span className="label arrow_box">home</span></i>,  hashRoute: ''},
+          {appRouteName: 'BROWSE', displayText: <i className="fa fa-binoculars"><span className="label arrow_box">browse</span></i>, hashRoute: 'browse'},
+          {appRouteName: 'REGISTER', displayText: <i className="fa fa-user-plus"><span className="label arrow_box">register</span></i>, hashRoute: 'register'},
+          {appRouteName: 'LOGIN', displayText: <i className="fa fa-sign-in"><span className="label arrow_box">login</span></i>, hashRoute: 'login'},
           {appRouteName: 'LANDING', displayText: 'landing-demo',  hashRoute: 'landing'},
-          {appRouteName: 'REGISTER', displayText: 'register', hashRoute: 'register'},
-          {appRouteName: 'LOGIN', displayText: 'login', hashRoute: 'login'},
-          {appRouteName: 'BROWSE', displayText: 'browse', hashRoute: 'browse'}
         ]
       }else {
     			routeList = [
     				{appRouteName: 'HOME', displayText: 'Welcome', hashRoute:  '' },
               {appRouteName: 'LANDING', displayText: 'landing-demo',  hashRoute: 'landing'},
-    	      {appRouteName: 'BROWSE', displayText: 'browse', hashRoute: 'browse'},
-    				{appRouteName: 'LOGOUT', displayText: 'Log OUT!', hashRoute: 'logout' }
+    	      {appRouteName: 'BROWSE', displayText:  <i className="fa fa-binoculars" aria-hidden="true"></i>, hashRoute: 'browse'},
+    				{appRouteName: 'LOGOUT', displayText:<i className="fa fa-sign-out" aria-hidden="true"></i>, hashRoute: 'logout' }
     			]
     		}
     		return routeList
@@ -37,9 +37,11 @@ export const NavBar = React.createClass({
     console.log('currentNavRoute from <Navbar/>' , this.props.currentNavRoute)
 console.log('currentUser per <Navbar/>' , this.props.currentUser)
     return(
-      <nav>
+      <nav className = "navbar navbar-fixed-top navbar-styles navbar-right">
+      <ul className ="navbar-right">
         {this._showNavOptionsJSX(this.props.appRouteName, this.props.currentUser)}
-      </nav>
+      </ul>
+    </nav>
     )
   }
 })
@@ -51,15 +53,15 @@ export const RouteOption = React.createClass({
   render: function(){
     let navOptionsClassName = "nav-option"
     if(this.props.appRouteName === this.props.currentNavRoute){
-      navOptionsClassName = 'nav-option nav-option-active'
+      navOptionsClassName = 'nav-option nav-option-act'
   }
       return(
-        <div
+        <li
           onClick = {this._handleNavClick}
           className = {navOptionsClassName}
         >
           {this.props.displayText}
-        </div>
+        </li>
 )
     }
 })

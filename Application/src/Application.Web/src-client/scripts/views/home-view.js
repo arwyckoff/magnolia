@@ -13,7 +13,7 @@ export const HomeView = React.createClass({
   componentDidMount: function(){
     let component = this;
 
-    ACTIONS.fetchAllTrees()
+    // ACTIONS.fetchAllTrees()
     // ACTIONS.fetchOneTree(this.props.treeListData)
   },
 
