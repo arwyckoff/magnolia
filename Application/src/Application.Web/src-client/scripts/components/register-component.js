@@ -23,13 +23,6 @@ export const RegisterComponent = React.createClass({
       }
     },
 
-
-    //
-    // _validateEmail: function(formDomEl){
-    //   let itemEl = formDomEl.usernameField
-    //   let userNameValue = itemEl.value
-    //   let flashMsgEl =
-    // },
   render: function(){
     return(
       <div className = "auth-form">
