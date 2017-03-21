@@ -3,6 +3,7 @@
     {
       "Value": "leaf type",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "simple",
@@ -20,7 +21,8 @@
     },
     {
       "Value": "leaf shape",
-      "Depends": "",
+      "Depends": "Aa",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "Needle-like",
@@ -117,6 +119,7 @@
     {
       "Value": "leaf Arrangement",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "alternate",
@@ -141,6 +144,7 @@
     {
       "Value": "leaf Venation",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "parallel",
@@ -170,7 +174,8 @@
     },
     {
       "Value": "leaf Apex",
-      "Depends": "",
+      "Depends": "A",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "acuminate",
@@ -224,7 +229,8 @@
     },
     {
       "Value": "leaf base",
-      "Depends": "",
+      "Depends": "A",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "cuneate",
@@ -278,7 +284,8 @@
     },
     {
       "Value": "leaf Margin",
-      "Depends": "",
+      "Depends": "A",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "entire",
@@ -368,7 +375,8 @@
     },
     {
       "Value": "leaf scar",
-      "Depends": "",
+      "Depends": "A",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "crescent-shaped",
@@ -434,7 +442,8 @@
     },
     {
       "Value": "leaf mobility",
-      "Depends": "",
+      "Depends": "A",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "mobile",
@@ -443,16 +452,17 @@
           "Description": ""
         },
         {
-          "Value": "sessile (fixed or immobile)",
+          "Value": "sessile",
           "Code": "Ib",
           "ImageRef": "",
-          "Description": ""
+          "Description": "fixed or immobile"
         }
       ]
     },
     {
       "Value": "leaf gland",
-      "Depends": "",
+      "Depends": "A",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "gland dotted",
@@ -470,7 +480,8 @@
     },
     {
       "Value": "leaf size",
-      "Depends": "",
+      "Depends": "A",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "greater than 4 inches long",
@@ -489,6 +500,7 @@
     {
       "Value": "needle growth pattern",
       "Depends": "Ba",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "clusters of 2-5 at base",
@@ -507,6 +519,7 @@
     {
       "Value": "needle shape",
       "Depends": "Ba",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "flat",
@@ -525,6 +538,7 @@
     {
       "Value": "needle size",
       "Depends": "Ba",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "1/2 long or more",
@@ -542,7 +556,8 @@
     },
     {
       "Value": "leaf odor/taste",
-      "Depends": "",
+      "Depends": "A",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "aromatic, spicy",
@@ -565,8 +580,9 @@
       ]
     },
     {
-      "Value": "petiole",
+      "Value": "petiole color",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "red",
@@ -585,6 +601,7 @@
     {
       "Value": "twig outgrowth",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "prickles",
@@ -609,6 +626,7 @@
     {
       "Value": "thorn branch",
       "Depends": "Rc",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "thorns branched",
@@ -626,7 +644,8 @@
     },
     {
       "Value": "twig Pith",
-      "Depends": "",
+      "Depends": "W",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "solid",
@@ -651,6 +670,7 @@
     {
       "Value": "pith size",
       "Depends": "T",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "small",
@@ -669,6 +689,7 @@
     {
       "Value": "twig color",
       "Depends": "W",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "greenish yellow",
@@ -717,12 +738,19 @@
           "Code": "Vh",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "light brown",
+          "Code": "Vi",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
     {
       "Value": "twig shape",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "flat",
@@ -747,6 +775,7 @@
     {
       "Value": "infloresence",
       "Depends": "",
+      "Category": "FLOWER",
       "States": [
         {
           "Value": "catkin",
@@ -795,6 +824,7 @@
     {
       "Value": "Fruit type",
       "Depends": "CUa",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "Aggregate",
@@ -825,6 +855,7 @@
     {
       "Value": "Aggregate Fruit",
       "Depends": "Ya",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "cone-like cluster of nutlets",
@@ -849,6 +880,7 @@
     {
       "Value": "multiple Fruit",
       "Depends": "Yb",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "capsules",
@@ -873,6 +905,7 @@
     {
       "Value": "simple fruit",
       "Depends": "Yc",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "samaras",
@@ -933,6 +966,7 @@
     {
       "Value": "fruit color",
       "Depends": "CUa",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "blue-black",
@@ -999,6 +1033,7 @@
     {
       "Value": "fruit persistence in winter",
       "Depends": "CUa",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "persists all winter",
@@ -1017,6 +1052,7 @@
     {
       "Value": "petals",
       "Depends": "",
+      "Category": "FLOWER",
       "States": [
         {
           "Value": "united",
@@ -1035,6 +1071,7 @@
     {
       "Value": "flower cluster",
       "Depends": "",
+      "Category": "FLOWER",
       "States": [
         {
           "Value": "terminal cluster",
@@ -1047,6 +1084,7 @@
     {
       "Value": "sepals",
       "Depends": "",
+      "Category": "FLOWER",
       "States": [
         {
           "Value": "enlarged",
@@ -1071,6 +1109,7 @@
     {
       "Value": "seed cone",
       "Depends": "",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "fleshy",
@@ -1113,6 +1152,7 @@
     {
       "Value": "tree season",
       "Depends": "",
+      "Category": "GENERAL",
       "States": [
         {
           "Value": "summer",
@@ -1131,6 +1171,7 @@
     {
       "Value": "leaf shed",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "evergreen",
@@ -1149,6 +1190,7 @@
     {
       "Value": "terminal bud",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "present",
@@ -1166,7 +1208,8 @@
     },
     {
       "Value": "terminal bud length",
-      "Depends": "",
+      "Depends": "AKa",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "more than 1/2 inch long",
@@ -1190,7 +1233,8 @@
     },
     {
       "Value": "terminal bud shape",
-      "Depends": "",
+      "Depends": "AKa",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "flattened",
@@ -1233,12 +1277,19 @@
           "Code": "AMg",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "scaled",
+          "Code": "AMh",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
     {
       "Value": "lateral bud",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "1/4 in long or more",
@@ -1269,6 +1320,7 @@
     {
       "Value": "lateral bud characteristics",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "encolsed/embedded in twig, petiole, or bark",
@@ -1319,7 +1371,7 @@
           "Description": ""
         },
         {
-          "Value": "flat",
+          "Value": "flattened",
           "Code": "AOi",
           "ImageRef": "",
           "Description": ""
@@ -1341,6 +1393,7 @@
     {
       "Value": "stem",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "branched",
@@ -1359,6 +1412,7 @@
     {
       "Value": "roots",
       "Depends": "",
+      "Category": "GENERAL",
       "States": [
         {
           "Value": "visible above soil",
@@ -1371,6 +1425,7 @@
     {
       "Value": "trunk buttressed",
       "Depends": "",
+      "Category": "GENERAL",
       "States": [
         {
           "Value": "buttressed",
@@ -1389,6 +1444,7 @@
     {
       "Value": "spur shoots",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "present",
@@ -1406,7 +1462,8 @@
     },
     {
       "Value": "bundle scar number",
-      "Depends": "",
+      "Depends": "H",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "single",
@@ -1455,6 +1512,7 @@
     {
       "Value": "sap characteristics",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "gummy sap",
@@ -1491,6 +1549,7 @@
     {
       "Value": "branched stipular spines",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "branched",
@@ -1503,6 +1562,7 @@
     {
       "Value": "stipule number/growth pattern",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "paired at nodes",
@@ -1527,6 +1587,7 @@
     {
       "Value": "general tree type",
       "Depends": "",
+      "Category": "GENERAL",
       "States": [
         {
           "Value": "conifer",
@@ -1545,6 +1606,7 @@
     {
       "Value": "needle-point quality",
       "Depends": "Ba",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "sharp",
@@ -1563,6 +1625,7 @@
     {
       "Value": "leaf feel",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "fleshy or leathery",
@@ -1599,6 +1662,7 @@
     {
       "Value": "Seed type",
       "Depends": "",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "gymnosperm",
@@ -1617,6 +1681,7 @@
     {
       "Value": "fruit size",
       "Depends": "CUa",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "less than 1 inch",
@@ -1629,6 +1694,7 @@
     {
       "Value": "flower color",
       "Depends": "",
+      "Category": "FLOWER",
       "States": [
         {
           "Value": "pink",
@@ -1653,12 +1719,19 @@
           "Code": "BEd",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "greenish white",
+          "Code": "BEe",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
     {
       "Value": "fruit shape",
       "Depends": "CUa",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "elliptical",
@@ -1695,6 +1768,7 @@
     {
       "Value": "knee formation",
       "Depends": "",
+      "Category": "GENERAL",
       "States": [
         {
           "Value": "formed",
@@ -1713,6 +1787,7 @@
     {
       "Value": "leaves appressed to twig",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "appressed",
@@ -1731,6 +1806,7 @@
     {
       "Value": "branch quality",
       "Depends": "",
+      "Category": "GENERAL",
       "States": [
         {
           "Value": "flattened",
@@ -1761,6 +1837,7 @@
     {
       "Value": "Leaf rigidity",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "rigid",
@@ -1779,6 +1856,7 @@
     {
       "Value": "fruit an acorn",
       "Depends": "CUa",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "fruit an acorn",
@@ -1797,6 +1875,7 @@
     {
       "Value": "Needle tip",
       "Depends": "Ba",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "sharp",
@@ -1815,6 +1894,7 @@
     {
       "Value": "Seed enclosure",
       "Depends": "",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "leathery",
@@ -1833,6 +1913,7 @@
     {
       "Value": "needle length",
       "Depends": "Ba",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "greater than 1 inch",
@@ -1851,6 +1932,7 @@
     {
       "Value": "flower size",
       "Depends": "",
+      "Category": "FLOWER",
       "States": [
         {
           "Value": "less than 1 inch in diameter",
@@ -1869,6 +1951,7 @@
     {
       "Value": "twig scent when crushed",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "rank odor when crushed",
@@ -1887,6 +1970,7 @@
     {
       "Value": "leaf breadth",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "1.5 to 3.5 inches across",
@@ -1905,6 +1989,7 @@
     {
       "Value": "leaf underside",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "greenish yellow",
@@ -1941,6 +2026,7 @@
     {
       "Value": "bud characteristics",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "more than 2 scales",
@@ -1971,6 +2057,7 @@
     {
       "Value": "Pubescence of mature leaves",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "very short",
@@ -1989,6 +2076,7 @@
     {
       "Value": "leaf enumeration",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "5 or more",
@@ -2001,6 +2089,7 @@
     {
       "Value": "leaflet type",
       "Depends": "Ab",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "simple",
@@ -2031,6 +2120,7 @@
     {
       "Value": "leaflet shape",
       "Depends": "Ab",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "Needle-like",
@@ -2127,6 +2217,7 @@
     {
       "Value": "leaflet arrangement",
       "Depends": "Ab",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "alternate",
@@ -2151,6 +2242,7 @@
     {
       "Value": "leaflet margin",
       "Depends": "Ab",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "entire",
@@ -2241,6 +2333,7 @@
     {
       "Value": "twig touch",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "smooth",
@@ -2271,6 +2364,7 @@
     {
       "Value": "bark color",
       "Depends": "",
+      "Category": "BARK",
       "States": [
         {
           "Value": "gray",
@@ -2306,7 +2400,8 @@
     },
     {
       "Value": "bark touch",
-      "Depends": "",
+      "Depends": "CA",
+      "Category": "BARK",
       "States": [
         {
           "Value": "smooth",
@@ -2325,12 +2420,19 @@
           "Code": "CBc",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "spiny",
+          "Code": "CBd",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
     {
       "Value": "lenticles",
       "Depends": "",
+      "Category": "BARK",
       "States": [
         {
           "Value": "raised",
@@ -2379,6 +2481,7 @@
     {
       "Value": "flower season",
       "Depends": "",
+      "Category": "FLOWER",
       "States": [
         {
           "Value": "early summer",
@@ -2397,6 +2500,7 @@
     {
       "Value": "fruit touch",
       "Depends": "CUa",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "smooth",
@@ -2427,6 +2531,7 @@
     {
       "Value": "autumnal colors",
       "Depends": "",
+      "Category": "GENERAL",
       "States": [
         {
           "Value": "red",
@@ -2463,6 +2568,7 @@
     {
       "Value": "leaf upper color",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "dark green",
@@ -2480,7 +2586,8 @@
     },
     {
       "Value": "bark thickness",
-      "Depends": "",
+      "Depends": "CA",
+      "Category": "BARK",
       "States": [
         {
           "Value": "thin",
@@ -2499,6 +2606,7 @@
     {
       "Value": "leaf lower color",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "pale",
@@ -2529,10 +2637,17 @@
     {
       "Value": "leaf rachis",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "winged",
           "Code": "CJa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "spiny",
+          "Code": "CJb",
           "ImageRef": "",
           "Description": ""
         }
@@ -2541,6 +2656,7 @@
     {
       "Value": "lateral bud color",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "tan",
@@ -2559,6 +2675,7 @@
     {
       "Value": "twig thickness",
       "Depends": "",
+      "Category": "TWIG",
       "States": [
         {
           "Value": "slender",
@@ -2589,6 +2706,7 @@
     {
       "Value": "leaf lower feel",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "glabrous (smooth)",
@@ -2619,6 +2737,7 @@
     {
       "Value": "flower petals",
       "Depends": "",
+      "Category": "FLOWER",
       "States": [
         {
           "Value": "6 petals",
@@ -2655,6 +2774,7 @@
     {
       "Value": "seed shape",
       "Depends": "",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "bean",
@@ -2667,6 +2787,7 @@
     {
       "Value": "seed quality",
       "Depends": "",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "shiny",
@@ -2691,6 +2812,7 @@
     {
       "Value": "leaf upper quality",
       "Depends": "",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "shiny",
@@ -2709,6 +2831,7 @@
     {
       "Value": "fruit flavor",
       "Depends": "CUa",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "bitter",
@@ -2727,6 +2850,7 @@
     {
       "Value": "tree shape",
       "Depends": "",
+      "Category": "GENERAL",
       "States": [
         {
           "Value": "conical",
@@ -2739,6 +2863,7 @@
     {
       "Value": "compound leaf type",
       "Depends": "Ab",
+      "Category": "LEAF",
       "States": [
         {
           "Value": "pinnately-compound",
@@ -2769,6 +2894,7 @@
     {
       "Value": "fruit visible",
       "Depends": "",
+      "Category": "FRUIT",
       "States": [
         {
           "Value": "yes",
@@ -2779,6 +2905,194 @@
         {
           "Value": "no",
           "Code": "CUb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "petiole quality",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "spiny",
+          "Code": "CVa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "enlarged at base",
+          "Code": "CVb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaflets touch",
+      "Depends": "Ab",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "fleshy or leathery",
+          "Code": "CWa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pubescent (hairy)",
+          "Code": "CWb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "glabrous (smooth)",
+          "Code": "CWc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stiff",
+          "Code": "CWd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "firm",
+          "Code": "CWe",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "lenticles color",
+      "Depends": "CC",
+      "Category": "BARK",
+      "States": [
+        {
+          "Value": "orange",
+          "Code": "CXa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "pith color",
+      "Depends": "T",
+      "Category": "TWIG",
+      "States": [
+        {
+          "Value": "white",
+          "Code": "CYa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "bark ridges",
+      "Depends": "CA",
+      "Category": "BARK",
+      "States": [
+        {
+          "Value": "shallow",
+          "Code": "CZa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "flattened",
+          "Code": "CZb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "inner bark color",
+      "Depends": "CA",
+      "Category": "BARK",
+      "States": [
+        {
+          "Value": "yellow",
+          "Code": "DAa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "flower sexuality",
+      "Depends": "",
+      "Category": "FLOWER",
+      "States": [
+        {
+          "Value": "dioecious",
+          "Code": "DBa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "monoecious",
+          "Code": "DBb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "fruit season",
+      "Depends": "CUa",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "early spring",
+          "Code": "DCa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late spring",
+          "Code": "DCb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early summer",
+          "Code": "DCc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late summer",
+          "Code": "DCd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early autumn",
+          "Code": "DCe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late autumn",
+          "Code": "DCf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early winter",
+          "Code": "DCg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late winter",
+          "Code": "DCh",
           "ImageRef": "",
           "Description": ""
         }

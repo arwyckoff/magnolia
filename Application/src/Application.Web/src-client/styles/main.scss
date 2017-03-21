@@ -1,4 +1,10 @@
 @import './helpers.scss';
+@import './login-styles.scss';
+@import './profile-styles.scss';
+@import './register-styles.scss';
+@import './nav-styles.scss';
+@import './mixins.scss';
+
 * {
 	box-sizing: border-box;
 }
@@ -32,3 +38,6 @@ p {
 .grid-item {
 	 width: 25%;
   }
+.leafType .lower {
+font-size: 0;
+}
