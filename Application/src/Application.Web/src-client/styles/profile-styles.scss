@@ -1,0 +1,15 @@
+@import "./mixins.scss";
+
+.tree-profile{
+  width: 70%;
+  margin: auto;
+  .container-tree{
+    width: 100%;
+  }
+
+  p{
+    color: black;
+    text-align: left;
+    letter-spacing: 2px;
+  }
+}

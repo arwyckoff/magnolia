@@ -16,8 +16,8 @@ export const NavBar = React.createClass({
       }else {
     			routeList = [
     				{appRouteName: 'HOME', displayText: 'Welcome', hashRoute:  '' },
-    				{appRouteName: 'SHOUTS', displayText: 'Shouts', hashRoute: 'shouts' },
-    				{appRouteName: 'EDITPROFILE', displayText: 'Edit Profile', hashRoute: 'profile' },
+              {appRouteName: 'LANDING', displayText: 'landing-demo',  hashRoute: 'landing'},
+    	      {appRouteName: 'BROWSE', displayText: 'browse', hashRoute: 'browse'},
     				{appRouteName: 'LOGOUT', displayText: 'Log OUT!', hashRoute: 'logout' }
     			]
     		}
