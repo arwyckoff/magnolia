@@ -1,6 +1,7 @@
 import Backbone from 'backbone'
 import {TreeModel, TreeCollection} from './models/tree-model.js'
 import {WikiModel, WikiCollection} from './models/wiki-model.js'
+import {CodeModel, CodeCollection} from './models/code-model.js'
 import {UserModel} from './models/model-user.js'
 import {TreeNameModel} from './models/tree-name-model.js'
 
@@ -15,6 +16,13 @@ fetchAllTrees: function(){
     STORE.setStore('treeListData', serverRes)
     STORE.setStore('filteredTrees', serverRes)
   })
+  },
+
+  fetchAllCharCodes: function(){
+    let CodeCollectionInstance = new CodeCollection()
+    CodeCollectionInstance.fetch().then(function(serverRes){
+      STORE.setStore('codeList', serverRes)
+    })
   },
 
 fetchMyLatinTree: function(latinName){
