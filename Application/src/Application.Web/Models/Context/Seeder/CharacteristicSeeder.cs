@@ -9,6 +9,7 @@ namespace Magnolia.Context.Seeder.Models
     {
         public string Value { get; set; }
         public string Depends { get; set; }
+        public string Category { get; set; }
         public List<StateSeeder> States { get; set; }
     }
 }
