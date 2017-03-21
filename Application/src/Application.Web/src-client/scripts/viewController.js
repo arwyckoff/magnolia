@@ -13,9 +13,11 @@ import {LandingView} from './views/landing-view.js'
 export const ViewController = React.createClass({
 
   getInitialState: function(){
+    ACTIONS.fetchAllTrees()
     ACTIONS.changeCurrentNav(this.props.fromRoute, window.location.hash)
     let storeObject = STORE.getStoreData()
     return storeObject
+
   },
 
   componentWillMount: function(){
@@ -25,6 +27,7 @@ export const ViewController = React.createClass({
       component.setState(newStoreObj)
     })
     ACTIONS.fetchCurrentUser()
+    // ACTIONS.fetchAllTrees()
 
   },
 
