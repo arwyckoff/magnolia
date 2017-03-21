@@ -13,6 +13,12 @@ fetchAllTrees: function(){
   let TreeCollInstance = new TreeCollection()
   TreeCollInstance.fetch().then(function(serverRes){
     STORE.setStore('treeListData', serverRes)
+  fetchAllTrees: function(){
+    let TreeCollInstance = new TreeCollection()
+    TreeCollInstance.fetch().then(function(serverRes){
+
+      STORE.setStore('treeListData', serverRes)
+      STORE.setStore("filteredTrees", serverRes)
     })
   },
 
@@ -26,7 +32,7 @@ fetchMyLatinTree: function(latinName){
 fetchMyWiki: function(latinName){
   let WikiModelInstance = new WikiModel(latinName)
   WikiModelInstance.fetch().then(function(serverRes){
-    console.log(serverRes)
+    // console.log(serverRes)
     if (serverRes.originalimage ==='undefined'){
       STORE.setStore('myImage', '')
     }
