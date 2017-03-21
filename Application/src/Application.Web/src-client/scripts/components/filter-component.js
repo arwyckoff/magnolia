@@ -1,5 +1,6 @@
 import React from 'react'
 import {TreeModel, TreeCollection} from '../models/tree-model.js'
+import {CodeModel, CodeCollection} from '../models/code-model.js'
 import {STORE} from '../store.js'
 import {ACTIONS} from '../actions.js'
 import {BROWSE_ACTIONS} from '../browse_actions.js'
@@ -37,14 +38,14 @@ render: function(){
           </div>
 
 
-          <div className="checkbox">
-              <label><input type="checkbox" value=""/>Option 1</label>
+          <div className="checkbox"  onChange={this._handleFilterSelect}>
+              <label><input type="checkbox" value="all"/>All</label>
             </div>
-          <div className="checkbox">
-              <label><input type="checkbox" value=""/>Option 2</label>
+          <div className="checkbox" onChange={this._handleFilterSelect}>
+              <label><input type="checkbox" value="Aa"/>simple</label>
             </div>
-          <div className="checkbox disabled">
-              <label><input type="checkbox" value="" disabled/>Option 3</label>
+          <div className="checkbox" onChange={this._handleFilterSelect}>
+              <label><input type="checkbox" value="Ab"/>compound</label>
             </div>
         </div>
 
