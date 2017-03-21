@@ -21,26 +21,44 @@ namespace Magnolia.Context.Seeder
             {
                 context.Database.EnsureCreated();
 
+                if (!context.CharacteristicCategories.Any())
+                {
+                    var seedCategories = model.Characteristics.Select(c => c.Category).Distinct();
+
+                    foreach (var seedCategory in seedCategories)
+                    {
+                        context.CharacteristicCategories.Add(new CharacteristicCategory()
+                        {
+                            Value = seedCategory
+                        });
+                    }
+                }
+
+                context.SaveChanges();
+
                 if (!context.Characteristics.Any())
                 {
-                    foreach (var characteristic in model.Characteristics)
+                    foreach (var seedCharacteristic in model.Characteristics)
                     {
-                        var c = new Characteristic();
-                        c.Permutations = characteristic.States.Count();
-                        c.Value = characteristic.Value.ToLower();
-                        c.Depends = characteristic.Depends;
+                        var characteristic = new Characteristic();
+                        characteristic.Permutations = seedCharacteristic.States.Count();
+                        characteristic.Value = seedCharacteristic.Value.ToLower();
+                        characteristic.Depends = seedCharacteristic.Depends;
 
-                        foreach (var state in characteristic.States)
+                        characteristic.Category = context.CharacteristicCategories.FirstOrDefault(c => c.Value == seedCharacteristic.Category) 
+                                                                                       ?? throw new Exception("Category not found: " + seedCharacteristic.Category);
+
+                        foreach (var seedState in seedCharacteristic.States)
                         {
-                            var s = new State();
-                            s.Value = state.Value.ToLower();
-                            s.Description = state.Description;
-                            s.ImageRef = state.ImageRef;
-                            s.Code = state.Code;
-                            c.States.Add(s);
+                            var state = new State();
+                            state.Value = seedState.Value.ToLower();
+                            state.Description = seedState.Description;
+                            state.ImageRef = seedState.ImageRef;
+                            state.Code = seedState.Code;
+                            characteristic.States.Add(state);
                         }
 
-                        context.Characteristics.Add(c);
+                        context.Characteristics.Add(characteristic);
                     }
                 }
 
