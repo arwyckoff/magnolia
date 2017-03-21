@@ -5,9 +5,12 @@ import {STORE} from '../store.js'
 
 
 export const LandingView = React.createClass({
-
+getInitialState: function(){
+ return STORE.getStoreData()
+},
 
       render: function(){
+
        //  console.log(this.props.filterChars)
 
          return (
