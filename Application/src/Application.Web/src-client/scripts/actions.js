@@ -5,8 +5,9 @@ import {UserModel} from './models/model-user.js'
 import {TreeNameModel} from './models/tree-name-model.js'
 
 import {STORE} from './store.js'
-// import {PlantViewModel} from '../../Models/Api/PlantViewModel.cs'
 
+
+export const ACTIONS = {
 
 fetchAllTrees: function(){
   let TreeCollInstance = new TreeCollection()
