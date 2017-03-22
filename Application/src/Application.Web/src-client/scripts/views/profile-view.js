@@ -7,7 +7,9 @@ import {GenusComponent, ProfileComponent} from '../components/profile-component.
 
 export const ProfileView = React.createClass({
   getInitialState: function(){
+          STORE.setStore('myImage', '')
     return STORE.getStoreData()
+
   },
 
 
@@ -18,17 +20,15 @@ export const ProfileView = React.createClass({
     let latinGenusWord = latinGenus[0]
     STORE.setStore('genus', latinGenusWord)
     console.log(this.state.genus)
-    ACTIONS.fetchGenusTrees(this.state.genus)
-    ACTIONS.fetchMyLatinTree(window.location.hash.slice(6))
-    ACTIONS.fetchMyWiki(window.location.hash.slice(6))
+    ACTIONS.fetchProfileStuff(this.state.genus, window.location.hash.slice(6))
 
   },
 
   render: function(){
     return(
       <div className = "profile-container">
-        <ProfileComponent {...this.state}/>
-        <GenusComponent {...this.state}/>
+        <ProfileComponent {...this.props}/>
+        <GenusComponent {...this.props}/>
       </div>
     )
   }
