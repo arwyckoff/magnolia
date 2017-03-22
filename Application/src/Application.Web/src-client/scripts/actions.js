@@ -4,6 +4,7 @@ import {WikiModel, WikiCollection} from './models/wiki-model.js'
 import {CodeModel, CodeCollection} from './models/code-model.js'
 import {UserModel} from './models/model-user.js'
 import {TreeNameModel} from './models/tree-name-model.js'
+import {CategoriesModel, CategoriesCollection} from "./models/categories-model.js"
 import {GenusModel, GenusCollection} from './models/model-genus.js'
 import {WikiGenusModel} from './models/new-wiki-model.js'
 
@@ -43,6 +44,14 @@ fetchAllTrees: function(){
     STORE.setStore('treeListData', serverRes)
     STORE.setStore('filteredTrees', serverRes)
   })
+  },
+
+  fetchAllCategories: function(){
+    let CatCollInstance = new CategoriesCollection()
+    CatCollInstance.fetch().then(function(serverRes){
+      console.log(serverRes)
+      STORE.setStore('categories', serverRes)
+    }, e => console.error(e))
   },
 
   fetchAllCharCodes: function(){
@@ -124,5 +133,13 @@ logoutUser: function(){
                   password: null})
     ACTIONS.changeCurrentNav('HOME', '')
   })
-}
+},
+
+  changeCategory: function(cat){
+    STORE.setStore('categorySelect', cat)
+  },
+
+  changeCharacteristic: function(char){
+    STORE.setStore('characteristicSelect', char)
+  }
 }

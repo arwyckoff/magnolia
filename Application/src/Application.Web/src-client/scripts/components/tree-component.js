@@ -11,7 +11,7 @@ export const TreeListComponent = React.createClass({
   componentDidMount: function (){
 
     let self = this
-    console.log(this.props.treeListData)
+    // console.log(this.props.treeListData)
   },
 
 
@@ -44,7 +44,7 @@ export const TreeListComponent = React.createClass({
     else {
       return (
 
-        <div className = "trees container-browse">
+        <div className="col-8">
                {this._makeTreeComponents(this.props.filteredTrees)}
         </div>
       )
