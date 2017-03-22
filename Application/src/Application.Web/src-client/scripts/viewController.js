@@ -15,6 +15,7 @@ export const ViewController = React.createClass({
   getInitialState: function(){
     ACTIONS.fetchAllTrees()
     ACTIONS.fetchAllCharCodes()
+    ACTIONS.fetchAllCategories()
     ACTIONS.changeCurrentNav(this.props.fromRoute, window.location.hash)
     let storeObject = STORE.getStoreData()
     return storeObject
