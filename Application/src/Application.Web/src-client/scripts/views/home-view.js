@@ -19,8 +19,7 @@ export const HomeView = React.createClass({
 
   render: function(){
     return(
-      <div className = "container">
-        <h1>hey!</h1>
+      <div className = "container home-container">
         <TreeProfileComponent {...this.props}/>
       </div>
     )
