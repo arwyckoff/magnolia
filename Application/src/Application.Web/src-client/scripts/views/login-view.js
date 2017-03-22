@@ -8,7 +8,7 @@ export const LoginView = React.createClass({
     return(
       <div className = "container-login">
         <LoginComponent/>
-
+      
       </div>
     )
   }

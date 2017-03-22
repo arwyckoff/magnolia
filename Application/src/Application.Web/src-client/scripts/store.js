@@ -1,7 +1,10 @@
 export const STORE = {
   _data:{
     treeListData: [],
+    categorySelect: [],
+    characteristicSelect: [],
     codeList: [],
+    categories: {},
     filteredListData: [],
     filterChars: [],
     filteredTrees: [],
