@@ -13,11 +13,72 @@
   @include xcenter;
   top: 25%;
 }
+.loginlog{
+  z-index: 1;
+  @include absolute-center;
+height: 70px;
+}
+// .login-box button{
+//   background-color: #474a2c;
+//   border: none;
+//   color: white;
+//   border-radius: 5px;
+//   font-size: 16px;
+//
+// }
 .login-box button{
-  background-color: #474a2c;
+  background-color: rgba(10, 10, 10, 0);
   border: none;
   color: white;
-  border-radius: 5px;
+  z-index: 100;
   font-size: 16px;
+  margin-top: 40px;
+}
+.loginbut{
+  position: relative;
+// p{
+//   z-index: 1;
+//   @include absolute-center;
+//   font-size: 28px;
+//   color: white;
+//
+// }
+}
+.loginlog{
+  height: 150px;
+  position: relative;
+}
+.loginarrow_box{
+  display: none;
+}
+button:hover{
+.loginarrow_box {
+@include xcenter;
+z-index: 500;
+bottom: -50px;
+background: rgb(159, 161, 146);
+display: inherit;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+padding: 5px 30px;
+font-size: 20px;
+font-weight: 700;
+font-family: 'Quattrocento Sans', sans-serif;
+}
 
+.loginarrow_box:after {
+bottom: 100%;
+left: 50%;
+border: solid transparent;
+content: '';
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+border-color: rgba(136, 183, 213, 0);
+border-bottom-color: rgb(159, 161, 146);
+border-width: 5px;
+margin-left: -5px;
+}
 }
