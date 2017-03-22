@@ -5,6 +5,7 @@ import {CodeModel, CodeCollection} from './models/code-model.js'
 import {UserModel} from './models/model-user.js'
 import {TreeNameModel} from './models/tree-name-model.js'
 import {GenusModel, GenusCollection} from './models/model-genus.js'
+import {WikiGenusModel} from './models/new-wiki-model.js'
 
 import {STORE} from './store.js'
 
@@ -15,6 +16,26 @@ fetchGenusTrees: function(genusName){
   GenusCollInstance.fetch().then(function(serverRes){
     STORE.setStore('genusTrees', serverRes)
   })
+},
+fetchProfileStuff: function(genusName, latinName){
+  let WikiModelInstance = new WikiModel(latinName)
+  WikiModelInstance.fetch().then(function(serverRes){
+    if (serverRes.originalimage ==='undefined'){
+      STORE.setStore('myImage', '')
+    }
+    else if (serverRes.originalimage !=='undefined' && serverRes.originalimage.source !== 'undefined'){
+      STORE.setStore('myImage', serverRes.originalimage.source)
+    }
+    STORE.setStore('myWiki', serverRes.extract)
+        })
+  let LatinModelInstance = new TreeNameModel(latinName)
+    LatinModelInstance.fetch().then(function(serverRes){
+    STORE.setStore('myTree', serverRes)
+        })
+      let GenusCollInstance = new GenusCollection(genusName)
+      GenusCollInstance.fetch().then(function(serverRes){
+        STORE.setStore('genusTrees', serverRes)
+      })
 },
 fetchAllTrees: function(){
   let TreeCollInstance = new TreeCollection()
@@ -51,7 +72,12 @@ fetchMyWiki: function(latinName){
     STORE.setStore('myWiki', serverRes.extract)
   })
     },
-
+fetchMyGenusWiki: function(latinName){
+  let WikiGenusInstance = new WikiGenusModel(latinName)
+    WikiGenusInstance.fetch().then(function(serverRes){
+      console.log(serverRes)
+    })
+},
   changeCurrentNav: function(selectedAppRoute, urlRoute){
     STORE.setStore('currentNavRoute', selectedAppRoute)
     window.location.hash = urlRoute
@@ -97,7 +123,6 @@ logoutUser: function(){
                   email: null,
                   password: null})
     ACTIONS.changeCurrentNav('HOME', '')
-    console.log(this.props)
   })
 }
 }
