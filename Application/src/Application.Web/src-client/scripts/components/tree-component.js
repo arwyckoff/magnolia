@@ -55,10 +55,9 @@ export const TreeListComponent = React.createClass({
 export const TreeItem = React.createClass({
   _handleProfClick: function(evt){
     evt.preventDefault()
-    let profileEl = evt.currentTarget
-    let id = this.props.treeData.id
     let latinName = this.props.treeData.latinName
-    ACTIONS.changeCurrentNav ('PROFILE', latinName)
+    let latinRoute = `tree/${latinName}`
+    ACTIONS.changeCurrentNav ('PROFILE', latinRoute)
   },
    render: function(){
     //  let statesArray = []
@@ -71,7 +70,7 @@ export const TreeItem = React.createClass({
 
       return (
 
-        <div className = "container-tree">
+        <div className = "container-tree" onClick = {this._handleProfClick}>
                    <p className= "single-tree">{this.props.treeData.commonName}</p>
                 {/* <h1>ehlllloo</h1> */}
                     {/* <p className= "single-tree prop">{statesArray}</p> */}
