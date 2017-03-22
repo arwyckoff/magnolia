@@ -20,15 +20,15 @@ export const ProfileComponent = React.createClass({
             </div>
             <div className = "profile-half">
                 <p> {this.props.myWiki}</p>
-            </div>
 
         </div>
       </div>
+    </div>
       )
    }
 })
 
-export const ProfileItem = React.createClass({
+export const ProfileItem = React.createClass ({
 
    render: function(){
      let self = this
@@ -49,19 +49,23 @@ export const ProfileItem = React.createClass({
 
 
 export const GenusComponent = React.createClass({
+  getInitialState: function(){
+    return STORE.getStoreData()
+  },
 
   componentDidMount: function (){
     let self = this
+
   },
 
-  _makeTreeComponents: function(treeList){
-   let arrayOfTreeComponents = treeList.map(function(smod, i){
-        return (
-           <GenusItem treeData={smod} key={i}/>
-        )
-     })
-   return arrayOfTreeComponents
- },
+    _makeTreeComponents: function(treeList){
+     let arrayOfTreeComponents = treeList.map(function(smod, i){
+          return (
+             <GenusItem treeData={smod} key={i}/>
+          )
+          })
+     return arrayOfTreeComponents
+   },
 
    render: function(){
       return (
@@ -74,19 +78,22 @@ export const GenusComponent = React.createClass({
 })
 
 export const GenusItem = React.createClass({
-  _handleProfClick: function(evt){
-    evt.preventDefault()
-    let profileEl = evt.currentTarget
-    let id = this.props.treeData.id
-    let latinName = this.props.treeData.latinName
-    ACTIONS.changeCurrentNav ('PROFILE', latinName)
-  },
+getInitialState: function(){
+      ACTIONS.fetchMyGenusWiki(this.props.treeData.latinName)
+      return STORE.getStoreData()
+},
+  // _handleGenusProfClick: function(evt){
+  //   evt.preventDefault()
+  //   let profileEl = evt.currentTarget
+  //   let id = this.props.treeData.id
+  //   let latinName = this.props.treeData.latinName
+  //   let latinRoute = `tree/${latinName}`
+  //   ACTIONS.changeCurrentNav ('PROFILE', latinRoute)
+  // },
    render: function(){
-
       return (
 
-        <div className = "genus-box" onClick = {this._handleProfClick}>
-          <img src = "http://placehold.it/200?text=add+wiki+image"/>
+        <div className = "genus-box">
               <p className= "single-tree">{this.props.treeData.commonName}</p>
               <p><em>{this.props.treeData.latinName}</em></p>
        </div>
