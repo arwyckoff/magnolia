@@ -22,9 +22,10 @@ export const LoginComponent = React.createClass({
 				       <form onSubmit = {this._handleLogin}>
 					            <input type="text" className="form-control" name="emailField" placeholder="Username"/>
 	                    <input type="password" className="form-control" name="passwordField" placeholder= "Password"/>
-	                    <button type="submit">Log in</button>
-				       </form>
+	                    <button type="submit" className = "loginbut">Log in<img src = "../../images/tree-576846_1280.png" className = "loginlog"/><span className="label loginarrow_box">LOG in</span></button>
 
+
+				       </form>
 			     </div>
         </div>
       )
