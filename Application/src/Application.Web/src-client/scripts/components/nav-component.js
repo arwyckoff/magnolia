@@ -9,6 +9,7 @@ export const NavBar = React.createClass({
        routeList = [
           {appRouteName: 'HOME', displayText: <i className="fa fa-tree"><span className="label arrow_box">home</span></i>,  hashRoute: ''},
           {appRouteName: 'BROWSE', displayText: <i className="fa fa-binoculars"><span className="label arrow_box">browse</span></i>, hashRoute: 'browse'},
+          {appRouteName: 'LOGIN', displayText: <i className="fa fa-search"><span className="label arrow_box">IDentify</span></i>, hashRoute: 'identify'},
           {appRouteName: 'REGISTER', displayText: <i className="fa fa-user-plus"><span className="label arrow_box">register</span></i>, hashRoute: 'register'},
           {appRouteName: 'LOGIN', displayText: <i className="fa fa-sign-in"><span className="label arrow_box">login</span></i>, hashRoute: 'login'},
           {appRouteName: 'LANDING', displayText: 'landing-demo',  hashRoute: 'landing'},

@@ -1,11 +1,7 @@
 import Backbone from 'backbone';
 import ReactDOM from 'react-dom'
 import React from 'react'
-import {HomeView} from './views/home-view.js'
 import {ViewController} from './viewController.js'
-import{ProfileView} from './views/profile-view.js'
-import {BrowseView} from './views/browse-view.js'
-import $ from 'jquery'
 
 
 if(window.location.hostname === 'localhost'){
@@ -27,7 +23,8 @@ const AppRouter = Backbone.Router.extend({
 		'logout': 'showLogoutPage',
 		'login': 'showLoginPage',
     'browse': 'showBrowsePage',
-    'landing': 'showLandingDemo'
+    'landing': 'showLandingDemo',
+    'identify': 'showIdentifyPage',
 },
 
 showHomePage: function(){
@@ -54,6 +51,9 @@ showLoginPage: function(){
 showLogoutPage: function(){
 		ReactDOM.render(<ViewController fromRoute = {'LOGOUT'} />, document.querySelector('#app-container'))
 },
+showIdentifyPage: function(){
+    ReactDOM.render(<ViewController fromRoute = {'IDENTIFY'} />, document.querySelector('#app-container'))
+}
 })
 
 new AppRouter()

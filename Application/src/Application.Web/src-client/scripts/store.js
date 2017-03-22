@@ -8,6 +8,8 @@ export const STORE = {
     filteredListData: [],
     filterChars: [],
     filteredTrees: [],
+    genusTrees: [],
+    genus: '',
     myTree: {},
     currentNavRoute:'',
     latinName: '',
@@ -17,6 +19,7 @@ export const STORE = {
                   email: null,
                   password: null},
     myImage: '',
+
   },
   getStoreData: function(){
 		return this._data
