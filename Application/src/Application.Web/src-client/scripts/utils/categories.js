@@ -1,4 +1,4 @@
-const CATEGORIES = {
+export const CATEGORIES = {
     LEAF: 'LEAF',
     BARK: 'BARK',
     TWIG: 'TWIG',
