@@ -74,7 +74,7 @@
         },
         {
           "Value": "obovate",
-          "Code": "Ba",
+          "Code": "Bo",
           "ImageRef": "",
           "Description": "Teardrop-shaped; stem attaches to the tapering end"
         },
@@ -208,7 +208,7 @@
           "Description": "Quite flat"
         },
         {
-          "Value": "emerginate",
+          "Value": "emarginate",
           "Code": "Ef",
           "ImageRef": "",
           "Description": "Has an inward dip at the tip similar to a heart"
@@ -437,6 +437,12 @@
           "Code": "Hj",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "raised",
+          "Code": "Hk",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -635,7 +641,7 @@
           "Description": ""
         },
         {
-          "Value": "not branched",
+          "Value": "",
           "Code": "Sb",
           "ImageRef": "",
           "Description": ""
@@ -744,6 +750,18 @@
           "Code": "Vi",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "greenish",
+          "Code": "Vj",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "purple",
+          "Code": "Vk",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -767,6 +785,12 @@
         {
           "Value": "rounded/4 sided",
           "Code": "Wb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "zigzag",
+          "Code": "Wd",
           "ImageRef": "",
           "Description": ""
         }
@@ -1025,6 +1049,12 @@
         {
           "Value": "orange",
           "Code": "ACj",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "brown",
+          "Code": "ACk",
           "ImageRef": "",
           "Description": ""
         }
@@ -1329,7 +1359,7 @@
           "Description": ""
         },
         {
-          "Value": "globose and conical",
+          "Value": "scaled",
           "Code": "AOb",
           "ImageRef": "",
           "Description": ""
@@ -1359,7 +1389,7 @@
           "Description": ""
         },
         {
-          "Value": "asymmetrical",
+          "Value": "appressed to twig",
           "Code": "AOg",
           "ImageRef": "",
           "Description": ""
@@ -1367,24 +1397,6 @@
         {
           "Value": "pubescent (hairy)",
           "Code": "AOh",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "flattened",
-          "Code": "AOi",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "triangular",
-          "Code": "AOj",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "pointed",
-          "Code": "AOk",
           "ImageRef": "",
           "Description": ""
         }
@@ -1490,7 +1502,7 @@
           "Description": ""
         },
         {
-          "Value": "3 bundle scars",
+          "Value": "three",
           "Code": "AUe",
           "ImageRef": "",
           "Description": ""
@@ -1725,6 +1737,18 @@
           "Code": "BEe",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "yellow",
+          "Code": "BEf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "white",
+          "Code": "BEg",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -1760,6 +1784,12 @@
         {
           "Value": "globose",
           "Code": "BFe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "flattened",
+          "Code": "BFf",
           "ImageRef": "",
           "Description": ""
         }
@@ -2358,6 +2388,12 @@
           "Code": "BZd",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "warty",
+          "Code": "BZe",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -2395,6 +2431,30 @@
           "Code": "CAe",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "golden-gray",
+          "Code": "CAf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "bronze",
+          "Code": "CAg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "black",
+          "Code": "CAh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pinkish",
+          "Code": "CAi",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -2424,6 +2484,54 @@
         {
           "Value": "spiny",
           "Code": "CBd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "fibrous",
+          "Code": "CBe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "twisted",
+          "Code": "CBf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "papery",
+          "Code": "CBg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "peels",
+          "Code": "CBh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "scaly",
+          "Code": "CBi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "shiny",
+          "Code": "CBj",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "shreddy",
+          "Code": "CBk",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "plates",
+          "Code": "CBl",
           "ImageRef": "",
           "Description": ""
         }
@@ -2492,6 +2600,42 @@
         {
           "Value": "late summer",
           "Code": "CDb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early autumn",
+          "Code": "CDb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late autumn",
+          "Code": "CDc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early winter",
+          "Code": "CDe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late winter",
+          "Code": "CDf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early spring",
+          "Code": "CDg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late spring",
+          "Code": "CDh",
           "ImageRef": "",
           "Description": ""
         }
@@ -2650,6 +2794,12 @@
           "Code": "CJb",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "narrowly winged",
+          "Code": "CJc",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -2667,6 +2817,18 @@
         {
           "Value": "silvery",
           "Code": "CKb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "brown",
+          "Code": "CKc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "green",
+          "Code": "CKd",
           "ImageRef": "",
           "Description": ""
         }
@@ -2704,7 +2866,7 @@
       ]
     },
     {
-      "Value": "leaf lower feel",
+      "Value": "leaf lower touch",
       "Depends": "",
       "Category": "LEAF",
       "States": [
@@ -2810,7 +2972,7 @@
       ]
     },
     {
-      "Value": "leaf upper quality",
+      "Value": "leaf upper touch",
       "Depends": "",
       "Category": "LEAF",
       "States": [
@@ -2848,13 +3010,49 @@
       ]
     },
     {
-      "Value": "tree shape",
+      "Value": "crown shape",
       "Depends": "",
       "Category": "GENERAL",
       "States": [
         {
           "Value": "conical",
           "Code": "CSa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "fan",
+          "Code": "CSb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "broad",
+          "Code": "CSc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "narrow",
+          "Code": "CSd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "rounded",
+          "Code": "CSe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "shrub",
+          "Code": "CSf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "spread",
+          "Code": "CSg",
           "ImageRef": "",
           "Description": ""
         }
@@ -2926,6 +3124,42 @@
           "Code": "CVb",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "persistent",
+          "Code": "CVc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stiff",
+          "Code": "CVd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stout",
+          "Code": "CVe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "flattened",
+          "Code": "CVf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "slender",
+          "Code": "CVg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pubescent",
+          "Code": "CVh",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -2987,6 +3221,18 @@
         {
           "Value": "white",
           "Code": "CYa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "green",
+          "Code": "CYb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "brown",
+          "Code": "CYc",
           "ImageRef": "",
           "Description": ""
         }
@@ -3093,6 +3339,392 @@
         {
           "Value": "late winter",
           "Code": "DCh",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaves persistent through winter",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "yes",
+          "Code": "DDa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "no",
+          "Code": "DDb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "has branches",
+      "Depends": "",
+      "Category": "GENERAL",
+      "States": [
+        {
+          "Value": "yes",
+          "Code": "DEa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "no",
+          "Code": "DEb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "midrib",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "prominent",
+          "Code": "DFa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "inconspicuous",
+          "Code": "DFb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "strongly curved",
+          "Code": "DFc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "bundle scar shape",
+      "Depends": "",
+      "Category": "TWIG",
+      "States": [
+        {
+          "Value": "u-shaped",
+          "Code": "DGa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "staminate",
+      "Depends": "",
+      "Category": "FLOWER",
+      "States": [
+        {
+          "Value": "elongate",
+          "Code": "DHa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "catkins",
+          "Code": "DHb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pendulous",
+          "Code": "DHc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "drooping",
+          "Code": "DHd",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "pistillate",
+      "Depends": "",
+      "Category": "FLOWER",
+      "States": [
+        {
+          "Value": "elongate",
+          "Code": "DIa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "catkins",
+          "Code": "DIb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pendulous",
+          "Code": "DIc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "erect",
+          "Code": "DId",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "below staminate",
+          "Code": "DIe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "glabrous",
+          "Code": "DIf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "cylindrical",
+          "Code": "DIg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "inconspicuous",
+          "Code": "DIh",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "fibers between leaf segments",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "yes",
+          "Code": "DJa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "lateral bud shape",
+      "Depends": "",
+      "Category": "TWIG",
+      "States": [
+        {
+          "Value": "flattened",
+          "Code": "DKa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "ovate",
+          "Code": "DKb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "sharp",
+          "Code": "DKc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pointed",
+          "Code": "DKd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "globose",
+          "Code": "DKe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "asymmetrical",
+          "Code": "DKf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "valvate",
+          "Code": "DKg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "triangular",
+          "Code": "DKh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "conical",
+          "Code": "DKi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "squarish",
+          "Code": "DKj",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stalked",
+          "Code": "DKl",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "twig taste/odor",
+      "Depends": "",
+      "Category": "TWIG",
+      "States": [
+        {
+          "Value": "wintergreen",
+          "Code": "DLa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "non-aromatic",
+          "Code": "DLb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "general fruit characteristics",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "winged",
+          "Code": "DMa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "subtended",
+          "Code": "DMb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "upright cones",
+          "Code": "DMc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "smooth cone bracts",
+          "Code": "DMd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pubescent cone bracts",
+          "Code": "DMe",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "general trunk characteristics",
+      "Depends": "",
+      "Category": "GENERAL",
+      "States": [
+        {
+          "Value": "clear of branches",
+          "Code": "DNa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "twisted",
+          "Code": "DNb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf taste/odor",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "wintergreen",
+          "Code": "DOa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaves ranked",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "twice",
+          "Code": "DPa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "three times",
+          "Code": "DPb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "general bark characteristics",
+      "Depends": "",
+      "Category": "BARK",
+      "States": [
+        {
+          "Value": "blackish triangles",
+          "Code": "DQa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "exfoliating",
+          "Code": "DQb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "muscular appearance",
+          "Code": "DQc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "fissured",
+          "Code": "DQd",
           "ImageRef": "",
           "Description": ""
         }
@@ -4203,7 +4835,7 @@
         "CLb",
         "Vc",
         "BZc",
-        "AOb",
+        "DKe",
         "Ha",
         "AVb",
         "CAd",
@@ -4263,7 +4895,7 @@
         "BZa",
         "BZc",
         "ANb",
-        "AOb",
+        "DKi",
         "AOa",
         "Hi",
         "AVc",
@@ -4304,7 +4936,7 @@
         "CLa",
         "Vb",
         "AMa",
-        "AOj",
+        "DKh",
         "Ha",
         "Hi",
         "AUg",
@@ -4505,7 +5137,7 @@
         "ABh",
         "ACh",
         "ADa",
-        "AOk"
+        "DKd"
       ]
     },
     {
@@ -4623,7 +5255,44 @@
       "FamilyName": "Ginseng",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "CTb",
+        "Ab",
+        "Ca",
+        "CVa",
+        "CVb",
+        "CJb",
+        "BWh",
+        "BYl",
+        "CWc",
+        "Wc",
+        "Vi",
+        "CXa",
+        "AMh",
+        "DKh",
+        "DKa",
+        "AUa",
+        "AUb",
+        "Ub",
+        "CYa",
+        "CAb",
+        "CHa",
+        "CBd",
+        "CZa",
+        "CZb",
+        "DAa",
+        "DBa",
+        "BEe",
+        "BOa",
+        "CDb",
+        "CUa",
+        "CEa",
+        "ABi",
+        "ABh",
+        "ACd",
+        "ADa",
+        "DCd",
+        "DCe"
       ]
     },
     {
@@ -4634,7 +5303,29 @@
       "FamilyName": "Palm",
       "ImageRef": "",
       "Characteristics": [
-
+        "DDa",
+        "Aa",
+        "Ca",
+        "CSb",
+        "CVc",
+        "DEb",
+        "Da",
+        "DFa",
+        "DFc",
+        "CVd",
+        "CVe",
+        "CVf",
+        "CBe",
+        "CBb",
+        "ABh",
+        "CEd",
+        "ACd",
+        "DJa",
+        "DCe",
+        "BFe",
+        "DBa",
+        "BEf",
+        "BEg"
       ]
     },
     {
@@ -4645,7 +5336,44 @@
       "FamilyName": "Birch",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "Aa",
+        "Ca",
+        "Bk",
+        "Bo",
+        "Gl",
+        "Gc",
+        "CMa",
+        "CMb",
+        "Vb",
+        "AKb",
+        "DKl",
+        "Hk",
+        "Hd",
+        "Hf",
+        "AUe",
+        "DGa",
+        "CYb",
+        "CYc",
+        "CAb",
+        "CAa",
+        "CBa",
+        "CBf",
+        "DBb",
+        "BOa",
+        "DHa",
+        "DHb",
+        "DHc",
+        "DId",
+        "BFb",
+        "Xb",
+        "CDg",
+        "Za",
+        "BDa",
+        "CJc",
+        "ADa",
+        "DCd",
+        "DCe"
       ]
     },
     {
@@ -4656,7 +5384,56 @@
       "FamilyName": "Birch",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSe",
+        "DPa",
+        "AJb",
+        "Aa",
+        "Ca",
+        "Cc",
+        "Bh",
+        "Ge",
+        "Eb",
+        "Ea",
+        "Fd",
+        "Ff",
+        "Fh",
+        "CMc",
+        "CVg",
+        "CVh",
+        "CFd",
+        "CLa",
+        "Wd",
+        "Vj",
+        "Vb",
+        "CCb",
+        "CCd",
+        "AKb",
+        "DKb",
+        "DKc",
+        "DKd",
+        "CKc",
+        "AOb",
+        "DLa",
+        "CBd",
+        "CAf",
+        "CAg",
+        "CBh",
+        "CHa",
+        "CBg",
+        "CBi",
+        "DBb",
+        "BOa",
+        "DHb",
+        "DId",
+        "DIb",
+        "DIe",
+        "CDg",
+        "ABc",
+        "DMa",
+        "DMb",
+        "DMc",
+        "DCb",
+        "DCc"
       ]
     },
     {
@@ -4667,7 +5444,57 @@
       "FamilyName": "Birch",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSe",
+        "DNa",
+        "AJb",
+        "Aa",
+        "Ca",
+        "Bk",
+        "DPa",
+        "Gd",
+        "Ge",
+        "Ea",
+        "Eb",
+        "Ff",
+        "Fd",
+        "CMc",
+        "DOa",
+        "CFd",
+        "CLa",
+        "Wd",
+        "Vb",
+        "BZa",
+        "CCc",
+        "AKb",
+        "DKb",
+        "DKc",
+        "DKd",
+        "CKc",
+        "AOb",
+        "AUe",
+        "DLa",
+        "CAd",
+        "CAh",
+        "CBa",
+        "CBj",
+        "CCb",
+        "CCc",
+        "CCf",
+        "DBb",
+        "BOa",
+        "DHd",
+        "DHb",
+        "DIf",
+        "DId",
+        "DIb",
+        "DIe",
+        "CDg",
+        "ABc",
+        "DMa",
+        "DMc",
+        "DCb",
+        "DCc",
+        "DMd"
       ]
     },
     {
@@ -4678,7 +5505,52 @@
       "FamilyName": "Birch",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSg",
+        "AJb",
+        "Aa",
+        "Ca",
+        "DPa",
+        "Bm",
+        "Bh",
+        "Fe",
+        "Fa",
+        "Ge",
+        "CMc",
+        "CMa",
+        "CVh",
+        "CLa",
+        "Wd",
+        "Vh",
+        "Vi",
+        "CCb",
+        "CCd",
+        "AKb",
+        "DKb",
+        "AUe",
+        "ATa",
+        "Ha",
+        "Hf",
+        "DLb",
+        "CAd",
+        "CAa",
+        "CAi",
+        "CHa",
+        "CBg",
+        "CBk",
+        "CBl",
+        "DBb",
+        "BOa",
+        "DHb",
+        "DHa",
+        "DHd",
+        "DIg",
+        "DId",
+        "CDg",
+        "ABc",
+        "DMa",
+        "DMc",
+        "DMe",
+        "BFc"
       ]
     },
     {
@@ -4689,7 +5561,17 @@
       "FamilyName": "Birch",
       "ImageRef": "",
       "Characteristics": [
-
+        "CBj",
+        "CBh",
+        "CBg",
+        "CAd",
+        "CCc",
+        "AJb",
+        "Aa",
+        "Ca",
+        "DPa",
+        "Bm",
+        "Bh"
       ]
     },
     {
@@ -4700,7 +5582,18 @@
       "FamilyName": "Birch",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "Aa",
+        "Ca",
+        "DPa",
+        "Bm",
+        "Bh",
+        "CAb",
+        "CAa",
+        "CAe",
+        "DQa",
+        "BZe",
+        "Ea"
       ]
     },
     {
@@ -4711,7 +5604,10 @@
       "FamilyName": "Birch",
       "ImageRef": "",
       "Characteristics": [
-
+        "CBa",
+        "CAb",
+        "Bj",
+        "DLa"
       ]
     },
     {
@@ -4722,7 +5618,41 @@
       "FamilyName": "Birch",
       "ImageRef": "",
       "Characteristics": [
-
+        "DNb",
+        "AJb",
+        "Aa",
+        "Ca",
+        "DPa",
+        "Bh",
+        "Ge",
+        "Fd",
+        "CGa",
+        "CQb",
+        "CId",
+        "CMc",
+        "CVh",
+        "CLa",
+        "BZc",
+        "Wd",
+        "AKb",
+        "AOg",
+        "DKd",
+        "DKj",
+        "Ha",
+        "AUe",
+        "CBa",
+        "DQc",
+        "DBb",
+        "BOa",
+        "DHb",
+        "DHd",
+        "DIb",
+        "CDg",
+        "ABc",
+        "BFb",
+        "DMb",
+        "Za",
+        "Bk"
       ]
     },
     {
@@ -4733,7 +5663,42 @@
       "FamilyName": "Birch",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "Aa",
+        "DPa",
+        "Be",
+        "Bk",
+        "Fd",
+        "Ff",
+        "Fh",
+        "Eb",
+        "Ea",
+        "Gd",
+        "Ge",
+        "CMc",
+        "CLa",
+        "Wd",
+        "Vh",
+        "Vb",
+        "AKb",
+        "AOb",
+        "CKc",
+        "CKd",
+        "AUe",
+        "CAd",
+        "CHa",
+        "DQd",
+        "CBi",
+        "CBk",
+        "DBb",
+        "DHb",
+        "DIh",
+        "CDg",
+        "ABc",
+        "ACk",
+        "DMd",
+        "DCd",
+        "ADb"
       ]
     },
     {
