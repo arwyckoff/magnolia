@@ -3,13 +3,11 @@ import {ACTIONS} from '../actions.js'
 import {STORE} from '../store.js'
 export const NavBar = React.createClass({
   _getMenuOptions: function(currentUserOnStore){
-    console.log(currentUserOnStore.id)
 		let routeList
 		if( currentUserOnStore.id === 'undefined' || currentUserOnStore.id === null){
        routeList = [
           {appRouteName: 'HOME', displayText: <i className="fa fa-tree"><span className="label arrow_box">home</span></i>,  hashRoute: ''},
           {appRouteName: 'BROWSE', displayText: <i className="fa fa-binoculars"><span className="label arrow_box">browse</span></i>, hashRoute: 'browse'},
-          {appRouteName: 'LOGIN', displayText: <i className="fa fa-search"><span className="label arrow_box">IDentify</span></i>, hashRoute: 'identify'},
           {appRouteName: 'REGISTER', displayText: <i className="fa fa-user-plus"><span className="label arrow_box">register</span></i>, hashRoute: 'register'},
           {appRouteName: 'LOGIN', displayText: <i className="fa fa-sign-in"><span className="label arrow_box">login</span></i>, hashRoute: 'login'},
           {appRouteName: 'IDENTIFY', displayText: <i className = "fa fa-search"> <span className = "label arrow_box">IDentify</span></i>, hashRoute: 'identify' },
@@ -36,8 +34,6 @@ export const NavBar = React.createClass({
   },
 
   render: function(){
-    console.log('currentNavRoute from <Navbar/>' , this.props.currentNavRoute)
-console.log('currentUser per <Navbar/>' , this.props.currentUser)
     return(
       <nav className = "navbar navbar-fixed-top navbar-styles navbar-right">
       <ul className ="navbar-right">
