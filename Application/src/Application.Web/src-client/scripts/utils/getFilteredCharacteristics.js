@@ -1,5 +1,8 @@
-const _getFilteredCharacteristics = (filters, allCharacteristics) => {
+import {STORE} from '../store.js';
+
+export const _getFilteredCharacteristics = (filters, allCharacteristics) => {
     let filteredCharacteristics = [];
+    let allCharacter
     for (var c = 0, cLen = allCharacteristics.length; c < cLen; c++) {
         let characteristic = allCharacteristics[c];
         if (characteristic.depends === "") {
@@ -31,6 +34,5 @@ const _getFilteredCharacteristics = (filters, allCharacteristics) => {
         }
     }
     return filteredCharacteristics;
+    STORE.setStore('filterChars', filteredCharacteristics)
 }
-
-export default _getFilteredCharacteristics;

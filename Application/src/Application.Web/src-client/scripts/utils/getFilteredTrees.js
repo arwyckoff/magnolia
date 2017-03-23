@@ -1,4 +1,6 @@
-const _getFilteredTrees = (filters, allTrees) => {
+import {STORE} from '../store.js';
+
+export const _getFilteredTrees = (filters, allTrees) => {
     let filteredTrees = [];
     let filterLength = filters.length;
     for (let t = 0, tLen = allTrees.length; t < tLen; t++) {
@@ -15,6 +17,5 @@ const _getFilteredTrees = (filters, allTrees) => {
         }
     }
     return filteredTrees;
+    STORE.setStore('filteredTrees', filteredTrees)
 }
-
-export default _getFilteredTrees;

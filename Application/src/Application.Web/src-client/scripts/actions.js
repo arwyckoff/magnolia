@@ -21,6 +21,7 @@ fetchGenusTrees: function(genusName){
 fetchProfileStuff: function(genusName, latinName){
   let WikiModelInstance = new WikiModel(latinName)
   WikiModelInstance.fetch().then(function(serverRes){
+    console.log(serverRes)
     if (serverRes.originalimage ==='undefined'){
       STORE.setStore('myImage', '')
     }
@@ -141,5 +142,5 @@ logoutUser: function(){
 
   changeCharacteristic: function(char){
     STORE.setStore('characteristicSelect', char)
-  }
+  },
 }
