@@ -3,7 +3,7 @@ export const STORE = {
     treeListData: [],
     categorySelect: [],
     characteristicSelect: [],
-    codeList: [],
+    codeList: {},
     categories: {},
     filteredListData: [],
     filterChars: [],
@@ -11,15 +11,29 @@ export const STORE = {
     genusTrees: [],
     genus: '',
     myTree: {},
-    currentNavRoute:'',
+    currentNavRoute: '',
     latinName: '',
     myWiki: '',
     id: '',
+    iDK: {},
     currentUser: {id: null,
                   email: null,
                   password: null},
     myImage: '',
-
+    preferredChars: [],
+    legalChars: [],
+    MostCommonChars: [],
+    splitByPreference: {
+        preferred: [],
+        otherwise: []
+      },
+    best: {
+      characteristic: null,
+      percentage: 0
+          },
+    legalChars:[],
+    allCharArray: [],
+    appRouteName: '',
   },
   getStoreData: function(){
 		return this._data
