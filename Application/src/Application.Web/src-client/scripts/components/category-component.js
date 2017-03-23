@@ -20,9 +20,10 @@ export const CategoryComponent = React.createClass({
 
   _handleCatSelect: function(evt){
 
+
     let catClicked = evt.currentTarget.dataset.cat
 
-
+    console.log(evt.currentTarget.className)
     ACTIONS.changeCategory(catClicked)
 
 
@@ -30,14 +31,21 @@ export const CategoryComponent = React.createClass({
 },
 
 render: function (){
+  let classNameVar = ""
+  // if((this.props.categorySelect).toLowerCase() === keyName.toLowerCase()){
+  //   classNameVar = "cat active"
+  // }
 
   let {categories} = this.props
-  let keyNamesJsx = Object.keys(categories).map( (keyName,i) => {
-    return(
-      <div onClick={this._handleCatSelect} key={i} data-cat={keyName}><a>{keyName.toLowerCase()}</a></div>
-     )
-  })
-
+  let keyNamesJsx = Object.keys(categories).map(
+    (keyName,i) => {
+      if(keyName === this.props.categorySelect){
+        return  <div className="filter active" onClick={this._handleCatSelect} key={i} data-cat={keyName}><a>{keyName.toLowerCase()}</a></div>
+      } else {
+        return  <div className="filter" onClick={this._handleCatSelect} key={i} data-cat={keyName}><a>{keyName.toLowerCase()}</a></div>
+      }
+    }
+  )
   // console.log('???categories', keyNamesJsx )
   return (
 
