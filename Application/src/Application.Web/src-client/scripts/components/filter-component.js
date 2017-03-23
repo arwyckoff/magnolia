@@ -4,7 +4,7 @@ import {CodeModel, CodeCollection} from '../models/code-model.js'
 import {STORE} from '../store.js'
 import {ACTIONS} from '../actions.js'
 import {BROWSE_ACTIONS} from '../browse_actions.js'
-
+import _getFilteredTrees from "../utils/getFilteredTrees"
 
 export const FilterComponent = React.createClass({
 
@@ -24,6 +24,7 @@ export const FilterComponent = React.createClass({
 
 render: function(){
   let self = this
+
   if(this.props.categories.BARK === undefined){
     return(
       <div></div>
@@ -31,9 +32,6 @@ render: function(){
   } else {
     let currentCat = this.props.categorySelect
     let currentChar = this.props.characteristicSelect
-    // console.log(this.props)
-    // console.log(this.props.categories.currentCat.currentChar)
-    //
     let characteristics = this.props.categories[currentCat]
     let states = []
     for (let i = 0, len = characteristics.length; i < len; i++) {
@@ -43,41 +41,28 @@ render: function(){
       }
     }
 
-    let stateJSX = states.map(function(obj,i){
-      return(
 
-          <div onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state}</a></div>
-          )
+    let stateJSX = states.map(function(obj,i){
+      let futurefiltChars = [...self.props.filterChars]
+      futurefiltChars.push(obj.code)
+      let resultCount = _getFilteredTrees(futurefiltChars,self.props.filteredTrees).length
+      
+      if((self.props.filterChars).indexOf(obj.code) !== -1){
+        return   <div className="filter active" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
+    } else {
+        return   <div className="filter" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
+    }
         })
 
-
-    console.log(this.props)
 
     return(
       <div>
         <h4>Filters</h4>
         <div>{stateJSX}</div>
       </div>
-      // <div>
-      // <h4>Filters</h4>
-      //
-      //
-      //       <div className="checkbox"  onChange={this._handleFilterSelect}>
-      //           <label><input type="checkbox" value="all"/>All</label>
-      //         </div>
-      //       <div className="checkbox" onChange={this._handleFilterSelect}>
-      //           <label><input type="checkbox" value="Aa"/>simple</label>
-      //         </div>
-      //       <div className="checkbox" onChange={this._handleFilterSelect}>
-      //           <label><input type="checkbox" value="Ab"/>compound</label>
-      //         </div>
-      //     </div>
-
 
 
         )
-}
-  }
-
-
+      }
+    }
 })
