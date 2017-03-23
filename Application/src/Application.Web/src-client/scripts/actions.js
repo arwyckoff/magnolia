@@ -20,23 +20,38 @@ fetchGenusTrees: function(genusName){
 },
 fetchProfileStuff: function(genusName, latinName){
   let WikiModelInstance = new WikiModel(latinName)
-  WikiModelInstance.fetch().then(function(serverRes){
+  WikiModelInstance.fetch().then(function (serverRes) {
     if (serverRes.originalimage ==='undefined'){
       STORE.setStore('myImage', '')
-    }
-    else if (serverRes.originalimage !=='undefined' && serverRes.originalimage.source !== 'undefined'){
+    } else if (serverRes.originalimage !== undefined &&
+               serverRes.originalimage.source !== 'undefined') {
       STORE.setStore('myImage', serverRes.originalimage.source)
     }
     STORE.setStore('myWiki', serverRes.extract)
-        })
+  })
   let LatinModelInstance = new TreeNameModel(latinName)
-    LatinModelInstance.fetch().then(function(serverRes){
+  let myTree = {}
+  LatinModelInstance.fetch().then(function (serverRes) {
+    myTree = serverRes
     STORE.setStore('myTree', serverRes)
-        })
-      let GenusCollInstance = new GenusCollection(genusName)
-      GenusCollInstance.fetch().then(function(serverRes){
-        STORE.setStore('genusTrees', serverRes)
-      })
+  })
+  let GenusCollInstance = new GenusCollection(genusName)
+  GenusCollInstance.fetch().then(function (serverRes) {
+    let genusTrees = serverRes
+    let i = -1
+    for (let t = 0, tLen = genusTrees.length; t < tLen; t++) {
+      let tree = genusTrees[t]
+      if (tree.latinName === myTree.latinName) {
+        i = t
+      }
+    }
+    if (i === -1) {
+      throw new Error('Tree not found in own genus! What?', myTree)
+    } else {
+      genusTrees.splice(i, 1)
+      STORE.setStore('genusTrees', genusTrees)
+    }
+  })
 },
 fetchAllTrees: function(){
   let TreeCollInstance = new TreeCollection()
