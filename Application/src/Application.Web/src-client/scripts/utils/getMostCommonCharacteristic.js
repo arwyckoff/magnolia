@@ -1,4 +1,6 @@
-const _getBestBetweenPreferredAndOtherwise = (preferred, otherwise, trees, threshold) => {
+import {STORE} from '../store.js'
+
+export const _getBestBetweenPreferredAndOtherwise = (preferred, otherwise, trees, threshold) => {
     let best = _getMostCommonCharacteristic(preferred, trees);
     if (bestPreferred.percentage > threshold) {
         return best;
@@ -7,7 +9,7 @@ const _getBestBetweenPreferredAndOtherwise = (preferred, otherwise, trees, thres
     return _getMostCommonCharacteristic(otherwise, trees);
 }
 
-const _getMostCommonCharacteristic = (characteristics, trees) => {
+export const _getMostCommonCharacteristic = (characteristics, trees) => {
     let best = {
         characteristic: null,
         percentage: 0
@@ -38,6 +40,5 @@ const _getMostCommonCharacteristic = (characteristics, trees) => {
     }
 
     return best;
+    STORE.setStore('best', {})
 }
-
-export default _getBestBetweenPreferredAndOtherwise;
