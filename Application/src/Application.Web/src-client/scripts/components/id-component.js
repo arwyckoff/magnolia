@@ -3,30 +3,45 @@ import $ from 'jquery'
 import {TreeModel, TreeCollection} from '../models/tree-model.js'
 import {STORE} from '../store.js'
 import {ACTIONS} from '../actions.js'
+import {BROWSE_ACTIONS} from '../browse_actions.js'
+
 
 export const IdComponent = React.createClass({
-  initialize: function(){
-    return STORE.getStoreData()
+
+  componentDidMount: function (){
+
   },
 
-  handleNextQuestion: function(){
-    let componenet = this
-    let characteristicObjectList = this.props.codeList
-      for (var singleCharObject in this.props.codeList){
-        if (singleCharObject.length === 2 && singleCharObject.slice(0,1) === 'A'){
-          STORE.setStore('filterChars', singleCharObject)}
-          }
-  },
+  _handleCatSelect: function(evt){
+    let catClicked = evt.currentTarget.dataset.cat
 
-  render: function(){
+    ACTIONS.changeCategory(catClicked)
+},
+
+render: function (){
+
+  let {categories} = this.props
+  console.log(this.props)
+  let keyNamesJsx = Object.keys(categories).map( (keyName,i) => {
     return(
-      <div className = "question-box">
-        <h4>hello!</h4>
-        <ul>
-
-        </ul>
+      <div  className = "question-card"
+        onClick={this._handleCatSelect}
+        key={i} data-cat={keyName}>
+        <a>{keyName.toLowerCase()}</a>
+        <img src ="http://placehold.it/200"/>
       </div>
-    )
-  }
+     )
+  })
 
+  // console.log('???categories', keyNamesJsx )
+  return (
+
+    <div className = "question-box">
+        <h4>Choose part of plant to identify</h4>
+        {keyNamesJsx}
+
+
+    </div>
+  )
+}
 })
