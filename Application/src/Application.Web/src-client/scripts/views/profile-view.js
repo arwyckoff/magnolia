@@ -6,22 +6,19 @@ import {GenusComponent, ProfileComponent} from '../components/profile-component.
 
 
 export const ProfileView = React.createClass({
-  getInitialState: function(){
-          STORE.setStore('myImage', '')
+  getInitialState: function () {
     return STORE.getStoreData()
 
   },
 
-
-  componentDidMount: function(){
-    let component = this
+  componentWillMount: function(){
     let latinName = window.location.hash.slice(6)
     let latinGenus = latinName.split(' ')
     let latinGenusWord = latinGenus[0]
     STORE.setStore('genus', latinGenusWord)
-    console.log(this.state.genus)
-    ACTIONS.fetchProfileStuff(this.state.genus, window.location.hash.slice(6))
+    ACTIONS.fetchProfileStuff(latinGenusWord, latinName)
 
+    STORE.setStore('myImage', '')
   },
 
   render: function(){
