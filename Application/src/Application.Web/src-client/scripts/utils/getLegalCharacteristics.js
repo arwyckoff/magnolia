@@ -13,7 +13,7 @@ const _getLegalCharacteristics = (filters, IDKs, characteristicsByCategory, IDKt
             let characteristic = characteristics[c];
             for (let s = 0, sLen = characteristic.states.length; s < sLen; s++) {
                 let code = characteristic.states[s].code;
-                if (filters.indexOf(state) === -1) {
+                if (filters.indexOf(code) === -1) {
                     legal.push(characteristic);
                     break;
                 }
