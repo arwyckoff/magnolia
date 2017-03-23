@@ -27,6 +27,12 @@ export const TreeProfileComponent = React.createClass({
 
 export const TreeItem = React.createClass({
   _handleProfClick: function(evt){
+    let self = this
+    // let clickedEl = evt.currentTarget
+    // if (clickedEl.className === "cat cat-active"){
+    //   clickedEl.className = 'cat'
+    // }
+    // else {clickedEl.className = 'cat cat-active'}
     evt.preventDefault()
     let latinName = this.props.treeData.latinName
     let latinRoute = `tree/${latinName}`
@@ -36,7 +42,7 @@ export const TreeItem = React.createClass({
 
       return (
 
-        <div className = "container-tree homw-tree" onClick = {this._handleProfClick} >
+        <div className = "container-tree home-tree" onClick = {this._handleProfClick} >
                     {/* <p className= "single-tree prop">{statesArray}</p> */}
         <div className = "container-tree" data-route = {this.props.treeData.id} data-id = {this.props.treeData.latinName}>
           <h4>this tree</h4>

@@ -10,7 +10,7 @@ export const NavBar = React.createClass({
           {appRouteName: 'BROWSE', displayText: <i className="fa fa-binoculars"><span className="label arrow_box">browse</span></i>, hashRoute: 'browse'},
           {appRouteName: 'REGISTER', displayText: <i className="fa fa-user-plus"><span className="label arrow_box">register</span></i>, hashRoute: 'register'},
           {appRouteName: 'LOGIN', displayText: <i className="fa fa-sign-in"><span className="label arrow_box">login</span></i>, hashRoute: 'login'},
-          {appRouteName: 'IDENTIFY', displayText: <i className = "fa fa-search"> <span className = "label arrow_box">IDentify</span></i>, hashRoute: 'identify' },
+          {appRouteName: 'IDENTIFY', displayText: <i className = "fa fa-search"> <span className = "label arrow_box">identify</span></i>, hashRoute: 'identify'},
           {appRouteName: 'LANDING', displayText: 'landing-demo',  hashRoute: 'landing'},
         ]
       }else {
@@ -35,7 +35,7 @@ export const NavBar = React.createClass({
 
   render: function(){
     return(
-      <nav className = "navbar navbar-fixed-top navbar-styles navbar-right">
+      <nav className = "container-fluid navbar navbar-fixed-top navbar-styles navbar-right">
       <ul className ="navbar-right">
         {this._showNavOptionsJSX(this.props.appRouteName, this.props.currentUser)}
       </ul>

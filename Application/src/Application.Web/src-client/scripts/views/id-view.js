@@ -2,11 +2,10 @@ import Backbone from 'backbone'
 import React from 'react'
 import {ACTIONS} from '../actions.js'
 import {STORE} from '../store.js'
-import {IdCategoryComponent} from '../components/id-component.js'
+import {IdCategoryComponent, QuestionComponent} from '../components/id-component.js'
 import {CharacteristicComponent} from '../components/characteristic-component.js'
 import {TreeListComponent} from '../components/tree-component.js'
 import {FilterComponent} from '../components/filter-component.js'
-
 
 export const IdentifyView = React.createClass({
   getInitialState: function(){
@@ -24,8 +23,7 @@ export const IdentifyView = React.createClass({
     return(
       <div className = "profile-container">
         <IdCategoryComponent {...this.props}/>
-
-        {/* <QuestionComponent {...this.props}/> */}
+        <QuestionComponent {...this.props}/>
         {/* <FilterComponent {...this.props}/> */}
         {/* <TreeListComponent {...this.props}/> */}
       </div>

@@ -1,4 +1,5 @@
 import Backbone from 'backbone';
+import $ from 'jquery'
 
 export const WikiModel = Backbone.Model.extend({
   initialize: function(latinName){
