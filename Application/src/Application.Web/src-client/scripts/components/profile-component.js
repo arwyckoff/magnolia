@@ -110,8 +110,11 @@ export const GenusItem = React.createClass({
     let id = this.props.treeData.id
     let latinName = this.props.treeData.latinName
     let latinRoute = `tree/${latinName}`
-
-    ACTIONS.changeCurrentNav ('PROFILE', latinRoute)
+    let latinGenus = latinName.split(' ')
+    let latinGenusWord = latinGenus[0]
+    STORE.setStore('genus', latinGenusWord)
+    ACTIONS.fetchProfileStuff(latinGenusWord, latinName)
+    STORE.setStore('myImage', '')
   },
    render: function(){
 
