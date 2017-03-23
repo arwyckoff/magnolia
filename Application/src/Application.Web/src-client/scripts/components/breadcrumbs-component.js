@@ -10,29 +10,28 @@ import {_handleFilterSelect} from "./filter-component.js"
 
 export const BreadcrumbsComponent = React.createClass({
 
-  _handleBreadcrumbSelect: function(evt){
 
-    console.log("hey")
-    let filterChar = evt.currentTarget.dataset.code
-    // let FilterList = this.props.filterChars
-    // console.log(this.props.categorySelect)
-    // console.log(this.props.characteristicSelect)
-  BROWSE_ACTIONS.changeFilter(filterChar)
+  _handleResetButtonSelect: function(){
+    BROWSE_ACTIONS.changeFilter("all")
+  },
+
+
+  _handleBreadcrumbSelect: function(evt){
+        let filterChar = evt.currentTarget.dataset.code
+        BROWSE_ACTIONS.changeFilter(filterChar)
 },
 
 render: function(){
-  // console.log(this.props)
-  // console.log(this.props)
-  //
+
   let codeListObj = this.props.filterChars
 
   let selectedCodeObj = codeListObj.map(
     (obj,i) => {
-      return <a
+      return <div
                className='item' key={i}>{this.props.codeList[obj].state}
             <i onClick={this._handleBreadcrumbSelect}
-              data-code={this.props.codeList[obj].code} className="fa fa-times-circle" aria-hidden="true"></i>
-            </a>
+              data-code={this.props.codeList[obj].code} className="fa fa-times-circle makeHand" aria-hidden="true"></i>
+            </div>
     }
   )
 
@@ -40,8 +39,11 @@ render: function(){
 
   return(
     <div>
-    <h4 className="breadCrumbHeader">Selected Filters</h4>
-    <div className="container filterContainer">
+      <div className="breadCrumbHeadContainer">
+          <h4 className="breadCrumbHeader selected">Selected Filters</h4>
+          <h4 onClick={this._handleResetButtonSelect} className="breadCrumbHeader reset">Reset</h4>
+      </div>
+          <div className="container filterContainer">
 
       <div >{selectedCodeObj} </div>
     </div>

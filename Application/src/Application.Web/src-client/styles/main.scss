@@ -22,6 +22,7 @@ p {
 	color: #aaa;
 }
 
+
 .container-browse{
 	background-color: cornflowerblue;
 	border: black thick solid;
@@ -55,9 +56,6 @@ font-size: 0;
 	color: black;
 }
 
-.filterContainer{
-
-}
 
 .futurefiltresults{
 	color: gray;
@@ -66,13 +64,20 @@ font-size: 0;
 
 .breadCrumbs{
 	font-size: 10px;
-
 }
 
+
 .breadCrumbHeader{
-	border: thick black solid;
+	display: inline-block;
+	width: 50%;
 	text-align: center;
-	font-size:14px;
+}
+
+.reset {
+	cursor: pointer;
+	cursor: hand;
+	font-size: 14px;
+	color: gray;
 }
 
 .container{
@@ -83,7 +88,14 @@ font-size: 0;
 	margin-bottom: 20px;
 }
 
+.makeHand{
+	cursor: pointer;
+	cursor: hand;
+}
+
 .item{
+	color: gray;
 	display: inline-block;
 	margin: 7px;
+	text-decoration: none;
 }
