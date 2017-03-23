@@ -3,7 +3,7 @@ export const STORE = {
     treeListData: [],
     categorySelect: [],
     characteristicSelect: [],
-    codeList: [],
+    codeList: {},
     categories: {},
     filteredListData: [],
     filterChars: [],
