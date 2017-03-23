@@ -8,6 +8,7 @@ import {IdComponent} from '../components/id-component.js'
 export const IdentifyView = React.createClass({
   getInitialState: function(){
     return STORE.getStoreData()
+    console.log(this.props)
   },
 
 
@@ -19,7 +20,7 @@ export const IdentifyView = React.createClass({
   render: function(){
     return(
       <div className = "profile-container">
-        <IdComponent {...this.state}/>
+        <IdComponent {...this.props}/>
       </div>
     )
   }
