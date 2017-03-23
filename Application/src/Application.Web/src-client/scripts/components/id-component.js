@@ -1,6 +1,4 @@
 import React from 'react'
-import $ from 'jquery'
-import {TreeModel, TreeCollection} from '../models/tree-model.js'
 import {STORE} from '../store.js'
 import {ACTIONS} from '../actions.js'
 import {BROWSE_ACTIONS} from '../browse_actions.js'
@@ -32,16 +30,15 @@ render: function (){
       </div>
      )
   })
-
-  // console.log('???categories', keyNamesJsx )
   return (
 
     <div className = "question-box">
         <h4>Choose part of plant to identify</h4>
         {keyNamesJsx}
 
-
     </div>
   )
 }
 })
+
+export const QuestionComponent
