@@ -46,11 +46,11 @@ render: function(){
       let futurefiltChars = [...self.props.filterChars]
       futurefiltChars.push(obj.code)
       let resultCount = _getFilteredTrees(futurefiltChars,self.props.filteredTrees).length
-      
+
       if((self.props.filterChars).indexOf(obj.code) !== -1){
-        return   <div className="filter active" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
+        return   <div className="filter active makeHand" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
     } else {
-        return   <div className="filter" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
+        return   <div className="filter makeHand" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
     }
         })
 
