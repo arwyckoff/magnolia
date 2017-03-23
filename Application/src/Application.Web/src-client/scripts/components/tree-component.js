@@ -42,10 +42,11 @@ export const TreeListComponent = React.createClass({
       )
     }
     else {
+      let filteredTreeJSX =  this._makeTreeComponents(this.props.filteredTrees)
       return (
 
         <div className="col-8">
-               {this._makeTreeComponents(this.props.filteredTrees)}
+               {filteredTreeJSX}
         </div>
       )
     }
@@ -60,24 +61,13 @@ export const TreeItem = React.createClass({
     ACTIONS.changeCurrentNav ('PROFILE', latinRoute)
   },
    render: function(){
-    //  let statesArray = []
-    //  let treeDataCommonNames = this.props.treeData.commonName
-     //
-    //  if(statesArray.indexOf(this.props.filterChars) === -1){
-    //    statesArray.push(treeDataCommonNames)
-    //    console.log(statesArray)
-    //  }
+
 
       return (
 
         <div className = "container-tree" onClick = {this._handleProfClick}>
                    <p className= "single-tree">{this.props.treeData.commonName}</p>
-                {/* <h1>ehlllloo</h1> */}
-                    {/* <p className= "single-tree prop">{statesArray}</p> */}
-        {/* <div className = "container-tree" onClick = {this._handleProfClick} data-route = {this.props.treeData.id} data-id = {this.props.treeData.latinName}>
-   */}
-                   {/* <p>{this.props.treeData.commonName}</p> */}
-         {/* </div> */}
+
        </div>
       )
    }
