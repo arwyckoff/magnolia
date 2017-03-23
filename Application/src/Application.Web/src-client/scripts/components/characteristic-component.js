@@ -40,11 +40,13 @@ render: function (){
     let characteristics = this.props.categories[this.props.categorySelect]
 
     let charJSX = characteristics.map(function(obj,i){
-      return(
-
-          <div onClick={self._handleCharSelect} data-cat={obj.characteristic} key={i}><a>{obj.characteristic}</a></div>
-          )
-        })
+      if(obj.characteristic === self.props.characteristicSelect){
+      return <div className="filter active" onClick={self._handleCharSelect} data-cat={obj.characteristic} key={i}><a>{obj.characteristic}</a></div>
+    } else {
+      return <div className="filter" onClick={self._handleCharSelect} data-cat={obj.characteristic} key={i}><a>{obj.characteristic}</a></div>
+            }
+        }
+      )
 
   return (
 
