@@ -10,7 +10,17 @@ export const ProfileComponent = React.createClass({
    render: function(){
       let self = this
       let allTheTrees = this.props.myTree
+      if (this.props.myWiki.description === 'Wikipedia disambiguation page' || this.props.myWiki.description ==='Wikimedia disambiguation page' || this.props.myWiki ===''){
+        return (
+          <div className = "profile-page">
+          <div className = "tree-profile">
+             <ProfileCategoryItem profileData={allTheTrees}/>
 
+          </div>
+        </div>
+        )
+      }
+      else {
       return (
         <div className = "profile-page">
         <div className = "tree-profile">
@@ -20,11 +30,11 @@ export const ProfileComponent = React.createClass({
             </div>
             <div className = "profile-half">
                 <p> {this.props.myWiki}</p>
-
         </div>
       </div>
     </div>
       )
+    }
    }
 })
 
@@ -33,20 +43,38 @@ export const ProfileItem = React.createClass ({
    render: function(){
      let self = this
 
-
       return (
         <div className = "container-tree" >
 
-          <h3>{this.props.profileData.commonName}({this.props.profileData.latinName})</h3>
+          <h3>{this.props.profileData.commonName} <em>{this.props.profileData.latinName}</em></h3>
           <p>also known as: {this.props.profileData.secondaryName}</p>
-
        </div>
 
      )
    }
 })
 
+export const ProfileCategoryItem = React.createClass ({
 
+   render: function(){
+     let self = this
+
+      return (
+        <div className = "container-tree container-disambigution" >
+
+          <h3>{this.props.profileData.commonName} <em>{this.props.profileData.latinName}</em></h3>
+          <p>also known as: {this.props.profileData.secondaryName}</p>
+            <div>
+                <ul> this plant does not have a wiki disambiguation page
+                  <li>some tree charactertics will go here</li>
+                  <li>some tree charactertics will go here</li>
+                </ul>
+            </div>
+       </div>
+
+     )
+   }
+})
 
 export const GenusComponent = React.createClass({
   getInitialState: function(){
@@ -78,24 +106,24 @@ export const GenusComponent = React.createClass({
 })
 
 export const GenusItem = React.createClass({
-getInitialState: function(){
-      ACTIONS.fetchMyGenusWiki(this.props.treeData.latinName)
-      return STORE.getStoreData()
-},
-  // _handleGenusProfClick: function(evt){
-  //   evt.preventDefault()
-  //   let profileEl = evt.currentTarget
-  //   let id = this.props.treeData.id
-  //   let latinName = this.props.treeData.latinName
-  //   let latinRoute = `tree/${latinName}`
-  //   ACTIONS.changeCurrentNav ('PROFILE', latinRoute)
-  // },
+
+  _handleGenusProfClick: function(evt){
+    evt.preventDefault()
+    let profileEl = evt.currentTarget
+    let id = this.props.treeData.id
+    let latinName = this.props.treeData.latinName
+    let latinRoute = `tree/${latinName}`
+
+    ACTIONS.changeCurrentNav ('PROFILE', latinRoute)
+  },
    render: function(){
+
       return (
 
-        <div className = "genus-box">
+        <div className = "genus-box" onClick = {this._handleGenusProfClick}>
               <p className= "single-tree">{this.props.treeData.commonName}</p>
               <p><em>{this.props.treeData.latinName}</em></p>
+
        </div>
       )
    }
