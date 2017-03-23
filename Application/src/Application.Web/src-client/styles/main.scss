@@ -44,3 +44,45 @@ p {
 .leafType .lower {
 font-size: 0;
 }
+
+ .active {
+	background-color: lightgreen;
+
+}
+
+ .filter a{
+	color: black;
+}
+
+.filterContainer{
+
+}
+
+.futurefiltresults{
+	color: gray;
+	font-size: 10px;
+}
+
+.breadCrumbs{
+	font-size: 10px;
+
+}
+
+.breadCrumbHeader{
+	border: thick black solid;
+	text-align: center;
+	font-size:14px;
+}
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.item{
+	display: inline-block;
+	margin: 7px;
+}

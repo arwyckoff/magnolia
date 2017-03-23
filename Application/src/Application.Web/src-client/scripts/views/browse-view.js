@@ -6,6 +6,7 @@ import {STORE} from '../store.js'
 import {TreeListComponent} from '../components/tree-component.js'
 import {FilterComponent} from '../components/filter-component.js'
 import {CategoryComponent} from '../components/category-component.js'
+import {BreadcrumbsComponent} from "../components/breadcrumbs-component.js"
 import {CharacteristicComponent} from '../components/characteristic-component.js'
 
 
@@ -46,6 +47,7 @@ export const BrowseView = React.createClass({
         <FilterComponent {...this.state}/>
       </div>
       <div className="col-xs-6">
+        <BreadcrumbsComponent {...this.state}/>
         <TreeListComponent {...this.state}/>
         </div>
       </div>
