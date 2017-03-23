@@ -1,0 +1,19 @@
+
+@import './mixins.scss';
+
+.question-box{
+	font-size: 16px;
+	width: 100%;
+	margin-top: 60px;
+	@include xcenter;
+	display: inline-block;
+	h1{
+		text-align: center;
+	}
+}
+.question-card{
+	display: inline-block;
+	padding: 5px;
+	margin: 2%;
+	border: 1px solid gray;
+}
