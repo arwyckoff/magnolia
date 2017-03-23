@@ -12,6 +12,7 @@ export const NavBar = React.createClass({
           {appRouteName: 'LOGIN', displayText: <i className="fa fa-search"><span className="label arrow_box">IDentify</span></i>, hashRoute: 'identify'},
           {appRouteName: 'REGISTER', displayText: <i className="fa fa-user-plus"><span className="label arrow_box">register</span></i>, hashRoute: 'register'},
           {appRouteName: 'LOGIN', displayText: <i className="fa fa-sign-in"><span className="label arrow_box">login</span></i>, hashRoute: 'login'},
+          {appRouteName: 'IDENTIFY', displayText: <i className = "fa fa-search"> <span className = "label arrow_box">IDentify</span></i>, hashRoute: 'identify' },
           {appRouteName: 'LANDING', displayText: 'landing-demo',  hashRoute: 'landing'},
         ]
       }else {
@@ -47,13 +48,14 @@ console.log('currentUser per <Navbar/>' , this.props.currentUser)
   }
 })
 
+
 export const RouteOption = React.createClass({
   _handleNavClick: function(evt){
     ACTIONS.changeCurrentNav(this.props.appRouteName, this.props.hashRoute)
   },
   render: function(){
     let navOptionsClassName = "nav-option"
-    if(this.props.appRouteName === this.props.currentNavRoute){
+    if(this.props.hashRoute === window.location.hash.slice(1)){
       navOptionsClassName = 'nav-option nav-option-act'
   }
       return(
