@@ -22,12 +22,19 @@ export const ProfileView = React.createClass({
   },
 
   render: function(){
+    if (this.props.genusTrees.length<=0){
     return(
       <div className = "profile-container">
         <ProfileComponent {...this.props}/>
-        <GenusComponent {...this.props}/>
       </div>
     )
   }
-
+  else {return(
+    <div className = "profile-container">
+      <ProfileComponent {...this.props}/>
+      <GenusComponent {...this.props}/>
+    </div>
+  )
+}
+}
 })
