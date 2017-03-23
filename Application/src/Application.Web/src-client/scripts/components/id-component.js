@@ -4,7 +4,7 @@ import {ACTIONS} from '../actions.js'
 import {BROWSE_ACTIONS} from '../browse_actions.js'
 
 
-export const IdComponent = React.createClass({
+export const IdCategoryComponent = React.createClass({
 
   componentDidMount: function (){
 
@@ -40,5 +40,3 @@ render: function (){
   )
 }
 })
-
-export const QuestionComponent
