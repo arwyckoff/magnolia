@@ -36,7 +36,7 @@ export const TreeListComponent = React.createClass({
       return (
 
         <div>
-          <h2>No Trees Match Your Criteria!</h2>
+          <h2 className="noTrees">No Trees Match Your Criteria!</h2>
         </div>
 
       )
