@@ -15,7 +15,33 @@ export const STORE = {
     latinName: '',
     myWiki: '',
     id: '',
-    iDK: {},
+    isTrue: false,
+
+    iDKs: {LEAF:
+            {totalIDK: 0,
+              idkRun: 0
+            },
+          BARK:
+            {totalIDK: 0,
+              idkRun: 0
+            },
+        TWIG:
+            {totalIDK: 0,
+             idkRun: 0
+           },
+          FLOWER:
+              {totalIDK: 0,
+              idkRun: 0
+            },
+            FRUIT:
+               {totalIDK: 0,
+               idkRun: 0
+             },
+              GENERAL:
+                {totalIDK: 0,
+                idkRun: 0
+              }
+              },
     currentUser: {id: null,
                   email: null,
                   password: null},
@@ -34,6 +60,7 @@ export const STORE = {
     legalChars:[],
     allCharArray: [],
     appRouteName: '',
+    currentQuestion: 1,
   },
   getStoreData: function(){
 		return this._data
