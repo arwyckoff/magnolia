@@ -16,10 +16,12 @@ export const FilterComponent = React.createClass({
 
     let filterChar = evt.currentTarget.dataset.code
     let FilterList = this.props.filterChars
-    // console.log(this.props.categorySelect)
-    // console.log(this.props.characteristicSelect)
+    let futurefiltCharsHandler = [...this.props.filterChars]
+    futurefiltCharsHandler.push(evt.currentTarget.dataset.code)
+    let resultCountHandler = _getFilteredTrees(futurefiltCharsHandler,this.props.filteredTrees).length
+    if(resultCountHandler !== 0){
   BROWSE_ACTIONS.changeFilter(filterChar)
-
+}
 },
 
 render: function(){
@@ -48,9 +50,9 @@ render: function(){
       let resultCount = _getFilteredTrees(futurefiltChars,self.props.filteredTrees).length
 
       if((self.props.filterChars).indexOf(obj.code) !== -1){
-        return   <div className="filter active makeHand" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
+        return   <div className="filter active makeHand hvr-grow" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
     } else {
-        return   <div className="filter makeHand" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
+        return   <div className="filter makeHand hvr-grow" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
     }
         })
 
