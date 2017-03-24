@@ -4,7 +4,6 @@
 @import './register-styles.scss';
 @import './nav-styles.scss';
 @import './mixins.scss';
-@import './identify-styles.scss';
 
 * {
 	box-sizing: border-box;
@@ -24,9 +23,6 @@ p {
 
 
 .container-browse{
-	background-color: cornflowerblue;
-	border: black thick solid;
-	font-size:0;
 
 
 }
@@ -48,22 +44,31 @@ font-size: 0;
 }
 
  .active {
-	background-color: lightgreen;
-
+	@include hoverTextColor;
 }
 
  .filter a{
-	color: black;
+	 text-align: center;
+	 text-decoration: none;
+	@include mainTextColor;
+
+}
+
+.filter a:hover{
+	@include hoverTextColor;
+
 }
 
 
 .futurefiltresults{
-	color: gray;
+	@include hoverTextColor
 	font-size: 10px;
 }
 
 .breadCrumbs{
+	@include hoverTextColor
 	font-size: 10px;
+
 }
 
 
@@ -77,8 +82,9 @@ font-size: 0;
 	cursor: pointer;
 	cursor: hand;
 	font-size: 14px;
-	color: gray;
+@include hoverTextColor
 }
+
 
 .container{
 	display: flex;
@@ -86,6 +92,7 @@ font-size: 0;
 	justify-content: center;
 	margin-top: 0;
 	margin-bottom: 20px;
+	width:100%;
 }
 
 .makeHand{
@@ -94,8 +101,44 @@ font-size: 0;
 }
 
 .item{
-	color: gray;
+	@include hoverTextColor
 	display: inline-block;
 	margin: 7px;
 	text-decoration: none;
+}
+
+.noTrees{
+	font-size:20px;
+	@include mainTextColor;
+	text-align: center;
+}
+
+.hvr-grow {
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.5s;
+    transition-property: transform;
+		animation-timing-function: linear;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+.browseCompContainer{
+	@include mainTextColor;
+	@include mainBackgroundColor;
+	min-height: 100vh;
+}
+
+.browseHeader h1{
+	@include navBarTextColor;
+}
+
+.auth-form{
+	margin-top:50px;
 }

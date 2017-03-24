@@ -34,8 +34,10 @@ export const BrowseView = React.createClass({
 
 // console.log("hello")
     return(
-      <div>
-        <h1>BROWSE</h1>
+      <div className = "browseCompContainer">
+        <div className="browseHeader">
+          <h1>BROWSE</h1>
+        </div>
       <div className= "container-fluid row">
         <div className="col-xs-2">
         <CategoryComponent {...this.state}/>

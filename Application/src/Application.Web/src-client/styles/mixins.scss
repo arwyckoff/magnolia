@@ -16,3 +16,44 @@ position: absolute;
 top: 50%;
 transform: translateY(-50%);
 }
+//snow//
+@mixin mainBackgroundColor(){
+  background-color: #FFF9F9;
+}
+
+@mixin navBarTextColor(){
+  color: #FFF9F9;
+}
+//charlestongreen//
+@mixin navBarBackground(){
+  background-color: #2A2B2A;
+}
+//charlestongreen #2A2B2A//
+@mixin mainTextColor(){
+  color: #2A2B2A;
+}
+//russiangreen//
+@mixin greenAccent(){
+  color: #668259;
+}
+//dimgray//
+@mixin hoverTextColor(){
+  color: #706C61;
+}
+//ruddypink//
+@mixin pinkBackground(){
+  background-color: #EF918F;
+}
+
+@mixin pinkColor(){
+  color: #EF918F;
+}
+
+@mixin navBarHoverInfo(){
+  border-color: rgba(42,43,42,0);
+	border-bottom-color: #EF918F;
+}
+//newyorkpink//
+@mixin newYorkPink(){
+  color: #D3807E;
+}
