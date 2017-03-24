@@ -2,32 +2,29 @@ import Backbone from 'backbone'
 import React from 'react'
 import {ACTIONS} from '../actions.js'
 import {STORE} from '../store.js'
-import {IdCategoryComponent, QuestionComponent} from '../components/id-component.js'
+import {IdComponent} from '../components/id-component.js'
 import {CharacteristicComponent} from '../components/characteristic-component.js'
-import {TreeListComponent} from '../components/tree-component.js'
+import {TreeIDComponent} from '../components/id-trees-component.js'
 import {FilterComponent} from '../components/filter-component.js'
+
 
 export const IdentifyView = React.createClass({
   getInitialState: function(){
     return STORE.getStoreData()
-    console.log(this.props)
   },
-
-
   componentDidMount: function(){
-    let component = this
-
+    console.log('testview')
   },
-
   render: function(){
-    return(
-      <div className = "profile-container">
-        <IdCategoryComponent {...this.props}/>
-        <QuestionComponent {...this.props}/>
-        {/* <FilterComponent {...this.props}/> */}
-        {/* <TreeListComponent {...this.props}/> */}
+    return (
+      <div className = "question-container">
+        <div className = "question-top">
+        <IdComponent {...this.state}/>
+      </div>
+        <div className = "question-tree-container">
+        <TreeIDComponent {...this.state}/>
+      </div>
       </div>
     )
   }
-
 })

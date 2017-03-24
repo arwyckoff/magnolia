@@ -12,6 +12,9 @@ import {STORE} from './store.js'
 
 
 export const ACTIONS = {
+  updateQuestionNumber: function(currentQuestion){
+    STORE.setStore('currentQuestion', currentQuestion+1)
+  },
 fetchGenusTrees: function(genusName){
   let GenusCollInstance = new GenusCollection(genusName)
   GenusCollInstance.fetch().then(function(serverRes){
@@ -66,9 +69,8 @@ fetchAllTrees: function(){
   fetchAllCategories: function(){
     let CatCollInstance = new CategoriesCollection()
     CatCollInstance.fetch().then(function(serverRes){
-      console.log(serverRes)
       STORE.setStore('categories', serverRes)
-    }, e => console.error(e))
+    })
   },
 
   fetchAllCharCodes: function(){

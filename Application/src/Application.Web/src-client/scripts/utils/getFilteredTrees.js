@@ -16,6 +16,6 @@ export const _getFilteredTrees = (filters, allTrees) => {
             filteredTrees.push(tree);
         }
     }
-    return filteredTrees;
-    STORE.setStore('filteredTrees', filteredTrees)
+STORE.setStore('filteredTrees', filteredTrees)
+        return filteredTrees;
 }
