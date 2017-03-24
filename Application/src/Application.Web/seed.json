@@ -768,6 +768,12 @@
           "Code": "Vl",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "orange",
+          "Code": "Vm",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -1331,6 +1337,12 @@
           "Code": "AMi",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "fringed scales",
+          "Code": "AMj",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -1417,8 +1429,13 @@
           "Code": "AOh",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "smaller than terminal buds",
+          "Code": "AOi",
+          "ImageRef": "",
+          "Description": ""
         }
-
 
 
 
@@ -1769,6 +1786,12 @@
         {
           "Value": "orange",
           "Code": "BEi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "brown",
+          "Code": "BEj",
           "ImageRef": "",
           "Description": ""
         }
@@ -2490,6 +2513,12 @@
           "Code": "CFe",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "green",
+          "Code": "CFf",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -2501,6 +2530,12 @@
         {
           "Value": "green",
           "Code": "CGa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "white",
+          "Code": "CGb",
           "ImageRef": "",
           "Description": ""
         }
@@ -2851,6 +2886,12 @@
           "Code": "CSh",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "pyrimidal",
+          "Code": "CSi",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -2905,7 +2946,7 @@
       ]
     },
     {
-      "Value": "petiole quality",
+      "Value": "general petiole characteristics",
       "Depends": "",
       "Category": "LEAF",
       "States": [
@@ -3163,6 +3204,12 @@
           "Code": "DFc",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "swollen tip",
+          "Code": "DFd",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3205,6 +3252,12 @@
         {
           "Value": "drooping",
           "Code": "DHd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "clustered",
+          "Code": "DHe",
           "ImageRef": "",
           "Description": ""
         }
@@ -3260,6 +3313,12 @@
         {
           "Value": "inconspicuous",
           "Code": "DIh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "solitary",
+          "Code": "DIi",
           "ImageRef": "",
           "Description": ""
         }
@@ -3428,6 +3487,18 @@
           "Code": "DMh",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "pulpy",
+          "Code": "DMi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "calyx present",
+          "Code": "DMj",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3463,6 +3534,12 @@
         {
           "Value": "crooked branches",
           "Code": "DNe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "contorted",
+          "Code": "DNf",
           "ImageRef": "",
           "Description": ""
         }
@@ -3532,6 +3609,24 @@
         {
           "Value": "long scales",
           "Code": "DQe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "squared plates",
+          "Code": "DQf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "lightly furrowed",
+          "Code": "DQg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "deeply furrowed",
+          "Code": "DQh",
           "ImageRef": "",
           "Description": ""
         }
@@ -3685,6 +3780,12 @@
           "Code": "DXb",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "lateral veins curved towards tip",
+          "Code": "DXc",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3709,6 +3810,75 @@
         {
           "Value": "fringed",
           "Code": "DZa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "embedded in twig",
+          "Code": "DZb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "general leaf characteristics",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "black marks",
+          "Code": "EAa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "flower shape",
+      "Depends": "",
+      "Category": "FLOWER",
+      "States": [
+        {
+          "Value": "urn",
+          "Code": "EBa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "cyllindrical",
+          "Code": "EBb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "linear",
+          "Code": "EBc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "angular",
+          "Code": "EBd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "saucer",
+          "Code": "EBe",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "seed color",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "brown",
+          "Code": "ECa",
           "ImageRef": "",
           "Description": ""
         }
@@ -4549,14 +4719,6 @@
       ]
     },
     {
-      "CommonName": "Franklin",
-      "LatinName": "Franklinia",
-      "FamilyName": "Tea",
-      "Characteristics": [
-
-      ]
-    },
-    {
       "CommonName": "Gordonia",
       "LatinName": "Gordonia",
       "FamilyName": "Tea",
@@ -4642,7 +4804,7 @@
       "CommonName": "Florida Maple",
       "SecondaryName": "Southern Sugar Maple",
       "TertiaryName": "",
-      "LatinName": "Acer barbatum",
+      "LatinName": "Acer floridanum",
       "FamilyName": "Maple",
       "ImageRef": "",
       "Characteristics": [
@@ -6067,7 +6229,48 @@
       "FamilyName": "Ebony",
       "ImageRef": "",
       "Characteristics": [
-
+        "DNb",
+        "DNf",
+        "AJb",
+        "Aa",
+        "Ca",
+        "Bh",
+        "Bk",
+        "Ea",
+        "Ga",
+        "CGa",
+        "DRc",
+        "EAa",
+        "CId",
+        "DSb",
+        "CFd",
+        "CFf",
+        "CFe",
+        "Wd",
+        "CXa",
+        "CCc",
+        "AKb",
+        "DKb",
+        "AOb",
+        "Tc",
+        "CAb",
+        "CAh",
+        "CHb",
+        "DQf",
+        "DBa",
+        "BEf",
+        "EBa",
+        "DHe",
+        "DIi",
+        "CDh",
+        "DMi",
+        "ABi",
+        "BFe",
+        "BEi",
+        "BEh",
+        "BEj",
+        "CRb",
+        "DMj"
       ]
     },
     {
@@ -6078,7 +6281,50 @@
       "FamilyName": "Heath",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSi",
+        "AJb",
+        "Aa",
+        "Ca",
+        "Be",
+        "Eb",
+        "Eh",
+        "Fb",
+        "DXc",
+        "CGa",
+        "DRc",
+        "DSb",
+        "CId",
+        "CMc",
+        "CVf",
+        "CVb",
+        "Vl",
+        "Vm",
+        "Vb",
+        "AKa",
+        "AMd",
+        "AMh",
+        "AMj",
+        "AOi",
+        "Hc",
+        "AUa",
+        "CAa",
+        "CHa",
+        "DQg",
+        "DBa",
+        "CNc",
+        "EBc",
+        "BEg",
+        "Xc",
+        "Xd",
+        "DId",
+        "CDa",
+        "DUa",
+        "ABd",
+        "ACk",
+        "ACd",
+        "ECa",
+        "COb",
+        "ADa"
       ]
     },
     {
@@ -6089,7 +6335,45 @@
       "FamilyName": "Heath",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSf",
+        "DNe",
+        "Wc",
+        "CSe",
+        "AJa",
+        "Aa",
+        "Ca",
+        "BBa",
+        "Bk",
+        "Ga",
+        "DFd",
+        "CGa",
+        "CGb",
+        "CIc",
+        "CId",
+        "CMa",
+        "CQb",
+        "Vj",
+        "Vh",
+        "Vl",
+        "AMh",
+        "Hd",
+        "DZb",
+        "CAc",
+        "CAb",
+        "CHa",
+        "CBi",
+        "DBa",
+        "BEa",
+        "BEb",
+        "BEg",
+        "EBd",
+        "EBe",
+        "DUa",
+        "CDh",
+        "ABd",
+        "DMg",
+        "DCd",
+        "DCe"
       ]
     },
     {
@@ -7748,17 +8032,6 @@
       "TertiaryName": "Gopher Wood",
       "LatinName": "Torreya taxifloria",
       "FamilyName": "Yew",
-      "ImageRef": "",
-      "Characteristics": [
-
-      ]
-    },
-    {
-      "CommonName": "Franklinia",
-      "SecondaryName": "Franklin-Tree",
-      "TertiaryName": "",
-      "LatinName": "Franklinia alatamaha",
-      "FamilyName": "Tea",
       "ImageRef": "",
       "Characteristics": [
 

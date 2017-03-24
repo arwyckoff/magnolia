@@ -17,11 +17,10 @@ export const ViewController = React.createClass({
     ACTIONS.fetchAllTrees()
     ACTIONS.fetchAllCharCodes()
     ACTIONS.fetchAllCategories()
-    ACTIONS.fetchAllCategories()
+    ACTIONS.fetchAllCharCodes()
     ACTIONS.changeCurrentNav(this.props.fromRoute, window.location.hash)
     let storeObject = STORE.getStoreData()
     return storeObject
-
   },
 
   componentWillMount: function(){
@@ -57,11 +56,11 @@ export const ViewController = React.createClass({
       case "LOGOUT":
         componentToRender = <LogoutView {...this.state}/>
         break;
+        case "IDENTIFY":
+          componentToRender = <IdentifyView {...this.state}/>
+          break;
       case "BROWSE":
         componentToRender = <BrowseView {...this.state}/>
-        break;
-      case "IDENTIFY":
-        componentToRender = <IdentifyView {...this.state}/>
         break;
         default:
     }

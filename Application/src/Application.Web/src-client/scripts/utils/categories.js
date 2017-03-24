@@ -6,5 +6,3 @@ export const CATEGORIES = {
     FRUIT: 'FRUIT',
     GENERAL: 'GENERAL'
 }
-
-export default CATEGORIES;
