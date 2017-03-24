@@ -34,5 +34,5 @@ export const _getFilteredCharacteristics = (filters, allCharacteristics) => {
         }
     }
     return filteredCharacteristics;
-    STORE.setStore('filterChars', filteredCharacteristics)
+
 }
