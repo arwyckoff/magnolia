@@ -77,32 +77,29 @@ export const ProfileCategoryItem = React.createClass ({
 })
 
 export const GenusComponent = React.createClass({
-  getInitialState: function(){
+  getInitialState: function () {
     return STORE.getStoreData()
   },
 
-  componentDidMount: function (){
-    let self = this
-
+  _makeTreeComponents: function (treeList) {
+    let arrayOfTreeComponents = treeList.map(
+      (smod, i) => {
+        return (
+          <GenusItem treeData={smod} key={i} />
+        )
+      }
+    )
+    return arrayOfTreeComponents
   },
 
-    _makeTreeComponents: function(treeList){
-     let arrayOfTreeComponents = treeList.map(function(smod, i){
-          return (
-             <GenusItem treeData={smod} key={i}/>
-          )
-          })
-     return arrayOfTreeComponents
-   },
-
-   render: function(){
-      return (
-        <div className = "genus-container">
-          <h4> Other trees in Genus <em>{this.props.genus}</em></h4>
-               {this._makeTreeComponents(this.props.genusTrees)}
-        </div>
-      )
-    }
+  render: function () {
+    return (
+      <div className="genus-container">
+        <h4> Other trees in Genus <em>{this.props.genus}</em></h4>
+        {this._makeTreeComponents(this.props.genusTrees)}
+      </div>
+    )
+  }
 })
 
 export const GenusItem = React.createClass({
@@ -113,8 +110,11 @@ export const GenusItem = React.createClass({
     let id = this.props.treeData.id
     let latinName = this.props.treeData.latinName
     let latinRoute = `tree/${latinName}`
-
-    ACTIONS.changeCurrentNav ('PROFILE', latinRoute)
+    let latinGenus = latinName.split(' ')
+    let latinGenusWord = latinGenus[0]
+    STORE.setStore('genus', latinGenusWord)
+    ACTIONS.fetchProfileStuff(latinGenusWord, latinName)
+    STORE.setStore('myImage', '')
   },
    render: function(){
 

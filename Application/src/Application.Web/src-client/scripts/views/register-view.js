@@ -19,7 +19,8 @@ export const RegisterView = React.createClass({
 
 		return (
 
-			<div className="container">
+			<div className="container register-container">
+				        <h2> Register for an account</h2>
 					<RegisterComponent/>
 
 			</div>

@@ -1,4 +1,4 @@
-const THRESHOLDS = {
+export const THRESHOLDS = {
     IDK: 3,
     DESCRIBES: [
         0.7,
@@ -7,5 +7,3 @@ const THRESHOLDS = {
         0.4
     ]
 };
-
-export default THRESHOLDS;
