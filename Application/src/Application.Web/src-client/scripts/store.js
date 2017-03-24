@@ -15,6 +15,7 @@ export const STORE = {
     latinName: '',
     myWiki: '',
     id: '',
+    isTrue: false,
 
     iDKs: {LEAF:
             {totalIDK: 0,
@@ -59,6 +60,7 @@ export const STORE = {
     legalChars:[],
     allCharArray: [],
     appRouteName: '',
+    currentQuestion: 1,
   },
   getStoreData: function(){
 		return this._data

@@ -1,44 +1,44 @@
-import {STORE} from '../store.js'
+import {STORE} from '../store.js';
+
 
 export const _getBestBetweenPreferredAndOtherwise = (preferred, otherwise, trees, threshold) => {
     let best = _getMostCommonCharacteristic(preferred, trees);
-    if (bestPreferred.percentage > threshold) {
-        return best;
-    }
-
-    return _getMostCommonCharacteristic(otherwise, trees);
+      if (best.percentage > threshold) {
+ STORE.setStore('best', best)
+ return best;
 }
 
-export const _getMostCommonCharacteristic = (characteristics, trees) => {
+return _getMostCommonCharacteristic(otherwise, trees);
+}
+
+export const _getMostCommonCharacteristic = (preferred, trees) => {
+  let otherwise = otherwise
     let best = {
         characteristic: null,
         percentage: 0
     };
 
     for (let c = 0, cLen = preferred.length; c < cLen; c++) {
-        let characteristic = preferred[c];
+        let characteristic = preferred[c]
         let occurrences = 0;
-
         for (let t = 0, tLen = trees.length; t < tLen; t++) {
-            let tree = trees[t];
+            let singleTree = trees[t];
+            let charStates = characteristic.states
             for (let s = 0, sLen = characteristic.states.length; s < sLen; s++) {
-                let state = characteristic.states[s];
-                if (tree.characteristics[state] !== undefined) {
-                    occurrences++;
-                    break;
-                }
-            }
-        }
+                let stateA = characteristic.states[s];
 
-        let percentage = occurrences / trees.length;
+                if (singleTree.characteristics.stateA !== 'undefined')
+                   occurrences++}
+
+        let percentage = occurrences / trees.length
         if (percentage > best.percentage) {
             Object.assign(
                 best,
                 { characteristic, percentage }
             );
-        }
-    }
-
-    return best;
-    STORE.setStore('best', {})
+        }}
 }
+
+        STORE.setStore('best', best)
+        return best;
+    }

@@ -8,14 +8,16 @@ export const _getPreferredCharacteristics = (characteristics, originalCategory) 
 
     for (let c = 0, cLen = characteristics.length; c < cLen; c++) {
         let characteristic = characteristics[c];
-        console.log(characteristic)
-        if (characteristics.category === originalCategory) {
+        // console.log(characteristic.category)
+        // console.log(originalCategory)
+        if (characteristic.category === originalCategory) {
             splitByPreference.preferred.push(characteristic);
         } else {
             splitByPreference.otherwise.push(characteristic);
         }
     }
     STORE.setStore('splitByPreference', splitByPreference)
+
     return splitByPreference;
 
 }
