@@ -1,10 +1,14 @@
 
 @import "./mixins.scss";
+.question-tree-container{
+	display: block;
+	position: relative;
+}
 
 .hero-img{
 min-height: 100%;
 min-width: 1024px;
-
+opacity: 50%;
 /* Set up proportionate scaling */
 width: 100%;
 height: auto;
@@ -20,14 +24,15 @@ left: 0;
 	font-weight: 500;
 	font-family: 'Quattrocento Sans', sans-serif;
 	text-align: center;
+	padding-top: 20%;
 	text-shadow: 0px 3px 5px #5D6D7E;
 }
 .landing-container{
 
-	@include xcenter;
-	top: 15%;
+	@include absolute-center;
 	width: 100%;
-	padding: 50px;
+	background-color:rgba(112, 108, 97, .3);
+	height: 100%;
 }
 .landing-options {
 	@include xcenter;
@@ -72,13 +77,14 @@ left: 0;
 		width: 200px;
 		font-size: 18px;
 	}
-.container{
-	margin-top: 50px;
 
-}
 .home-tree{
-	margin-top: 60px;
+	margin-top: 70px;
 	p, h4{
 		text-align: center;
 	}
+}
+.cat-active{
+	color: red;
+	background-color: purple;
 }
