@@ -2,7 +2,7 @@ import React from 'react'
 import {TreeModel, TreeCollection} from '../models/tree-model.js'
 import {STORE} from '../store.js'
 import {ACTIONS} from '../actions.js'
-import {BROWSE_ACTIONS} from '../browse_actions.js'
+import {ID_ACTIONS} from '../id-actions.js'
 
 
 export const TreeIDComponent = React.createClass({
@@ -24,13 +24,16 @@ export const TreeIDComponent = React.createClass({
 _handleBrowse: function(){
       ACTIONS.changeCurrentNav ('BROWSE', 'browse')
 },
+_handleReset: function(){
+  ID_ACTIONS.resetIDProps()
+},
    render: function(){
 
     if(this.props.filterChars.length > 0 && this.props.filteredTrees.length === 0){
       return (
 
         <div>
-          <h2>No trees match your criteria. Try checking your previous answers or explore all in <a onClick = {this._handleBrowse}>browse view</a></h2>
+          <h2>No trees match your criteria. Please <a onClick = {this._handleReset}>try again</a> or explore all in <a onClick = {this._handleBrowse}>browse view</a></h2>
         </div>
 
       )
