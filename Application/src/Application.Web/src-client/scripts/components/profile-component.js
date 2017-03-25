@@ -27,7 +27,7 @@ export const ProfileComponent = React.createClass({
            <ProfileItem profileData={allTheTrees}/>
            <div className = "profile-half">
                 <img className = "plant-pic" src = {this.props.myImage}/>
-                <p> {this.props.myWiki}</p>
+                <p> {this.props.myWiki}</p><p style={{clear: 'both'}}> </p>
         </div>
       </div>
     </div>
