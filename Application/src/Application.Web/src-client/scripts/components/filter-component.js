@@ -11,10 +11,7 @@ export const FilterComponent = React.createClass({
 
     let filterChar = evt.currentTarget.dataset.code
     let FilterList = this.props.filterChars
-
-    // console.log(this.props.categorySelect)
-    // console.log(this.props.characteristicSelect)
-    BROWSE_ACTIONS.changeFilter(filterChar)
+    
     let futurefiltCharsHandler = [...this.props.filterChars]
     futurefiltCharsHandler.push(evt.currentTarget.dataset.code)
     let resultCountHandler = _getFilteredTrees(futurefiltCharsHandler, this.props.filteredTrees).length
