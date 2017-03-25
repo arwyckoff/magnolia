@@ -41,9 +41,6 @@ export const ViewController = React.createClass({
       case "HOME":
         componentToRender = <HomeView {...this.state}/>
         break;
-      case "LANDING":
-        componentToRender = <LandingView {...this.state}/>
-        break;
       case "PROFILE":
         componentToRender = <ProfileView {...this.state}/>
         break;
