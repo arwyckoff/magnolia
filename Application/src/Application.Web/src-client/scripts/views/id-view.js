@@ -13,7 +13,6 @@ export const IdentifyView = React.createClass({
     return STORE.getStoreData()
   },
   componentDidMount: function(){
-    console.log('testview')
   },
   render: function(){
     return (
