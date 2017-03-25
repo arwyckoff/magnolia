@@ -8,11 +8,6 @@ export const RegisterView = React.createClass({
 
 	componentDidMount: function(){
 
-	  // STORE.onStoreChange(function(){
-	  //   component.setState( STORE.getStoreData() )
-	  // })
-
-
 
 	},
 	render: function(){
@@ -20,7 +15,7 @@ export const RegisterView = React.createClass({
 		return (
 
 			<div className="container register-container">
-				        <h2> Register for an account</h2>
+				<h2>create an account</h2>
 					<RegisterComponent/>
 
 			</div>

@@ -1,1 +1,141 @@
 @import "./mixins.scss";
+.register-container{
+background-color: #FFF2F2;
+h2{
+  @include xcenter;
+top: 15%;
+font-size: 26px;
+}}
+.register-box input, button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 40px;
+
+}
+
+.register-box button{
+  border: none;
+  color: white;
+  z-index: 100;
+  font-size: 18px;
+  background-color:  #668259;
+  border-radius: 5px;
+  height: 50px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.register-box{
+  p{
+    font-size: 20px;
+    margin-bottom:0;
+    text-align: left;
+    color:  #474a2c;
+  }
+}
+.register-box{
+  @include absolute-center;
+width:300px;
+top: 45%;
+  .container 		{
+  margin:30px auto 0;
+  display:block;
+  // background:rgb(243, 243, 243);
+  padding:10px 50px 50px;
+}
+
+/* form starting stylings ------------------------------- */
+.group 			  {
+  position:relative;
+  margin-bottom:30px;
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #D3807E;
+    background:rgb(243, 243, 243);
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#D3807E;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#D3807E;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#D3807E;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#D3807E; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#D3807E; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#D3807E; }
+  to 	{ width:0; background:transparent; }
+}
+}
