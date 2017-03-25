@@ -10,9 +10,11 @@
   .profile-half{
     vertical-align: top;
     font-size: medium;
+    padding-bottom: 20px;
+    display: block;
     img{
-      height: 100%;
-      max-width: 60%;
+      max-height: 500px;
+      max-width: 50%;
       float: left;
       margin: 4px 10px 0px 0px;
       border: 1px solid #000000;
@@ -23,6 +25,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 70px;
+  display: block;
   .container-tree{
     width: 100%;
   }
@@ -36,8 +39,8 @@
 }
 .genus-container{
   width: 100%;
-padding-left: 15%;
-  padding-right: 15%;
+padding: 10px 15% 10px 15%;
+display: block;
 }
 .genus-box{
   display: inline-block;
