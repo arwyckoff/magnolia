@@ -1,0 +1,7 @@
+const ORDER = {
+  CATEGORY: "CATEGORY",
+  SUB_CATEGORY: "SUBCATEGORY",
+  FINALIZER: "FINALIZER"
+}
+
+export default ORDER;
