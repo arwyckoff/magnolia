@@ -1,5 +1,5 @@
 import Backbone from 'backbone'
-import {_getFilteredTrees} from "./utils/getFilteredTrees"
+import _getFilteredTrees from "./utils/getFilteredTrees"
 import {TreeModel, TreeCollection} from './models/tree-model.js'
 import {CodeModel, CodeCollection} from './models/code-model.js'
 import {WikiModel, WikiCollection} from './models/wiki-model.js'
