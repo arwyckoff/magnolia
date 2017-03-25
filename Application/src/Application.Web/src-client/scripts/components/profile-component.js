@@ -5,8 +5,15 @@ import {STORE} from '../store.js'
 import {ACTIONS} from '../actions.js'
 
 export const ProfileComponent = React.createClass({
-
-
+_handleUserCollection: function(evt){
+  let plantToAdd = STORE.getStoreData().myTree
+  let userInfo = STORE.getStoreData().currentUser
+  let userPlantArray = userInfo.plants
+  if (userInfo.id !== null){
+  userPlantArray.push(plantToAdd)
+  STORE.setStore('currentUser', userInfo)
+}
+},
    render: function(){
       let self = this
       let allTheTrees = this.props.myTree
@@ -29,6 +36,7 @@ export const ProfileComponent = React.createClass({
                 <img className = "plant-pic" src = {this.props.myImage}/>
                 <p> {this.props.myWiki}</p><p style={{clear: 'both'}}> </p>
         </div>
+        <a className = "user-add" onClick = {this._handleUserCollection} data-id = {this.props.myTree}>add to my collection</a>
       </div>
     </div>
       )
