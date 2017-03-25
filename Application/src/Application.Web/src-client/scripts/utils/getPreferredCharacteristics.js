@@ -1,4 +1,4 @@
-import {STORE} from '../store.js';
+
 
 export const _getPreferredCharacteristics = (characteristics, originalCategory) => {
     let splitByPreference = {
@@ -16,8 +16,6 @@ export const _getPreferredCharacteristics = (characteristics, originalCategory) 
             splitByPreference.otherwise.push(characteristic);
         }
     }
-    STORE.setStore('splitByPreference', splitByPreference)
-
     return splitByPreference;
 
 }
