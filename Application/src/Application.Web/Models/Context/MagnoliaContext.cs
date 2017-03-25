@@ -17,6 +17,9 @@ namespace Magnolia.Context.Models
         public DbSet<PlantCharacteristics> PlantCharacteristics { get; set; }
         public DbSet<UserPlants> UserPlants { get; set; }
         public DbSet<CharacteristicCategory> CharacteristicCategories { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<QuestionAnswer> QuestionAnswers { get; set; }
+        public DbSet<QuestionAnswersStates> QuestionAnswersStates { get; set; }
 
         public MagnoliaContext() : base()
         {
