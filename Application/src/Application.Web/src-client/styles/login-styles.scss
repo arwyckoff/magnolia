@@ -1,31 +1,24 @@
 
 @import "./mixins.scss";
-
-.login-box input, button{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
-  margin-bottom: 20px;
-  height: 40px;
-}
-.login-box{
-  @include xcenter;
-  top: 25%;
-}
+//
+// .login-box input, button{
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 300px;
+//   margin-bottom: 20px;
+//   height: 40px;
+// }
+// .login-box{
+//   @include xcenter;
+//   top: 25%;
+// }
 .loginlog{
   z-index: 1;
   @include absolute-center;
-height: 70px;
+margin-top: 20px;
 }
-// .login-box button{
-//   background-color: #474a2c;
-//   border: none;
-//   color: white;
-//   border-radius: 5px;
-//   font-size: 16px;
-//
-// }
+
 .login-box button{
   background-color: rgba(10, 10, 10, 0);
   border: none;
@@ -55,8 +48,8 @@ button:hover{
 .loginarrow_box {
 @include xcenter;
 z-index: 500;
-bottom: -50px;
-background: rgb(159, 161, 146);
+bottom: -80px;
+background-color: #D3807E;
 display: inherit;
 text-align: center;
 margin-left: auto;
@@ -77,8 +70,126 @@ width: 0;
 position: absolute;
 pointer-events: none;
 border-color: rgba(136, 183, 213, 0);
-border-bottom-color: rgb(159, 161, 146);
+border-bottom-color: #D3807E;
 border-width: 5px;
 margin-left: -5px;
+}
+}
+
+.login-box{
+  @include absolute-center;
+  top: 35%;
+width:300px;
+  .container 		{
+
+  margin:30px auto 0;
+  display:block;
+  background:rgb(243, 243, 243);
+  padding:10px 50px 50px;
+}
+h2 		 {
+  text-align:center;
+  margin-bottom:50px;
+}
+h2 small {
+  font-weight:normal;
+  color:#D3807E;
+  display:block;
+}
+
+
+/* form starting stylings ------------------------------- */
+.group 			  {
+  position:relative;
+  margin-bottom:45px;
+}
+input 				{
+  font-size:18px;
+  height: 50px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #D3807E;
+    background:rgb(243, 243, 243);
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#D3807E;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#D3807E;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#D3807E;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#D3807E; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#D3807E; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#D3807E; }
+  to 	{ width:0; background:transparent; }
 }
 }
