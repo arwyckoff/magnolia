@@ -2,16 +2,16 @@
 @import './mixins.scss';
 .question-container{
 	margin-top: 80px;
+	text-align: center;
+	h4{
+		font-size: 30px;
+	}
 }
 .question-box{
 	font-size: 16px;
 	width: 100%;
 	margin-top: 60px;
-
 	display: inline-block;
-	h1{
-		text-align: center;
-	}
 }
 .question-top{
 	position: relative;
@@ -23,6 +23,7 @@
 	margin: 2%;
 	border: 1px solid gray;
 	cursor: pointer}
+
 	.question-top{
 		position: relative;
 		display: block;
