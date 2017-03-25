@@ -40,9 +40,9 @@ render: function (){
   let keyNamesJsx = Object.keys(categories).map(
     (keyName,i) => {
       if(keyName === this.props.categorySelect){
-        return  <div className="filter active makeHand" onClick={this._handleCatSelect} key={i} data-cat={keyName}><a>{keyName.toLowerCase()}</a></div>
+        return  <div className="filter active makeHand hvr-grow" onClick={this._handleCatSelect} key={i} data-cat={keyName}><a>{keyName.toLowerCase()}</a></div>
       } else {
-        return  <div className="filter makeHand" onClick={this._handleCatSelect} key={i} data-cat={keyName}><a>{keyName.toLowerCase()}</a></div>
+        return  <div className="filter makeHand hvr-grow" onClick={this._handleCatSelect} key={i} data-cat={keyName}><a>{keyName.toLowerCase()}</a></div>
       }
     }
   )

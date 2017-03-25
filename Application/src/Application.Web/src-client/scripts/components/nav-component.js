@@ -35,7 +35,11 @@ export const NavBar = React.createClass({
 
   render: function(){
     return(
+
       <nav className = "container-fluid navbar navbar-fixed-top navbar-styles navbar-right">
+        <p className="navbar-text navRoute">{this.props.currentNavRoute}
+        </p>
+
       <ul className ="navbar-right">
         {this._showNavOptionsJSX(this.props.appRouteName, this.props.currentUser)}
       </ul>
@@ -50,9 +54,9 @@ export const RouteOption = React.createClass({
     ACTIONS.changeCurrentNav(this.props.appRouteName, this.props.hashRoute)
   },
   render: function(){
-    let navOptionsClassName = "nav-option"
+    let navOptionsClassName = "nav-option hvr-grow"
     if(this.props.hashRoute === window.location.hash.slice(1)){
-      navOptionsClassName = 'nav-option nav-option-act'
+      navOptionsClassName = 'nav-option nav-option-act hvr-grow'
   }
       return(
         <li

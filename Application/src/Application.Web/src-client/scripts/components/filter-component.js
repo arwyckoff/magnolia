@@ -11,12 +11,17 @@ export const FilterComponent = React.createClass({
 
     let filterChar = evt.currentTarget.dataset.code
     let FilterList = this.props.filterChars
+
     // console.log(this.props.categorySelect)
     // console.log(this.props.characteristicSelect)
     BROWSE_ACTIONS.changeFilter(filterChar)
-
+    let futurefiltCharsHandler = [...this.props.filterChars]
+    futurefiltCharsHandler.push(evt.currentTarget.dataset.code)
+    let resultCountHandler = _getFilteredTrees(futurefiltCharsHandler, this.props.filteredTrees).length
+    if (resultCountHandler !== 0) {
+      BROWSE_ACTIONS.changeFilter(filterChar)
+    }
   },
-
   render: function () {
     let self = this
 
@@ -48,7 +53,6 @@ export const FilterComponent = React.createClass({
           return <div className="filter makeHand" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
         }
       })
-
 
       return (
         <div>

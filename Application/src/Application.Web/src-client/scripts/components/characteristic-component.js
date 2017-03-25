@@ -41,9 +41,9 @@ render: function (){
 
     let charJSX = characteristics.map(function(obj,i){
       if(obj.characteristic === self.props.characteristicSelect){
-      return <div className="filter active" onClick={self._handleCharSelect} data-cat={obj.characteristic} key={i}><a>{obj.characteristic}</a></div>
+      return <div className="filter active makeHand hvr-grow" onClick={self._handleCharSelect} data-cat={obj.characteristic} key={i}><a>{obj.characteristic}</a></div>
     } else {
-      return <div className="filter" onClick={self._handleCharSelect} data-cat={obj.characteristic} key={i}><a>{obj.characteristic}</a></div>
+      return <div className="filter makeHand hvr-grow" onClick={self._handleCharSelect} data-cat={obj.characteristic} key={i}><a>{obj.characteristic}</a></div>
             }
         }
       )
