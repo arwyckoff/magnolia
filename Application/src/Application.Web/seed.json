@@ -16,6 +16,12 @@
           "Code": "Ab",
           "ImageRef": "",
           "Description": "Generally compound"
+        },
+        {
+          "Value": "needle",
+          "Code": "Ba",
+          "ImageRef": "",
+          "Description": "Slender and pointed"
         }
       ]
     },
@@ -24,12 +30,6 @@
       "Depends": "Aa",
       "Category": "LEAF",
       "States": [
-        {
-          "Value": "Needle-like",
-          "Code": "Ba",
-          "ImageRef": "",
-          "Description": "Slender and pointed"
-        },
         {
           "Value": "awl-like",
           "Code": "Bb",
@@ -443,6 +443,12 @@
           "Code": "Hk",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "linear",
+          "Code": "Hl",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -509,14 +515,26 @@
       "Category": "LEAF",
       "States": [
         {
-          "Value": "clusters of 2-5 at base",
+          "Value": "clustered",
           "Code": "Ma",
           "ImageRef": "",
           "Description": ""
         },
         {
-          "Value": "separately along branches",
+          "Value": "random",
           "Code": "Mb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "crowded at end",
+          "Code": "Mc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "tufts along trunk",
+          "Code": "Md",
           "ImageRef": "",
           "Description": ""
         }
@@ -670,6 +688,24 @@
           "Code": "Tc",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "continuous",
+          "Code": "Td",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "large",
+          "Code": "Te",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "homogeneous",
+          "Code": "Tf",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -772,6 +808,12 @@
         {
           "Value": "orange",
           "Code": "Vm",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "rusty",
+          "Code": "Vn",
           "ImageRef": "",
           "Description": ""
         }
@@ -1343,6 +1385,18 @@
           "Code": "AMj",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "minute",
+          "Code": "AMk",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "sticky",
+          "Code": "AMl",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -1435,9 +1489,19 @@
           "Code": "AOi",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "minute",
+          "Code": "AOj",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "small",
+          "Code": "AOk",
+          "ImageRef": "",
+          "Description": ""
         }
-
-
 
       ]
     },
@@ -1525,6 +1589,12 @@
         {
           "Value": "numerous",
           "Code": "AUb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "two",
+          "Code": "AUc",
           "ImageRef": "",
           "Description": ""
         },
@@ -1954,25 +2024,6 @@
       ]
     },
     {
-      "Value": "Needle tip",
-      "Depends": "Ba",
-      "Category": "LEAF",
-      "States": [
-        {
-          "Value": "sharp",
-          "Code": "BLa",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "soft",
-          "Code": "BLb",
-          "ImageRef": "",
-          "Description": ""
-        }
-      ]
-    },
-    {
       "Value": "Seed enclosure",
       "Depends": "",
       "Category": "FRUIT",
@@ -2105,7 +2156,7 @@
       ]
     },
     {
-      "Value": "bud characteristics",
+      "Value": "general bud characteristics",
       "Depends": "",
       "Category": "TWIG",
       "States": [
@@ -2130,6 +2181,36 @@
         {
           "Value": "stalked",
           "Code": "BSd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "keeled",
+          "Code": "BSe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "conspicuous",
+          "Code": "BSf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "large",
+          "Code": "BSg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "small",
+          "Code": "BSh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "scaled",
+          "Code": "BSi",
           "ImageRef": "",
           "Description": ""
         }
@@ -2201,6 +2282,18 @@
           "Code": "BZe",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "flaky",
+          "Code": "BZf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "waxy",
+          "Code": "BZg",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -2260,6 +2353,12 @@
         {
           "Value": "pinkish",
           "Code": "CAi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "yellow",
+          "Code": "CAj",
           "ImageRef": "",
           "Description": ""
         }
@@ -2341,6 +2440,12 @@
           "Code": "CBl",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "broken",
+          "Code": "CBm",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -2388,6 +2493,12 @@
         {
           "Value": "inconspicuous",
           "Code": "CCg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "small",
+          "Code": "CCh",
           "ImageRef": "",
           "Description": ""
         }
@@ -2476,6 +2587,18 @@
           "Code": "CEd",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "sticky",
+          "Code": "CEe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "lustrous",
+          "Code": "CEf",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -2538,6 +2661,12 @@
           "Code": "CGb",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "yellow",
+          "Code": "CGc",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -2580,6 +2709,12 @@
         {
           "Value": "green",
           "Code": "CId",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "silver",
+          "Code": "CIe",
           "ImageRef": "",
           "Description": ""
         }
@@ -2704,6 +2839,12 @@
         {
           "Value": "waxy",
           "Code": "CMd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "woolly",
+          "Code": "CMe",
           "ImageRef": "",
           "Description": ""
         }
@@ -2892,6 +3033,36 @@
           "Code": "CSi",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "irregular",
+          "Code": "CSj",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "compact",
+          "Code": "CSk",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "short",
+          "Code": "CSl",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "scrubby",
+          "Code": "CSm",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "scraggly",
+          "Code": "CSn",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -2997,6 +3168,18 @@
           "Code": "CVh",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "swollen",
+          "Code": "CVi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "conspicuous",
+          "Code": "CVj",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3065,6 +3248,12 @@
         {
           "Value": "yellow",
           "Code": "DAa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "reddish brown",
+          "Code": "DAb",
           "ImageRef": "",
           "Description": ""
         }
@@ -3499,6 +3688,18 @@
           "Code": "DMj",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "drooping",
+          "Code": "DMk",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stalks",
+          "Code": "DMl",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3542,6 +3743,12 @@
           "Code": "DNf",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "branches whorled",
+          "Code": "DNg",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3553,6 +3760,12 @@
         {
           "Value": "wintergreen",
           "Code": "DOa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "sour",
+          "Code": "DOb",
           "ImageRef": "",
           "Description": ""
         }
@@ -3629,6 +3842,42 @@
           "Code": "DQh",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "blocky",
+          "Code": "DQi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "uniformly patterned",
+          "Code": "DQj",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "breaking",
+          "Code": "DQk",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "irregularly shaped plates",
+          "Code": "DQl",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "rectangular plates",
+          "Code": "DQm",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "flattened plates",
+          "Code": "DQn",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3652,6 +3901,18 @@
         {
           "Value": "dark",
           "Code": "DRc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "lustrous",
+          "Code": "DRd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "glossy",
+          "Code": "DRe",
           "ImageRef": "",
           "Description": ""
         }
@@ -3723,6 +3984,18 @@
           "Code": "DUb",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "drooping",
+          "Code": "DUc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "spray",
+          "Code": "DUd",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3786,6 +4059,12 @@
           "Code": "DXc",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "palmate",
+          "Code": "DXd",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3797,6 +4076,24 @@
         {
           "Value": "three-angled",
           "Code": "DYa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "scaly",
+          "Code": "DYb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "flexible/difficult to break",
+          "Code": "DYc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "resinous",
+          "Code": "DYd",
           "ImageRef": "",
           "Description": ""
         }
@@ -3818,6 +4115,12 @@
           "Code": "DZb",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "raised",
+          "Code": "DZc",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3829,6 +4132,12 @@
         {
           "Value": "black marks",
           "Code": "EAa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "rusty scales",
+          "Code": "EAb",
           "ImageRef": "",
           "Description": ""
         }
@@ -3868,6 +4177,12 @@
           "Code": "EBe",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "bell",
+          "Code": "EBf",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3879,6 +4194,880 @@
         {
           "Value": "brown",
           "Code": "ECa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "general stipule characteristics",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "small",
+          "Code": "EDa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "papery",
+          "Code": "EDb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "general bundle scar characteristics",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "large",
+          "Code": "EEa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "small",
+          "Code": "EEb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "needles per fasicle",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "one",
+          "Code": "EFa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "two",
+          "Code": "EFb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "three",
+          "Code": "EFc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "four",
+          "Code": "EFd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "five",
+          "Code": "EFe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "six",
+          "Code": "EFf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "seven",
+          "Code": "EFg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "eight",
+          "Code": "EFh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "nine",
+          "Code": "EFi",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "cone scale color",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "red",
+          "Code": "EGa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "brown",
+          "Code": "EGb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "purple",
+          "Code": "EGc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "cone prickle",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "stout",
+          "Code": "EHa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "sharp",
+          "Code": "EHb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "deciduous",
+          "Code": "EHc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "recurved",
+          "Code": "EHd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "short",
+          "Code": "EHe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "slightly prickly",
+          "Code": "EHf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stiff",
+          "Code": "EHg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "slender",
+          "Code": "EHh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "weak",
+          "Code": "EHi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "absent",
+          "Code": "EHj",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "general needle characteristics",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "slender",
+          "Code": "EIa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "flexible",
+          "Code": "EIb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stout",
+          "Code": "EIc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "twisted",
+          "Code": "EId",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stiff",
+          "Code": "EIe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "shiny",
+          "Code": "EIf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "coarse",
+          "Code": "EIg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "drooping",
+          "Code": "EIh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "sharp point",
+          "Code": "BLa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "soft point",
+          "Code": "BLb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "straight",
+          "Code": "EIi",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "bud scale color",
+      "Depends": "",
+      "Category": "TWIG",
+      "States": [
+        {
+          "Value": "red",
+          "Code": "EJa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "brown",
+          "Code": "EJb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "young pollen cone color",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "green",
+          "Code": "EKa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "yellow",
+          "Code": "EKb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "brown",
+          "Code": "EKc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "red",
+          "Code": "EKd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "purple",
+          "Code": "EKe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "orange",
+          "Code": "EKf",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "young pollen cone clustering",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "compact",
+          "Code": "ELa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "loosely",
+          "Code": "ELb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "large clusters",
+          "Code": "ELc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "in pairs",
+          "Code": "ELd",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "young ovulate cone color",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "pink",
+          "Code": "EMa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "purple",
+          "Code": "EMb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "green",
+          "Code": "EMc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "yellow",
+          "Code": "EMd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "red",
+          "Code": "EMe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "blue",
+          "Code": "EMf",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "young ovulate cones per cluster",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "one",
+          "Code": "ENa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "two",
+          "Code": "ENb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "three",
+          "Code": "ENc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "four",
+          "Code": "ENd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "five",
+          "Code": "ENe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "six",
+          "Code": "ENf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "seven",
+          "Code": "ENg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "eight",
+          "Code": "ENh",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "young cone season",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "early winter",
+          "Code": "EOa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late winter",
+          "Code": "EOb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early spring",
+          "Code": "EOc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late spring",
+          "Code": "EOd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early summer",
+          "Code": "EOe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late summer",
+          "Code": "EOf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early autumn",
+          "Code": "EOg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late autumn",
+          "Code": "EOh",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "mature cone shape",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "oval",
+          "Code": "EPa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "elongate",
+          "Code": "EPb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "elliptical",
+          "Code": "EPc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "cylindrical",
+          "Code": "EPd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "conical",
+          "Code": "EPe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "oblong",
+          "Code": "EPf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "lopsided",
+          "Code": "EPg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "round",
+          "Code": "EPh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "narrow",
+          "Code": "EPi",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "general mature cone characteristics",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "stalked",
+          "Code": "EQa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "scales keeled",
+          "Code": "EQb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "scales raised on end",
+          "Code": "EQc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "scales thin",
+          "Code": "EQd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "scales flat",
+          "Code": "EQe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "scales rounded on end",
+          "Code": "EQf",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "mature cone scale color",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "gray",
+          "Code": "ERa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "brown",
+          "Code": "ERb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "red",
+          "Code": "ERc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "green",
+          "Code": "ERd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "yellow",
+          "Code": "ERe",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "needle color",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "green",
+          "Code": "ESa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "yellow",
+          "Code": "ESb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "red",
+          "Code": "ESc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "brown",
+          "Code": "ESd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "blue",
+          "Code": "ESe",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "needle color quality",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "dark",
+          "Code": "ETa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "pale",
+          "Code": "ETb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "mature cone season",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "early winter",
+          "Code": "EUa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late winter",
+          "Code": "EUb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early spring",
+          "Code": "EUc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late spring",
+          "Code": "EUd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early summer",
+          "Code": "EUe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late summer",
+          "Code": "EUf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "early autumn",
+          "Code": "EUg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "late autumn",
+          "Code": "EUh",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "mature cone scale color quality",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "shiny",
+          "Code": "EVa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "lustrous",
+          "Code": "EVb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "varinished",
+          "Code": "EVc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "general twig scale characteristics",
+      "Depends": "",
+      "Category": "TWIG",
+      "States": [
+        {
+          "Value": "fringed",
+          "Code": "EWa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "hairy",
+          "Code": "EWb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "smooth",
+          "Code": "EWc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "rusty-pubescent",
+          "Code": "EWd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "tomentose",
+          "Code": "EWe",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "young ovulate cone shape",
+      "Depends": "",
+      "Category": "FRUIT",
+      "States": [
+        {
+          "Value": "long",
+          "Code": "EXa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "stalked",
+          "Code": "EXb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "narrow",
+          "Code": "EXc",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "cylindrical",
+          "Code": "EXd",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "leaf thickness",
+      "Depends": "",
+      "Category": "LEAF",
+      "States": [
+        {
+          "Value": "thick",
+          "Code": "EYa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "thin",
+          "Code": "EYb",
           "ImageRef": "",
           "Description": ""
         }
@@ -6384,7 +7573,48 @@
       "FamilyName": "Heath",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSf",
+        "DNe",
+        "CSj",
+        "CSh",
+        "AJa",
+        "Aa",
+        "Ca",
+        "Bk",
+        "Bo",
+        "Ed",
+        "Eh",
+        "Ga",
+        "Gb",
+        "Gc",
+        "EAb",
+        "CLa",
+        "Vb",
+        "Vn",
+        "AMk",
+        "AOj",
+        "DKc",
+        "AOg",
+        "Hd",
+        "AUa",
+        "CAa",
+        "CAd",
+        "DQh",
+        "CBi",
+        "CZa",
+        "DBa",
+        "BEg",
+        "BEa",
+        "BFe",
+        "EBa",
+        "DHe",
+        "CDh",
+        "ABd",
+        "DMg",
+        "BFb",
+        "DCd",
+        "DCe",
+        "ADa"
       ]
     },
     {
@@ -6395,7 +7625,46 @@
       "FamilyName": "Heath",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSh",
+        "CSg",
+        "AJb",
+        "Aa",
+        "Ca",
+        "Bk",
+        "Gl",
+        "CGc",
+        "CFa",
+        "DOb",
+        "Wd",
+        "Va",
+        "CCc",
+        "AKb",
+        "AOk",
+        "AOa",
+        "Hd",
+        "Hc",
+        "DZc",
+        "AUa",
+        "CAa",
+        "CAb",
+        "CAc",
+        "DQh",
+        "DQi",
+        "DQj",
+        "DBa",
+        "BEg",
+        "EBf",
+        "Xc",
+        "DUd",
+        "DUc",
+        "CDa",
+        "ABd",
+        "DCe",
+        "DCf",
+        "ADa",
+        "DMk",
+        "DMh",
+        "DMl"
       ]
     },
     {
@@ -6406,7 +7675,44 @@
       "FamilyName": "Heath",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSf",
+        "DUa",
+        "AJa",
+        "Aa",
+        "Ca",
+        "BBa",
+        "Bk",
+        "Fd",
+        "Ec",
+        "Gb",
+        "CQa",
+        "CGa",
+        "DRc",
+        "CIc",
+        "Wc",
+        "Vj",
+        "AOk",
+        "AMh",
+        "AMl",
+        "Hh",
+        "Hl",
+        "AUa",
+        "AUb",
+        "CAd",
+        "CAb",
+        "CHa",
+        "CBa",
+        "DQd",
+        "CBi",
+        "DBa",
+        "BEa",
+        "BEh",
+        "CDh",
+        "ABd",
+        "BFg",
+        "CEe",
+        "DCd",
+        "DCe"
       ]
     },
     {
@@ -6417,7 +7723,54 @@
       "FamilyName": "Heath",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSf",
+        "DNe",
+        "CSk",
+        "AJa",
+        "Aa",
+        "Ca",
+        "BBa",
+        "Be",
+        "Ea",
+        "Fb",
+        "Gb",
+        "Ga",
+        "CGa",
+        "DRc",
+        "DRd",
+        "CId",
+        "DSb",
+        "Wc",
+        "Vj",
+        "Vh",
+        "Vl",
+        "AOk",
+        "AMh",
+        "AMl",
+        "Hh",
+        "Hl",
+        "AUa",
+        "AUb",
+        "CAd",
+        "CAb",
+        "CHa",
+        "CBi",
+        "CBm",
+        "DBa",
+        "DUa",
+        "BEg",
+        "BEa",
+        "BEh",
+        "CDb",
+        "ABd",
+        "ACd",
+        "ACb",
+        "ACk",
+        "BFg",
+        "CEe",
+        "ADa",
+        "DCd",
+        "DCe"
       ]
     },
     {
@@ -6428,7 +7781,46 @@
       "FamilyName": "Heath",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSf",
+        "DNe",
+        "DNb",
+        "AJb",
+        "Aa",
+        "Ca",
+        "Bj",
+        "Bk",
+        "Ec",
+        "Eh",
+        "Fd",
+        "Fb",
+        "DXb",
+        "DRc",
+        "CGa",
+        "DRe",
+        "DSb",
+        "CId",
+        "CLa",
+        "Vh",
+        "AKb",
+        "DKe",
+        "AOk",
+        "Hd",
+        "AUa",
+        "CHa",
+        "CAa",
+        "CBi",
+        "DAb",
+        "BEg",
+        "EBf",
+        "Xc",
+        "CDh",
+        "ABi",
+        "ACd",
+        "CEf",
+        "DCd",
+        "DCe",
+        "ADa",
+        "DFa"
       ]
     },
     {
@@ -6439,7 +7831,60 @@
       "FamilyName": "Bean",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSl",
+        "CSg",
+        "AJb",
+        "Aa",
+        "Ca",
+        "Bh",
+        "Eb",
+        "Ff",
+        "Ga",
+        "DXd",
+        "CQb",
+        "CGa",
+        "CMc",
+        "CMa",
+        "CVi",
+        "CVj",
+        "EDa",
+        "EDb",
+        "CFd",
+        "Wd",
+        "CLa",
+        "Vi",
+        "Vh",
+        "CCh",
+        "CCb",
+        "AKb",
+        "AOf",
+        "DKb",
+        "AOb",
+        "BSd",
+        "BSe",
+        "BSf",
+        "Hf",
+        "DZa",
+        "AUc",
+        "EEa",
+        "Td",
+        "CAa",
+        "CAh",
+        "CAb",
+        "DQh",
+        "CBi",
+        "CBl",
+        "DBa",
+        "BEh",
+        "BEa",
+        "CDg",
+        "ABe",
+        "BFf",
+        "BFc",
+        "DMl",
+        "ACd",
+        "ACk",
+        "ADa"
       ]
     },
     {
@@ -7473,7 +8918,14 @@
       "FamilyName": "Pine",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJa",
+        "CSm",
+        "Ba",
+        "EFb",
+        "EGa",
+        "EGb",
+        "EGc",
+        "EHa"
       ]
     },
     {
@@ -7484,7 +8936,37 @@
       "FamilyName": "Pine",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJa",
+        "Ba",
+        "EFb",
+        "EIa",
+        "EIb",
+        "CLa",
+        "Vj",
+        "Vk",
+        "Vh",
+        "DYb",
+        "EJa",
+        "EJb",
+        "CAh",
+        "CAb",
+        "CBi",
+        "CAd",
+        "DQk",
+        "CBl",
+        "EKb",
+        "EKa",
+        "ELa",
+        "EMa",
+        "ENb",
+        "ENc",
+        "EOc",
+        "EPa",
+        "EQb",
+        "ERa",
+        "EHc",
+        "EHe",
+        "EHd"
       ]
     },
     {
@@ -7495,7 +8977,49 @@
       "FamilyName": "Pine",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJa",
+        "Ba",
+        "EFb",
+        "EFc",
+        "EIc",
+        "EIe",
+        "EIf",
+        "ETa",
+        "ESa",
+        "Wc",
+        "Vm",
+        "Vl",
+        "BZb",
+        "Ma",
+        "DYb",
+        "EJa",
+        "EJb",
+        "CAb",
+        "CAc",
+        "CAh",
+        "DQh",
+        "DQe",
+        "DQf",
+        "EKe",
+        "EKc",
+        "ELa",
+        "EMa",
+        "EMb",
+        "ENa",
+        "ENb",
+        "EOb",
+        "EOc",
+        "EPa",
+        "EPb",
+        "EPd",
+        "EUf",
+        "EUg",
+        "EVb",
+        "ERb",
+        "EVc",
+        "EHd",
+        "EHe",
+        "EHf"
       ]
     },
     {
@@ -7506,7 +9030,38 @@
       "FamilyName": "Pine",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJa",
+        "Ba",
+        "EFb",
+        "EIa",
+        "Na",
+        "EId",
+        "ETa",
+        "ESa",
+        "CLa",
+        "Vb",
+        "Vj",
+        "BZa",
+        "Vi",
+        "CAa",
+        "CAb",
+        "CBa",
+        "CHa",
+        "CAh",
+        "DQh",
+        "EKa",
+        "EKb",
+        "ELa",
+        "EMc",
+        "EMa",
+        "EOb",
+        "EOc",
+        "EPe",
+        "EPc",
+        "EQa",
+        "EQb",
+        "EHe",
+        "EHc"
       ]
     },
     {
@@ -7517,7 +9072,45 @@
       "FamilyName": "Pine",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJa",
+        "Ba",
+        "EFc",
+        "EIg",
+        "EIb",
+        "Mc",
+        "EIh",
+        "ESa",
+        "ETa",
+        "Wc",
+        "DYb",
+        "Vm",
+        "Vl",
+        "BZb",
+        "BZf",
+        "BSg",
+        "BSf",
+        "EWa",
+        "CAa",
+        "CAb",
+        "CHa",
+        "CBi",
+        "CBm",
+        "CZb",
+        "CAd",
+        "CBl",
+        "EMb",
+        "EMf",
+        "ELc",
+        "EMa",
+        "EMb",
+        "ELd",
+        "ENc",
+        "ENd",
+        "EOc",
+        "EPa",
+        "EPf",
+        "EHd",
+        "EHe"
       ]
     },
     {
@@ -7528,7 +9121,49 @@
       "FamilyName": "Pine",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJa",
+        "Ba",
+        "EFb",
+        "EFc",
+        "EIc",
+        "EIe",
+        "BLa",
+        "EId",
+        "ESa",
+        "ETa",
+        "Wc",
+        "DYc",
+        "Vm",
+        "Vl",
+        "BZb",
+        "DYd",
+        "EJb",
+        "CHa",
+        "CAd",
+        "CAh",
+        "CBi",
+        "DQh",
+        "CBl",
+        "EKa",
+        "EKb",
+        "ELa",
+        "EMc",
+        "ENc",
+        "ENd",
+        "ENe",
+        "ENf",
+        "ENg",
+        "ENh",
+        "EXa",
+        "EXb",
+        "EOc",
+        "EOd",
+        "EPe",
+        "EPa",
+        "EPg",
+        "EQb",
+        "EHa",
+        "EHd"
       ]
     },
     {
@@ -7539,7 +9174,52 @@
       "FamilyName": "Pine",
       "ImageRef": "",
       "Characteristics": [
-
+        "CSn",
+        "AJa",
+        "Ba",
+        "EFc",
+        "EIc",
+        "EIe",
+        "EId",
+        "ESa",
+        "ESb",
+        "Wc",
+        "Vj",
+        "Vb",
+        "Vl",
+        "Vm",
+        "BZb",
+        "BZf",
+        "EJa",
+        "EJb",
+        "CAb",
+        "CAh",
+        "CBi",
+        "DQd",
+        "CBl",
+        "DQl",
+        "CAj",
+        "EKb",
+        "EKa",
+        "EKe",
+        "ELa",
+        "EMc",
+        "EMd",
+        "ENc",
+        "ENd",
+        "ENe",
+        "ENf",
+        "ENg",
+        "ENh",
+        "EXb",
+        "EOd",
+        "EPc",
+        "EPa",
+        "EQc",
+        "EQb",
+        "EHg",
+        "EHh",
+        "EHb"
       ]
     },
     {
@@ -7550,7 +9230,44 @@
       "FamilyName": "Pine",
       "ImageRef": "",
       "Characteristics": [
-
+        "DNb",
+        "CSj",
+        "AJa",
+        "Ba",
+        "EFc",
+        "EFd",
+        "EIa",
+        "EIe",
+        "ESa",
+        "ESb",
+        "Md",
+        "CLa",
+        "Va",
+        "Vl",
+        "DYb",
+        "BSi",
+        "CAa",
+        "CAd",
+        "DQh",
+        "CBi",
+        "CBl",
+        "EKb",
+        "EKf",
+        "ELa",
+        "EMc",
+        "EMd",
+        "ELd",
+        "ENc",
+        "ENd",
+        "EOc",
+        "EPh",
+        "EPa",
+        "ERb",
+        "ERe",
+        "EQc",
+        "EQb",
+        "EHc",
+        "EHi"
       ]
     },
     {
@@ -7561,7 +9278,37 @@
       "FamilyName": "Pine",
       "ImageRef": "",
       "Characteristics": [
-
+        "DNg",
+        "AJa",
+        "Ba",
+        "EFe",
+        "BLb",
+        "EIb",
+        "ESe",
+        "ESa",
+        "CLa",
+        "BZa",
+        "Vj",
+        "CAa",
+        "CAb",
+        "DQd",
+        "DQi",
+        "EKa",
+        "EKb",
+        "ELc",
+        "EMc",
+        "EMa",
+        "EXc",
+        "EXd",
+        "EXb",
+        "EOd",
+        "EPi",
+        "EPd",
+        "EPb",
+        "EQd",
+        "EQe",
+        "EQf",
+        "EHj"
       ]
     },
     {
@@ -7572,7 +9319,41 @@
       "FamilyName": "Pine",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "Ba",
+        "EFf",
+        "EFg",
+        "EFh",
+        "EFi",
+        "EIe",
+        "EIi",
+        "ESa",
+        "ETa",
+        "Wc",
+        "Vj",
+        "Vl",
+        "BZb",
+        "BZf",
+        "CAa",
+        "CAh",
+        "CHb",
+        "DQh",
+        "CBi",
+        "CAd",
+        "DQn",
+        "DQm",
+        "EKa",
+        "EKb",
+        "ELa",
+        "EMc",
+        "ENc",
+        "ENd",
+        "EXb",
+        "EPa",
+        "EPe",
+        "EQb",
+        "EHa",
+        "EHb"
       ]
     },
     {
@@ -7583,7 +9364,41 @@
       "FamilyName": "Pine",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "Ba",
+        "EFb",
+        "EIc",
+        "EIb",
+        "EId",
+        "ESa",
+        "ESb",
+        "CLa",
+        "Vj",
+        "BZg",
+        "Vb",
+        "DYd",
+        "EJa",
+        "EJb",
+        "CAb",
+        "CHa",
+        "DQd",
+        "CBi",
+        "EKa",
+        "EKb",
+        "ELb",
+        "ENb",
+        "ENc",
+        "ENd",
+        "ENe",
+        "ENf",
+        "ENg",
+        "ENh",
+        "EOc",
+        "EPa",
+        "EPe",
+        "EQd",
+        "EHh",
+        "EHb"
       ]
     },
     {
