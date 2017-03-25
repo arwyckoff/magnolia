@@ -70,7 +70,7 @@ export const QuestionItem = React.createClass({
   },
     render: function (){
       let self = this
-        return ( <div className = "question-card" data-cat={this.props.questionData} onClick = {this._handleQuesSelect}>
+        return ( <div className = "question-card hvr-grow" data-cat={this.props.questionData} onClick = {this._handleQuesSelect}>
             <a>{this.props.questionData}</a>
             <img src ="http://placehold.it/200"/>
           </div>
@@ -89,7 +89,7 @@ export const PartTwoItem = React.createClass({
 
   render: function(){
     return(
-      <div className = "question-card" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
+      <div className = "question-card hvr-grow" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
           <p>{this.props.partTwoData.state}</p>
         </div>
     )
