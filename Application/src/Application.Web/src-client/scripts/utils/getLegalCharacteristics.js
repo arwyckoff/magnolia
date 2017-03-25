@@ -1,5 +1,4 @@
 import {CATEGORIES} from './categories';
-import {STORE} from '../store.js';
 
 export const _getLegalCharacteristics = (filters, IDKs, characteristicsByCategory, IDKthreshold) => {
     let legal = [];
@@ -25,7 +24,6 @@ export const _getLegalCharacteristics = (filters, IDKs, characteristicsByCategor
           }
 }}
 
-    STORE.setStore('legalChars', legal)
     return legal;
 
 }
