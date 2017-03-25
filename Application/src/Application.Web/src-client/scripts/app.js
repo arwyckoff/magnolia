@@ -23,17 +23,12 @@ const AppRouter = Backbone.Router.extend({
 		'logout': 'showLogoutPage',
 		'login': 'showLoginPage',
     'browse': 'showBrowsePage',
-    'landing': 'showLandingDemo',
     'identify': 'showIdentifyPage',
 },
 
 showHomePage: function(){
 
 	ReactDOM.render(<ViewController fromRoute = {'HOME'} />, document.querySelector('#app-container'))
-},
-showLandingDemo: function(){
-
-	ReactDOM.render(<ViewController fromRoute = {'LANDING'} />, document.querySelector('#app-container'))
 },
 showBrowsePage: function(){
   	ReactDOM.render(<ViewController fromRoute = {'BROWSE'} />, document.querySelector('#app-container'))
