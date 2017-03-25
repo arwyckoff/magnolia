@@ -41,7 +41,7 @@ render: function(){
     <div>
       <div className="breadCrumbHeadContainer">
           <h4 className="breadCrumbHeader selected">Selected Filters</h4>
-          <h4 onClick={this._handleResetButtonSelect} className="breadCrumbHeader reset">Reset</h4>
+          <h4 onClick={this._handleResetButtonSelect} className="breadCrumbHeader reset hvr-grow">Reset</h4>
       </div>
           <div className="container filterContainer">
 
