@@ -17,17 +17,24 @@ export const LoginComponent = React.createClass({
         <div className = "hero">
 
                 <img className = "hero-img" src = '../../images/jon-flobrant-42709.jpg'/>
-              {/* <img className = "hero-img" src = 'http://i64.tinypic.com/2lthudd.jpg'/> */}
+
             <div className="auth-form login-box">
-				       <form onSubmit = {this._handleLogin}>
-					            <input type="text" className="form-control" name="emailField" placeholder="Username"/>
-	                    <input type="password" className="form-control" name="passwordField" placeholder= "Password"/>
-	                    <button type="submit" className = "loginbut">Log in<img src = "../../images/tree-576846_1280.png" className = "loginlog"/><span className="label loginarrow_box">LOG in</span></button>
-
-
-				       </form>
+ 				       <form onSubmit = {this._handleLogin}>
+                    <div className = "group">
+ 					            <input type="text" className="form-control" name="emailField" placeholder="Email"/>
+                          <span className="highlight"></span>
+                          <span className="bar"></span>
+                      </div>
+                      <div className = "group">
+ 	                    <input type="password" className="form-control" name="passwordField" placeholder= "Password"/>
+                          <span className="highlight"></span>
+                          <span className="bar"></span>
+                      </div>
+                 <button type="submit" className = "loginbut">Log in<img src = "../../images/tree-576846_1280.png" className = "loginlog"/><span className="label loginarrow_box">LOG in</span></button>
+ 				       </form>
 			     </div>
-        </div>
+         </div>
+
       )
    }
 })
