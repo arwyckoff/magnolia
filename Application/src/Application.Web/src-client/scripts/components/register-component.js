@@ -42,17 +42,17 @@ export const RegisterComponent = React.createClass({
   _handleNewUser: function(evt){
     evt.preventDefault()
     let formEl = evt.target
-    if (formEl.usernameField.value !== formEl.passwordField.value){
-      formEl.passwordmsg.value = "passwords must match"
-    }
-    else {
+    // if (formEl.usernameField.value !== formEl.passwordField.value){
+    //   formEl.passwordmsg.value = "passwords must match"
+    // }
+
     let formValsObj = {
       email: formEl.usernameField.value,
       password: formEl.passwordField.value,
-      confirmPassword: formEl.passwordFieldConfirm.value
+      confirmPassword: formEl.passwordFieldConfirm.value}
 
-    }
+
     ACTIONS.registerNewUserM(formValsObj)
 
-}}
+}
 })
