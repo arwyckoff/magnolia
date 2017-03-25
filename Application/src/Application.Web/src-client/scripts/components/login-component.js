@@ -30,7 +30,7 @@ export const LoginComponent = React.createClass({
                           <span className="highlight"></span>
                           <span className="bar"></span>
                       </div>
-                 <button type="submit" className = "loginbut">Log in<img src = "../../images/tree-576846_1280.png" className = "loginlog"/><span className="label loginarrow_box">LOG in</span></button>
+                 <button type="submit" className = "loginbut"><img src = "../../images/tree-576846_1280.png" className = "loginlog"/><span className="label loginarrow_box">LOG in</span></button>
  				       </form>
 			     </div>
          </div>

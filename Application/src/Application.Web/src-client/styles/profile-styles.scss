@@ -1,15 +1,22 @@
 @import "./mixins.scss";
-
+.top-space{
+  margin-top: 80px;
+}
 .profile-container{
   display: inline-block;
   font-size: 0;
   vertical-align: top;
 }
   .profile-half{
-    width: 50%;
     vertical-align: top;
     font-size: medium;
-    display: inline-block;
+    img{
+      height: 100%;
+      max-width: 60%;
+      float: left;
+      margin: 4px 10px 0px 0px;
+      border: 1px solid #000000;
+    }
   }
 .tree-profile{
   width: 70%;
@@ -22,9 +29,9 @@
   p{
     color: black;
     text-align: left;
-    letter-spacing: 2px;
-    padding-left: 20px;
+    letter-spacing: 1.5px;
     vertical-align: top;
+    padding-left: 0;
   }
 }
 .genus-container{
