@@ -35,11 +35,9 @@ export const NavBar = React.createClass({
 
   render: function(){
     return(
-
       <nav className = "container-fluid navbar navbar-fixed-top navbar-styles navbar-right">
         <p className="navbar-text navRoute">{this.props.currentNavRoute}
         </p>
-
       <ul className ="navbar-right">
         {this._showNavOptionsJSX(this.props.appRouteName, this.props.currentUser)}
       </ul>
