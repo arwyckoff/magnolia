@@ -1,7 +1,7 @@
 export const STORE = {
   _data:{
     treeListData: [],
-    categorySelect: [],
+    categorySelect: '',
     characteristicSelect: [],
     codeList: {},
     categories: {},
@@ -15,8 +15,6 @@ export const STORE = {
     latinName: '',
     myWiki: '',
     id: '',
-    isTrue: false,
-
     iDKs: {LEAF:
             {totalIDK: 0,
               idkRun: 0

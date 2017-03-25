@@ -2,6 +2,7 @@ import React from 'react';
 import {STORE} from '../store.js';
 import {ACTIONS} from '../actions.js';
 import {BROWSE_ACTIONS} from '../browse_actions.js'
+import {ID_ACTIONS} from '../id-actions.js'
 import {_getFilteredCharacteristics} from '../utils/getFilteredCharacteristics.js';
 import {_getPreferredCharacteristics} from '../utils/getPreferredCharacteristics.js';
 import {_getFilteredTrees} from '../utils/getFilteredTrees.js';
@@ -10,8 +11,6 @@ import {_getBestBetweenPreferredAndOtherwise} from '../utils/getMostCommonCharac
 
 export const IdComponent = React.createClass({
   getInitialState: function(){
-    // ACTIONS.fetchAllCategories()
-    // ACTIONS.fetchAllTrees()
   return STORE.getStoreData()
 },
 _makeQuestionComponents: function(categories){
@@ -43,7 +42,7 @@ render: function(){
             {questionStuff}
           </div>
         )}
-  else if (currentQuestion > 1){
+  else if (currentQuestion > 1 && this.props.best.characteristic !== null){
           let stateStuff = this.props.best.characteristic.states
           let charStuff = this._makePartTwoComponents(stateStuff)
         return (
@@ -53,63 +52,47 @@ render: function(){
       </div>
     )
   }
+  else if (this.props.filteredTrees > 0) {
+        return (
+          <div className = "question-box">
+            <h4>We believe your tree is below</h4>
+      </div>
+    )}
+    else {return(<div></div>)}
   }
   })
 
-
-export const PartTwoItem = React.createClass({
-getInitialState: function(){
-  return STORE.getStoreData()
-
-},
+export const QuestionItem = React.createClass({
   _handleQuesSelect: function(evt){
     evt.preventDefault()
     let catClicked = evt.currentTarget.dataset.cat
-    let currentChar = evt.currentTarget.dataset.ch
-    let filterChar = evt.currentTarget.dataset.id
-    BROWSE_ACTIONS.changeFilter(filterChar)
-    let legalArray = _getLegalCharacteristics(this.state.filterChars, this.state.iDKs, this.state.categories, 3)
-    let preferredCharObj = _getPreferredCharacteristics(legalArray, this.state.categorySelect)
-    let commonObj= _getBestBetweenPreferredAndOtherwise(preferredCharObj.preferred, preferredCharObj.otherwise, this.state.filteredTrees, .3)
-    let filteredListNew = _getFilteredTrees(this.state.filterChars, this.state.filteredTrees)
-    let currentQuestion = this.state.currentQuestion
-   ACTIONS.updateQuestionNumber(this.state.currentQuestion)
-},
-  render: function(){
-    let self = this
-    return(
-      <div className = "question-card" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
-          <p data-id = {this.props.partTwoData.code}>{this.props.partTwoData.state}</p>
-        </div>
-    )
-  }
-
-})
-
-export const QuestionItem = React.createClass({
-  getInitialState: function(){
-    return STORE.getStoreData()
+    ID_ACTIONS.firstQuestionAction(evt.currentTarget.dataset.cat)
   },
-
-  _handleQuesSelect: function(evt){
-    evt.preventDefault()
-      let catClicked = evt.currentTarget.dataset.cat
-      ACTIONS.changeCategory(catClicked)
-          let legalArray = _getLegalCharacteristics(this.state.filterChars, this.state.iDKs, this.state.categories, 3)
-          let preferredCharObj = _getPreferredCharacteristics(legalArray, catClicked)
-          STORE.setStore('splitByPreference', preferredCharObj)
-          console.log(preferredCharObj)
-          let commonObj= _getBestBetweenPreferredAndOtherwise(preferredCharObj.preferred, preferredCharObj.otherwise, this.state.treeListData, .3)
-
-            ACTIONS.updateQuestionNumber(this.state.currentQuestion)
-},
     render: function (){
       let self = this
-
         return ( <div className = "question-card" data-cat={this.props.questionData} onClick = {this._handleQuesSelect}>
             <a>{this.props.questionData}</a>
             <img src ="http://placehold.it/200"/>
           </div>
         )
         }
+})
+export const PartTwoItem = React.createClass({
+
+  _handleQuesSelect: function(evt){
+    evt.preventDefault()
+    let filterChar = evt.currentTarget.dataset.id
+    let catClicked = evt.currentTarget.dataset.cat
+    let currentChar = evt.currentTarget.dataset.ch
+    ID_ACTIONS.updateQuestionInfo(evt.currentTarget.dataset.cat, evt.currentTarget.dataset.id)
+  },
+
+  render: function(){
+    return(
+      <div className = "question-card" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
+          <p>{this.props.partTwoData.state}</p>
+        </div>
+    )
+  }
+
 })
