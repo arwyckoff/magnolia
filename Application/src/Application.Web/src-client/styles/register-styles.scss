@@ -1,12 +1,14 @@
 @import "./mixins.scss";
 .register-container{
-background-color: #FFF2F2;
-h2{
-  @include xcenter;
-top: 15%;
-font-size: 26px;
-}}
-.register-box input, button{
+  background-color: #FFF2F2;
+  h2{
+    @include xcenter;
+    top: 15%;
+    font-size: 26px;
+  }
+}
+.register-box input, 
+button {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -26,23 +28,26 @@ font-size: 26px;
   font-size: 20px;
   margin-top: 10px;
 }
+
 .register-box{
-  p{
+  p {
     font-size: 20px;
     margin-bottom:0;
     text-align: left;
     color:  #474a2c;
   }
 }
+
 .register-box{
   @include absolute-center;
-width:300px;
-top: 45%;
+  width:300px;
+  top: 45%;
   .container 		{
-  margin:30px auto 0;
-  display:block;
-  // background:rgb(243, 243, 243);
-  padding:10px 50px 50px;
+    margin:30px auto 0;
+    display:block;
+    // background:rgb(243, 243, 243);
+    padding:10px 50px 50px;
+  }
 }
 
 /* form starting stylings ------------------------------- */
@@ -137,5 +142,4 @@ input:focus ~ .highlight {
 @keyframes inputHighlighter {
 	from { background:#D3807E; }
   to 	{ width:0; background:transparent; }
-}
 }

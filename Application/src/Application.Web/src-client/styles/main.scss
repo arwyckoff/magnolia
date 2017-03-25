@@ -7,67 +7,64 @@
 @import './identify-styles.scss';
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
-body{
-		font-family: 'Quattrocento Sans', sans-serif;
+
+body {
+	font-family: 'Quattrocento Sans', sans-serif;
 }
 
 img {
 	width: 100%;
 	display: block;
 }
+
 p {
 	text-align: center;
 	color: #aaa;
 }
 
-
-.container-browse{
-
-
-}
-.container-tree{
+.container-tree {
 	font-size:medium;
 	display:inline-block;
 	width:25%;
-
 }
 
-.checkbox{
+.checkbox {
 	font-size:medium;
 }
+
 .grid-item {
 	 width: 25%;
-  }
-.leafType .lower {
-font-size: 0;
 }
 
- .active {
+.leafType .lower {
+	font-size: 0;
+}
+
+.active {
 	@include hoverTextColor;
 }
 
- .filter a{
+.filter a {
 	 text-align: center;
 	 text-decoration: none;
 	@include mainTextColor;
-
 }
 
-.filter a:hover{
+.filter a:hover {
 	@include hoverTextColor;
 
 }
 
 
-.futurefiltresults{
-	@include hoverTextColor
+.futurefiltresults {
+	@include hoverTextColor;
 	font-size: 10px;
 }
 
 .breadCrumbs{
-	@include hoverTextColor
+	@include hoverTextColor;
 	font-size: 10px;
 
 }
@@ -83,7 +80,7 @@ font-size: 0;
 	cursor: pointer;
 	cursor: hand;
 	font-size: 14px;
-@include hoverTextColor
+	@include hoverTextColor
 }
 
 
@@ -102,7 +99,7 @@ font-size: 0;
 }
 
 .item{
-	@include hoverTextColor
+	@include hoverTextColor;
 	display: inline-block;
 	margin: 7px;
 	text-decoration: none;
