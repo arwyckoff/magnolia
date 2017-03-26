@@ -25,7 +25,6 @@ fetchProfileStuff: function(genusName, latinName){
   let WikiModelInstance = new WikiModel(latinName)
 
   WikiModelInstance.fetch().then(function (serverRes) {
-
     if (serverRes.originalimage ==='undefined'){
       STORE.setStore('myImage', '')
     } else if (serverRes.originalimage !== undefined &&
@@ -33,6 +32,7 @@ fetchProfileStuff: function(genusName, latinName){
       STORE.setStore('myImage', serverRes.originalimage.source)
     }
     STORE.setStore('myWiki', serverRes.extract)
+    STORE.setStore('ready', true)
   })
   let LatinModelInstance = new TreeNameModel(latinName)
   let myTree = {}
