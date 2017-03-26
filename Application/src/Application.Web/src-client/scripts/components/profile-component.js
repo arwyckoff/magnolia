@@ -6,7 +6,11 @@ import {ACTIONS} from '../actions.js'
 
 export const ProfileComponent = React.createClass({
 _handleImageLoad: function(evt){
-  ACTIONS.changeReadyState("ready", true)
+
+  setTimeout(() => {
+    ACTIONS.changeReadyState("ready", true);
+  }, 2000);
+
 },
 
 _handleUserCollection: function(evt){
