@@ -32,7 +32,6 @@ fetchProfileStuff: function(genusName, latinName){
       STORE.setStore('myImage', serverRes.originalimage.source)
     }
     STORE.setStore('myWiki', serverRes.extract)
-    STORE.setStore('ready', true)
   })
   let LatinModelInstance = new TreeNameModel(latinName)
   let myTree = {}
@@ -161,4 +160,8 @@ logoutUser: function(){
   changeCharacteristic: function(char){
     STORE.setStore('characteristicSelect', char)
   },
+
+  changeReadyState: function(state){
+    STORE.setStore("ready", true)
+  }
 }
