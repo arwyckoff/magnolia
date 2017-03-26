@@ -279,6 +279,12 @@
           "Code": "Fh",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "auriculate",
+          "Code": "Fi",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -435,6 +441,12 @@
         {
           "Value": "V-shaped",
           "Code": "Hj",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "narrow",
+          "Code": "Hk",
           "ImageRef": "",
           "Description": ""
         },
@@ -814,6 +826,12 @@
         {
           "Value": "rusty",
           "Code": "Vn",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "gray",
+          "Code": "Vo",
           "ImageRef": "",
           "Description": ""
         }
@@ -1397,6 +1415,12 @@
           "Code": "AMl",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "reflexed outward",
+          "Code": "AMm",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -1864,6 +1888,12 @@
           "Code": "BEj",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "green",
+          "Code": "BEk",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -1911,6 +1941,24 @@
         {
           "Value": "elongate",
           "Code": "BFg",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "ellipsoid",
+          "Code": "BFh",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "round",
+          "Code": "BFi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "conical",
+          "Code": "BFj",
           "ImageRef": "",
           "Description": ""
         }
@@ -2211,6 +2259,18 @@
         {
           "Value": "scaled",
           "Code": "BSi",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "glabrous",
+          "Code": "BSj",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "single scale",
+          "Code": "BSk",
           "ImageRef": "",
           "Description": ""
         }
@@ -2845,6 +2905,12 @@
         {
           "Value": "woolly",
           "Code": "CMe",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "glaucous",
+          "Code": "CMf",
           "ImageRef": "",
           "Description": ""
         }
@@ -3700,6 +3766,18 @@
           "Code": "DMl",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "glabrous",
+          "Code": "DMm",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "oblong",
+          "Code": "DMn",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3878,6 +3956,24 @@
           "Code": "DQn",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "irregularly patterned",
+          "Code": "DQo",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "thin",
+          "Code": "DQp",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "fragrant",
+          "Code": "DQq",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -3994,6 +4090,18 @@
         {
           "Value": "spray",
           "Code": "DUd",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "disagreeable odor",
+          "Code": "DUf",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "spirally arranged",
+          "Code": "DUe",
           "ImageRef": "",
           "Description": ""
         }
@@ -4121,6 +4229,12 @@
           "Code": "DZc",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "all along twig",
+          "Code": "DZd",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     },
@@ -4194,6 +4308,12 @@
         {
           "Value": "brown",
           "Code": "ECa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "red",
+          "Code": "ECb",
           "ImageRef": "",
           "Description": ""
         }
@@ -5068,6 +5188,108 @@
         {
           "Value": "thin",
           "Code": "EYb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "stalk characteristics",
+      "Depends": "",
+      "Category": "FLOWER",
+      "States": [
+        {
+          "Value": "stout",
+          "Code": "EZa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "hairy",
+          "Code": "EZb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "terminal bud characteristics",
+      "Depends": "",
+      "Category": "FLOWER",
+      "States": [
+        {
+          "Value": "hairy",
+          "Code": "FAa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "aromatic",
+          "Code": "FAb",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "glabrous",
+          "Code": "FAc",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "terminal bud color",
+      "Depends": "",
+      "Category": "FLOWER",
+      "States": [
+        {
+          "Value": "purple",
+          "Code": "FBa",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "glaucous",
+          "Code": "FBb",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "filament color",
+      "Depends": "",
+      "Category": "FLOWER",
+      "States": [
+        {
+          "Value": "purple",
+          "Code": "FCa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "stamen characteristics",
+      "Depends": "",
+      "Category": "FLOWER",
+      "States": [
+        {
+          "Value": "numerous",
+          "Code": "FDa",
+          "ImageRef": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Value": "pistil characteristics",
+      "Depends": "",
+      "Category": "FLOWER",
+      "States": [
+        {
+          "Value": "numerous",
+          "Code": "FFa",
           "ImageRef": "",
           "Description": ""
         }
@@ -6149,7 +6371,25 @@
       "FamilyName": "Cashew",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "Aa",
+        "Ca",
+        "Bo",
+        "Ec",
+        "Ef",
+        "Ga",
+        "Gc",
+        "CGa",
+        "DRc",
+        "CLa",
+        "Vk",
+        "Vb",
+        "ALa",
+        "AMg",
+        "AUe",
+        "ABh",
+        "BFf",
+        "CSf"
       ]
     },
     {
@@ -8665,7 +8905,39 @@
       "FamilyName": "Magnolia",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "Aa",
+        "Ca",
+        "Bk",
+        "CQb",
+        "CMc",
+        "Eb",
+        "Ea",
+        "Bo",
+        "Wc",
+        "CLe",
+        "EWb",
+        "BSk",
+        "DZc",
+        "Hk",
+        "Tf",
+        "CAa",
+        "CAb",
+        "DQj",
+        "DBa",
+        "BEf",
+        "BEk",
+        "FDa",
+        "FFa",
+        "DUe",
+        "CDh",
+        "CDa",
+        "Za",
+        "Ya",
+        "ACh",
+        "BFb",
+        "DMn",
+        "ECb"
       ]
     },
     {
@@ -8676,7 +8948,36 @@
       "FamilyName": "Magnolia",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "Aa",
+        "Ca",
+        "Bo",
+        "Bi",
+        "BBc",
+        "Fi",
+        "Wc",
+        "CLe",
+        "FBa",
+        "AMm",
+        "FAc",
+        "CHa",
+        "FCa",
+        "CAa",
+        "CAb",
+        "CBi",
+        "DBa",
+        "DUb",
+        "BEg",
+        "CDh",
+        "CDa",
+        "Za",
+        "Ya",
+        "ACh",
+        "DMm",
+        "DMn",
+        "DCc",
+        "DCd",
+        "ECb"
       ]
     },
     {
@@ -8687,7 +8988,45 @@
       "FamilyName": "Magnolia",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJa",
+        "EYa",
+        "BBa",
+        "Aa",
+        "Ca",
+        "Bk",
+        "Eb",
+        "CGa",
+        "DRd",
+        "CId",
+        "BRe",
+        "CMe",
+        "Wc",
+        "EWb",
+        "EWd",
+        "Tb",
+        "CAa",
+        "CAb",
+        "CBa",
+        "CZb",
+        "DQg",
+        "CBi",
+        "DBa",
+        "DUb",
+        "BEg",
+        "CDh",
+        "CDa",
+        "EZa",
+        "EZb",
+        "Za",
+        "Ya",
+        "ACh",
+        "ACk",
+        "BFb",
+        "BFd",
+        "DMe",
+        "DCe",
+        "DCf",
+        "ECb"
       ]
     },
     {
@@ -8698,7 +9037,38 @@
       "FamilyName": "Magnolia",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "Fi",
+        "Aa",
+        "Ca",
+        "Bl",
+        "CQb",
+        "CGa",
+        "CMf",
+        "CMc",
+        "AMg",
+        "AMa",
+        "FAa",
+        "Te",
+        "Tf",
+        "Wc",
+        "CLe",
+        "EWe",
+        "DQp",
+        "CAa",
+        "CBa",
+        "DBa",
+        "BEg",
+        "CDh",
+        "CDa",
+        "Za",
+        "Ya",
+        "BFb",
+        "BFi",
+        "DMe",
+        "DCc",
+        "DCd",
+        "ECb"
       ]
     },
     {
@@ -8709,7 +9079,35 @@
       "FamilyName": "Magnolia",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "Aa",
+        "Bo",
+        "Bi",
+        "Fi",
+        "Wc",
+        "CLe",
+        "DZd",
+        "BSj",
+        "FBa",
+        "AMm",
+        "FAc",
+        "DQp",
+        "CBa",
+        "CAa",
+        "CAb",
+        "CBi",
+        "DBa",
+        "DUb",
+        "BEg",
+        "CDa",
+        "CDh",
+        "Za",
+        "Ya",
+        "ACh",
+        "DMm",
+        "DMn",
+        "DCd",
+        "ECb"
       ]
     },
     {
@@ -8720,7 +9118,40 @@
       "FamilyName": "Magnolia",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJb",
+        "Aa",
+        "Ca",
+        "Bo",
+        "Bf",
+        "CQb",
+        "CMc",
+        "BSj",
+        "Wc",
+        "Vh",
+        "Vl",
+        "Vo",
+        "FBa",
+        "FAc",
+        "FAc",
+        "DQp",
+        "CAa",
+        "CBa",
+        "DQg",
+        "DBa",
+        "DUf",
+        "BEg",
+        "FCa",
+        "CDh",
+        "CDa",
+        "Za",
+        "Ya",
+        "ACh",
+        "BFj",
+        "BFd",
+        "DMm",
+        "DCc",
+        "DCd",
+        "ECb"
       ]
     },
     {
@@ -8731,7 +9162,41 @@
       "FamilyName": "Magnolia",
       "ImageRef": "",
       "Characteristics": [
-
+        "AJa",
+        "EYb",
+        "BBa",
+        "Aa",
+        "Ca",
+        "Bj",
+        "Bk",
+        "Pa",
+        "CGa",
+        "CIe",
+        "CMc",
+        "CLa",
+        "Vj",
+        "EWb",
+        "EWd",
+        "FAa",
+        "FAb",
+        "Tb",
+        "DQp",
+        "CAa",
+        "CBa",
+        "DQo",
+        "CBi",
+        "DQq",
+        "DBa",
+        "BEg",
+        "DUb",
+        "CDh",
+        "CDa",
+        "Za",
+        "Ya",
+        "ACh",
+        "BFh",
+        "DCc",
+        "DCd"
       ]
     },
     {
