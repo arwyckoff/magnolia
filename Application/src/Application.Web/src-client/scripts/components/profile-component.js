@@ -9,7 +9,7 @@ _handleImageLoad: function(evt){
 
   setTimeout(() => {
     ACTIONS.changeReadyState("ready", true);
-  }, 2000);
+  }, 1250);
 
 },
 
