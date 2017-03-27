@@ -15,7 +15,10 @@ export const ID_ACTIONS = {
     STORE.setStore('currentQuestion', currentQuestion+1)
   },
 
-  updateQuestionInfo: function(category, filterCharacter){
+  updateQuestionInfo: function(category, filterCharacter, characteristic){
+    let prevQuesArray = STORE.getStoreData().prevQuestions
+    prevQuesArray.push(characteristic)
+    STORE.setStore('prevQuestions', prevQuesArray)
     let filterList = STORE.getStoreData().filterChars
     let futurefiltCharsHandler = [...filterList]
     futurefiltCharsHandler.push(filterCharacter)
