@@ -19,7 +19,6 @@ namespace Magnolia.Context.Models
         public DbSet<CharacteristicCategory> CharacteristicCategories { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<QuestionAnswer> QuestionAnswers { get; set; }
-        public DbSet<QuestionAnswersStates> QuestionAnswersStates { get; set; }
 
         public MagnoliaContext() : base()
         {
@@ -61,6 +60,24 @@ namespace Magnolia.Context.Models
 
             builder.Entity<IdentityUser>()
                 .ForSqliteToTable("Users");
+
+            builder.Entity<Question>(question =>
+            {
+                question.HasOne(q => q.Depends)
+                        .WithOne(a => a.Depended)
+                        .HasForeignKey<Question>(q => q.DependsId)
+                        .IsRequired(false);
+
+                question.HasOne(q => q.SkipIf)
+                        .WithOne(a => a.Skips)
+                        .HasForeignKey<Question>(q => q.SkipIfId)
+                        .IsRequired(false);
+
+                question.HasMany(q => q.Answers)
+                        .WithOne(a => a.Question)
+                        .HasForeignKey(a => a.QuestionId)
+                        .IsRequired();
+            });
         }
     }
 }

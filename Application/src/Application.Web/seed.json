@@ -1,4 +1,906 @@
 ﻿{
+  "Questions": [
+    {
+      "Question": "What type of leaf does the tree have?",
+      "Category": "LEAF",
+      "Description": "Leaves are the predominate foliage found on most trees.",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "Simple",
+          "Description": "A simple leaf type means that each leaf is composed of only one leaf. Most trees fall under this category.",
+          "Code": "LE-1-1",
+          "Apply": "Aa"
+        },
+        {
+          "Answer": "Compound",
+          "Description": "A compound leaf type means that each leaf is actually composed of many smaller leaves. This is made apparent when the twigs have what look like sub-twigs to which the leaves are attached. If you don't know whether the leaf is compound or simple (if, for example, you only have one leaf) then choose the simple leaf type as most of the trees described in Magnolia Tree ID have simple leaf types.",
+          "Code": "LE-1-2",
+          "Apply": "Ab"
+        },
+        {
+          "Answer": "Needle",
+          "Description": "A needle leaf type means that the leaf has the shape of a needle. This includes everything from long, slender pine needles to more flexible, soft and scaly needles.",
+          "Code": "LE-1-3",
+          "Apply": "Ba"
+        }
+      ]
+    },
+    {
+      "Question": "How are the leaves arranged?",
+      "Category": "LEAF",
+      "Description": "",
+      "Depends": "",
+      "SkipIf": "LE-1-3",
+      "Answers": [
+        {
+          "Answer": "Alternating",
+          "Description": "Leaves are in an alternating arrangement when they appear to take turns in their growth pattern along the twig itself.",
+          "Code": "LE-2-1",
+          "Apply": "Ca"
+        },
+        {
+          "Answer": "Opposite",
+          "Description": "Leaves are in an opposite arrangement when they appear to grow in pairs on either side of the twig to which they are attached.",
+          "Code": "LE-2-2",
+          "Apply": "Cb"
+        },
+        {
+          "Answer": "Whorled",
+          "Description": "Leaves are whorled when they grow in a cyclic arrangement of three or more leaves around the twig to which they are attached.",
+          "Code": "LE-2-3",
+          "Apply": "Cc"
+        }
+      ]
+    },
+    {
+      "Question": "What are the leaf margins like?",
+      "Category": "LEAF",
+      "Description": "",
+      "Depends": "",
+      "SkipIf": "LE-1-3",
+      "Answers": [
+        {
+          "Answer": "Entire",
+          "Description": "Leaf margins are entire when their edges are not broken up by repeated serration, toothing or lobing.",
+          "Code": "LE-3-1",
+          "Apply": "Ga"
+        },
+        {
+          "Answer": "Serrated in one way or another",
+          "Description": "Serrated margins may appear like tiny teeth, a saw's teeth, or like very fine hairy edges. Choose this one if there appears to be any consistent, patterned breaking up of the leaf's margins.",
+          "Code": "LE-3-2",
+          "Apply": ""
+        }
+      ]
+    },
+    {
+      "Question": "What do the serrated margins look like?",
+      "Category": "LEAF",
+      "Description": "",
+      "Depends": "LE-3-2",
+      "SkipIf": "LE-3-1",
+      "Answers": [
+        {
+          "Answer": "Angled towards apex",
+          "Description": "The tips of the teeth are pointed or angled towards the apex of the leaf.",
+          "Code": "LE-4-1",
+          "Apply": "Gf"
+        },
+        {
+          "Answer": "Pointed outwards, away from the center of leaf",
+          "Description": "The tips of the teeth are angled away from the center of the leaf such that they appear to reach outward, away from the leaf. Drawing a line from the tip of the teeth to the general margin would result in two perpendicular lines.",
+          "Code": "LE-4-2",
+          "Apply": "Gd"
+        },
+        {
+          "Answer": "Very fine or serrulate",
+          "Description": "The teeth are soft and feel fuzzy to the touch.",
+          "Code": "LE-4-3",
+          "Apply": "Gl"
+        }
+      ]
+    },
+    {
+      "Question": "Are the leaf margins wavy or undulating?",
+      "Category": "LEAF",
+      "Description": "",
+      "Depends": "LE-3-1",
+      "SkipIf": "LE-3-2",
+      "Answers": [
+        {
+          "Answer": "Yes",
+          "Description": "",
+          "Code": "LE-5-1",
+          "Apply": "Gc"
+        },
+        {
+          "Answer": "No",
+          "Description": "",
+          "Code": "LE-5-2",
+          "Apply": ""
+        }
+      ]
+    },
+    {
+      "Question": "Do the leaves shed during winter?",
+      "Category": "LEAF",
+      "Description": "",
+      "Depends": "LE-2-1",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "Yes, they are deciduous",
+          "Description": "",
+          "Code": "LE-6-1",
+          "Apply": "AJb"
+        },
+        {
+          "Answer": "No, they seem to be evergreen",
+          "Description": "",
+          "Code": "LE-6-2",
+          "Apply": "AJa"
+        }
+      ]
+    },
+    {
+      "Question": "Which of these best describes the twig color?",
+      "Category": "TWIG",
+      "Description": "A twig is a small thin terminal branch of a woody plant.",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "greenish-yellow",
+          "Description": "",
+          "Code": "TW-1-2",
+          "Apply": "Va"
+        },
+        {
+          "Answer": "gray to brown",
+          "Description": "",
+          "Code": "TW-1-3",
+          "Apply": "Vb"
+        },
+        {
+          "Answer": "green, red, or maroon",
+          "Description": "",
+          "Code": "TW-1-4",
+          "Apply": "Vc"
+        },
+        {
+          "Answer": "blueish-gray/glaucous",
+          "Description": "",
+          "Code": "TW-1-5",
+          "Apply": "Ve"
+        },
+        {
+          "Answer": "not blueish-gray/ not glaucous",
+          "Description": "",
+          "Code": "TW-1-6",
+          "Apply": "Vf"
+        },
+        {
+          "Answer": "not green or reddish",
+          "Description": "",
+          "Code": "TW-1-7",
+          "Apply": "Vg"
+        },
+        {
+          "Answer": "reddish",
+          "Description": "",
+          "Code": "TW-1-8",
+          "Apply": "Vh"
+        },
+        {
+          "Answer": "light brown",
+          "Description": "",
+          "Code": "TW-1-9",
+          "Apply": "Vi"
+        },
+        {
+          "Answer": "greenish",
+          "Description": "",
+          "Code": "TW-1-10",
+          "Apply": "Vj"
+        },
+        {
+          "Answer": "purple",
+          "Description": "",
+          "Code": "TW-1-11",
+          "Apply": "Vk"
+        },
+        {
+          "Answer": "brown",
+          "Description": "",
+          "Code": "TW-1-12",
+          "Apply": "Vl"
+        },
+        {
+          "Answer": "orange",
+          "Description": "",
+          "Code": "TW-1-13",
+          "Apply": "Vm"
+        },
+        {
+          "Answer": "rusty",
+          "Description": "",
+          "Code": "TW-1-14",
+          "Apply": "Vn"
+        },
+        {
+          "Answer": "gray",
+          "Description": "",
+          "Code": "TW-1-15",
+          "Apply": "Vo"
+        },
+        {
+          "Answer": "yellow",
+          "Description": "",
+          "Code": "TW-1-16",
+          "Apply": "Vp"
+        }
+      ]
+    },
+    {
+      "Question": "What is the shape of the lateral bud?",
+      "Category": "TWIG",
+      "Description": "The lateral (or axillary) bud, is an embryonic shoot located at the intersection of the leaf and stem of the plant.",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "flattened",
+          "Description": "Having a flat shape.",
+          "Code": "TW-2-1",
+          "Apply": "DKa"
+        },
+        {
+          "Answer": "ovate",
+          "Description": "Having an oval outline or ovoid shape, like an egg.",
+          "Code": "TW-2-2",
+          "Apply": "DKb"
+        },
+        {
+          "Answer": "sharp",
+          "Description": "Having a sharpened tip.",
+          "Code": "TW-2-3",
+          "Apply": "DKc"
+        },
+        {
+          "Answer": "pointed",
+          "Description": "Having a tapered tip.",
+          "Code": "TW-2-4",
+          "Apply": "DKd"
+        },
+        {
+          "Answer": "globose",
+          "Description": "Having the shape of a sphere or ball, a spherical object.",
+          "Code": "TW-2-5",
+          "Apply": "DKe"
+        },
+        {
+          "Answer": "asymmetrical",
+          "Description": "Lacking symmetry.",
+          "Code": "TW-2-6",
+          "Apply": "DKf"
+        },
+        {
+          "Answer": "triangular",
+          "Description": "Having the shape of a triangle.",
+          "Code": "TW-2-7",
+          "Apply": "DKh"
+        },
+        {
+          "Answer": "conical",
+          "Description": "Having the shape of a cone.",
+          "Code": "TW-2-8",
+          "Apply": "DKi"
+        },
+        {
+          "Answer": "squarish",
+          "Description": "Having the shape of a square.",
+          "Code": "TW-2-9",
+          "Apply": "DKj"
+        },
+        {
+          "Answer": "stalked",
+          "Description": "Having a stalk or a main stem.",
+          "Code": "TW-2-10",
+          "Apply": "DKl"
+        },
+        {
+          "Answer": "lanceolate",
+          "Description": "Shaped like the head of a lance, a narrow oval shape tapering to a point at each end.",
+          "Code": "TW-2-11",
+          "Apply": "DKm"
+        },
+        {
+          "Answer": "not stalked",
+          "Description": "Lacking a stalk or main stem.",
+          "Code": "TW-2-12",
+          "Apply": "DKn"
+        }
+      ]
+    },
+    {
+      "Question": "Can you describe the number of bundle scars?",
+      "Category": "TWIG",
+      "Description": "A bundle scar is a small mark on a leaf scar indicating a point where a vein from the leaf was once connected with the twig.",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "single",
+          "Description": "",
+          "Code": "TW-3-1",
+          "Apply": "AUa"
+        },
+        {
+          "Answer": "two",
+          "Description": "",
+          "Code": "TW-3-2",
+          "Apply": "AUc"
+        },
+        {
+          "Answer": "three",
+          "Description": "",
+          "Code": "TW-3-3",
+          "Apply": "AUe"
+        },
+        {
+          "Answer": "four",
+          "Description": "",
+          "Code": "TW-3-4",
+          "Apply": "AUf"
+        },
+        {
+          "Answer": "five",
+          "Description": "",
+          "Code": "TW-3-5",
+          "Apply": "AUg"
+        },
+        {
+          "Answer": "six",
+          "Description": "",
+          "Code": "TW-3-6",
+          "Apply": "AUb"
+        },
+        {
+          "Answer": "seven",
+          "Description": "",
+          "Code": "TW-3-7",
+          "Apply": "AUd"
+        },
+        {
+          "Answer": "eight",
+          "Description": "",
+          "Code": "TW-3-8",
+          "Apply": "AUh"
+        },
+        {
+          "Answer": "nine",
+          "Description": "",
+          "Code": "TW-3-9",
+          "Apply": "AUi"
+        }
+      ]
+    },
+    {
+      "Question": "Which is the predominant color of the flower petals?",
+      "Category": "FLOWER",
+      "Description": "Flower petals are typically thin, soft, and colored. They are modified leaves that surround the reproductive parts of flowers.",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "pink",
+          "Description": "",
+          "Code": "FL-1-1",
+          "Apply": "BEa"
+        },
+        {
+          "Answer": "red or reddish",
+          "Description": "",
+          "Code": "FL-1-2",
+          "Apply": "BEb"
+        },
+        {
+          "Answer": "greenish white",
+          "Description": "",
+          "Code": "FL-1-3",
+          "Apply": "BEe"
+        },
+        {
+          "Answer": "yellow",
+          "Description": "",
+          "Code": "FL-1-4",
+          "Apply": "BEf"
+        },
+        {
+          "Answer": "white",
+          "Description": "",
+          "Code": "FL-1-5",
+          "Apply": "BEg"
+        },
+        {
+          "Answer": "purple",
+          "Description": "",
+          "Code": "FL-1-6",
+          "Apply": "BEh"
+        },
+        {
+          "Answer": "orange",
+          "Description": "",
+          "Code": "FL-1-7",
+          "Apply": "BEi"
+        },
+        {
+          "Answer": "brown",
+          "Description": "",
+          "Code": "FL-1-8",
+          "Apply": "BEj"
+        },
+        {
+          "Answer": "green",
+          "Description": "",
+          "Code": "FL-1-9",
+          "Apply": "BEk"
+        },
+        {
+          "Answer": "No petals",
+          "Description": "",
+          "Code": "FL-1-10",
+          "Apply": "DUg"
+        }
+      ]
+    },
+    {
+      "Question": "Which of these general characteristics describes the flower?",
+      "Category": "FLOWER",
+      "Description": "",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "showy",
+          "Description": "Having a striking appearance or style, typically by being excessively bright, colorful, or ostentatious.",
+          "Code": "FL-3-1",
+          "Apply": "DUa"
+        },
+        {
+          "Answer": "fragrant",
+          "Description": "Having a pleasant or sweet smell.",
+          "Code": "FL-3-2",
+          "Apply": "DUb"
+        },
+        {
+          "Answer": "drooping",
+          "Description": "Bending or hanging downward limply.",
+          "Code": "FL-3-3",
+          "Apply": "DUc"
+        },
+        {
+          "Answer": "disagreeable odor",
+          "Description": "Having an odor which is not pleasant nor enjoyable.",
+          "Code": "FL-3-4",
+          "Apply": "DUf"
+        },
+        {
+          "Answer": "spirally arranged",
+          "Description": "Having a curl or corkscrew shape.",
+          "Code": "FL-3-5",
+          "Apply": "DUe"
+        }
+      ]
+    },
+    {
+      "Question": "Do you know when this flower was found?",
+      "Category": "FLOWER",
+      "Description": "",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "summer",
+          "Description": "June to September",
+          "Code": "FL-4-1",
+          "Apply": "FIa"
+        },
+        {
+          "Answer": "autumn",
+          "Description": "September to December",
+          "Code": "FL-4-2",
+          "Apply": "FIb"
+        },
+        {
+          "Answer": "winter",
+          "Description": "December to March",
+          "Code": "FL-4-3",
+          "Apply": "FIc"
+        },
+        {
+          "Answer": "spring",
+          "Description": "March to June",
+          "Code": "FL-4-4",
+          "Apply": "FId"
+        }
+      ]
+    },
+    {
+      "Question": "Which is the predominant color of the bark?",
+      "Category": "BARK",
+      "Description": "Bark is the outermost layer of stems and roots of woody plants.",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "gray",
+          "Description": "",
+          "Code": "BA-1-1",
+          "Apply": "CAa"
+        },
+        {
+          "Answer": "brown",
+          "Description": "",
+          "Code": "BA-1-2",
+          "Apply": "CAb"
+        },
+        {
+          "Answer": "red",
+          "Description": "",
+          "Code": "BA-1-3",
+          "Apply": "CAc"
+        },
+        {
+          "Answer": "reddish brown",
+          "Description": "",
+          "Code": "BA-1-4",
+          "Apply": "CAd"
+        },
+        {
+          "Answer": "white",
+          "Description": "",
+          "Code": "BA-1-5",
+          "Apply": "CAe"
+        },
+        {
+          "Answer": "golden-gray",
+          "Description": "",
+          "Code": "BA-1-6",
+          "Apply": "CAf"
+        },
+        {
+          "Answer": "bronze",
+          "Description": "",
+          "Code": "BA-1-7",
+          "Apply": "CAg"
+        },
+        {
+          "Answer": "black",
+          "Description": "",
+          "Code": "BA-1-8",
+          "Apply": "CAh"
+        },
+        {
+          "Answer": "pinkish",
+          "Description": "",
+          "Code": "BA-1-9",
+          "Apply": "CAi"
+        },
+        {
+          "Answer": "yellow",
+          "Description": "",
+          "Code": "BA-1-10",
+          "Apply": "CAj"
+        },
+        {
+          "Answer": "bluish",
+          "Description": "",
+          "Code": "BA-1-11",
+          "Apply": "CAk"
+        }
+      ]
+    },
+    {
+      "Question": "How would you describe the touch of the bark?",
+      "Category": "BARK",
+      "Description": "",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "smooth",
+          "Description": "Having an even and regular surface, free from lumps or indentations.",
+          "Code": "BA-3-1",
+          "Apply": "CBa"
+        },
+        {
+          "Answer": "rough",
+          "Description": "Having an uneven or irregular surface, not smooth or level.",
+          "Code": "BA-3-2",
+          "Apply": "CBb"
+        },
+        {
+          "Answer": "warty",
+          "Description": "Having hard rough lumps.",
+          "Code": "BA-3-3",
+          "Apply": "CBc"
+        },
+        {
+          "Answer": "spiny",
+          "Description": "Covered with prickles.",
+          "Code": "BA-3-4",
+          "Apply": "CBd"
+        },
+        {
+          "Answer": "fibrous",
+          "Description": "Consisting of or characterized by fibers.",
+          "Code": "BA-3-5",
+          "Apply": "CBe"
+        },
+        {
+          "Answer": "twisted",
+          "Description": "Having a rotating or winding appearance.",
+          "Code": "BA-3-6",
+          "Apply": "CBf"
+        },
+        {
+          "Answer": "papery",
+          "Description": "Thin and dry like paper.",
+          "Code": "BA-3-7",
+          "Apply": "CBg"
+        },
+        {
+          "Answer": "peels",
+          "Description": "Loose parts in small strips or pieces.",
+          "Code": "BA-3-8",
+          "Apply": "CBh"
+        },
+        {
+          "Answer": "scaly",
+          "Description": "Covered in scales.",
+          "Code": "BA-3-9",
+          "Apply": "CBi"
+        },
+        {
+          "Answer": "shiny",
+          "Description": "A polished look, reflecting light.",
+          "Code": "BA-3-10",
+          "Apply": "CBj"
+        },
+        {
+          "Answer": "shreddy",
+          "Description": "Consisting of or resembling shreds.",
+          "Code": "BA-3-11",
+          "Apply": "CBk"
+        },
+        {
+          "Answer": "plates",
+          "Description": "Consisting of thin, flat sheets.",
+          "Code": "BA-3-12",
+          "Apply": "CBl"
+        },
+        {
+          "Answer": "broken",
+          "Description": "Having a rough and uneven surface with breaks in continuity.",
+          "Code": "BA-3-13",
+          "Apply": "CBm"
+        }
+      ]
+    },
+    {
+      "Question": "What general characteristics describe the bark?",
+      "Category": "BARK",
+      "Description": "",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "squared plates",
+          "Description": "Plates have an equal-sided rectangular form.",
+          "Code": "BA-4-1",
+          "Apply": "DQf"
+        },
+        {
+          "Answer": "lightly furrowed",
+          "Description": "Bark has shallow ruts and grooves.",
+          "Code": "BA-4-2",
+          "Apply": "DQg"
+        },
+        {
+          "Answer": "deeply furrowed",
+          "Description": "Bark has deep ruts and grooves.",
+          "Code": "BA-4-3",
+          "Apply": "DQh"
+        },
+        {
+          "Answer": "flattened plates",
+          "Description": "",
+          "Code": "BA-4-4",
+          "Apply": "DQn"
+        },
+        {
+          "Answer": "long scales",
+          "Description": "",
+          "Code": "BA-4-5",
+          "Apply": "DQe"
+        },
+        {
+          "Answer": "fissured",
+          "Description": "Plates are split or cracked to form long narrow openings.",
+          "Code": "BA-4-6",
+          "Apply": "DQd"
+        }
+      ]
+    },
+    {
+      "Question": "Which is the predominant color of the fruit?",
+      "Category": "FRUIT",
+      "Description": "Fruit is the seed-bearing structure in flowering plants.",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "reddish",
+          "Description": "",
+          "Code": "FR-1-1",
+          "Apply": "ACb"
+        },
+        {
+          "Answer": "black",
+          "Description": "",
+          "Code": "FR-1-2",
+          "Apply": "ACd"
+        },
+        {
+          "Answer": "green",
+          "Description": "",
+          "Code": "FR-1-3",
+          "Apply": "ACf"
+        },
+        {
+          "Answer": "yellow",
+          "Description": "",
+          "Code": "FR-1-4",
+          "Apply": "ACg"
+        },
+        {
+          "Answer": "red",
+          "Description": "",
+          "Code": "FR-1-5",
+          "Apply": "ACh"
+        },
+        {
+          "Answer": "dull red",
+          "Description": "",
+          "Code": "FR-1-6",
+          "Apply": "ACi"
+        },
+        {
+          "Answer": "orange",
+          "Description": "",
+          "Code": "FR-1-7",
+          "Apply": "ACj"
+        },
+        {
+          "Answer": "brown",
+          "Description": "",
+          "Code": "FR-1-8",
+          "Apply": "ACj"
+        },
+        {
+          "Answer": "purple",
+          "Description": "",
+          "Code": "FR-1-9",
+          "Apply": "ACl"
+        }
+      ]
+    },
+    {
+      "Question": "How would you describe the shape of the fruit?",
+      "Category": "FRUIT",
+      "Description": "",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "globose",
+          "Description": "Having the shape of a sphere or ball, a spherical object.",
+          "Code": "FR-2-1",
+          "Apply": "BFe"
+        },
+        {
+          "Answer": "flattened",
+          "Description": "Having a flat shape.",
+          "Code": "FR-2-2",
+          "Apply": "BFf"
+        },
+        {
+          "Answer": "elongated",
+          "Description": "unusually long in relation to its width.",
+          "Code": "FR-2-3",
+          "Apply": "BFg"
+        },
+        {
+          "Answer": "ellipsoid",
+          "Description": "A three-dimensional figure whose plane sections are ellipses or circles.",
+          "Code": "FR-2-4",
+          "Apply": "BFh"
+        },
+        {
+          "Answer": "round",
+          "Description": "",
+          "Code": "FR-2-5",
+          "Apply": "BFi"
+        },
+        {
+          "Answer": "conical",
+          "Description": "Having the shape of a cone.",
+          "Code": "FR-2-6",
+          "Apply": "BFj"
+        },
+        {
+          "Answer": "triangular",
+          "Description": "Having the shape of a triangle.",
+          "Code": "FR-2-7",
+          "Apply": "BFk"
+        },
+        {
+          "Answer": "cylindrical",
+          "Description": "In the shape or form of a cylinder.",
+          "Code": "FR-2-8",
+          "Apply": "BFd"
+        },
+        {
+          "Answer": "oblong",
+          "Description": "In an elongated rectangle or oval shape.",
+          "Code": "FR-2-9",
+          "Apply": "BFc"
+        },
+        {
+          "Answer": "elliptical",
+          "Description": "Egg-shaped.",
+          "Code": "FR-2-10",
+          "Apply": "BFl"
+        }
+      ]
+    },
+    {
+      "Question": "Do you know when this fruit was found?",
+      "Category": "FRUIT",
+      "Description": "",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "summer",
+          "Description": "June to September",
+          "Code": "FR-3-1",
+          "Apply": "FJb"
+        },
+        {
+          "Answer": "autumn",
+          "Description": "September to December",
+          "Code": "FR-3-2",
+          "Apply": "FJc"
+        },
+        {
+          "Answer": "winter",
+          "Description": "December to March",
+          "Code": "FR-3-3",
+          "Apply": "FJd"
+        },
+        {
+          "Answer": "spring",
+          "Description": "March to June",
+          "Code": "FR-3-4",
+          "Apply": "FJa"
+        }
+      ]
+    }
+  ],
   "Characteristics": [
     {
       "Value": "leaf type",
@@ -2008,18 +2910,6 @@
       "Category": "FRUIT",
       "States": [
         {
-          "Value": "elliptical",
-          "Code": "BFa",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "ovoid",
-          "Code": "BFb",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
           "Value": "oblong",
           "Code": "BFc",
           "ImageRef": "",
@@ -2044,7 +2934,7 @@
           "Description": ""
         },
         {
-          "Value": "elongate",
+          "Value": "elongated",
           "Code": "BFg",
           "ImageRef": "",
           "Description": ""
@@ -2069,7 +2959,13 @@
         },
         {
           "Value": "triangular",
-          "Code": "BJk",
+          "Code": "BFk",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "elliptical",
+          "Code": "BFl",
           "ImageRef": "",
           "Description": ""
         }
@@ -2717,50 +3613,26 @@
       "Category": "FLOWER",
       "States": [
         {
-          "Value": "early summer",
-          "Code": "CDa",
+          "Value": "summer",
+          "Code": "FIa",
           "ImageRef": "",
           "Description": ""
         },
         {
-          "Value": "late summer",
-          "Code": "CDb",
+          "Value": "autumn",
+          "Code": "FIb",
           "ImageRef": "",
           "Description": ""
         },
         {
-          "Value": "early autumn",
-          "Code": "CDb",
+          "Value": "winter",
+          "Code": "FIc",
           "ImageRef": "",
           "Description": ""
         },
         {
-          "Value": "late autumn",
-          "Code": "CDc",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "early winter",
-          "Code": "CDe",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "late winter",
-          "Code": "CDf",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "early spring",
-          "Code": "CDg",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "late spring",
-          "Code": "CDh",
+          "Value": "spring",
+          "Code": "FId",
           "ImageRef": "",
           "Description": ""
         }
@@ -3477,8 +4349,8 @@
       ]
     },
     {
-      "Value": "\"bark ridges\t\t{",
-      "Value": "CA",
+      "Value": "bark ridges",
+      "Depends": "CA",
       "Category": "BARK",
       "States": [
         {
@@ -3569,50 +4441,26 @@
       "Category": "FRUIT",
       "States": [
         {
-          "Value": "early spring",
-          "Code": "DCa",
+          "Value": "spring",
+          "Code": "FJa",
           "ImageRef": "",
           "Description": ""
         },
         {
-          "Value": "late spring",
-          "Code": "DCb",
+          "Value": "summer",
+          "Code": "FJb",
           "ImageRef": "",
           "Description": ""
         },
         {
-          "Value": "early summer",
-          "Code": "DCc",
+          "Value": "autumn",
+          "Code": "FJc",
           "ImageRef": "",
           "Description": ""
         },
         {
-          "Value": "late summer",
-          "Code": "DCd",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "early autumn",
-          "Code": "DCe",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "late autumn",
-          "Code": "DCf",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "early winter",
-          "Code": "DCg",
-          "ImageRef": "",
-          "Description": ""
-        },
-        {
-          "Value": "late winter",
-          "Code": "DCh",
+          "Value": "winter",
+          "Code": "FJd",
           "ImageRef": "",
           "Description": ""
         }
@@ -3706,7 +4554,7 @@
       "Category": "FLOWER",
       "States": [
         {
-          "Value": "elongate",
+          "Value": "elongated",
           "Code": "DHa",
           "ImageRef": "",
           "Description": ""
@@ -3755,7 +4603,7 @@
       "Category": "FLOWER",
       "States": [
         {
-          "Value": "elongate",
+          "Value": "elongated",
           "Code": "DIa",
           "ImageRef": "",
           "Description": ""
@@ -4152,6 +5000,12 @@
         {
           "Value": "fluted",
           "Code": "DNj",
+          "ImageRef": "",
+          "Description": ""
+        },
+        {
+          "Value": "branches ascending",
+          "Code": "DNk",
           "ImageRef": "",
           "Description": ""
         }
@@ -5270,7 +6124,7 @@
           "Description": ""
         },
         {
-          "Value": "elongate",
+          "Value": "elongated",
           "Code": "EPb",
           "ImageRef": "",
           "Description": ""
@@ -5861,6 +6715,12 @@
           "Code": "FHd",
           "ImageRef": "",
           "Description": ""
+        },
+        {
+          "Value": "red tipped",
+          "Code": "FHe",
+          "ImageRef": "",
+          "Description": ""
         }
       ]
     }
@@ -6082,7 +6942,7 @@
         "CHa",
         "BEd",
         "BOa",
-        "CDa"
+        "FIa"
       ]
     },
     {
@@ -6897,13 +7757,13 @@
         "BEb",
         "BOc",
         "BSf",
-        "CDg",
+        "FId",
         "ABa",
         "ACh",
         "ACk",
         "DMw",
-        "DCa",
-        "DCb"
+        "FJa",
+        "FJa"
       ]
     },
     {
@@ -7011,7 +7871,7 @@
         "CAd",
         "CHa",
         "CCf",
-        "BFb",
+        "BFl",
         "CJa"
       ]
     },
@@ -7462,15 +8322,15 @@
         "DBa",
         "BEe",
         "BOa",
-        "CDb",
+        "FIa",
         "CUa",
         "CEa",
         "ABi",
         "ABh",
         "ACd",
         "ADa",
-        "DCd",
-        "DCe"
+        "FJb",
+        "FJc"
       ]
     },
     {
@@ -7499,7 +8359,7 @@
         "CEd",
         "ACd",
         "DJa",
-        "DCe",
+        "FJc",
         "BFe",
         "DBa",
         "BEf",
@@ -7543,15 +8403,15 @@
         "DHb",
         "DHc",
         "DId",
-        "BFb",
+        "BFl",
         "Xb",
-        "CDg",
+        "FId",
         "Za",
         "BDa",
         "CJc",
         "ADa",
-        "DCd",
-        "DCe"
+        "FJb",
+        "FJc"
       ]
     },
     {
@@ -7605,13 +8465,13 @@
         "DId",
         "DIb",
         "DIe",
-        "CDg",
+        "FId",
         "ABc",
         "DMa",
         "DMb",
         "DMc",
-        "DCb",
-        "DCc"
+        "FJa",
+        "FJb"
       ]
     },
     {
@@ -7666,12 +8526,12 @@
         "DId",
         "DIb",
         "DIe",
-        "CDg",
+        "FId",
         "ABc",
         "DMa",
         "DMc",
-        "DCb",
-        "DCc",
+        "FJa",
+        "FJb",
         "DMd"
       ]
     },
@@ -7723,7 +8583,7 @@
         "DHd",
         "DIg",
         "DId",
-        "CDg",
+        "FId",
         "ABc",
         "DMa",
         "DMc",
@@ -7826,9 +8686,9 @@
         "DHb",
         "DHd",
         "DIb",
-        "CDg",
+        "FId",
         "ABc",
-        "BFb",
+        "BFl",
         "DMb",
         "Za",
         "Bk"
@@ -7872,11 +8732,11 @@
         "DBb",
         "DHb",
         "DIh",
-        "CDg",
+        "FId",
         "ABc",
         "ACk",
         "DMd",
-        "DCd",
+        "FJb",
         "ADb"
       ]
     },
@@ -7923,7 +8783,7 @@
         "BEi",
         "DWa",
         "Xd",
-        "CDh",
+        "FId",
         "ABd",
         "BFg",
         "ACk",
@@ -8256,15 +9116,15 @@
         "DUb",
         "AGd",
         "Xc",
-        "CDg",
+        "FId",
         "ABc",
         "ABh",
         "DMa",
         "CEd",
         "ACg",
-        "BFa",
+        "BFl",
         "DMf",
-        "DCd",
+        "FJb",
         "ADa"
       ]
     },
@@ -8304,14 +9164,14 @@
         "BEg",
         "BOa",
         "Xc",
-        "CDh",
+        "FId",
         "ABh",
         "ACk",
         "DMg",
-        "BFb",
+        "BFl",
         "DMh",
         "DMf",
-        "DCd",
+        "FJb",
         "ADa"
       ]
     },
@@ -8356,7 +9216,7 @@
         "EBa",
         "DHe",
         "DIi",
-        "CDh",
+        "FId",
         "DMi",
         "ABi",
         "BFe",
@@ -8411,7 +9271,7 @@
         "Xc",
         "Xd",
         "DId",
-        "CDa",
+        "FIa",
         "DUa",
         "ABd",
         "ACk",
@@ -8463,11 +9323,11 @@
         "EBd",
         "EBe",
         "DUa",
-        "CDh",
+        "FId",
         "ABd",
         "DMg",
-        "DCd",
-        "DCe"
+        "FJb",
+        "FJc"
       ]
     },
     {
@@ -8513,12 +9373,12 @@
         "BFe",
         "EBa",
         "DHe",
-        "CDh",
+        "FId",
         "ABd",
         "DMg",
-        "BFb",
-        "DCd",
-        "DCe",
+        "BFl",
+        "FJb",
+        "FJc",
         "ADa"
       ]
     },
@@ -8562,10 +9422,10 @@
         "Xc",
         "DUd",
         "DUc",
-        "CDa",
+        "FIa",
         "ABd",
-        "DCe",
-        "DCf",
+        "FJc",
+        "FJc",
         "ADa",
         "DMk",
         "DMh",
@@ -8615,12 +9475,12 @@
         "DBa",
         "BEa",
         "BEh",
-        "CDh",
+        "FId",
         "ABd",
         "BFg",
         "CEe",
-        "DCd",
-        "DCe"
+        "FJb",
+        "FJc"
       ]
     },
     {
@@ -8672,7 +9532,7 @@
         "BEg",
         "BEa",
         "BEh",
-        "CDb",
+        "FIa",
         "ABd",
         "ACd",
         "ACb",
@@ -8680,8 +9540,8 @@
         "BFg",
         "CEe",
         "ADa",
-        "DCd",
-        "DCe"
+        "FJb",
+        "FJc"
       ]
     },
     {
@@ -8724,12 +9584,12 @@
         "BEg",
         "EBf",
         "Xc",
-        "CDh",
+        "FId",
         "ABi",
         "ACd",
         "CEf",
-        "DCd",
-        "DCe",
+        "FJb",
+        "FJc",
         "ADa",
         "DFa"
       ]
@@ -8788,7 +9648,7 @@
         "DBa",
         "BEh",
         "BEa",
-        "CDg",
+        "FId",
         "ABe",
         "BFf",
         "BFc",
@@ -8837,12 +9697,12 @@
         "DUa",
         "DUb",
         "DUc",
-        "CDh",
+        "FId",
         "ABe",
         "BFf",
         "ACk",
         "BFc",
-        "DCd",
+        "FJb",
         "ADa"
       ]
     },
@@ -8886,9 +9746,9 @@
         "DIe",
         "DHe",
         "Xc",
-        "CDh",
+        "FId",
         "ABe",
-        "BFb",
+        "BFl",
         "BFf",
         "AZc",
         "ACk"
@@ -8934,11 +9794,11 @@
         "DIe",
         "DHe",
         "Xc",
-        "CDh",
+        "FId",
         "ABe",
         "BFg",
         "DMi",
-        "DCf",
+        "FJc",
         "BFc"
       ]
     },
@@ -8987,8 +9847,8 @@
         "BEh",
         "DHf",
         "DIj",
-        "CDh",
-        "CDa",
+        "FId",
+        "FIa",
         "ABe",
         "ACk",
         "ACd",
@@ -8996,7 +9856,7 @@
         "CRa",
         "CEe",
         "DMi",
-        "DCf",
+        "FJc",
         "DDa"
       ]
     },
@@ -9042,13 +9902,13 @@
         "BEg",
         "Xc",
         "DUb",
-        "CDh",
+        "FId",
         "ABe",
         "ACk",
         "BFf",
-        "DCd",
-        "DCe",
-        "DCf",
+        "FJb",
+        "FJc",
+        "FJc",
         "AOm"
       ]
     },
@@ -9082,14 +9942,14 @@
         "BEf",
         "DUa",
         "Xc",
-        "CDh",
+        "FId",
         "ABe",
         "ACk",
         "BFf",
         "DMa",
-        "DCd",
-        "DCe",
-        "DCf",
+        "FJb",
+        "FJc",
+        "FJc",
         "DMt"
       ]
     },
@@ -9137,16 +9997,16 @@
         "DBb",
         "DHg",
         "DHb",
-        "CDh",
-        "CDa",
+        "FId",
+        "FIa",
         "ABc",
         "CEd",
         "ACk",
         "BFf",
         "CRb",
         "DMu",
-        "DCd",
-        "DCe",
+        "FJb",
+        "FJc",
         "BBg"
       ]
     },
@@ -9182,13 +10042,13 @@
         "DHg",
         "DHb",
         "DIh",
-        "CDa",
+        "FIa",
         "ABc",
         "CEd",
         "ACk",
         "DMu",
-        "DCd",
-        "DCe"
+        "FJb",
+        "FJc"
       ]
     },
     {
@@ -9240,15 +10100,14 @@
         "DHe",
         "DHd",
         "DIk",
-        "CDg",
-        "CDh",
+        "FId",
         "ABc",
         "ACg",
         "ACk",
-        "BJk",
+        "BFk",
         "DMu",
-        "DCd",
-        "DCe"
+        "FJb",
+        "FJc"
       ]
     },
     {
@@ -9955,12 +10814,12 @@
         "FDa",
         "FFa",
         "DUe",
-        "CDh",
-        "CDa",
+        "FId",
+        "FIa",
         "Za",
         "Ya",
         "ACh",
-        "BFb",
+        "BFl",
         "DMn",
         "ECb"
       ]
@@ -9993,15 +10852,15 @@
         "DBa",
         "DUb",
         "BEg",
-        "CDh",
-        "CDa",
+        "FId",
+        "FIa",
         "Za",
         "Ya",
         "ACh",
         "DMm",
         "DMn",
-        "DCc",
-        "DCd",
+        "FJb",
+        "FJb",
         "ECb"
       ]
     },
@@ -10038,19 +10897,19 @@
         "DBa",
         "DUb",
         "BEg",
-        "CDh",
-        "CDa",
+        "FId",
+        "FIa",
         "EZa",
         "EZb",
         "Za",
         "Ya",
         "ACh",
         "ACk",
-        "BFb",
+        "BFl",
         "BFd",
         "DMe",
-        "DCe",
-        "DCf",
+        "FJc",
+        "FJc",
         "ECb"
       ]
     },
@@ -10084,15 +10943,15 @@
         "CBa",
         "DBa",
         "BEg",
-        "CDh",
-        "CDa",
+        "FId",
+        "FIa",
         "Za",
         "Ya",
-        "BFb",
+        "BFl",
         "BFi",
         "DMe",
-        "DCc",
-        "DCd",
+        "FJb",
+        "FJb",
         "ECb"
       ]
     },
@@ -10124,14 +10983,14 @@
         "DBa",
         "DUb",
         "BEg",
-        "CDa",
-        "CDh",
+        "FIa",
+        "FId",
         "Za",
         "Ya",
         "ACh",
         "DMm",
         "DMn",
-        "DCd",
+        "FJb",
         "ECb"
       ]
     },
@@ -10166,16 +11025,16 @@
         "DUf",
         "BEg",
         "FCa",
-        "CDh",
-        "CDa",
+        "FId",
+        "FIa",
         "Za",
         "Ya",
         "ACh",
         "BFj",
         "BFd",
         "DMm",
-        "DCc",
-        "DCd",
+        "FJb",
+        "FJb",
         "ECb"
       ]
     },
@@ -10214,14 +11073,14 @@
         "DBa",
         "BEg",
         "DUb",
-        "CDh",
-        "CDa",
+        "FId",
+        "FIa",
         "Za",
         "Ya",
         "ACh",
         "BFh",
-        "DCc",
-        "DCd"
+        "FJb",
+        "FJb"
       ]
     },
     {
@@ -11079,7 +11938,46 @@
       "FamilyName": "Rose",
       "ImageRef": "",
       "Characteristics": [
-
+        "DNk",
+        "AJb",
+        "Aa",
+        "Ca",
+        "Bk",
+        "Bf",
+        "Ea",
+        "Fd",
+        "Gd",
+        "Gl",
+        "FHe",
+        "CGa",
+        "CQa",
+        "CQb",
+        "CMc",
+        "CLa",
+        "BZa",
+        "Vh",
+        "Vl",
+        "AMo",
+        "AMg",
+        "EJb",
+        "AUe",
+        "CAb",
+        "CAc",
+        "CHa",
+        "CBa",
+        "CCb",
+        "CCf",
+        "DAb",
+        "BEg",
+        "Xc",
+        "ABh",
+        "ACl",
+        "ACd",
+        "BFl",
+        "CRa",
+        "FJb",
+        "FJb",
+        "FJc"
       ]
     },
     {

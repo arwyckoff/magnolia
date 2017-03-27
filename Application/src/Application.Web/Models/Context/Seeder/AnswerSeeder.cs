@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Magnolia.Api.Models
+namespace Magnolia.Context.Seeder.Models
 {
-    public class AnswerViewModel
+    public class AnswerSeeder
     {
         public string Answer { get; set; }
         public string Description { get; set; }
