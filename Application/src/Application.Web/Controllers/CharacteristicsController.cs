@@ -46,6 +46,9 @@ namespace Magnolia.Controllers
 
                 foreach (var state in characteristic.States)
                 {
+                    if (!_context.PlantCharacteristics.Any(s => s.StateId == state.Id))
+                        continue;
+
                     characteristicViewModel.States.Add(new StateViewModel()
                     {
                         Characteristic = characteristic.Value,
