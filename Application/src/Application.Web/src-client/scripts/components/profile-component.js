@@ -8,10 +8,9 @@ export const ProfileComponent = React.createClass({
 _handleUserCollection: function(evt){
   let plantToAdd = STORE.getStoreData().myTree
   let userInfo = STORE.getStoreData().currentUser
-  let userPlantArray = userInfo.plants
   if (userInfo.id !== null){
-  userPlantArray.push(plantToAdd)
-  STORE.setStore('currentUser', userInfo)
+  userInfo.plants.push(plantToAdd)
+  STORE.setStore('userProfile', userInfo)
 }
 },
    render: function(){
