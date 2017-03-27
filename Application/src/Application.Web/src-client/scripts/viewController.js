@@ -10,6 +10,8 @@ import {LogoutView} from './views/logout-view.js'
 import {BrowseView} from './views/browse-view.js'
 import {LandingView} from './views/landing-view.js'
 import {IdentifyView} from './views/id-view.js'
+import {UserView} from './views/user-view.js';
+
 
 export const ViewController = React.createClass({
 
@@ -18,6 +20,8 @@ export const ViewController = React.createClass({
     ACTIONS.fetchAllCharCodes()
     ACTIONS.fetchAllCategories()
     ACTIONS.fetchAllCharCodes()
+    ACTIONS.fetchUserInfo()
+    ACTIONS.fetchCurrentUser()
     ACTIONS.changeCurrentNav(this.props.fromRoute, window.location.hash)
     let storeObject = STORE.getStoreData()
     return storeObject
@@ -29,9 +33,7 @@ export const ViewController = React.createClass({
       let newStoreObj = STORE.getStoreData()
       component.setState(newStoreObj)
     })
-    ACTIONS.fetchCurrentUser()
     // ACTIONS.fetchAllTrees()
-
   },
 
   render: function(){
@@ -58,6 +60,9 @@ export const ViewController = React.createClass({
           break;
       case "BROWSE":
         componentToRender = <BrowseView {...this.state}/>
+        break;
+      case "MYPROFILE":
+        componentToRender = <UserView/>
         break;
         default:
     }

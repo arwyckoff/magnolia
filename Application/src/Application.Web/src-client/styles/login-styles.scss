@@ -41,6 +41,7 @@ margin-top: 20px;
   height: 150px;
   position: relative;
 }
+
 .loginarrow_box{
   display: none;
 }
@@ -192,4 +193,25 @@ input:focus ~ .highlight {
 	from { background:#D3807E; }
   to 	{ width:0; background:transparent; }
 }
+}
+
+
+.container-user{
+  font-size: 16px;
+width: 100%;
+height: 100vh;
+
+}
+
+.user-container{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-left: 20px;
+  width: 70%;
+  height: 100vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.make-green{
+  @include greenAccent;
 }
