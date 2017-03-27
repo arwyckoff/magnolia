@@ -88,7 +88,8 @@ export const PartTwoItem = React.createClass({
     let filterChar = evt.currentTarget.dataset.id
     let catClicked = evt.currentTarget.dataset.cat
     let currentChar = evt.currentTarget.dataset.ch
-    ID_ACTIONS.updateQuestionInfo(evt.currentTarget.dataset.cat, evt.currentTarget.dataset.id)
+    console.log(currentChar)
+    ID_ACTIONS.updateQuestionInfo(evt.currentTarget.dataset.cat, evt.currentTarget.dataset.id, evt.currentTarget.dataset.ch)
   },
 
   render: function(){
