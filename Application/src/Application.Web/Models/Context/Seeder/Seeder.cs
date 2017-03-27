@@ -158,6 +158,7 @@ namespace Magnolia.Context.Seeder
                             case "FRUIT":
                             case "TWIG":
                             case "BARK":
+                            case "CATEGORY":
                                 goto MAKE_QUESTION;
                             default:
                                 throw new Exception("Category not found! " + question.Category);
