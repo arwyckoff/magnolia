@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Magnolia.Api.Models
+namespace Magnolia.Context.Seeder.Models
 {
-    public class QuestionViewModel
+    public class QuestionSeeder
     {
         public string Question { get; set; }
-        public string Description { get; set; }
         public string Category { get; set; }
         public string Depends { get; set; }
         public string SkipIf { get; set; }
-        public List<AnswerViewModel> Answers { get; set; }
-
-        public QuestionViewModel()
-        {
-            Answers = new List<AnswerViewModel>();
-        }
+        public string Description { get; set; }
+        public List<AnswerSeeder> Answers { get; set; }
     }
 }

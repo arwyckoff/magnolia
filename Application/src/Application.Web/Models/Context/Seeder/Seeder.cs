@@ -146,6 +146,53 @@ namespace Magnolia.Context.Seeder
                 }
 
                 context.SaveChanges();
+
+                if (!context.Questions.Any())
+                {
+                    foreach (var question in model.Questions)
+                    {
+                        switch(question.Category)
+                        {
+                            case "LEAF":
+                            case "FLOWER":
+                            case "FRUIT":
+                            case "TWIG":
+                            case "BARK":
+                                goto MAKE_QUESTION;
+                            default:
+                                throw new Exception("Category not found! " + question.Category);
+                        }
+
+                    MAKE_QUESTION:
+                        var q = new Question()
+                        {
+                            Value = question.Question,
+                            Category = question.Category,
+                            Description = question.Description,
+                            Depends = question.Depends == "" ? null : context.QuestionAnswers.FirstOrDefault(a => a.Code == question.Depends) ?? throw new Exception("Dependency not found! " + question.Depends),
+                            SkipIf = question.SkipIf == "" ? null : context.QuestionAnswers.FirstOrDefault(a => a.Code == question.SkipIf) ?? throw new Exception("Skip not found! " + question.SkipIf)
+                        };
+
+                        foreach (var answer in question.Answers)
+                        {
+                            var a = new QuestionAnswer()
+                            {
+                                Value = answer.Answer,
+                                Description = answer.Description,
+                                Code = answer.Code,
+                                Apply = answer.Apply == "" ? null : context.States.FirstOrDefault(s => s.Code == answer.Apply) ?? throw new Exception("Apply not found! " + answer.Apply)
+                            };
+
+                            context.QuestionAnswers.Add(a);
+                            q.Answers.Add(a);
+                        }
+
+                        context.Questions.Add(q);
+                        context.SaveChanges();
+                    }
+                }
+
+                context.SaveChanges();
             }
         }
     }

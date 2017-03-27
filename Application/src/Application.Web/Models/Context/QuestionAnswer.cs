@@ -9,13 +9,14 @@ namespace Magnolia.Context.Models
     {
         public int Id { get; set; }
         public string Value { get; set; }
-        
-        public List<State> ResultingStates { get; set; }
-        public Question Question { get; set; }
+        public string Description { get; set; }
+        public string Code { get; set; }
+        public int QuestionId { get; set; }
+        public int ApplyId { get; set; }
 
-        public QuestionAnswer()
-        {
-            ResultingStates = new List<State>();
-        }
+        public State Apply { get; set; }
+        public Question Question { get; set; }
+        public Question Depended { get; set; }
+        public Question Skips { get; set; }
     }
 }
