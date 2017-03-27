@@ -64,6 +64,7 @@ export const STORE = {
     allCharArray: [],
     appRouteName: '',
     currentQuestion: 1,
+    prevQuestions: [],
   },
   getStoreData: function(){
 		return this._data
