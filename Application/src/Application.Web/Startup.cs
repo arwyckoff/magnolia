@@ -53,8 +53,7 @@ namespace Magnolia
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
+            loggerFactory.AddDebug(LogLevel.Error);
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
