@@ -5,6 +5,7 @@ import {STORE} from '../store.js'
 import {ACTIONS} from '../actions.js'
 
 export const ProfileComponent = React.createClass({
+
 _handleImageLoad: function(evt){
 
   setTimeout(() => {
@@ -21,6 +22,14 @@ _handleUserCollection: function(evt){
   STORE.setStore('userProfile', userInfo)
 }
 },
+_handleWikiClick: function(){
+  let wikiPart = 'https://en.wikipedia.org/wiki/'
+  let latinPart = this.props.myWiki.latinName
+  let wholeLink = `${wikiPart}${latinPart}`
+  console.log(wholeLink)
+  return wholeLink
+},
+
    render: function(){
       let self = this
       let allTheTrees = this.props.myTree
@@ -40,8 +49,10 @@ _handleUserCollection: function(evt){
         <div className = "tree-profile">
            <ProfileItem profileData={allTheTrees}/>
            <div className = "profile-half">
-                <img onLoad = {this._handleImageLoad} className = "plant-pic" src = {this.props.myImage}/>
-                <p> {this.props.myWiki}</p><p style={{clear: 'both'}}> </p>
+                <img onLoad ={this._handleImageLoad} className = "plant-pic" src = {this.props.myImage}/>
+                <p> {this.props.myWiki}</p>
+                 <a href = {this.props.wikiLink} target = '_blank'>read more</a>
+                <p style={{clear: 'both'}}></p>
         </div>
         <a className = "user-add" onClick = {this._handleUserCollection} data-id = {this.props.myTree}>add to my collection</a>
       </div>
