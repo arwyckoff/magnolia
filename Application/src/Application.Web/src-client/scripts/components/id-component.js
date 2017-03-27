@@ -13,6 +13,9 @@ export const IdComponent = React.createClass({
   getInitialState: function(){
   return STORE.getStoreData()
 },
+componentWillMount: function(){
+      STORE.setStore('currentQuestion', 1)
+},
 _makeQuestionComponents: function(categories){
   let keyNameJsx = Object.keys(categories).map(
     (smod, i) => {
@@ -34,7 +37,8 @@ render: function(){
   let currentQuestion = this.props.currentQuestion
       let {categories} = this.props
       //
-      if (currentQuestion ===1){
+
+      if (currentQuestion ===1 ){
         let questionStuff = this._makeQuestionComponents(categories)
         return (
           <div className = "question-box">

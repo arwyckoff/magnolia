@@ -51,6 +51,7 @@ export const ID_ACTIONS = {
 
   resetIDProps: function(){
     let allTrees = STORE.getStoreData().treeListData
+    console.log(allTrees)
     STORE.setStore('currentQuestion', 1)
     STORE.setStore('categorySelect', '')
     STORE.setStore('characteristicSelect', '')
@@ -63,5 +64,6 @@ export const ID_ACTIONS = {
                                  FLOWER:{totalIDK: 0,idkRun: 0},
                                  FRUIT:{totalIDK: 0,idkRun: 0},
                                  GENERAL:{totalIDK: 0,idkRun: 0},})
+  STORE.setStore('filteredTrees', allTrees)
 },
 }
