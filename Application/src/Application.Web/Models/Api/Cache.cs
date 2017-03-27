@@ -18,8 +18,9 @@ namespace Magnolia.Api.Models
             if (_plantViewModels == null)
             {
                 var plants = await context.Plants.Include(p => p.PlantCharacteristics)
-                                              .Include(p => p.Family)
-                                              .ToListAsync();
+                                                 .Include(p => p.Family)
+                                                 .Where(p => p.PlantCharacteristics.Count > 0)
+                                                 .ToListAsync();
 
                 var plantViewModels = new List<PlantViewModel>();
 
