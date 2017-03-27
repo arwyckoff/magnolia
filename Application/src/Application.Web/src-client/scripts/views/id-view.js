@@ -6,6 +6,7 @@ import {IdComponent} from '../components/id-component.js'
 import {CharacteristicComponent} from '../components/characteristic-component.js'
 import {TreeIDComponent} from '../components/id-trees-component.js'
 import {FilterComponent} from '../components/filter-component.js'
+import {IdBreadcrumbsComponent} from '../components/id-breadcrumbs.js'
 import {ID_ACTIONS} from '../id-actions.js'
 
 
@@ -18,6 +19,9 @@ export const IdentifyView = React.createClass({
       <div className = "question-container">
         <div className = "question-top">
         <IdComponent {...this.state}/>
+      </div>
+      <div className = "question-bc-container">
+      <IdBreadcrumbsComponent {...this.state}/>
       </div>
         <div className = "question-tree-container">
         <TreeIDComponent {...this.state}/>
