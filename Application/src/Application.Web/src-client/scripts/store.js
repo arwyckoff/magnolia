@@ -1,5 +1,6 @@
 export const STORE = {
   _data:{
+    ready: false,
     treeListData: [],
     categorySelect: '',
     characteristicSelect: [],
