@@ -13,18 +13,18 @@ nav{
 	ul{
 		@include navBarTextColor;
 		margin-bottom: 0;
-			height: 50px;
 	}
 	i{
 		@include navBarTextColor;
-		font-size: 20px;
+
+		padding-top: 15px;
+		padding-bottom: 15px;
 	}
 .nav-option-act i{
 	@include newYorkPink;
 }
 	li{
   display: inline-block;
-			line-height: 50px;
   padding-left: 10px;
 	padding-right: 10px;
   cursor: pointer;
@@ -41,7 +41,7 @@ nav{
 		 .arrow_box {
 			 border-color: #EF918F;
 	@include xcenter;
-	bottom: -15px;
+	bottom: -20px;
 	@include pinkBackground;
 	display: inherit;
 	text-align: center;
@@ -71,7 +71,7 @@ nav{
 
 .navRoute{
 	@include navBarTextColor;
-	font-size: 20px;
+	font-size: 26px;
 }
 
 .relative-this{
