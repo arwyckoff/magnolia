@@ -33,6 +33,24 @@ export const ID_ACTIONS = {
      ID_ACTIONS.updateQuestionNumber(currentQuestion)
     },
 
+      updateQuestionBack: function(category){
+        let filterList = STORE.getStoreData().filterChars
+        // let futurefiltCharsHandler = [...filterList]
+        // futurefiltCharsHandler.push(filterCharacter)
+        // BROWSE_ACTIONS.changeFilter(filterCharacter)
+        let iDKs = STORE.getStoreData().iDKs
+        let categories = STORE.getStoreData().categories
+        let legalArray = _getLegalCharacteristics(filterList, iDKs, categories, 3)
+        let preferredCharObj = _getPreferredCharacteristics(legalArray, category)
+        let filteredTrees = STORE.getStoreData().filteredTrees
+        let best = STORE.getStoreData().best
+        console.log(best)
+        let commonObj= _getBestBetweenPreferredAndOtherwise(preferredCharObj.preferred, preferredCharObj.otherwise, filteredTrees, 0)
+        STORE.setStore('best', commonObj)
+        let currentQuestion = STORE.getStoreData().currentQuestion
+        let backOne = currentQuestion-1
+         STORE.setStore('currentQuestion', backOne)
+        },
   firstQuestionAction: function(category){
     ACTIONS.changeCategory(category)
       let filterList = STORE.getStoreData().filterChars
