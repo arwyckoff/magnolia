@@ -3,11 +3,11 @@ import {STORE} from '../store.js';
 import {ACTIONS} from '../actions.js';
 import {BROWSE_ACTIONS} from '../browse_actions.js'
 import {ID_ACTIONS} from '../id-actions.js'
-import {_getFilteredCharacteristics} from '../utils/getFilteredCharacteristics.js';
-import {_getPreferredCharacteristics} from '../utils/getPreferredCharacteristics.js';
-import {_getFilteredTrees} from '../utils/getFilteredTrees.js';
-import {_getLegalCharacteristics} from '../utils/getLegalCharacteristics.js';
-import {_getBestBetweenPreferredAndOtherwise} from '../utils/getMostCommonCharacteristic.js';
+// import {_getFilteredCharacteristics} from '../utils/getFilteredCharacteristics.js';
+// import {_getPreferredCharacteristics} from '../utils/getPreferredCharacteristics.js';
+import  _getFilteredTrees  from "../utils/getFilteredTrees"
+// import {_getLegalCharacteristics} from '../utils/getLegalCharacteristics.js';
+// import {_getBestBetweenPreferredAndOtherwise} from '../utils/getMostCommonCharacteristic.js';
 
 export const IdComponent = React.createClass({
   getInitialState: function(){
@@ -28,7 +28,10 @@ _makePartTwoComponents: function(statesArray){
       (keyName, i) => {
         let futurefiltChars = [...this.props.filterChars]
         futurefiltChars.push(keyName.code)
-      return    <PartTwoItem partTwoData={keyName} key = {i}/>
+        let self = this
+        let resultCount = _getFilteredTrees(futurefiltChars, this.props.filteredTrees).length
+        console.log(resultCount)
+      return    <PartTwoItem partTwoData={keyName} results={resultCount} key = {i}/>
       })
     return stateJsx
   },
@@ -88,16 +91,29 @@ export const PartTwoItem = React.createClass({
     let filterChar = evt.currentTarget.dataset.id
     let catClicked = evt.currentTarget.dataset.cat
     let currentChar = evt.currentTarget.dataset.ch
-    console.log(currentChar)
     ID_ACTIONS.updateQuestionInfo(evt.currentTarget.dataset.cat, evt.currentTarget.dataset.id, evt.currentTarget.dataset.ch)
   },
 
   render: function(){
+    if (this.props.results === 1){
     return(
       <div className = "question-card hvr-grow" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
-          <p>{this.props.partTwoData.state}</p>
+          <p>{this.props.partTwoData.state}</p><span><em>({this.props.results} tree)</em></span>
         </div>
     )
+  }
+  else if(this.props.results>1){
+    return(
+        <div className = "question-card hvr-grow" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
+            <p>{this.props.partTwoData.state}</p><span><em>({this.props.results} trees)</em></span>
+          </div>
+      )
+  }
+  else if (this.props.results===0){
+    return(
+      <div className = 'bye'></div>
+    )
+  }
   }
 
 })

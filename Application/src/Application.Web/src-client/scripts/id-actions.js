@@ -38,16 +38,15 @@ export const ID_ACTIONS = {
 
       updateQuestionBack: function(category){
         let filterList = STORE.getStoreData().filterChars
-        // let futurefiltCharsHandler = [...filterList]
-        // futurefiltCharsHandler.push(filterCharacter)
-        // BROWSE_ACTIONS.changeFilter(filterCharacter)
+        let prevQuesArray = STORE.getStoreData().prevQuestions
+        prevQuesArray.pop()
+        STORE.setStore('prevQuestions', prevQuesArray)
         let iDKs = STORE.getStoreData().iDKs
         let categories = STORE.getStoreData().categories
         let legalArray = _getLegalCharacteristics(filterList, iDKs, categories, 3)
         let preferredCharObj = _getPreferredCharacteristics(legalArray, category)
         let filteredTrees = STORE.getStoreData().filteredTrees
         let best = STORE.getStoreData().best
-        console.log(best)
         let commonObj= _getBestBetweenPreferredAndOtherwise(preferredCharObj.preferred, preferredCharObj.otherwise, filteredTrees, 0)
         STORE.setStore('best', commonObj)
         let currentQuestion = STORE.getStoreData().currentQuestion
@@ -86,5 +85,6 @@ export const ID_ACTIONS = {
                                  FRUIT:{totalIDK: 0,idkRun: 0},
                                  GENERAL:{totalIDK: 0,idkRun: 0},})
   STORE.setStore('filteredTrees', allTrees)
+  STORE.setStore('prevQuestions', [])
 },
 }

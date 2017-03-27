@@ -26,8 +26,7 @@ _handleBack: function(evt){
     let filterChars = this.props.filterChars
     let lastFilter = filterChars[filterChars.length-1]
     BROWSE_ACTIONS.changeFilter(lastFilter)
-    // let backOneChar = filterChars.slice(1)
-    // console.log(backOneChar)
+
   ID_ACTIONS.updateQuestionBack(this.props.categorySelect)
 }
 else {ID_ACTIONS.resetIDProps()}

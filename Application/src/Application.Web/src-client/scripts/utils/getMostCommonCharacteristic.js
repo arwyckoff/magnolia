@@ -30,7 +30,7 @@ export const _getMostCommonCharacteristic = (preferred, trees) => {
             let charStates = characteristic.states
             for (let s = 0, sLen = characteristic.states.length; s < sLen; s++) {
                 let stateA = characteristic.states[s];
-                if (singleTree.characteristics.stateA !== 'undefined' && characteristic !== formerBest.characteristic)
+                if (singleTree.characteristics.stateA !== 'undefined')
                    {occurrences++}}
 
         let percentage = occurrences / trees.length
