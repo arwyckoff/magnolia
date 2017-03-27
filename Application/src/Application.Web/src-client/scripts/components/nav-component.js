@@ -7,17 +7,19 @@ export const NavBar = React.createClass({
 		if( currentUserOnStore.id === 'undefined' || currentUserOnStore.id === null){
        routeList = [
           {appRouteName: 'HOME', displayText: <i className="fa fa-tree"><span className="label arrow_box">home</span></i>,  hashRoute: ''},
-          {appRouteName: 'IDENTIFY', displayText: <i className = "fa fa-search"><span className = "label arrow_box">identify</span></i>, hashRoute: 'identify'},
+          {appRouteName: 'IDENTIFY', displayText: <i className = "fa fa-leaf"><span className = "label arrow_box">identify</span></i>, hashRoute: 'identify'},
           {appRouteName: 'BROWSE', displayText: <i className="fa fa-binoculars"><span className="label arrow_box">browse</span></i>, hashRoute: 'browse'},
           {appRouteName: 'LOGIN', displayText: <i className="fa fa-sign-in"><span className="label arrow_box">login</span></i>, hashRoute: 'login'},
           {appRouteName: 'REGISTER', displayText: <i className="fa fa-user-plus"><span className="label arrow_box">register</span></i>, hashRoute: 'register'},
+
         ]
       }else {
     			routeList = [
-    				{appRouteName: 'HOME', displayText: 'Welcome', hashRoute:  '' },
+    				{appRouteName: 'HOME', displayText: <i className="fa fa-tree"><span className="label arrow_box">home</span></i>,  hashRoute:  '' },
             {appRouteName: 'IDENTIFY', displayText: <i className = "fa fa-search"><span className = "label arrow_box">identify</span></i>, hashRoute: 'identify'},
-    	      {appRouteName: 'BROWSE', displayText:  <i className="fa fa-binoculars" aria-hidden="true"></i>, hashRoute: 'browse'},
-    				{appRouteName: 'LOGOUT', displayText:<i className="fa fa-sign-out" aria-hidden="true"></i>, hashRoute: 'logout' }
+    	      {appRouteName: 'BROWSE', displayText:  <i className="fa fa-binoculars" aria-hidden="true"><span className="label arrow_box">browse</span></i>, hashRoute: 'browse'},
+            {appRouteName: 'MYPROFILE', displayText:<i className="fa fa-user-o" aria-hidden="true"><span className = "label arrow_box">my profile</span></i>, hashRoute: 'my-profile' },
+            {appRouteName: 'LOGOUT', displayText:<i className="fa fa-sign-out" aria-hidden="true"><span className="label arrow_box">logout</span></i>, hashRoute: 'logout' }
     			]
     		}
     		return routeList
