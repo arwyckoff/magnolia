@@ -25,7 +25,6 @@ fetchProfileStuff: function(genusName, latinName){
   let WikiModelInstance = new WikiModel(latinName)
 
   WikiModelInstance.fetch().then(function (serverRes) {
-
     if (serverRes.originalimage ==='undefined'){
       STORE.setStore('myImage', '')
     } else if (serverRes.originalimage !== undefined &&
@@ -167,4 +166,8 @@ logoutUser: function(){
   changeCharacteristic: function(char){
     STORE.setStore('characteristicSelect', char)
   },
+
+  changeReadyState: function(state){
+    STORE.setStore("ready", true)
+  }
 }
