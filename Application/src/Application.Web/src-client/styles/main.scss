@@ -55,7 +55,6 @@ p {
 }
 
 .filter a:hover {
-	@include hoverTextColor;
 
 }
 
@@ -117,7 +116,8 @@ p {
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
+		//removed due to blur//
+    // -moz-osx-font-smoothing: grayscale;
     transition-duration: 0.5s;
     transition-property: transform;
 		animation-timing-function: linear;
