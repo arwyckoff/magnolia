@@ -40,3 +40,38 @@
 	display: inline-block;
 	width: 20%;
 }
+
+.question-bc-container .id-bc-container{
+width: 100%;
+display:block;
+text-align: left;
+}
+.question-bc-container .id-bc-container >*{
+display: inline-block;
+font-size: 14px;
+padding-left: 50px;
+.filter-select{
+	text-align: left;
+}
+}
+
+.make-pink{
+	@include pinkColor
+}
+
+.make-button{
+	text-align: left;
+}
+
+.make-hand{
+	cursor: pointer;
+}
+a{
+	cursor: pointer;
+}
+.bye{
+	display: none;
+}
+.question-card span{
+	font-size: 10px;
+}
