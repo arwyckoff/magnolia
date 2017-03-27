@@ -2,7 +2,7 @@ import Backbone from 'backbone'
 
 export const CategoriesModel = Backbone.Model.extend({
   initialize: function(){},
-  urlRoot: '/api/characteristics'
+  url: '/api/characteristics'
 
 })
 
