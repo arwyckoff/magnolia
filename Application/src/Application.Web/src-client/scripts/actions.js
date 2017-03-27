@@ -130,6 +130,12 @@ fetchMyGenusWiki: function(latinName){
 
   })
 },
+  fetchUserInfo: function(){
+    let userProf = new UserModel()
+     userProf.fetch().then(function(serverRes){
+       STORE.setStore('userProfile', serverRes)
+     })
+},
 registerNewUser: function(dataObj){
     let newUserInstance= new UserModel()
     newUserInstance.set(dataObj)
