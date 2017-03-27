@@ -54,3 +54,11 @@ padding-left: 50px;
 	text-align: left;
 }
 }
+
+.make-pink{
+	@include pinkColor
+}
+
+.make-button{
+	text-align: left;
+}

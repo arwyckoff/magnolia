@@ -19,6 +19,18 @@ export const IdBreadcrumbsComponent = React.createClass({
   _handleBreadcrumbSelect: function(evt){
         let filterChar = evt.currentTarget.dataset.code
         BROWSE_ACTIONS.changeFilter(filterChar)
+        ID_ACTIONS.updateQuestionBack(this.props.categorySelect)
+},
+_handleBack: function(evt){
+  if (this.props.currentQuestion >2){
+    let filterChars = this.props.filterChars
+    let lastFilter = filterChars[filterChars.length-1]
+    BROWSE_ACTIONS.changeFilter(lastFilter)
+    // let backOneChar = filterChars.slice(1)
+    // console.log(backOneChar)
+  ID_ACTIONS.updateQuestionBack(this.props.categorySelect)
+}
+else {ID_ACTIONS.resetIDProps()}
 },
 
 render: function(){
@@ -28,18 +40,19 @@ if (this.props.filterChars.length >0){
   let selectedCodeObj = codeListObj.map(
     (obj,i) => {
       return <div
-               className='item-bc' key={i}>{this.props.codeList[obj].state}
+
+               className='item-bc' key={i}>
+               {this.props.codeList[obj].state}
+
             <i onClick={this._handleBreadcrumbSelect}
-              data-code={this.props.codeList[obj].code} className="fa fa-times-circle makeHand" aria-hidden="true"></i>
+              data-code={this.props.codeList[obj].code} className="fa fa-times-circle make-pink makeHand" aria-hidden="true"></i>
             </div>
     }
   )
-
-  // console.log('selected: ', selectedCodeObj)
-
   return(
     <div>
       <div className="id-bc-container">
+  <i className="fa fa-chevron-left makeHand make-pink make-button" aria-hidden="true" onClick = {this._handleBack}>Back</i>
           <h4 className="filter-select selected">Selected Filters</h4>
           <div className=" select-container">
 
@@ -53,8 +66,13 @@ if (this.props.filterChars.length >0){
 
     )
   }
-  else {return(
-    <div></div>
+  else if (this.props.currentQuestion >1){return(
+    <div>
+
+            <i className="fa fa-chevron-left makeHand make-pink make-button" aria-hidden="true" onClick = {this._handleBack}>Back</i>
+
+    </div>
   )}
+  else {return (<div></div>)}
 }
 })
