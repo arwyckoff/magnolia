@@ -5,6 +5,9 @@ import {STORE} from '../store.js'
 import {TreeProfileComponent} from '../components/tree-profile-component.js'
 
 export const HomeView = React.createClass({
+  componentDidMount: function(){
+    console.log(this.props.userProfile)
+  },
     render: function () {
       return (
         <div className="hero">

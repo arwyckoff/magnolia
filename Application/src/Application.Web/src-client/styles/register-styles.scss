@@ -1,13 +1,18 @@
 @import "./mixins.scss";
 .register-container{
-  background-color: #FFF2F2;
+  background-color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-width: 90%;
+  min-height: 100vh;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   h2{
     @include xcenter;
     top: 15%;
     font-size: 26px;
   }
 }
-.register-box input, 
+.register-box input,
 button {
   display: block;
   margin-left: auto;
@@ -113,33 +118,33 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 }
 
 /* HIGHLIGHTER ================================== */
-.highlight {
-  position:absolute;
-  height:60%;
-  width:100px;
-  top:25%;
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
-}
+// .highlight {
+//   position:absolute;
+//   height:60%;
+//   width:100px;
+//   top:25%;
+//   left:0;
+//   pointer-events:none;
+//   opacity:0.5;
+// }
 
 /* active state */
-input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
-}
+// input:focus ~ .highlight {
+//   -webkit-animation:inputHighlighter 0.3s ease;
+//   -moz-animation:inputHighlighter 0.3s ease;
+//   animation:inputHighlighter 0.3s ease;
+// }
 
-/* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
-	from { background:#D3807E; }
-  to 	{ width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
-	from { background:#D3807E; }
-  to 	{ width:0; background:transparent; }
-}
-@keyframes inputHighlighter {
-	from { background:#D3807E; }
-  to 	{ width:0; background:transparent; }
-}
+// /* ANIMATIONS ================ */
+// @-webkit-keyframes inputHighlighter {
+// 	from { background:#D3807E; }
+//   to 	{ width:0; background:transparent; }
+// }
+// @-moz-keyframes inputHighlighter {
+// 	from { background:#D3807E; }
+//   to 	{ width:0; background:transparent; }
+// }
+// @keyframes inputHighlighter {
+// 	from { background:#D3807E; }
+//   to 	{ width:0; background:transparent; }
+// }
