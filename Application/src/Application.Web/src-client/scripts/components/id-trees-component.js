@@ -7,9 +7,13 @@ import {ID_ACTIONS} from '../id-actions.js'
 
 export const TreeIDComponent = React.createClass({
 
-  componentDidMount: function (){
-
-    let self = this
+  componentWillMount: function (){
+    let allTheTrees = STORE.getStoreData().treeListData
+    let currentQuestion = STORE.getStoreData().currentQuestion
+    if (currentQuestion ===1){
+      STORE.setStore('filteredTrees', allTheTrees)
+      STORE.setStore('filterChars', [])}
+      return STORE.getStoreData()
   },
 
 
