@@ -1,3 +1,11 @@
+@mixin playfairDisplay(){
+  font-family: 'Playfair Display', serif;
+}
+
+@mixin raleway(){
+  font-family: 'Raleway', sans-serif;
+}
+
 @mixin absolute-center(){
   position: absolute;
   top: 50%;

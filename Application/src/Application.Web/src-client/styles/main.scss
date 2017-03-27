@@ -11,7 +11,7 @@
 }
 
 body {
-	font-family: 'Droid Sans', sans-serif;
+	@include raleway;
 }
 
 img {
@@ -25,7 +25,9 @@ p {
 }
 
 .container-tree {
-	font-size:medium;
+	@include playfairDisplay;
+	font-size:40px;
+	font-weight: bold;
 	display:inline-block;
 	width:25%;
 }
@@ -76,6 +78,7 @@ p {
 	text-align: center;
 }
 .reset {
+	@include playfairDisplay;
 	cursor: pointer;
 	cursor: hand;
 	font-size: 14px;
@@ -105,6 +108,7 @@ p {
 
 .noTrees{
 	font-size:20px;
+	@include playfairDisplay;
 	@include mainTextColor;
 	text-align: center;
 }
@@ -132,6 +136,7 @@ p {
 }
 
 .browseHeader h1{
+	@include playfairDisplay;
 	@include navBarTextColor;
 }
 

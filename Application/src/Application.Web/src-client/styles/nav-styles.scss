@@ -35,6 +35,10 @@ nav{
     display: none;
   }
 }
+
+.navbar-text{
+	@include playfairDisplay;
+}
   .nav-option:hover{
     i{@include newYorkPink}
 
@@ -50,7 +54,7 @@ nav{
 	padding: 3px 10px;
 	font-size: 14px;
 	font-weight: 500;
-		font-family: 'Quattrocento Sans', sans-serif;
+		@include playfairDisplay;
 }
 
 .arrow_box:after {
