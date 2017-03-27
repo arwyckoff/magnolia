@@ -15,6 +15,7 @@ export const STORE = {
     currentNavRoute: '',
     latinName: '',
     myWiki: '',
+    wikiLink: 'https://en.wikipedia.org/wiki/',
     id: '',
     iDKs: {LEAF:
             {totalIDK: 0,
@@ -63,6 +64,7 @@ export const STORE = {
     allCharArray: [],
     appRouteName: '',
     currentQuestion: 1,
+    prevQuestions: [],
   },
   getStoreData: function(){
 		return this._data

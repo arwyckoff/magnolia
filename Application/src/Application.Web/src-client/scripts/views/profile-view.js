@@ -6,10 +6,7 @@ import {GenusComponent, ProfileComponent} from '../components/profile-component.
 import {PreloaderComponent} from "../components/preloader-component.js"
 
 export const ProfileView = React.createClass({
-  getInitialState: function () {
-    return STORE.getStoreData()
 
-  },
 
   componentWillMount: function(){
     STORE.setStore("ready", false)
@@ -19,7 +16,10 @@ export const ProfileView = React.createClass({
     STORE.setStore('genus', latinGenusWord)
     ACTIONS.fetchProfileStuff(latinGenusWord, latinName)
     STORE.setStore('myImage', '')
-
+    let wikiLink =   STORE.getStoreData().wikiLink
+    let wholeLink = `${wikiLink}${latinName}`
+    STORE.setStore('wikiLink', wholeLink)
+      return STORE.getStoreData()
   },
 
   render: function(){
