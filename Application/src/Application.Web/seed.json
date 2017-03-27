@@ -1,6 +1,45 @@
 ﻿{
   "Questions": [
     {
+      "Question": "What category do you know the most about",
+      "Category": "CATEGORY",
+      "Description": "",
+      "Depends": "",
+      "SkipIf": "",
+      "Answers": [
+        {
+          "Answer": "The leaves",
+          "Description": "",
+          "Code": "CAT-LE",
+          "Apply": ""
+        },
+        {
+          "Answer": "The bark",
+          "Description": "",
+          "Code": "CAT-BA",
+          "Apply": ""
+        },
+        {
+          "Answer": "The flowers",
+          "Description": "",
+          "Code": "CAT-FL",
+          "Apply": ""
+        },
+        {
+          "Answer": "The twigs",
+          "Description": "",
+          "Code": "CAT-TW",
+          "Apply": ""
+        },
+        {
+          "Answer": "The fruit",
+          "Description": "",
+          "Code": "CAT-FR",
+          "Apply": ""
+        }
+      ]
+    },
+    {
       "Question": "What type of leaf does the tree have?",
       "Category": "LEAF",
       "Description": "Leaves are the predominate foliage found on most trees.",
