@@ -7,6 +7,7 @@ namespace Magnolia.Context.Seeder.Models
 {
     public class SeederModel
     {
+        public List<QuestionSeeder> Questions { get; set; }
         public List<CharacteristicSeeder> Characteristics { get; set; }
         public List<FamilySeeder> Families { get; set; }
         public List<GenusSeeder> Genus { get; set; }
