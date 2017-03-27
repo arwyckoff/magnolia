@@ -15,6 +15,7 @@ export const STORE = {
     currentNavRoute: '',
     latinName: '',
     myWiki: '',
+    wikiLink: 'https://en.wikipedia.org/wiki/',
     id: '',
     iDKs: {LEAF:
             {totalIDK: 0,
