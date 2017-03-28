@@ -12,15 +12,12 @@ return _getMostCommonCharacteristic(otherwise, trees);
 
 export const _getMostCommonCharacteristic = (preferred, trees) => {
   let otherwise = otherwise
-    let formerBest = STORE.getStoreData().best
     let prevQuestions = STORE.getStoreData().prevQuestions
+    let currentBest = STORE.getStoreData().best
     let best =  {
           characteristic: null,
           percentage: 0
               }
-          if (formerBest === 'undefined'){
-          formerBest = best
-        }
     for (let c = 0, cLen = preferred.length; c < cLen; c++) {
         let characteristic = preferred[c]
         let occurrences = 0;
@@ -34,7 +31,8 @@ export const _getMostCommonCharacteristic = (preferred, trees) => {
                    {occurrences++}}
 
         let percentage = occurrences / trees.length
-        if (percentage > best.percentage) {
+
+        if (percentage > best.percentage && prevQuestions.indexOf(best.characteristic ===-1)) {
             Object.assign(
                 best,
                 { characteristic, percentage }
