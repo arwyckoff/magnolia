@@ -9,7 +9,7 @@ export const ProfileComponent = React.createClass({
 _handleImageLoad: function(evt){
 
   setTimeout(() => {
-    ACTIONS.changeReadyState("ready", true);
+    ACTIONS.changeReadyState(true);
   }, 1250);
 
 },
