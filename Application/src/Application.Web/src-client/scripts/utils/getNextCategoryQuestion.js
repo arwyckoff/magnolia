@@ -1,4 +1,4 @@
-const _getNextCategoryQuestion = (categoryQuestions, givenAnswers) => {
+const _getNextCategoryQuestion = (categoryQuestions, givenAnswers, answeredQuestions) => {
     for (let q = 0, qLen = categoryQuestions.length; q < qLen; q++) {
         let question = categoryQuestions[q];
 
@@ -12,17 +12,12 @@ const _getNextCategoryQuestion = (categoryQuestions, givenAnswers) => {
                 continue;
         }
 
-        for (let a = 0, aLen = givenAnswers.length; a < aLen; a++) {
-            let answerCode = givenAnswers[a];
-            for (let qa = 0, qaLen = question.answers.length; qa < qaLen; qa++) {
-                let questionAnswer = question.answers[a];
-                if (answerCode === questionAnswer.code) {
-                    break;
-                }
-                if (qa === qaLen - 1) {
-                    return question;
-                }
-            }
+        if (givenAnswers.length === 0) {
+          return question;
+        }
+
+        if (answeredQuestions.indexOf(question.question) === -1) {
+          return question;
         }
     }
 
