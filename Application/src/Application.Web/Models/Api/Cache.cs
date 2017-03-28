@@ -15,10 +15,8 @@ namespace Magnolia.Api.Models
 
         public async static Task<List<PlantViewModel>> GetPlantViewModels(MagnoliaContext context)
         {
-            if (_plantViewModels == null)
-            {
-
-            }
+            if (_plantViewModels != null)
+                return _plantViewModels;
 
             var plants = await context.Plants.Include(p => p.PlantCharacteristics)
                      .Include(p => p.Family)
