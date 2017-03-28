@@ -3,12 +3,9 @@ import {STORE} from '../store.js';
 import {ACTIONS} from '../actions.js';
 import {BROWSE_ACTIONS} from '../browse_actions.js'
 import {ID_ACTIONS} from '../id-actions.js'
-// import {_getFilteredCharacteristics} from '../utils/getFilteredCharacteristics.js';
-// import {_getPreferredCharacteristics} from '../utils/getPreferredCharacteristics.js';
+
 import  _getFilteredTrees  from "../utils/getFilteredTrees";
 
-// import {_getLegalCharacteristics} from '../utils/getLegalCharacteristics.js';
-// import {_getBestBetweenPreferredAndOtherwise} from '../utils/getMostCommonCharacteristic.js';
 
 export const IdComponent = React.createClass({
   getInitialState: function(){
@@ -32,11 +29,6 @@ _makePartTwoComponents: function(statesArray){
         let self = this
         let resultCount = _getFilteredTrees(futurefiltChars, this.props.filteredTrees).length
         let returnedTrees = _getFilteredTrees(futurefiltChars, this.props.filteredTrees)
-
-
-        // unReturned.push(unReturned)
-        let totalResults = resultCount++
-        // if resultCount === 0 && this.props.filteredTrees.indexOf(keyName.code)
       return    <PartTwoItem partTwoData={keyName} results={resultCount} key = {i}/>
       })
     return stateJsx
@@ -58,7 +50,7 @@ render: function(){
             {questionStuff}
           </div>
         )}
-  else if (currentQuestion > 1 && this.props.best.characteristic !== null){
+  else if (currentQuestion > 1 && this.props.best.characteristic !== null && this.props.best.occurrences >1){
           let stateStuff = this.props.best.characteristic.states
           let charStuff = this._makePartTwoComponents(stateStuff)
         return (
@@ -71,7 +63,7 @@ render: function(){
       </div>
     )
   }
-  else if (this.props.filteredTrees > 0) {
+  else if (this.props.best.occurrences ===1 || this.props.filteredTrees === this.props.best.occurrences) {
         return (
           <div className = "question-box">
             <h4>We believe your tree is below</h4>
