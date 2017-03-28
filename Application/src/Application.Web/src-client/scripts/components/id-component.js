@@ -112,8 +112,11 @@ export const IdComponent = React.createClass({
 
   render: function(){
     let answeredQuestions = this.props.answeredQuestions
+    let categorySelected = this.props.categorySelect
     let numberOfanseredQuestions = answeredQuestions.length
     let currentQuestion = this.props.currentQuestion
+    // let questionsInCategory = this.props.allProps[categorySelected]
+    console.log(this.props.allProps)
 
     if (numberOfanseredQuestions === 0) {
       return this._renderCategoriesQuestion()
