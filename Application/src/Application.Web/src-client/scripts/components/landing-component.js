@@ -8,7 +8,7 @@ export const LandingComponent = React.createClass({
    render: function(){
     return (
       <div className = "landing-container">
-        <h1>Magnolia Tree Id</h1>
+        <h1>Magnolia Tree ID</h1>
       </div>
     )
    }

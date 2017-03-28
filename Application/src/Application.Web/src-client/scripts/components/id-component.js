@@ -45,7 +45,7 @@ render: function(){
         let questionStuff = this._makeQuestionComponents(categories)
         return (
           <div className = "question-box">
-            <h4>Choose part of plant to identify</h4>
+            <h4 className = "id-view-header">Choose part of plant to identify</h4>
             {questionStuff}
           </div>
         )}
