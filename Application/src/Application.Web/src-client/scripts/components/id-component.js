@@ -5,7 +5,8 @@ import {BROWSE_ACTIONS} from '../browse_actions.js'
 import {ID_ACTIONS} from '../id-actions.js'
 // import {_getFilteredCharacteristics} from '../utils/getFilteredCharacteristics.js';
 // import {_getPreferredCharacteristics} from '../utils/getPreferredCharacteristics.js';
-import  _getFilteredTrees  from "../utils/getFilteredTrees"
+import  _getFilteredTrees  from "../utils/getFilteredTrees";
+
 // import {_getLegalCharacteristics} from '../utils/getLegalCharacteristics.js';
 // import {_getBestBetweenPreferredAndOtherwise} from '../utils/getMostCommonCharacteristic.js';
 
@@ -30,17 +31,25 @@ _makePartTwoComponents: function(statesArray){
         futurefiltChars.push(keyName.code)
         let self = this
         let resultCount = _getFilteredTrees(futurefiltChars, this.props.filteredTrees).length
-        console.log(resultCount)
+        let returnedTrees = _getFilteredTrees(futurefiltChars, this.props.filteredTrees)
+
+
+        // unReturned.push(unReturned)
+        let totalResults = resultCount++
+        // if resultCount === 0 && this.props.filteredTrees.indexOf(keyName.code)
       return    <PartTwoItem partTwoData={keyName} results={resultCount} key = {i}/>
       })
     return stateJsx
+  },
+  _handleidontknow: function(evt){
+    let catClicked = evt.currentTarget.dataset.cat
+    let currentChar = evt.currentTarget.dataset.ch
+    ID_ACTIONS.getNextBest(evt.currentTarget.dataset.cat, evt.currentTarget.dataset.ch)
   },
 
 render: function(){
   let currentQuestion = this.props.currentQuestion
       let {categories} = this.props
-      //
-
       if (currentQuestion ===1 ){
         let questionStuff = this._makeQuestionComponents(categories)
         return (
@@ -56,6 +65,9 @@ render: function(){
           <div className = "question-box">
             <h4>Choose best answer for {this.props.best.characteristic.characteristic}</h4>
           {charStuff}
+          <div className = "question-card hvr-grow" data-ch= {this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick = {this._handleidontknow}>
+              <p>I don't know/skip</p><span><em>({this.props.filteredTrees.length} trees)</em></span>
+            </div>
       </div>
     )
   }
@@ -95,25 +107,23 @@ export const PartTwoItem = React.createClass({
   },
 
   render: function(){
-    if (this.props.results === 1){
+  if (this.props.results === 1){
     return(
       <div className = "question-card hvr-grow" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
           <p>{this.props.partTwoData.state}</p><span><em>({this.props.results} tree)</em></span>
         </div>
     )
   }
-  else if(this.props.results>1){
+   if(this.props.results>1){
     return(
         <div className = "question-card hvr-grow" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
             <p>{this.props.partTwoData.state}</p><span><em>({this.props.results} trees)</em></span>
           </div>
       )
   }
-  else if (this.props.results===0){
-    return(
-      <div className = 'bye'></div>
-    )
-  }
-  }
+  if (this.props.results ===0){return   (
+      <div></div>
+        )
+}}
 
 })
