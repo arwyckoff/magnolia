@@ -14,6 +14,24 @@ export const STORE = {
     myTree: {},
     currentNavRoute: '',
     latinName: '',
+    questionCurrentlyAsked: '',
+    answeredQuestions: [],
+    catQuestionTracker:{LEAF:
+                              {codeArray:[]
+                              },
+                              BARK:
+                              {codeArray:[]
+                              },
+                              TWIG:
+                              {codeArray:[]
+                              },
+                              FLOWER:
+                              {codeArray:[]
+                              },
+                              FRUIT:
+                              {codeArray:[]
+                              },
+                            },
     myWiki: '',
     wikiLink: 'https://en.wikipedia.org/wiki/',
     id: '',
