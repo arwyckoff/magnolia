@@ -22,43 +22,7 @@ namespace Magnolia.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var characteristics = await _context.Characteristics.Include(s => s.States)
-                                                                .Include(s => s.Category)
-                                                                .ToListAsync();
-
-            var characteristicViewModels = new Dictionary<string, List<CharacteristicViewModel>>();
-
-            foreach (var characteristic in characteristics)
-            {
-                var category = characteristic.Category.Value;
-                if (!characteristicViewModels.Keys.Any(k => k == category))
-                {
-                    characteristicViewModels.Add(category, new List<CharacteristicViewModel>());
-                }
-
-                var characteristicViewModel = new CharacteristicViewModel()
-                {
-                    Id = characteristic.Id,
-                    Characteristic = characteristic.Value,
-                    Depends = characteristic.Depends,
-                    Permutations = characteristic.Permutations
-                };
-
-                foreach (var state in characteristic.States)
-                {
-                    if (!_context.PlantCharacteristics.Any(s => s.StateId == state.Id))
-                        continue;
-
-                    characteristicViewModel.States.Add(new StateViewModel()
-                    {
-                        Characteristic = characteristic.Value,
-                        State = state.Value,
-                        Code = state.Code
-                    });
-                }
-
-                characteristicViewModels[category].Add(characteristicViewModel);
-            }
+            var characteristicViewModels = await Cache.GetCharacteristicViewModels(_context);
 
             return Ok(characteristicViewModels);
         }
