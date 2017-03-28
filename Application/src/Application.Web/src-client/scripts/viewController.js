@@ -2,6 +2,7 @@ import React from 'react';
 import {NavBar} from './components/nav-component.js';
 import {STORE} from './store.js'
 import {ACTIONS} from './actions.js'
+import {ID_ACTIONS} from './id-actions.js'
 import {HomeView} from './views/home-view.js'
 import {ProfileView} from './views/profile-view.js'
 import {RegisterView} from './views/register-view.js'
@@ -23,6 +24,7 @@ export const ViewController = React.createClass({
     ACTIONS.fetchAllCharCodes()
     ACTIONS.fetchUserInfo()
     ACTIONS.fetchCurrentUser()
+    ID_ACTIONS.fetchAllQuestions()
     ACTIONS.changeCurrentNav(this.props.fromRoute, window.location.hash)
     let storeObject = STORE.getStoreData()
     return storeObject
