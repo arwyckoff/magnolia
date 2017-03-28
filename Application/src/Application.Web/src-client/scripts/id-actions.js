@@ -22,6 +22,20 @@ export const ID_ACTIONS = {
     })
   },
 
+  getNextBest: function(category, characteristic){
+    let prevQuesArray = STORE.getStoreData().prevQuestions
+    prevQuesArray.push(characteristic)
+    STORE.setStore('prevQuestions', prevQuesArray)
+    let iDKs = STORE.getStoreData().iDKs +1
+    let categories = STORE.getStoreData().categories
+    let legalArray = STORE.getStoreData().legalChars
+    let preferredCharObj = STORE.getStoreData().splitByPreference
+    let filteredTrees = STORE.getStoreData().filteredTrees
+    let commonObj= _getBestBetweenPreferredAndOtherwise(preferredCharObj.preferred, preferredCharObj.otherwise, filteredTrees, .3)
+    STORE.setStore('best', commonObj)
+    let currentQuestion = STORE.getStoreData().currentQuestion
+     ID_ACTIONS.updateQuestionNumber(currentQuestion)
+  },
   updateQuestionInfo: function(category, filterCharacter, characteristic){
     let prevQuesArray = STORE.getStoreData().prevQuestions
     prevQuesArray.push(characteristic)
