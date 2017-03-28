@@ -1,7 +1,12 @@
 import React from 'react'
 import {ACTIONS} from '../actions.js'
 import {STORE} from '../store.js'
+import {PreloaderComponent} from '../components/preloader-component.js'
+
 export const NavBar = React.createClass({
+  getInitialState: function() {
+    return STORE.getStoreData()
+  },
   _getMenuOptions: function(currentUserOnStore){
 		let routeList
 		if( currentUserOnStore.id === 'undefined' || currentUserOnStore.id === null){
@@ -34,17 +39,32 @@ export const NavBar = React.createClass({
     return componentsList
   },
 
+  componentWillMount: function() {
+    if (this.props.currentNavRoute === 'PROFILE') {
+      ACTIONS.changeReadyState(false)
+    } else {
+      ACTIONS.changeReadyState(true)
+    }
+  },
+
   render: function(){
+    if (this.props.ready === false) {
+      return(
+        <PreloaderComponent/>
+      )
+    } else {
     return(
-      <nav className = "container-fluid navbar navbar-fixed-top navbar-styles navbar-right">
+      <nav className = "container navbar navbar-fixed-top navbar-styles">
+        <p className="navbar-text navRoute">MAGNOLIA TREE ID</p>
         <p className="navbar-text navRoute">{this.props.currentNavRoute}
         </p>
-      <ul className ="navbar-right">
+       <ul className ="navbar-right">
         {this._showNavOptionsJSX(this.props.appRouteName, this.props.currentUser)}
       </ul>
     </nav>
     )
   }
+}
 })
 
 
