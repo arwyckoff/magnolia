@@ -6,7 +6,7 @@ import {ID_ACTIONS} from '../id-actions.js'
 // import {_getFilteredCharacteristics} from '../utils/getFilteredCharacteristics.js';
 // import {_getPreferredCharacteristics} from '../utils/getPreferredCharacteristics.js';
 import  _getFilteredTrees  from "../utils/getFilteredTrees";
-import _getUnfilteredTrees from '../utils/getUnfilteredTrees.js';
+
 // import {_getLegalCharacteristics} from '../utils/getLegalCharacteristics.js';
 // import {_getBestBetweenPreferredAndOtherwise} from '../utils/getMostCommonCharacteristic.js';
 
@@ -32,13 +32,12 @@ _makePartTwoComponents: function(statesArray){
         let self = this
         let resultCount = _getFilteredTrees(futurefiltChars, this.props.filteredTrees).length
         let returnedTrees = _getFilteredTrees(futurefiltChars, this.props.filteredTrees)
-        let unReturned = _getUnfilteredTrees(futurefiltChars, this.props.filteredTrees)
+
 
         // unReturned.push(unReturned)
         let totalResults = resultCount++
-        console.log(totalResults)
         // if resultCount === 0 && this.props.filteredTrees.indexOf(keyName.code)
-      return    <PartTwoItem partTwoData={keyName} results={resultCount} key = {i} skipTrees = {this.props.filteredTrees}/>
+      return    <PartTwoItem partTwoData={keyName} results={resultCount} key = {i}/>
       })
     return stateJsx
   },
