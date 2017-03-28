@@ -15,7 +15,7 @@ export const IdComponent = React.createClass({
   return STORE.getStoreData()
 },
 componentWillMount: function(){
-      STORE.setStore('currentQuestion', 1)
+  ID_ACTIONS.resetIDProps()
 },
 _makeQuestionComponents: function(categories){
   let keyNameJsx = Object.keys(categories).map(
