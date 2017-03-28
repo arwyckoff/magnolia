@@ -67,9 +67,9 @@ namespace Magnolia.Api.Models
                 return _questionViewModels;
 
             var questions = await context.Questions.Include(q => q.Answers)
-                                                    .Include(q => q.Depends)
-                                                    .Include(q => q.SkipIf)
-                                                    .ToListAsync();
+                                                   .Include(q => q.Depends)
+                                                   .Include(q => q.SkipIf)
+                                                   .ToListAsync();
 
             var questionViewModels = new Dictionary<string, List<QuestionViewModel>>();
 
@@ -87,10 +87,15 @@ namespace Magnolia.Api.Models
                 foreach (var answer in question.Answers)
                 {
                     var a = new AnswerViewModel();
+                    var state = answer.ApplyId == 0 ? null : await context.States.Include(s => s.Characteristic).FirstOrDefaultAsync(s => s.Id == answer.ApplyId);
+
+                    if (q.Characteristic == null && answer.ApplyId != 0)
+                        q.Characteristic = state.Characteristic.Value;
+
                     a.Answer = answer.Value;
                     a.Description = answer.Description;
                     a.Code = answer.Code;
-                    a.Apply = answer.ApplyId == 0 ? "" : context.States.FirstOrDefault(s => s.Id == answer.ApplyId).Code;
+                    a.Apply = state == null ? "" : state.Code;
 
                     q.Answers.Add(a);
                 }
