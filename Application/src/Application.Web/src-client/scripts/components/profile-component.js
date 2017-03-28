@@ -49,7 +49,9 @@ _handleWikiClick: function(){
         <div className = "tree-profile">
            <ProfileItem profileData={allTheTrees}/>
            <div className = "profile-half">
+             <div className = "profile-image-container">
                 <img onLoad ={this._handleImageLoad} className = "plant-pic" src = {this.props.myImage}/>
+              </div>
                 <p> {this.props.myWiki}</p>
                  <a href = {this.props.wikiLink} target = '_blank'>read more on Wikipedia</a>
                 <p style={{clear: 'both'}}></p>

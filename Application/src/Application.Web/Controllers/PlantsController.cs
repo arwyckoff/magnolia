@@ -24,6 +24,7 @@ namespace Magnolia.Controllers
         public async Task<IActionResult> Get()
         {
             var plantViewModels = await Cache.GetPlantViewModels(_context);
+
             return Ok(plantViewModels);
         }
 

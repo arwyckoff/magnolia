@@ -9,53 +9,55 @@ namespace Magnolia.Api.Models
 {
     public class Cache
     {
-        private static List<PlantViewModel> _plantViewModels;
+        public static List<PlantViewModel> _plantViewModels;
 
         private Cache() { }
 
-        public static async Task<List<PlantViewModel>> GetPlantViewModels(MagnoliaContext context)
+        public async static Task<List<PlantViewModel>> GetPlantViewModels(MagnoliaContext context)
         {
             if (_plantViewModels == null)
             {
-                var plants = await context.Plants.Include(p => p.PlantCharacteristics)
-                                                 .Include(p => p.Family)
-                                                 .Where(p => p.PlantCharacteristics.Count > 0)
-                                                 .ToListAsync();
 
-                var plantViewModels = new List<PlantViewModel>();
+            }
 
-                foreach (var plant in plants)
+            var plants = await context.Plants.Include(p => p.PlantCharacteristics)
+                     .Include(p => p.Family)
+                     .Where(p => p.PlantCharacteristics.Count > 0)
+                     .ToListAsync();
+
+            var plantViewModels = new List<PlantViewModel>();
+
+            foreach (var plant in plants)
+            {
+                var plantViewModel = new PlantViewModel()
                 {
-                    var plantViewModel = new PlantViewModel()
+                    Id = plant.Id,
+                    CommonName = plant.CommonName,
+                    SecondaryName = plant.SecondaryName ?? "",
+                    TertiaryName = plant.TertiaryName ?? "",
+                    LatinName = plant.LatinName,
+                    Family = new PlantsFamilyViewModel()
                     {
-                        Id = plant.Id,
-                        CommonName = plant.CommonName,
-                        SecondaryName = plant.SecondaryName ?? "",
-                        TertiaryName = plant.TertiaryName ?? "",
-                        LatinName = plant.LatinName,
-                        Family = new PlantsFamilyViewModel()
-                        {
-                            CommonName = plant.Family.CommonName,
-                            LatinName = plant.Family.LatinName
-                        }
-                    };
-
-                    foreach (var characteristic in plant.PlantCharacteristics)
-                    {
-                        var state = await context.States.Include(s => s.Characteristic)
-                                                         .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
-
-                        if (plantViewModel.Characteristics.Keys.Any(k => k == state.Code))
-                            continue;
-
-                        plantViewModel.Characteristics.Add(state.Code, null);
+                        CommonName = plant.Family.CommonName,
+                        LatinName = plant.Family.LatinName
                     }
+                };
 
-                    plantViewModels.Add(plantViewModel);
+                foreach (var characteristic in plant.PlantCharacteristics)
+                {
+                    var state = await context.States.Include(s => s.Characteristic)
+                                                     .FirstOrDefaultAsync(s => s.Id == characteristic.StateId);
+
+                    if (plantViewModel.Characteristics.Keys.Any(k => k == state.Code))
+                        continue;
+
+                    plantViewModel.Characteristics.Add(state.Code, null);
                 }
 
-                _plantViewModels = plantViewModels;
+                plantViewModels.Add(plantViewModel);
             }
+
+            _plantViewModels = plantViewModels;
 
             return _plantViewModels;
         }
