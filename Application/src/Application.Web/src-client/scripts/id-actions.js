@@ -2,6 +2,7 @@ import Backbone from 'backbone'
 import {STORE} from './store.js'
 import {ACTIONS} from './actions.js'
 import {BROWSE_ACTIONS} from './browse_actions.js'
+import {QuestionModel, QuestionCollection} from './models/question-model.js'
 import {_getFilteredCharacteristics} from './utils/getFilteredCharacteristics.js';
 import {_getPreferredCharacteristics} from './utils/getPreferredCharacteristics.js';
 import {_getFilteredTrees} from './utils/getFilteredTrees.js';
@@ -13,6 +14,12 @@ import {_getBestBetweenPreferredAndOtherwise} from './utils/getMostCommonCharact
 export const ID_ACTIONS = {
   updateQuestionNumber: function(currentQuestion){
     STORE.setStore('currentQuestion', currentQuestion+1)
+  },
+  fetchAllQuestions: function(){
+    let QuestionCollInstance = new QuestionCollection()
+    QuestionCollInstance.fetch().then(function(serverRes){
+      STORE.setStore('allQuestions', serverRes)
+    })
   },
 
   updateQuestionInfo: function(category, filterCharacter, characteristic){
@@ -30,7 +37,7 @@ export const ID_ACTIONS = {
     let filteredTrees = STORE.getStoreData().filteredTrees
     let best = STORE.getStoreData().best
     console.log(best)
-    let commonObj= _getBestBetweenPreferredAndOtherwise(preferredCharObj.preferred, preferredCharObj.otherwise, filteredTrees, 0)
+    let commonObj= _getBestBetweenPreferredAndOtherwise(preferredCharObj.preferred, preferredCharObj.otherwise, filteredTrees, .3)
     STORE.setStore('best', commonObj)
     let currentQuestion = STORE.getStoreData().currentQuestion
      ID_ACTIONS.updateQuestionNumber(currentQuestion)
