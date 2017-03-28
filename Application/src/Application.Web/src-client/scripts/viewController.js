@@ -11,6 +11,7 @@ import {BrowseView} from './views/browse-view.js'
 import {LandingView} from './views/landing-view.js'
 import {IdentifyView} from './views/id-view.js'
 import {UserView} from './views/user-view.js';
+import {PreloaderComponent} from "./components/preloader-component.js"
 
 
 export const ViewController = React.createClass({
@@ -28,6 +29,7 @@ export const ViewController = React.createClass({
   },
 
   componentWillMount: function(){
+    STORE.setStore("ready", false)
     let component = this;
     STORE.onStoreChange(function(){
       let newStoreObj = STORE.getStoreData()

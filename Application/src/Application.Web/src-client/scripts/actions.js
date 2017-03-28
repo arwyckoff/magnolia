@@ -167,7 +167,10 @@ logoutUser: function(){
     STORE.setStore('characteristicSelect', char)
   },
 
-  changeReadyState: function(state){
-    STORE.setStore("ready", true)
+  changeReadyState: function(readiness){
+    if (typeof(readiness) !== 'boolean') {
+      throw new Error("Ready state must be a boolean!")
+    }
+    STORE.setStore("ready", readiness)
   }
 }
