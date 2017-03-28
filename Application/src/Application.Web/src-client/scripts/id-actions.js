@@ -2,6 +2,7 @@ import Backbone from 'backbone'
 import {STORE} from './store.js'
 import {ACTIONS} from './actions.js'
 import {BROWSE_ACTIONS} from './browse_actions.js'
+import {catQuestionTrackerEmpty} from './utils/catQuestionTrackerEmpty.js'
 import {QuestionModel, QuestionCollection} from './models/question-model.js'
 import {_getFilteredCharacteristics} from './utils/getFilteredCharacteristics.js';
 import {_getPreferredCharacteristics} from './utils/getPreferredCharacteristics.js';
@@ -87,6 +88,32 @@ export const ID_ACTIONS = {
         STORE.setStore('best', commonObj)
             let currentQuestion = STORE.getStoreData().currentQuestion
         ID_ACTIONS.updateQuestionNumber(currentQuestion)
+        let answeredQuestionArray = STORE.getStoreData().answeredQuestions;
+        answeredQuestionArray.push(category);
+        STORE.setStore('answeredQuestions', answeredQuestionArray);
+  },
+  answerPhaseOneAction: function(category, code, apply, answeredQuestion){
+    let data = STORE.getStoreData();
+    let filterChars = data.filterChars
+
+    if(apply !== ""){
+      BROWSE_ACTIONS.changeFilter(apply)
+    }
+    let catQuestionTrackerCopy = data.catQuestionTracker
+    catQuestionTrackerCopy[category]["codeArray"].push(code)
+    STORE.setStore('catQuestionTracker', catQuestionTrackerCopy)
+    let answeredQuestionArray = STORE.getStoreData().answeredQuestions;
+    answeredQuestionArray.push(answeredQuestion);
+    STORE.setStore('answeredQuestions', answeredQuestionArray);
+
+    // console.log(answeredQuestionArray)
+    // console.log(this.props)
+
+    // assign new apply to store if not ""
+    // grab catQuestionTracker from store
+    // cqt[category][codeArray].push(code)
+    // STORE.setStoreData('catQuestionTracker', newcqt)
+
   },
 
   resetIDProps: function(){
@@ -105,5 +132,7 @@ export const ID_ACTIONS = {
                                  GENERAL:{totalIDK: 0,idkRun: 0},})
   STORE.setStore('filteredTrees', allTrees)
   STORE.setStore('prevQuestions', [])
+  STORE.setStore('catQuestionTracker', catQuestionTrackerEmpty)
+  STORE.setStore('answeredQuestions', [])
 },
 }
