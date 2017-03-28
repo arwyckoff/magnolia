@@ -76,7 +76,8 @@ export const STORE = {
       },
     best: {
       characteristic: null,
-      percentage: 0
+      percentage: 0,
+      occurrences: 0,
           },
     legalChars:[],
     allCharArray: [],
