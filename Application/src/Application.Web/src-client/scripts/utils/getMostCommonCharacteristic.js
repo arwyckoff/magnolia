@@ -14,6 +14,7 @@ export const _getMostCommonCharacteristic = (preferred, trees) => {
   let otherwise = otherwise
     let prevQuestions = STORE.getStoreData().prevQuestions
     let currentBest = STORE.getStoreData().best
+    let filterChars = STORE.getStoreData().filterChars
     let best =  {
           characteristic: null,
           percentage: 0,
@@ -27,7 +28,9 @@ export const _getMostCommonCharacteristic = (preferred, trees) => {
                         let tree = trees[t];
                         for (let s = 0, sLen = characteristic.states.length; s < sLen; s++) {
                           let state = characteristic.states[s].code;
-                           if (tree.characteristics[state]!== undefined) {
+                          for (let m=0, mLen = filterChars.length; m<mLen; m++){
+                            let filterSingle = filterChars[m]
+                           if (filterSingle !== state && tree.characteristics[state]!== undefined) {
                                    occurrences++;
                                    break;
                                }
@@ -39,7 +42,7 @@ export const _getMostCommonCharacteristic = (preferred, trees) => {
   best,
    { characteristic, percentage, occurrences }
         );
-         }
+      }}
        }  }       }
 
                           return best;
