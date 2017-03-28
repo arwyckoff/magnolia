@@ -33,9 +33,8 @@ export const _getMostCommonCharacteristic = (preferred, trees) => {
                                }
                            }
 
-
                        let percentage = occurrences / trees.length
-   if (percentage > best.percentage) {console.log(characteristic)
+   if (percentage > best.percentage) {
      Object.assign(
   best,
    { characteristic, percentage, occurrences }

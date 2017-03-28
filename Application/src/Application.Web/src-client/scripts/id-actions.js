@@ -50,7 +50,6 @@ export const ID_ACTIONS = {
     let preferredCharObj = _getPreferredCharacteristics(legalArray, category)
     let filteredTrees = STORE.getStoreData().filteredTrees
     let best = STORE.getStoreData().best
-    console.log(best)
     let commonObj= _getBestBetweenPreferredAndOtherwise(preferredCharObj.preferred, preferredCharObj.otherwise, filteredTrees, .3)
     STORE.setStore('best', commonObj)
     let currentQuestion = STORE.getStoreData().currentQuestion
@@ -92,7 +91,6 @@ export const ID_ACTIONS = {
 
   resetIDProps: function(){
     let allTrees = STORE.getStoreData().treeListData
-    console.log(allTrees)
     STORE.setStore('currentQuestion', 1)
     STORE.setStore('categorySelect', '')
     STORE.setStore('characteristicSelect', '')
