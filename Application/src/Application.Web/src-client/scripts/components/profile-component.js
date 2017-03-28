@@ -51,7 +51,7 @@ _handleWikiClick: function(){
            <div className = "profile-half">
                 <img onLoad ={this._handleImageLoad} className = "plant-pic" src = {this.props.myImage}/>
                 <p> {this.props.myWiki}</p>
-                 <a href = {this.props.wikiLink} target = '_blank'>read more</a>
+                 <a href = {this.props.wikiLink} target = '_blank'>read more on Wikipedia</a>
                 <p style={{clear: 'both'}}></p>
         </div>
         <a className = "user-add" onClick = {this._handleUserCollection} data-id = {this.props.myTree}>add to my collection</a>
@@ -147,7 +147,7 @@ export const GenusItem = React.createClass({
 
       return (
 
-        <div className = "genus-box" onClick = {this._handleGenusProfClick}>
+        <div className = "genus-box hvr-trim makeHand" onClick = {this._handleGenusProfClick}>
               <p className= "single-tree">{this.props.treeData.commonName}</p>
               <p><em>{this.props.treeData.latinName}</em></p>
 
