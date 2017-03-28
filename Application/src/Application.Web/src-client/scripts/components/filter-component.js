@@ -8,10 +8,8 @@ import _getFilteredTrees from "../utils/getFilteredTrees"
 
 export const FilterComponent = React.createClass({
   _handleFilterSelect: function (evt) {
-
     let filterChar = evt.currentTarget.dataset.code
     let FilterList = this.props.filterChars
-
     let futurefiltCharsHandler = [...this.props.filterChars]
     futurefiltCharsHandler.push(evt.currentTarget.dataset.code)
     let resultCountHandler = _getFilteredTrees(futurefiltCharsHandler, this.props.filteredTrees).length
@@ -19,6 +17,7 @@ export const FilterComponent = React.createClass({
       BROWSE_ACTIONS.changeFilter(filterChar)
     }
   },
+
   render: function () {
     let self = this
 
@@ -37,27 +36,25 @@ export const FilterComponent = React.createClass({
           states = c.states
         }
       }
+      let stateJSX = states.map(
+        (obj, i) => {
+          let futurefiltChars = [...self.props.filterChars]
+          futurefiltChars.push(obj.code)
+          let resultCount = _getFilteredTrees(futurefiltChars, self.props.filteredTrees).length
 
-
-      let stateJSX = states.map(function (obj, i) {
-        let futurefiltChars = [...self.props.filterChars]
-        futurefiltChars.push(obj.code)
-        let resultCount = _getFilteredTrees(futurefiltChars, self.props.filteredTrees).length
-
-        if ((self.props.filterChars).indexOf(obj.code) !== -1) {
-          return <div className="filter active makeHand" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
-        } else {
-          return <div className="filter makeHand" onClick={self._handleFilterSelect} data-code={obj.code} key={i}><a>{obj.state} <span className="futurefiltresults">({resultCount})</span></a></div>
+          if ((self.props.filterChars).indexOf(obj.code) !== -1) {
+            return <div className="filter filter-selected makeHand" onClick={self._handleFilterSelect} data-code={obj.code} key={i}>{obj.state} <span className="filter-resulting"> ( {resultCount} ) </span></div>
+          } else {
+            return <div className="filter makeHand" onClick={self._handleFilterSelect} data-code={obj.code} key={i}>{obj.state} <span className="filter-resulting"> ( {resultCount} ) </span></div>
+          }
         }
-      })
+      )
 
       return (
         <div>
           <h4>Filters</h4>
           <div>{stateJSX}</div>
         </div>
-
-
       )
     }
   }
