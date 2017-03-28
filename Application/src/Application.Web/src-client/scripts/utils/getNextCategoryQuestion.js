@@ -34,3 +34,5 @@ const _getNextCategoryQuestion = (categoryQuestions, givenAnswers) => {
         answers: []
     };
 }
+
+export default _getNextCategoryQuestion;
