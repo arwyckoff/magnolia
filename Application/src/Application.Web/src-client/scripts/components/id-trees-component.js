@@ -70,6 +70,7 @@ _handleReset: function(){
 export const TreeIDItem = React.createClass({
   _handleProfClick: function(evt){
     evt.preventDefault()
+    ACTIONS.changeReadyState(false)
     let latinName = this.props.treeData.latinName
     let latinRoute = `tree/${latinName}`
     ACTIONS.changeCurrentNav ('PROFILE', latinRoute)
