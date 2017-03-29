@@ -115,12 +115,9 @@ _renderConfidence: function () {
 
   render: function(){
     let answeredQuestions = this.props.answeredQuestions
-<<<<<<< HEAD
-    let categorySelected = this.props.categorySelect
-    let numberOfanseredQuestions = answeredQuestions.length
-=======
+
     let numberOfansweredQuestions = answeredQuestions.length
->>>>>>> 4c7bdd55949ff815a78ac75eb237c9672fc07283
+
     let currentQuestion = this.props.currentQuestion
     // let questionsInCategory = this.props.allProps[categorySelected]
     // console.log(this.props.allProps)
