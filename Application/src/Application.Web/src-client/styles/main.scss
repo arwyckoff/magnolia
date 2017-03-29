@@ -64,7 +64,7 @@ body {
 }
 
 .filter:hover {
-	filter: drop-shadow(0px 0px 2px #e07171);
+	@include pillBoxHover;
 }
 
 .filter-selected {
