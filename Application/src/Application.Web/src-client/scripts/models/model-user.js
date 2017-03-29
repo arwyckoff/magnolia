@@ -35,6 +35,16 @@ UserModel.register =  function(dataObj){
 		url: '/api/accounts/register'
 	})
 }
+UserModel.plantAdd =  function(dataObj){
+	return $.ajax({
+		method: 'POST',
+		data: JSON.stringify(dataObj),
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		url: '/api/user/plants'
+	})
+}
 
 UserModel.getCurrentUser =  function(){
 	return $.ajax({

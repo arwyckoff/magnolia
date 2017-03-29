@@ -115,6 +115,10 @@ fetchMyGenusWiki: function(latinName){
     ACTIONS.changeCurrentNav('HOME', '')
 })
 },
+updateUserPlants: function(userObj){
+  UserModel.plantAdd(userObj).then(function(serverRes){
+  })
+},  
 
   loginUser: function(email, password){
     UserModel.logIn(email, password).then(function(serverRes){
@@ -172,5 +176,5 @@ logoutUser: function(){
       throw new Error("Ready state must be a boolean!")
     }
     STORE.setStore("ready", readiness)
-  }
+  },
 }

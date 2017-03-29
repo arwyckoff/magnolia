@@ -5,23 +5,16 @@ import { STORE } from '../store.js'
 import { ACTIONS } from '../actions.js'
 
 export const ProfileComponent = React.createClass({
-
   _handleImageLoad: function (evt) {
-
     setTimeout(() => {
       ACTIONS.changeReadyState(true);
     }, 1250);
-
   },
 
   _handleUserCollection: function (evt) {
-    let plantToAdd = STORE.getStoreData().myTree
-    let userInfo = STORE.getStoreData().currentUser
-    if (userInfo.id !== null) {
-      userInfo.plants.push(plantToAdd)
-      STORE.setStore('userProfile', userInfo)
-    }
+      STORE.setStore('popupShow', true)
   },
+
   _handleWikiClick: function () {
     let wikiPart = 'https://en.wikipedia.org/wiki/'
     let latinPart = this.props.myWiki.latinName
@@ -29,7 +22,6 @@ export const ProfileComponent = React.createClass({
     console.log(wholeLink)
     return wholeLink
   },
-
   render: function () {
     let self = this
     let allTheTrees = this.props.myTree
@@ -157,6 +149,31 @@ export const GenusItem = React.createClass({
       <div className="genus-box hvr-trim makeHand" onClick={this._handleGenusProfClick}>
         <p className="single-tree">{this.props.treeData.commonName}</p>
         <p><em>{this.props.treeData.latinName}</em></p>
+      </div>
+    )
+  }
+})
+export const AddTreeComponent = React.createClass({
+  _handleProfileAdd: function (evt) {
+    let formEl = evt.target
+    let inputComment = formEl.commentField.value
+    let newObject = {}
+    newObject.plantId = this.props.myTree.id
+    newObject.comment = inputComment
+      ACTIONS.updateUserPlants(newObject)
+      ACTIONS.changeCurrentNav('MYPROFILE', 'my-profile')
+  },
+
+  render: function(){
+    return(
+      <div className = "add-tree">
+        <form onSubmit = {this._handleProfileAdd}>
+          <p className = "tree-name">{this.props.myTree.commonName}<br/><span>
+        <em>{this.props.myTree.latinName}</em></span></p>
+          <p className = "field-input">field notes</p>
+          <textarea maxLength='150' name="commentField"></textarea>
+          <button type = "submit">Add to my collection</button>
+        </form>
       </div>
     )
   }
