@@ -33,6 +33,9 @@ _handleReset: function(){
 },
    render: function(){
 
+     if (this.props.currentQuestion <3 || this.props.filteredTrees.length/this.props.treeListData > 70){
+       return (<div className = "bye"></div>)
+     }
     if(this.props.filterChars.length > 0 && this.props.filteredTrees.length === 0){
       return (
 
@@ -77,7 +80,7 @@ export const TreeIDItem = React.createClass({
       return (
 
         <div className = "tree-one" onClick = {this._handleProfClick}>
-         <p className= "one-tree make-hand">{this.props.treeData.commonName}</p>
+         <p className= "one-tree make-hand back-pink">{this.props.treeData.commonName}</p>
 
        </div>
       )

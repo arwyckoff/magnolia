@@ -9,24 +9,34 @@
 	    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	h4{
 		font-size: 30px;
+		margin-bottom: 20px;
 	}
 }
 .question-box{
 	font-size: 16px;
 	width: 100%;
-	padding-top: 60px;
 	display: inline-block;
+	margin: 20px;
 }
 .question-top{
 	position: relative;
 }
+.question-card:hover{
+		filter: drop-shadow(0px 0px 2px #e07171);
+}
 
 .question-card{
 	display: inline-block;
-	padding: 5px;
-	margin: 2%;
-	border: 1px solid gray;
-	cursor: pointer}
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #2A2B2A;
+	cursor: pointer;
+background-color: white;
+font-size: 16px;
+p{
+	margin-bottom: 0;
+}
+}
 
 	.question-top{
 		position: relative;
@@ -54,7 +64,10 @@ padding-left: 50px;
 	text-align: left;
 }
 }
-
+.make-inline{
+	display: inline-block;
+	padding-right: 7px;
+}
 .make-pink{
 	@include pinkColor
 }
@@ -72,6 +85,10 @@ a{
 .bye{
 	display: none;
 }
-.question-card span{
-	font-size: 10px;
+
+.back-pink{
+	background-color: white;
+}
+.back-pink:hover{
+		filter: drop-shadow(0px 0px 2px #e07171);
 }
