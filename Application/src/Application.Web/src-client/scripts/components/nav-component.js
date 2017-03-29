@@ -59,9 +59,9 @@ export const NavBar = React.createClass({
     } else {
       return (
         <nav className="navbar-container navbar navbar-fixed-top navbar-styles">
-          <div className="navbar-text navRoute">MAGNOLIA TREE ID</div>
-          <div className="navbar-text navRoute">{this.props.currentNavRoute}</div>
-          <ul className="route-options">
+          <div className="navbar-text navRoute magnolia">MAGNOLIA TREE ID</div>
+          <div className="navbar-text navRoute current-route">{this.props.currentNavRoute}</div>
+          <ul className="route-options icons">
             {this._showNavOptionsJSX(this.props.appRouteName, this.props.currentUser)}
           </ul>
         </nav>
