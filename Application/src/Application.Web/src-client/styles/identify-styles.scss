@@ -1,5 +1,5 @@
-
 @import './mixins.scss';
+
 .question-container{
 	padding-top: 80px;
 	text-align: center;
@@ -17,15 +17,24 @@ font-size: 22px;
 }
 .question-box{
 	font-size: 16px;
-	width: 80%;
 	display: inline-block;
 	margin: 20px;
+	width: 100%;
+
 }
 .question-top{
 	position: relative;
 	z-index: 2;
 	display: block;
 	margin-top: 10px;
+}
+
+.question-card-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
 }
 .question-card:hover{
 		filter: drop-shadow(0px 0px 2px #e07171);
@@ -38,13 +47,16 @@ font-size: 22px;
 	border: 1px solid #2A2B2A;
 	cursor: pointer;
 background-color: white;
-font-size: 16px;
 border-radius: 2px;
-p{
-	margin-bottom: 0;
+font-size: 16px;
+@include pillBox;
+flex-grow: 0;
+flex-direction: column;
+p {
+margin-bottom: 0;
+font-size: 16px;
 }
 }
-
 .question-center{
 	display: block;
 	text-align: center;
@@ -101,8 +113,6 @@ margin-left: 5px;
 
 .make-button{
 	text-align: left;
-	// border: 1px solid #e07171;
-	// border-radius: 50%;
 }
 
 .make-hand{
@@ -119,6 +129,16 @@ margin-left: 5px;
 }
 .make-cursor{
 	cursor: pointer;
+}
+.make-reset{
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px rgba(211, 128, 126, 0.8) solid;
+	box-shadow: inset 0px 0px 0px 1px white;
+	background-color: white;
+	align-items: center;
+	justify-content: center;
+	filter: drop-shadow(0px 0px 1px #ffb8b8);
 }
 a{
 	cursor: pointer;
