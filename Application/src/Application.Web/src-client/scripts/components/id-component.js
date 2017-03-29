@@ -37,7 +37,7 @@ export const IdComponent = React.createClass({
   _makePartOneComponents: function(questions){
     let phaseOneQuestionJSX = questions.map(
       (smod, i) => {
-        return   <PhaseOneQuestionItem questionData = {smod} key = {i}/>
+        return   <PhaseOneQuestionItem questionData = {smod} key = {i} />
       }
     )
     return phaseOneQuestionJSX
@@ -70,7 +70,6 @@ export const IdComponent = React.createClass({
   let questionText = nextQuestion["question"]
   let answersArray = nextQuestion["answers"]
   let answerEls = this._makeAnswersComponent(answersArray, nextQuestion)
-
   return (
     <div className = "question-box">
       {questionText}
@@ -93,7 +92,6 @@ _renderCategoriesQuestion: function () {
 _renderPhaseTwo: function () {
   let stateStuff = this.props.best.characteristic.states
   let charStuff = this._makePartTwoComponents(stateStuff)
-
   return (
     <div className = "question-box">
     <h4>Choose best answer for {this.props.best.characteristic.characteristic}</h4>
@@ -131,7 +129,7 @@ _renderConfidence: function () {
     } else {
     // ???? Something ain't right
       return(
-        <div></div>
+        <div className = 'bye'></div>
       )
     }
   }
@@ -163,11 +161,10 @@ export const PhaseOneQuestionItem = React.createClass({
     let answerCode = evt.currentTarget.dataset.code
     let answerApply = evt.currentTarget.dataset.apply
     let questionText = evt.currentTarget.dataset.question
+    let questionChar = evt.currentTarget.dataset.characteristic
     let answerCat = this.props.allProps.categorySelect
-    // let answerQuestion = this.dataset.question
-    console.log(evt.currentTarget.dataset)
-    console.log(this.props.questionData["answer"])
-    ID_ACTIONS.answerPhaseOneAction(answerCat, answerCode, answerApply, questionText)
+    console.log(questionChar)
+    ID_ACTIONS.answerPhaseOneAction(answerCat, answerCode, answerApply, questionText, questionChar)
   },
 
   render: function(){
@@ -177,9 +174,10 @@ export const PhaseOneQuestionItem = React.createClass({
     let catDescription = this.props.questionData["description"]
     let totalFilterList = this.props.filterChars
     let question = this.props.questionObjData.question
+    let characteristicA = this.props.questionObjData.characteristic
 
     return (
-      <div data-code={catCode} data-apply={catApply} data-question={question} onClick={this._handlePhaseOneSelect} className = "question-card hvr-grow">
+      <div data-code={catCode} data-apply={catApply} data-question={question} data-characteristic = {characteristicA} onClick={this._handlePhaseOneSelect} className = "question-card hvr-grow">
         {catAnswers}
       </div>
     )
@@ -212,7 +210,7 @@ export const PartTwoItem = React.createClass({
       )
   }
   if (this.props.results ===0){return   (
-      <div></div>
+      <div className = 'bye'></div>
         )
 }}
 
