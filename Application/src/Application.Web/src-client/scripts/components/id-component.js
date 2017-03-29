@@ -116,7 +116,7 @@ export const IdComponent = React.createClass({
     let numberOfanseredQuestions = answeredQuestions.length
     let currentQuestion = this.props.currentQuestion
     // let questionsInCategory = this.props.allProps[categorySelected]
-    console.log(this.props.allProps)
+    // console.log(this.props.allProps)
 
     if (numberOfanseredQuestions === 0) {
       return this._renderCategoriesQuestion()
@@ -176,10 +176,13 @@ export const PhaseOneQuestionItem = React.createClass({
     let totalFilterList = this.props.filterChars
     let question = this.props.questionObjData.question
 
+
     return (
-      <div data-code={catCode} data-apply={catApply} data-question={question} onClick={this._handlePhaseOneSelect} className = "question-card hvr-grow">
-        {catAnswers}
-      </div>
+
+          <div data-code={catCode} data-apply={catApply} data-question={question} onClick={this._handlePhaseOneSelect} className = "question-card hvr-grow">
+              {catAnswers}
+          </div>
+
     )
   }
 })
