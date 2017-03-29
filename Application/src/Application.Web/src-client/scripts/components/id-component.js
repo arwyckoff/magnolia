@@ -61,6 +61,49 @@ export const IdComponent = React.createClass({
     ID_ACTIONS.getNextBest(evt.currentTarget.dataset.cat, evt.currentTarget.dataset.ch)
   },
 
+  _makeGlossary: function (question) {
+    let questionDescription
+    if (question.description.length !== "") {
+      questionDescription = (
+        <div className="glossary-item">
+          <div className="glossary-term">
+            General explanation
+            <div className="glossary-line"></div>
+          </div>
+          <div className="glossary-definition">
+            {question.description}
+          </div>
+        </div>
+      )
+    }
+
+    let answerDescriptions = question.answers.map(
+      (answerObj, i) => {
+        if (answerObj.description !== "") {
+          return (
+            <div key={i} className="glossary-item">
+              <div className="glossary-term">
+                {answerObj.answer}
+                <div className="glossary-line"></div>
+              </div>
+              <div className="glossary-definition">
+                {answerObj.description}
+              </div>
+            </div>
+          )
+        }
+      }
+    )
+
+    return (
+      <div className="glossary-container">
+        <h3 className="glossary-heading">Glossary</h3>
+        {questionDescription}
+        {answerDescriptions}
+      </div>
+    )
+  },
+
   _renderPhaseOne: function () {
     let currentCatSelect = this.state.categorySelect
     let phaseOneQuestions = this.props.allQuestions
@@ -71,13 +114,14 @@ export const IdComponent = React.createClass({
     let questionText = nextQuestion["question"]
     let answersArray = nextQuestion["answers"]
     let answerEls = this._makeAnswersComponent(answersArray, nextQuestion)
+    let glossary = this._makeGlossary(nextQuestion)
     return (
-
       <div className="question-box col-md-8 col-md-offset-2">
-          <h4 className="id-view-header">{questionText}</h4>
+        <h4 className="id-view-header">{questionText}</h4>
         <div className="question-card-container">
           {answerEls}
         </div>
+        {glossary}
       </div>
     )
   },
@@ -104,9 +148,9 @@ export const IdComponent = React.createClass({
         <div className="question-card-container">
           {charStuff}
         </div>
-          <div className="question-card question-center" data-ch={this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick={this._handleidontknow}>
-            <p>I don't know/skip</p>
-          </div>
+        <div className="question-card question-center" data-ch={this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick={this._handleidontknow}>
+          <p>I don't know/skip</p>
+        </div>
       </div>
     )
   },
@@ -127,10 +171,7 @@ export const IdComponent = React.createClass({
 
     if (numberOfansweredQuestions === 0) {
       return this._renderCategoriesQuestion()
-
     } else if (numberOfansweredQuestions > 0 && numberOfansweredQuestions < 2) {
-      console.log('test')
-
       return this._renderPhaseOne()
     } else if (numberOfansweredQuestions >= 2 && this.props.best.characteristic !== null && this.props.best.occurrences > 1) {
       return this._renderPhaseTwo()
