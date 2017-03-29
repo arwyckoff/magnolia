@@ -1,29 +1,28 @@
 @import './mixins.scss';
-// nav{
-// 	width: 100%;
-// }
+
 .navbar-styles{
-	width: 100vw;
 	@include navBarBackground;
 	@include navBarTextColor;
-	// background-color: rgba(236, 240, 241, .9);
-	padding-right: 40px;
 	margin-left: 0;
 	margin-bottom: 0;
+
 	ul{
 		@include navBarTextColor;
 		margin-bottom: 0;
 	}
+
 	i{
 		@include navBarTextColor;
 
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
-.nav-option-act i{
-	@include newYorkPink;
-}
-	li{
+
+	.nav-option-act i{
+		@include newYorkPink;
+	}
+
+	li {
   display: inline-block;
   padding-left: 10px;
 	padding-right: 10px;
@@ -31,46 +30,47 @@
 	position: relative;
 	text-align: right;
 
-  .arrow_box{
-    display: none;
-  }
-}
+  	.arrow_box{
+    	display: none;
+  	}
+	}
 
-.navbar-text{
-	@include playfairDisplay;
-}
-  .nav-option:hover{
-    i{@include newYorkPink}
-
-		 .arrow_box {
-			 border-color: #EF918F;
-	@include xcenter;
-	bottom: -20px;
-	@include pinkBackground;
-	display: inherit;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 3px 10px;
-	font-size: 14px;
-	font-weight: 500;
+	.navbar-text{
 		@include playfairDisplay;
-}
+	}
 
-.arrow_box:after {
-	bottom: 90%;
-	left: 50%;
-	border: solid transparent;
-	content: '';
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	@include navBarHoverInfo;
-	border-width: 5px;
-	margin-left: -5px;
-}
-}
+	.nav-option:hover{
+  	i {@include newYorkPink}
+
+		.arrow_box {
+			border-color: #EF918F;
+			@include xcenter;
+			bottom: -20px;
+			@include pinkBackground;
+			display: inherit;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 3px 10px;
+			font-size: 14px;
+			font-weight: 500;
+			@include playfairDisplay;
+		}
+	}
+
+	.arrow_box:after {
+		bottom: 90%;
+		left: 50%;
+		border: solid transparent;
+		content: '';
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		@include navBarHoverInfo;
+		border-width: 5px;
+		margin-left: -5px;
+	}
 }
 
 .navRoute{
@@ -81,4 +81,12 @@
 .relative-this{
 	width: 100%;
 	position: relative;
+}
+
+.navbar-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
 }
