@@ -41,25 +41,24 @@ if (this.props.filterChars.length >0){
   let selectedCodeObj = codeListObj.map(
     (obj,i) => {
       return <div
-
-               className='item-bc make-inline' key={i}>
+               className='item-bc make-inline make-cursor' key={i}>
                {this.props.codeList[obj].state}
 
             <i onClick={this._handleBreadcrumbSelect}
-              data-code={this.props.codeList[obj].code} className="fa fa-times-circle make-pink makeHand" aria-hidden="true"></i>
+              data-code={this.props.codeList[obj].code} className="fa fa-times-circle make-pink make-cursor add-pad" aria-hidden="true"></i>
             </div>
     }
   )
   return(
     <div>
       <div className="id-bc-container">
-  <i className="fa fa-chevron-left makeHand make-pink make-button" aria-hidden="true" onClick = {this._handleBack}>Back</i>
-          <h4 className="filter-select selected">Selected Filters</h4>
-            <h4 onClick={this._handleResetButtonSelect} className="reset-btn reset">Reset</h4>
-          <div className="select-container">
+  <i className="fa fa-chevron-left make-cursor make-button" aria-hidden="true" onClick = {this._handleBack}><span className = 'rale'>back</span></i>
+          <h4 className="filter-select selected">selected Filters</h4>
+          <div className="select-container make-inline">
 
-      <div >{selectedCodeObj} </div>
+      <div>{selectedCodeObj} </div>
     </div>
+          <p onClick={this._handleResetButtonSelect} className="reset-btn make-reset make-cursor">reset</p>
       </div>
 
   </div>
@@ -70,7 +69,7 @@ if (this.props.filterChars.length >0){
   else if (this.props.currentQuestion >1){return(
     <div>
 
-            <i className="fa fa-chevron-left makeHand make-pink make-button" aria-hidden="true" onClick = {this._handleBack}>Back</i>
+            <i className="fa fa-chevron-left make-cursor make-button" aria-hidden="true" onClick = {this._handleBack}> back</i>
 
     </div>
   )}

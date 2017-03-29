@@ -3,9 +3,9 @@ import { ACTIONS } from '../actions.js'
 import { CATEGORIES } from '../utils/categories.js'
 
 export const CategoryComponent = React.createClass({
+
   _handleCatSelect: function (evt) {
     let catClicked = evt.currentTarget.dataset.cat
-    console.log(evt.currentTarget.className)
     ACTIONS.changeCategory(catClicked)
   },
 
