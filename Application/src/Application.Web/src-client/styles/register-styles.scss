@@ -1,15 +1,15 @@
 @import "./mixins.scss";
 .register-container{
-  background-color: white;
-  margin-left: 5%;
-  margin-right: 5%;
+  // background-color: white;
+  // margin-left: 5%;
+  // margin-right: 5%;
   max-width: 90%;
   min-height: 100vh;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   h2{
     @include xcenter;
     top: 15%;
-    font-size: 26px;
+    font-size: 30px;
   }
 }
 .register-box input,
