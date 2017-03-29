@@ -115,6 +115,7 @@ body {
 }
 
 .reset {
+  color:  #706C61;
 	@include playfairDisplay;
 	cursor: pointer;
 	cursor: hand;
@@ -225,9 +226,9 @@ body {
   margin-right:auto;
   font-size: 14px;
   color:gray;
-  @include raleway;
 }
 
 .latin-name{
+  font-weight:500px;
   font-size:12px;
 }
