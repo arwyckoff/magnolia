@@ -87,6 +87,7 @@ _renderCategoriesQuestion: function () {
 
     </div>
   )
+
 },
 
 _renderPhaseTwo: function () {
@@ -97,7 +98,7 @@ _renderPhaseTwo: function () {
     <h4>Choose best answer for {this.props.best.characteristic.characteristic}</h4>
       {charStuff}
       <div className = "question-card hvr-grow" data-ch= {this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick = {this._handleidontknow}>
-          <p>I don't know/skip</p><span><em>({this.props.filteredTrees.length} trees)</em></span>
+          <p>I don't know/skip</p>
         </div>
     </div>
   )
@@ -146,12 +147,19 @@ export const QuestionItem = React.createClass({
 
   render: function (){
     let self = this
+    if (this.props.questionData !== 'GENERAL'){
     return (
-      <div className = "question-card hvr-grow" data-cat={this.props.questionData} onClick = {this._handleQuesSelect}>
-        <a>{this.props.questionData}</a>
+      <div className = "question-card" data-cat={this.props.questionData} onClick = {this._handleQuesSelect}>
+        <p>{this.props.questionData}</p>
         <img src ="http://placehold.it/200"/>
       </div>
     )
+  }
+  else {
+    return(
+      <div className = 'bye'></div>
+    )
+  }
   }
 })
 
@@ -197,15 +205,15 @@ export const PartTwoItem = React.createClass({
   render: function(){
   if (this.props.results === 1){
     return(
-      <div className = "question-card hvr-grow" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
-          <p>{this.props.partTwoData.state}</p><span><em>({this.props.results} tree)</em></span>
+      <div className = "question-card" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
+          <p>{this.props.partTwoData.state}</p>
         </div>
     )
   }
    if(this.props.results>1){
     return(
-        <div className = "question-card hvr-grow" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
-            <p>{this.props.partTwoData.state}</p><span><em>({this.props.results} trees)</em></span>
+        <div className = "question-card" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
+            <p>{this.props.partTwoData.state}</p>
           </div>
       )
   }
