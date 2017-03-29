@@ -1,18 +1,5 @@
-
 @import "./mixins.scss";
-//
-// .login-box input, button{
-//   display: block;
-//   margin-left: auto;
-//   margin-right: auto;
-//   width: 300px;
-//   margin-bottom: 20px;
-//   height: 40px;
-// }
-// .login-box{
-//   @include xcenter;
-//   top: 25%;
-// }
+
 .loginlog{
   z-index: 1;
   @include absolute-center;
@@ -27,16 +14,11 @@ margin-top: 20px;
   font-size: 16px;
   margin-top: 40px;
 }
+
 .loginbut{
   position: relative;
-// p{
-//   z-index: 1;
-//   @include absolute-center;
-//   font-size: 28px;
-//   color: white;
-//
-// }
 }
+
 .loginlog{
   height: 150px;
   position: relative;
@@ -45,6 +27,7 @@ margin-top: 20px;
 .loginarrow_box{
   display: none;
 }
+
 button:hover{
 .loginarrow_box {
 @include xcenter;
@@ -80,41 +63,43 @@ margin-left: -5px;
 .login-box{
   @include absolute-center;
   top: 35%;
-width:300px;
-  .container 		{
+  width:300px;
 
-  margin:30px auto 0;
-  display:block;
-  background:rgb(243, 243, 243);
-  padding:10px 50px 50px;
-}
-h2 		 {
-  text-align:center;
-  margin-bottom:50px;
-}
-h2 small {
-  font-weight:normal;
-  color:#D3807E;
-  display:block;
-}
+  .container {
+    margin:30px auto 0;
+    display:block;
+    background:white;
+    padding: 10px 50px 50px;
+  }
 
+  h2 {
+    text-align:center;
+    margin-bottom:50px;
+  }
+  h2 small {
+    font-weight:normal;
+    color:#D3807E;
+    display:block;
+  }
 
 /* form starting stylings ------------------------------- */
-.group 			  {
-  position:relative;
-  margin-bottom:45px;
-}
-input 				{
-  font-size:18px;
-  height: 50px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:300px;
-  border:none;
-  border-bottom:1px solid #D3807E;
-    background:rgb(243, 243, 243);
-}
-input:focus 		{ outline:none; }
+  .group 			  {
+   position:relative;
+    margin-bottom:45px;
+  }
+  input 				{
+    font-size:18px;
+    height: 50px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #D3807E;
+    background: white;
+  }
+  input:focus	{ 
+    outline:none; 
+  }
 
 /* LABEL ======================================= */
 label 				 {

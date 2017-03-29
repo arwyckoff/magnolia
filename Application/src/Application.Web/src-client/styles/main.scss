@@ -12,11 +12,7 @@
 
 body {
 	@include raleway;
-}
-
-img {
-	width: 100%;
-	display: block;
+	@include mainBackgroundColor;
 }
 
 .container-tree {
@@ -198,4 +194,25 @@ img {
 .reset-individual {
 	@include giveSomeSpace;
 	@include greenAccent;
+}
+
+.preloader-img {
+	width: 400px;
+	height: 400px;
+}
+
+.preloader-container {
+	@include mainBackgroundColor;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	@include playfairDisplay;
+	font-weight: 700;
+}
+
+.smallcaps {
+	font-size: .8em;
 }
