@@ -7,6 +7,10 @@
 	flex-wrap: wrap;
 }
 
+.mag-brand:hover {
+	color: #EF918F;
+}
+
 .navbar-styles{
 	@include navBarBackground;
 	@include navBarTextColor;
