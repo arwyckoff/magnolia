@@ -91,7 +91,6 @@ text-align: left;
 .question-bc-container .id-bc-container >*{
 display: inline-block;
 font-size: 14px;
-padding-left: 50px;
 .filter-select{
 	text-align: left;
 }
@@ -130,14 +129,17 @@ margin-left: 5px;
 .make-cursor{
 	cursor: pointer;
 }
+.filter-select, .select-container{
+	padding-left: 40px;
+
+}
 .make-reset{
-	padding: 2px;
-	border-radius: 2px;
+	margin-left: 50px;
+	padding: 1px 3px;
+	border-radius: 4px;
 	border: 1px rgba(211, 128, 126, 0.8) solid;
 	box-shadow: inset 0px 0px 0px 1px white;
 	background-color: white;
-	align-items: center;
-	justify-content: center;
 	filter: drop-shadow(0px 0px 1px #ffb8b8);
 }
 a{
