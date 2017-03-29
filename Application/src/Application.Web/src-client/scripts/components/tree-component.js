@@ -57,7 +57,7 @@ export const TreeItem = React.createClass({
     return (
       <div className="container-tree makeHand" onClick={this._handleProfClick}>
         <div>{this.props.treeData.commonName}</div>
-        <div><em>{this.props.treeData.latinName}</em></div>
+        <div className="latin-name"><em>{this.props.treeData.latinName}</em></div>
       </div>
     )
   }
