@@ -60,6 +60,7 @@ export const IdComponent = React.createClass({
     let currentChar = evt.currentTarget.dataset.ch
     ID_ACTIONS.getNextBest(evt.currentTarget.dataset.cat, evt.currentTarget.dataset.ch)
   },
+
   _renderPhaseOne: function () {
     let currentCatSelect = this.state.categorySelect
     let phaseOneQuestions = this.props.allQuestions
@@ -186,13 +187,10 @@ export const PhaseOneQuestionItem = React.createClass({
     let question = this.props.questionObjData.question
     let characteristicA = this.props.questionObjData.characteristic
 
-
     return (
-
       <div data-code={catCode} data-apply={catApply} data-question={question} data-characteristic={characteristicA} onClick={this._handlePhaseOneSelect} className="question-card hvr-grow">
         {catAnswers}
       </div>
-
     )
   }
 })
