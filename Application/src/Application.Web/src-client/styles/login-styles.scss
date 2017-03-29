@@ -97,8 +97,8 @@ margin-left: -5px;
     border-bottom:1px solid #D3807E;
     background: white;
   }
-  input:focus	{ 
-    outline:none; 
+  input:focus	{
+    outline:none;
   }
 
 /* LABEL ======================================= */
@@ -179,24 +179,17 @@ input:focus ~ .highlight {
   to 	{ width:0; background:transparent; }
 }
 }
-
-
-.container-user{
-  font-size: 16px;
-width: 100%;
-height: 100vh;
-
-}
-
-.user-container{
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 80px;
-  padding-left: 20px;
-  width: 70%;
-  height: 100vh;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.make-green{
-  @include greenAccent;
-}
+.logout-box
+  button{
+    @include xcenter;
+    top: 40%;
+    @include pillBox;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    background-color: white;
+    @include playfairDisplay;
+  }
+  .logout-box button:hover{
+        filter: drop-shadow(0px 0px 2px #e07171);
+  }

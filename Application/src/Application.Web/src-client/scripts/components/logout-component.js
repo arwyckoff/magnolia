@@ -12,11 +12,9 @@ export const LogoutComponent = React.createClass({
 
   render: function(){
       return (
-         <div className="auth-form">
+         <div className="auth-form logout-box">
 				<form onSubmit = {this._handleLogout}>
-					<p>Confirm log out</p>
-
-	            <button type="submit">Log out</button>
+	            <button type="submit">confirm log out</button>
 				</form>
 
 			</div>
