@@ -10,7 +10,6 @@ import { WikiGenusModel } from './models/new-wiki-model.js'
 import CATEGORY_IMAGES from './utils/categoryImages.js'
 import { STORE } from './store.js'
 
-
 export const ACTIONS = {
   updateQuestionNumber: function (currentQuestion) {
     STORE.setStore('currentQuestion', currentQuestion + 1)
