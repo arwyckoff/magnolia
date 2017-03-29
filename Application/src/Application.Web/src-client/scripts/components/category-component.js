@@ -20,10 +20,10 @@ export const CategoryComponent = React.createClass({
         }
       }
     )
-    
+
     return (
       <div>
-        <h4>Categories</h4>
+        <h4 className="text-center">Categories</h4>
         {keyNamesJsx}
       </div>
     )
