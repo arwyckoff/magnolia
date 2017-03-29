@@ -68,6 +68,7 @@ body {
 }
 
 .filter-selected {
+  @include raleway;
 	font-weight: 700;
 }
 
@@ -221,6 +222,7 @@ body {
 	font-size: .8em;
 }
 
+
 .no-filter-msg{
   margin-left:auto;
   margin-right:auto;
@@ -231,4 +233,8 @@ body {
 .latin-name{
   font-weight:500px;
   font-size:12px;
+}
+
+.landing-title{
+  font-size:48px;
 }
