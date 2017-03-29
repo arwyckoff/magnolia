@@ -9,7 +9,10 @@
 	    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	h4{
 		font-size: 30px;
-		margin-bottom: 20px;
+		margin-bottom: 25px;
+margin-top: 0;
+@include playfairDisplay;
+font-size: 22px;
 	}
 }
 .question-box{
@@ -42,24 +45,41 @@ p{
 		position: relative;
 		display: block;
 	}
-
+.question-center{
+	display: block;
+	text-align: center;
+	width: 170px;
+	margin-left: auto;
+	margin-right: auto;
+}
 	.question-tree-container, .question-tree-container>*{
 		display: inline-block;
+		width: 100%;
 	}
 .tree-one{
 	display: inline-block;
-	width: 20%;
+	width: 50%;
+	padding: 5px 10px;
+	font-size: 16px;
 }
-
+.one-tree{
+	width: 100%;
+}
+.rale{
+	@include raleway;
+	padding-left: 5px;
+}
 .question-bc-container .id-bc-container{
 width: 100%;
-display:block;
+position: absolute;
+top: 75px;
 text-align: left;
 }
 .question-bc-container .id-bc-container >*{
 display: inline-block;
 font-size: 14px;
 padding-left: 50px;
+z-index: 1000;
 .filter-select{
 	text-align: left;
 }
@@ -67,6 +87,10 @@ padding-left: 50px;
 .make-inline{
 	display: inline-block;
 	padding-right: 7px;
+	z-index: 1000;
+}
+.add-pad{
+margin-left: 5px;
 }
 .make-pink{
 	@include pinkColor
@@ -74,9 +98,23 @@ padding-left: 50px;
 
 .make-button{
 	text-align: left;
+	// border: 1px solid #e07171;
+	// border-radius: 50%;
 }
 
 .make-hand{
+	cursor: pointer;
+}
+.all-trees{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	h4{
+		@include playfairDisplay;
+		font-size: 22px;
+	}
+}
+.make-cursor{
 	cursor: pointer;
 }
 a{
@@ -91,4 +129,7 @@ a{
 }
 .back-pink:hover{
 		filter: drop-shadow(0px 0px 2px #e07171);
+}
+.make-cursor{
+	cursor: pointer;
 }
