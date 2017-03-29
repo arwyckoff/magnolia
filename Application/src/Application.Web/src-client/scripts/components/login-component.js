@@ -16,7 +16,7 @@ export const LoginComponent = React.createClass({
     return (
       <div className="hero">
         <div className="auth-form login-box">
-          <h2>login</h2>
+          <h2>login to your account</h2>
           <form onSubmit={this._handleLogin}>
             <div className="group">
               <input type="text" className="mag-form" name="emailField" placeholder="Email" />
