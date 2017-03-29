@@ -71,7 +71,7 @@ export const IdComponent = React.createClass({
     let answersArray = nextQuestion["answers"]
     let answerEls = this._makeAnswersComponent(answersArray, nextQuestion)
     return (
-      <div className="question-box">
+      <div className="question-box col-md-8 col-md-offset-2">
         {questionText}
         {answerEls}
       </div>
@@ -81,10 +81,9 @@ export const IdComponent = React.createClass({
   _renderCategoriesQuestion: function () {
     let questionStuff = this._makeQuestionComponents(this.props.categories)
     return (
-      <div className="question-box">
+      <div className="question-box col-md-8 col-md-offset-2">
         <h4 className="id-view-header">Choose part of plant to identify</h4>
         {questionStuff}
-
       </div>
     )
 
@@ -94,7 +93,7 @@ export const IdComponent = React.createClass({
     let stateStuff = this.props.best.characteristic.states
     let charStuff = this._makePartTwoComponents(stateStuff)
     return (
-      <div className="question-box">
+      <div className="question-box col-md-8 col-md-offset-2">
         <h4>Choose best answer for {this.props.best.characteristic.characteristic}</h4>
         {charStuff}
         <div className="question-card question-center" data-ch={this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick={this._handleidontknow}>
@@ -106,7 +105,7 @@ export const IdComponent = React.createClass({
 
   _renderConfidence: function () {
     return (
-      <div className="question-box">
+      <div className="question-box col-md-8 col-md-offset-2">
         <h4>We believe your tree is below</h4>
       </div>
     )
