@@ -115,6 +115,7 @@ _renderConfidence: function () {
 
   render: function(){
     let answeredQuestions = this.props.answeredQuestions
+    let categorySelected = this.props.categorySelect
     let numberOfansweredQuestions = answeredQuestions.length
     let currentQuestion = this.props.currentQuestion
 
@@ -128,7 +129,7 @@ _renderConfidence: function () {
       else if (this.props.best.occurrences ===1 || this.props.filteredTrees === this.props.best.occurrences) {
       return this._renderConfidence()
     } else {
-    // ???? Something ain't right
+      // ???? Something ain't right
       return(
         <div className = 'bye'></div>
       )
@@ -184,10 +185,13 @@ export const PhaseOneQuestionItem = React.createClass({
     let question = this.props.questionObjData.question
     let characteristicA = this.props.questionObjData.characteristic
 
+
     return (
+
       <div data-code={catCode} data-apply={catApply} data-question={question} data-characteristic = {characteristicA} onClick={this._handlePhaseOneSelect} className = "question-card hvr-grow">
         {catAnswers}
       </div>
+
     )
   }
 })
