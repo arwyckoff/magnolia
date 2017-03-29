@@ -12,7 +12,7 @@ namespace Magnolia.Api.Models
         public int PlantId { get; set; }
 
         [DataType(DataType.Text)]
-        [StringLength(150, ErrorMessage = "{0}'s may not exceed 150 characters.")]
+        [StringLength(150, ErrorMessage = "{0}s may not exceed 150 characters.")]
         public string Comment { get; set; }
     }
 }
