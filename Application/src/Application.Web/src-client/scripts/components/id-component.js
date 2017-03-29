@@ -115,8 +115,15 @@ _renderConfidence: function () {
 
   render: function(){
     let answeredQuestions = this.props.answeredQuestions
+<<<<<<< HEAD
+    let categorySelected = this.props.categorySelect
+    let numberOfanseredQuestions = answeredQuestions.length
+=======
     let numberOfansweredQuestions = answeredQuestions.length
+>>>>>>> 4c7bdd55949ff815a78ac75eb237c9672fc07283
     let currentQuestion = this.props.currentQuestion
+    // let questionsInCategory = this.props.allProps[categorySelected]
+    // console.log(this.props.allProps)
 
     if (numberOfansweredQuestions === 0) {
       return this._renderCategoriesQuestion()
@@ -184,10 +191,13 @@ export const PhaseOneQuestionItem = React.createClass({
     let question = this.props.questionObjData.question
     let characteristicA = this.props.questionObjData.characteristic
 
+
     return (
+
       <div data-code={catCode} data-apply={catApply} data-question={question} data-characteristic = {characteristicA} onClick={this._handlePhaseOneSelect} className = "question-card hvr-grow">
         {catAnswers}
       </div>
+
     )
   }
 })
