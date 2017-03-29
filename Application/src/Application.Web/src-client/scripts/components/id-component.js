@@ -60,6 +60,7 @@ export const IdComponent = React.createClass({
     let currentChar = evt.currentTarget.dataset.ch
     ID_ACTIONS.getNextBest(evt.currentTarget.dataset.cat, evt.currentTarget.dataset.ch)
   },
+
   _renderPhaseOne: function () {
     let currentCatSelect = this.state.categorySelect
     let phaseOneQuestions = this.props.allQuestions
@@ -71,9 +72,12 @@ export const IdComponent = React.createClass({
     let answersArray = nextQuestion["answers"]
     let answerEls = this._makeAnswersComponent(answersArray, nextQuestion)
     return (
-      <div className="question-box">
+
+      <div className="question-box col-md-8 col-md-offset-2">
           <h4 className="id-view-header">{questionText}</h4>
-        {answerEls}
+        <div className="question-card-container">
+          {answerEls}
+        </div>
       </div>
     )
   },
@@ -81,10 +85,11 @@ export const IdComponent = React.createClass({
   _renderCategoriesQuestion: function () {
     let questionStuff = this._makeQuestionComponents(this.props.categories)
     return (
-      <div className="question-box">
+      <div className="question-box col-md-8 col-md-offset-2">
         <h4 className="id-view-header">Choose part of plant to identify</h4>
-        {questionStuff}
-
+        <div className="question-card-container">
+          {questionStuff}
+        </div>
       </div>
     )
 
@@ -94,19 +99,21 @@ export const IdComponent = React.createClass({
     let stateStuff = this.props.best.characteristic.states
     let charStuff = this._makePartTwoComponents(stateStuff)
     return (
-      <div className="question-box">
+      <div className="question-box col-md-8 col-md-offset-2">
         <h4>Choose best answer for {this.props.best.characteristic.characteristic}</h4>
-        {charStuff}
-        <div className="question-card question-center" data-ch={this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick={this._handleidontknow}>
-          <p>I don't know/skip</p>
+        <div className="question-card-container">
+          {charStuff}
         </div>
+          <div className="question-card question-center" data-ch={this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick={this._handleidontknow}>
+            <p>I don't know/skip</p>
+          </div>
       </div>
     )
   },
 
   _renderConfidence: function () {
     return (
-      <div className="question-box">
+      <div className="question-box col-md-8 col-md-offset-2">
         <h4>We believe your tree is below</h4>
       </div>
     )
@@ -120,8 +127,10 @@ export const IdComponent = React.createClass({
 
     if (numberOfansweredQuestions === 0) {
       return this._renderCategoriesQuestion()
+
     } else if (numberOfansweredQuestions > 0 && numberOfansweredQuestions < 2) {
       console.log('test')
+
       return this._renderPhaseOne()
     } else if (numberOfansweredQuestions >= 2 && this.props.best.characteristic !== null && this.props.best.occurrences > 1) {
       return this._renderPhaseTwo()
@@ -185,13 +194,10 @@ export const PhaseOneQuestionItem = React.createClass({
     let question = this.props.questionObjData.question
     let characteristicA = this.props.questionObjData.characteristic
 
-
     return (
-
       <div data-code={catCode} data-apply={catApply} data-question={question} data-characteristic={characteristicA} onClick={this._handlePhaseOneSelect} className="question-card hvr-grow">
         {catAnswers}
       </div>
-
     )
   }
 })

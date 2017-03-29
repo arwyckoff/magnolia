@@ -37,10 +37,10 @@ export const BrowseView = React.createClass({
           <h1>BROWSE</h1>
         </div>
         <div className="container row">
-          <div className="col-sm-1">
+          <div className="col-sm-2">
             <CategoryComponent {...this.state} />
           </div>
-          <div className="col-sm-3">
+          <div className="col-sm-2">
             <CharacteristicComponent {...this.state} />
           </div>
           <div className="col-sm-2">
