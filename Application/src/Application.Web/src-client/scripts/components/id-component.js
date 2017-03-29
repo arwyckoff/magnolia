@@ -72,7 +72,7 @@ export const IdComponent = React.createClass({
     let answerEls = this._makeAnswersComponent(answersArray, nextQuestion)
     return (
       <div className="question-box">
-        {questionText}
+          <h4 className="id-view-header">{questionText}</h4>
         {answerEls}
       </div>
     )
