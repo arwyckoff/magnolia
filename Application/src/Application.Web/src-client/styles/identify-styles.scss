@@ -9,11 +9,11 @@
 	margin-right: 5%;
 	background-color: white;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	
+
 	h4{
 		font-size: 30px;
 		margin-bottom: 25px;
-		margin-top: 0;
+		margin-top: 20px;
 		@include playfairDisplay;
 		font-size: 22px;
 	}
@@ -21,6 +21,9 @@
 .question-box{
 	font-size: 16px;
 	display: inline-block;
+}
+.question-box h4{
+	font-size: 36px;
 }
 .question-top{
 	position: relative;
@@ -47,19 +50,19 @@
 	cursor: pointer;
 	background-color: white;
 	border-radius: 2px;
-	font-size: 16px;
+	font-size: 20px;
 	@include pillBox;
 	flex-grow: 0;
 	flex-direction: column;
 	p {
 		margin-bottom: 0;
-		font-size: 16px;
+		font-size: 22px;
 	}
 }
 .question-center{
 	display: block;
 	text-align: center;
-	width: 170px;
+	width: 265px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -70,8 +73,8 @@
 .tree-one{
 	display: inline-block;
 	width: 50%;
-	padding: 10px;
-	font-size: 16px;
+	padding: 5px;
+	font-size: 22px;
 }
 .one-tree{
 	width: 100%;
@@ -81,15 +84,18 @@
 	@include raleway;
 	padding-left: 5px;
 }
+.bc-back-styles{
+	font-size:22px;
+}
 .question-bc-container .id-bc-container{
 width: 100%;
-position: absolute;
 top: 75px;
-text-align: left;
+text-align: center;
+margin-bottom: 10px;
 }
 .question-bc-container .id-bc-container >*{
 display: inline-block;
-font-size: 14px;
+font-size: 22px;
 .filter-select{
 	text-align: left;
 }
@@ -122,18 +128,20 @@ margin-left: 5px;
 	margin-right: auto;
 	h4{
 		@include playfairDisplay;
-		font-size: 22px;
+		font-size: 28px;
 	}
 }
 .make-cursor{
 	cursor: pointer;
 }
 .filter-select, .select-container{
+	font-size:20px;
 	padding-left: 40px;
 
 }
 .make-reset{
-	margin-left: 50px;
+	//made reset button not centered//
+	// margin-left: 50px;
 	padding: 1px 3px;
 	border-radius: 4px;
 	border: 1px rgba(211, 128, 126, 0.8) solid;
