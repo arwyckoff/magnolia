@@ -104,3 +104,15 @@
 	flex-wrap: wrap;
 	width: 100%;
 }
+
+@media (max-width: 600px){
+  .navRoute{
+    display:none;
+  }
+}
+
+@media (max-width: 820px){
+  .navbar-current{
+    display:none;
+  }
+}
