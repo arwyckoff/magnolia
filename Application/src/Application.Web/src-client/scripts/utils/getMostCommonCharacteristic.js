@@ -22,12 +22,12 @@ export const _getMostCommonCharacteristic = (preferred, trees) => {
  for (let c = 0, cLen = preferred.length; c < cLen; c++) {
                 let characteristic = preferred[c];
                               let occurrences = 0;
-                if (prevQuestions.indexOf(characteristic.characteristic) === -1 || prevQuestions.length ===0){
+                if (prevQuestions.indexOf(characteristic.characteristic) === -1){
                for (let t = 0, tLen = trees.length; t < tLen; t++) {
                         let tree = trees[t];
                         for (let s = 0, sLen = characteristic.states.length; s < sLen; s++) {
                           let state = characteristic.states[s].code;
-                           if (tree.characteristics[state]!== undefined) {
+                           if (tree.characteristics[state]!== undefined && prevQuestions.indexOf(characteristic.characteristic) === -1) {
                                    occurrences++;
                                    break;
                                }

@@ -37,6 +37,11 @@ export const ID_ACTIONS = {
     let currentQuestion = STORE.getStoreData().currentQuestion
      ID_ACTIONS.updateQuestionNumber(currentQuestion)
   },
+  updateQuestionAsked: function(characteristic){
+    let prevQuesArray = STORE.getStoreData().prevQuestions
+    prevQuesArray.push(characteristic)
+    STORE.setStore('prevQuestions', prevQuesArray)
+  },
   updateQuestionInfo: function(category, filterCharacter, characteristic){
     let prevQuesArray = STORE.getStoreData().prevQuestions
     prevQuesArray.push(characteristic)
@@ -92,7 +97,7 @@ export const ID_ACTIONS = {
         answeredQuestionArray.push(category);
         STORE.setStore('answeredQuestions', answeredQuestionArray);
   },
-  answerPhaseOneAction: function(category, code, apply, answeredQuestion){
+  answerPhaseOneAction: function(category, code, apply, answeredQuestion, characteristic){
     let data = STORE.getStoreData();
     let filterChars = data.filterChars
 
@@ -105,7 +110,17 @@ export const ID_ACTIONS = {
     let answeredQuestionArray = STORE.getStoreData().answeredQuestions;
     answeredQuestionArray.push(answeredQuestion);
     STORE.setStore('answeredQuestions', answeredQuestionArray);
-
+    let prevQuesArray = STORE.getStoreData().prevQuestions
+    prevQuesArray.push(characteristic)
+    STORE.setStore('prevQuestions', prevQuesArray)
+    let iDKs = STORE.getStoreData().iDKs
+    let categories = STORE.getStoreData().categories
+    let legalArray = _getLegalCharacteristics(STORE.getStoreData().filterChars, iDKs, categories, 3)
+    let preferredCharObj = _getPreferredCharacteristics(legalArray, category)
+    let filteredTrees = STORE.getStoreData().filteredTrees
+    let best = STORE.getStoreData().best
+    let commonObj= _getBestBetweenPreferredAndOtherwise(preferredCharObj.preferred, preferredCharObj.otherwise, filteredTrees, .3)
+    STORE.setStore('best', commonObj)
     // console.log(answeredQuestionArray)
     // console.log(this.props)
 
@@ -135,4 +150,13 @@ export const ID_ACTIONS = {
   STORE.setStore('catQuestionTracker', catQuestionTrackerEmpty)
   STORE.setStore('answeredQuestions', [])
 },
+// filterCategoryQuestions: function(category){
+//     let prevQuestionsArray = []
+//     let barkQuestions = ['bark color', 'bark texture', 'general bark characteristics']
+//     let leafQUestions = ['leaf type', 'leaf margin]
+//   if (category === 'BARK'){
+//      prevQuestions.push('bark color', )
+//   }
+//
+// }
 }

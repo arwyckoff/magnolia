@@ -33,6 +33,9 @@ _handleReset: function(){
 },
    render: function(){
 
+     if (this.props.currentQuestion <3 || this.props.filteredTrees.length/this.props.treeListData > 70){
+       return (<div className = "bye"></div>)
+     }
     if(this.props.filterChars.length > 0 && this.props.filteredTrees.length === 0){
       return (
 
@@ -40,6 +43,15 @@ _handleReset: function(){
           <h2>No trees match your criteria. Please <a onClick = {this._handleReset}>try again</a> or explore all in <a onClick = {this._handleBrowse}>browse view</a></h2>
         </div>
 
+      )
+    }
+    else if (this.props.filteredTrees.length===1){
+      let filteredTreeJSX =  this._makeTreeComponents(this.props.filteredTrees)
+      return (
+
+        <div className="all-trees">
+               {filteredTreeJSX}
+        </div>
       )
     }
     else {
@@ -68,7 +80,7 @@ export const TreeIDItem = React.createClass({
       return (
 
         <div className = "tree-one" onClick = {this._handleProfClick}>
-         <p className= "one-tree make-hand">{this.props.treeData.commonName}</p>
+         <p className= "one-tree make-hand back-pink">{this.props.treeData.commonName}</p>
 
        </div>
       )

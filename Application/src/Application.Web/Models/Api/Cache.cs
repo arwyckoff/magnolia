@@ -11,8 +11,55 @@ namespace Magnolia.Api.Models
     {
         private static List<PlantViewModel> _plantViewModels;
         private static Dictionary<string, List<QuestionViewModel>> _questionViewModels;
+        private static Dictionary<string, List<CharacteristicViewModel>> _characteristicViewModels;
 
         private Cache() { }
+
+        public async static Task<Dictionary<string, List<CharacteristicViewModel>>> GetCharacteristicViewModels(MagnoliaContext context)
+        {
+            if (_characteristicViewModels != null)
+                return _characteristicViewModels;
+
+            var characteristics = await context.Characteristics.Include(s => s.States)
+                                                    .Include(s => s.Category)
+                                                    .ToListAsync();
+
+            var characteristicViewModels = new Dictionary<string, List<CharacteristicViewModel>>();
+
+            foreach (var characteristic in characteristics)
+            {
+                var category = characteristic.Category.Value;
+                if (!characteristicViewModels.Keys.Any(k => k == category))
+                {
+                    characteristicViewModels.Add(category, new List<CharacteristicViewModel>());
+                }
+
+                var characteristicViewModel = new CharacteristicViewModel()
+                {
+                    Id = characteristic.Id,
+                    Characteristic = characteristic.Value,
+                    Depends = characteristic.Depends,
+                    Permutations = characteristic.Permutations
+                };
+
+                foreach (var state in characteristic.States)
+                {
+                    if (!context.PlantCharacteristics.Any(s => s.StateId == state.Id))
+                        continue;
+
+                    characteristicViewModel.States.Add(new StateViewModel()
+                    {
+                        Characteristic = characteristic.Value,
+                        State = state.Value,
+                        Code = state.Code
+                    });
+                }
+
+                characteristicViewModels[category].Add(characteristicViewModel);
+            }
+
+            return _characteristicViewModels = characteristicViewModels;
+        }
 
         public async static Task<Dictionary<string, List<QuestionViewModel>>> GetQuestionViewModels(MagnoliaContext context)
         {
@@ -20,9 +67,9 @@ namespace Magnolia.Api.Models
                 return _questionViewModels;
 
             var questions = await context.Questions.Include(q => q.Answers)
-                                                    .Include(q => q.Depends)
-                                                    .Include(q => q.SkipIf)
-                                                    .ToListAsync();
+                                                   .Include(q => q.Depends)
+                                                   .Include(q => q.SkipIf)
+                                                   .ToListAsync();
 
             var questionViewModels = new Dictionary<string, List<QuestionViewModel>>();
 
@@ -40,10 +87,15 @@ namespace Magnolia.Api.Models
                 foreach (var answer in question.Answers)
                 {
                     var a = new AnswerViewModel();
+                    var state = answer.ApplyId == 0 ? null : await context.States.Include(s => s.Characteristic).FirstOrDefaultAsync(s => s.Id == answer.ApplyId);
+
+                    if (q.Characteristic == null && answer.ApplyId != 0)
+                        q.Characteristic = state.Characteristic.Value;
+
                     a.Answer = answer.Value;
                     a.Description = answer.Description;
                     a.Code = answer.Code;
-                    a.Apply = answer.ApplyId == 0 ? "" : context.States.FirstOrDefault(s => s.Id == answer.ApplyId).Code;
+                    a.Apply = state == null ? "" : state.Code;
 
                     q.Answers.Add(a);
                 }

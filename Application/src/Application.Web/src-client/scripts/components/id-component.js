@@ -3,7 +3,8 @@ import {STORE} from '../store.js';
 import {ACTIONS} from '../actions.js';
 import {BROWSE_ACTIONS} from '../browse_actions.js'
 import {ID_ACTIONS} from '../id-actions.js'
-import _getFilteredTrees from "../utils/getFilteredTrees"
+import  _getFilteredTrees  from "../utils/getFilteredTrees";
+
 import _getNextCategoryQuestion from "../utils/getNextCategoryQuestion.js"
 
 export const IdComponent = React.createClass({
@@ -36,7 +37,7 @@ export const IdComponent = React.createClass({
   _makePartOneComponents: function(questions){
     let phaseOneQuestionJSX = questions.map(
       (smod, i) => {
-        return   <PhaseOneQuestionItem questionData = {smod} key = {i}/>
+        return   <PhaseOneQuestionItem questionData = {smod} key = {i} />
       }
     )
     return phaseOneQuestionJSX
@@ -47,9 +48,7 @@ export const IdComponent = React.createClass({
       (keyName, i) => {
         let futurefiltChars = [...this.props.filterChars]
         futurefiltChars.push(keyName.code)
-
         let resultCount = _getFilteredTrees(futurefiltChars, this.props.filteredTrees).length
-        let returnedTrees = _getFilteredTrees(futurefiltChars, this.props.filteredTrees)
         return <PartTwoItem partTwoData={keyName} results={resultCount} key = {i}/>
       }
     )
@@ -61,75 +60,84 @@ export const IdComponent = React.createClass({
     let currentChar = evt.currentTarget.dataset.ch
     ID_ACTIONS.getNextBest(evt.currentTarget.dataset.cat, evt.currentTarget.dataset.ch)
   },
-
   _renderPhaseOne: function () {
-    let currentCatSelect = this.state.categorySelect
-    let phaseOneQuestions = this.props.allQuestions
-    let catQuestionTrackerEl = this.props.catQuestionTracker[currentCatSelect]
-    let catCodeArray = catQuestionTrackerEl["codeArray"]
-    let questionObjArray = phaseOneQuestions[currentCatSelect]
-    let nextQuestion = _getNextCategoryQuestion(questionObjArray, catCodeArray, this.props.answeredQuestions)
-    let questionText = nextQuestion["question"]
-    let answersArray = nextQuestion["answers"]
-    let answerEls = this._makeAnswersComponent(answersArray, nextQuestion)
+  let currentCatSelect = this.state.categorySelect
+  let phaseOneQuestions = this.props.allQuestions
+  let catQuestionTrackerEl = this.props.catQuestionTracker[currentCatSelect]
+  let catCodeArray = catQuestionTrackerEl["codeArray"]
+  let questionObjArray = phaseOneQuestions[currentCatSelect]
+  let nextQuestion = _getNextCategoryQuestion(questionObjArray, catCodeArray, this.props.answeredQuestions)
+  let questionText = nextQuestion["question"]
+  let answersArray = nextQuestion["answers"]
+  let answerEls = this._makeAnswersComponent(answersArray, nextQuestion)
+  return (
+    <div className = "question-box">
+      {questionText}
+      {answerEls}
+    </div>
+  )
+},
 
-    return (
-      <div className = "question-box">
-        {questionText}
-        {answerEls}
-      </div>
-    )
-  },
+_renderCategoriesQuestion: function () {
+  let questionStuff = this._makeQuestionComponents(this.props.categories)
+  return (
+    <div className = "question-box">
+      <h4 className = "id-view-header">Choose part of plant to identify</h4>
+      {questionStuff}
 
-  _renderCategoriesQuestion: function () {
-    let questionStuff = this._makeQuestionComponents(this.props.categories)
-    return (
-      <div className = "question-box">
-        <h4 className = "id-view-header">Choose part of plant to identify</h4>
-        {questionStuff}
-      </div>
-    )
-  },
+    </div>
+  )
 
-  _renderPhaseTwo: function () {
-    let stateStuff = this.props.best.characteristic.states
-    let charStuff = this._makePartTwoComponents(stateStuff)
-    return (
-      <div className = "question-box">
-      <h4>Choose best answer for {this.props.best.characteristic.characteristic}</h4>
-        {charStuff}
-      </div>
-    )
-  },
+},
 
-  _renderConfidence: function () {
-    return (
-      <div className = "question-box">
-        <h4>We believe your tree is below</h4>
-      </div>
-    )
-  },
+_renderPhaseTwo: function () {
+  let stateStuff = this.props.best.characteristic.states
+  let charStuff = this._makePartTwoComponents(stateStuff)
+  return (
+    <div className = "question-box">
+    <h4>Choose best answer for {this.props.best.characteristic.characteristic}</h4>
+      {charStuff}
+      <div className = "question-card hvr-grow" data-ch= {this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick = {this._handleidontknow}>
+          <p>I don't know/skip</p>
+        </div>
+    </div>
+  )
+},
+
+_renderConfidence: function () {
+  return (
+    <div className = "question-box">
+      <h4>We believe your tree is below</h4>
+    </div>
+  )
+},
+
 
   render: function(){
     let answeredQuestions = this.props.answeredQuestions
+<<<<<<< HEAD
     let categorySelected = this.props.categorySelect
     let numberOfanseredQuestions = answeredQuestions.length
+=======
+    let numberOfansweredQuestions = answeredQuestions.length
+>>>>>>> 4c7bdd55949ff815a78ac75eb237c9672fc07283
     let currentQuestion = this.props.currentQuestion
     // let questionsInCategory = this.props.allProps[categorySelected]
     // console.log(this.props.allProps)
 
-    if (numberOfanseredQuestions === 0) {
+    if (numberOfansweredQuestions === 0) {
       return this._renderCategoriesQuestion()
-    } else if (numberOfanseredQuestions > 0 && numberOfanseredQuestions < 2 && this.props.best.characteristic !== null){
+    } else if (numberOfansweredQuestions > 0 && numberOfansweredQuestions < 2 ){
+            console.log('test')
       return this._renderPhaseOne()
-    } else if (numberOfanseredQuestions >= 2 && this.props.best.characteristic !== null){
-      return this._renderPhaseTwo()
-    } else if (this.props.filteredTrees > 0) {
+    } else if (numberOfansweredQuestions >= 2 && this.props.best.characteristic !== null  && this.props.best.occurrences >1){
+      return this._renderPhaseTwo()}
+      else if (this.props.best.occurrences ===1 || this.props.filteredTrees === this.props.best.occurrences) {
       return this._renderConfidence()
     } else {
     // ???? Something ain't right
       return(
-        <div></div>
+        <div className = 'bye'></div>
       )
     }
   }
@@ -146,12 +154,19 @@ export const QuestionItem = React.createClass({
 
   render: function (){
     let self = this
+    if (this.props.questionData !== 'GENERAL'){
     return (
-      <div className = "question-card hvr-grow" data-cat={this.props.questionData} onClick = {this._handleQuesSelect}>
-        <a>{this.props.questionData}</a>
+      <div className = "question-card" data-cat={this.props.questionData} onClick = {this._handleQuesSelect}>
+        <p>{this.props.questionData}</p>
         <img src ="http://placehold.it/200"/>
       </div>
     )
+  }
+  else {
+    return(
+      <div className = 'bye'></div>
+    )
+  }
   }
 })
 
@@ -161,11 +176,10 @@ export const PhaseOneQuestionItem = React.createClass({
     let answerCode = evt.currentTarget.dataset.code
     let answerApply = evt.currentTarget.dataset.apply
     let questionText = evt.currentTarget.dataset.question
+    let questionChar = evt.currentTarget.dataset.characteristic
     let answerCat = this.props.allProps.categorySelect
-    // let answerQuestion = this.dataset.question
-    console.log(evt.currentTarget.dataset)
-    console.log(this.props.questionData["answer"])
-    ID_ACTIONS.answerPhaseOneAction(answerCat, answerCode, answerApply, questionText)
+    console.log(questionChar)
+    ID_ACTIONS.answerPhaseOneAction(answerCat, answerCode, answerApply, questionText, questionChar)
   },
 
   render: function(){
@@ -175,13 +189,14 @@ export const PhaseOneQuestionItem = React.createClass({
     let catDescription = this.props.questionData["description"]
     let totalFilterList = this.props.filterChars
     let question = this.props.questionObjData.question
+    let characteristicA = this.props.questionObjData.characteristic
 
 
     return (
 
-          <div data-code={catCode} data-apply={catApply} data-question={question} onClick={this._handlePhaseOneSelect} className = "question-card hvr-grow">
-              {catAnswers}
-          </div>
+      <div data-code={catCode} data-apply={catApply} data-question={question} data-characteristic = {characteristicA} onClick={this._handlePhaseOneSelect} className = "question-card hvr-grow">
+        {catAnswers}
+      </div>
 
     )
   }
@@ -200,20 +215,20 @@ export const PartTwoItem = React.createClass({
   render: function(){
   if (this.props.results === 1){
     return(
-      <div className = "question-card hvr-grow" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
-          <p>{this.props.partTwoData.state}</p><span><em>({this.props.results} tree)</em></span>
+      <div className = "question-card" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
+          <p>{this.props.partTwoData.state}</p>
         </div>
     )
   }
    if(this.props.results>1){
     return(
-        <div className = "question-card hvr-grow" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
-            <p>{this.props.partTwoData.state}</p><span><em>({this.props.results} trees)</em></span>
+        <div className = "question-card" data-ch= {this.props.partTwoData.characteristic} data-cat={this.props.categorySelect} data-id = {this.props.partTwoData.code} onClick = {this._handleQuesSelect}>
+            <p>{this.props.partTwoData.state}</p>
           </div>
       )
   }
   if (this.props.results ===0){return   (
-      <div></div>
+      <div className = 'bye'></div>
         )
 }}
 
