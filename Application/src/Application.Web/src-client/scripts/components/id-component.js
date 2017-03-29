@@ -125,7 +125,7 @@ _renderConfidence: function () {
     if (numberOfansweredQuestions === 0) {
       return this._renderCategoriesQuestion()
     } else if (numberOfansweredQuestions > 0 && numberOfansweredQuestions < 2 ){
-            console.log('test')
+            // console.log('test')
       return this._renderPhaseOne()
     } else if (numberOfansweredQuestions >= 2 && this.props.best.characteristic !== null  && this.props.best.occurrences >1){
       return this._renderPhaseTwo()}

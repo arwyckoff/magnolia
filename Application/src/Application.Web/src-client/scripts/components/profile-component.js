@@ -139,6 +139,7 @@ export const GenusItem = React.createClass({
   _handleGenusProfClick: function (evt) {
     evt.preventDefault()
     ACTIONS.changeReadyState(false)
+    scroll(0,0)
     let profileEl = evt.currentTarget
     let id = this.props.treeData.id
     let latinName = this.props.treeData.latinName

@@ -57,6 +57,8 @@ body {
 }
 
 .filter {
+  text-align: center;
+  flex-wrap:wrap;
 	@include mainTextColor;
 	@include pillBox;
 }
@@ -103,7 +105,7 @@ body {
 	margin-bottom: 5px;
 	padding-left: 3px;
 	background-color: white;
-	border: 1px solid #d3807e;
+	border: 1px solid rgba(211, 128, 126, 0.8);
 	border-radius: 2px;
 	box-shadow: inset 0px 0px 10px -5px black;
 }
@@ -216,4 +218,12 @@ body {
 
 .smallcaps {
 	font-size: .8em;
+}
+
+.no-filter-msg{
+  margin-left:auto;
+  margin-right:auto;
+  font-size: 14px;
+  color:gray;
+  @include raleway;
 }
