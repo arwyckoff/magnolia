@@ -157,3 +157,39 @@ a{
 .make-cursor{
 	cursor: pointer;
 }
+
+.glossary-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	h3 {
+		@include playfairDisplay;
+	}
+}
+
+.glossary-item {
+	@include pillBox;
+	flex-direction: column;
+	margin: 20px;
+	width: 100%;
+	padding: 20px;
+}
+
+.glossary-term {
+	text-align: center;
+	font-weight: 700;
+}
+
+.glossary-line {
+	width: 95%;
+	border-bottom: 1px solid #e07171;
+	margin: auto;
+	margin-top: -5px;
+}
+
+.glossary-definition {
+	font-weight: 500;
+	margin-top: 20px;
+}
