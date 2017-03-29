@@ -41,7 +41,7 @@ if (this.props.filterChars.length >0){
   let selectedCodeObj = codeListObj.map(
     (obj,i) => {
       return <div
-               className='item-bc make-inline make-cursor' key={i}>
+               className='item-bc make-inline' key={i}>
                {this.props.codeList[obj].state}
 
             <i onClick={this._handleBreadcrumbSelect}
