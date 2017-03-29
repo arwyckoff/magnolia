@@ -97,7 +97,7 @@ _renderPhaseTwo: function () {
     <div className = "question-box">
     <h4>Choose best answer for {this.props.best.characteristic.characteristic}</h4>
       {charStuff}
-      <div className = "question-card hvr-grow" data-ch= {this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick = {this._handleidontknow}>
+      <div className = "question-card question-center" data-ch= {this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick = {this._handleidontknow}>
           <p>I don't know/skip</p>
         </div>
     </div>
