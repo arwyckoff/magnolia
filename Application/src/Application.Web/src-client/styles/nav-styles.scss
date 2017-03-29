@@ -1,19 +1,31 @@
 @import './mixins.scss';
 
+.mag-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
 .navbar-styles{
 	@include navBarBackground;
 	@include navBarTextColor;
 	margin-left: 0;
 	margin-bottom: 0;
 
+	.navbar-current {
+		min-width: 300px;
+		text-align: center;
+	}
+
 	ul{
 		@include navBarTextColor;
 		margin-bottom: 0;
+		padding-left: 0;
 	}
 
 	i{
 		@include navBarTextColor;
-
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
@@ -30,10 +42,12 @@
 	position: relative;
 	text-align: right;
 
+
   	.arrow_box{
     	display: none;
   	}
 	}
+
 
 	.navbar-text{
 		@include playfairDisplay;
