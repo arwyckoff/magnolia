@@ -60,9 +60,9 @@ export const NavBar = React.createClass({
       )
     } else {
       return (
-        <nav className="navbar-container navbar navbar-fixed-top navbar-styles">
+        <nav className="mag-nav navbar-fixed-top navbar-styles">
           <div className="navbar-text navRoute">M<span className="smallcaps">AGNOLIA</span> T<span className="smallcaps">REE</span> ID</div>
-          <div className="navbar-text navRoute">{currentNavRouteFirst}<span className="smallcaps">{currentNavRouteRest}</span></div>
+          <div className="navbar-text navRoute navbar-current">{currentNavRouteFirst}<span className="smallcaps">{currentNavRouteRest}</span></div>
           <ul className="route-options">
             {this._showNavOptionsJSX(this.props.appRouteName, this.props.currentUser)}
           </ul>
