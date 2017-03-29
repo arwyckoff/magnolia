@@ -59,7 +59,7 @@ _handleReset: function(){
       return (
 
         <div className="all-trees">
-          <h4> Possible matches </h4>
+          <h4 className="possible-matches"> Possible matches </h4>
                {filteredTreeJSX}
         </div>
       )

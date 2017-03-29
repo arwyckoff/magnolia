@@ -49,9 +49,9 @@ export const IdBreadcrumbsComponent = React.createClass({
         }
       )
       return (
-        <div className="id-bc-container">
-          <i className="fa fa-chevron-left make-cursor make-button" aria-hidden="true" onClick={this._handleBack}><span className='rale'>back</span></i>
-          <h4 className="filter-select selected">selected Filters</h4>
+        <div className="id-bc-container id-bc-styles">
+          <i className="fa fa-chevron-left make-cursor make-button" aria-hidden="true" onClick={this._handleBack}><span className='rale'>Previous Question</span></i>
+          <div className="filter-select selected">Selected Filters</div>
           <div className="select-container make-inline">
 
             <div>{selectedCodeObj} </div>
@@ -61,8 +61,8 @@ export const IdBreadcrumbsComponent = React.createClass({
       )
     } else if (this.props.currentQuestion > 1) {
       return (
-        <div>
-          <i className="fa fa-chevron-left make-cursor make-button" aria-hidden="true" onClick={this._handleBack}> back</i>
+        <div className="bc-back-styles">
+          <i className="fa fa-chevron-left make-cursor make-button " aria-hidden="true" onClick={this._handleBack}><span className='rale'>Previous Question</span></i>
         </div>
       )
     }
