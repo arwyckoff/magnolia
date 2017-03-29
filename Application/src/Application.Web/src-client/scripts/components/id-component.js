@@ -74,7 +74,9 @@ export const IdComponent = React.createClass({
     return (
       <div className="question-box col-md-8 col-md-offset-2">
         {questionText}
-        {answerEls}
+        <div className="question-card-container">
+          {answerEls}
+        </div>
       </div>
     )
   },
@@ -84,7 +86,9 @@ export const IdComponent = React.createClass({
     return (
       <div className="question-box col-md-8 col-md-offset-2">
         <h4 className="id-view-header">Choose part of plant to identify</h4>
-        {questionStuff}
+        <div className="question-card-container">
+          {questionStuff}
+        </div>
       </div>
     )
 
@@ -96,10 +100,12 @@ export const IdComponent = React.createClass({
     return (
       <div className="question-box col-md-8 col-md-offset-2">
         <h4>Choose best answer for {this.props.best.characteristic.characteristic}</h4>
-        {charStuff}
-        <div className="question-card question-center" data-ch={this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick={this._handleidontknow}>
-          <p>I don't know/skip</p>
+        <div className="question-card-container">
+          {charStuff}
         </div>
+          <div className="question-card question-center" data-ch={this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick={this._handleidontknow}>
+            <p>I don't know/skip</p>
+          </div>
       </div>
     )
   },
