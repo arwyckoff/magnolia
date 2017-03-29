@@ -13,7 +13,7 @@
 	height: auto;
 	position: fixed;
 	left: -1px;
-	top: 20%;
+	top: 30%;
 }
 
 .home-head{
@@ -38,9 +38,16 @@
 	font-weight: 700;
 }
 
-.landing-invitation {
-	width: 20%;
-	text-align: center;
+.landing-line {
+	width: 275px;
+	border-bottom: 1px solid black;
+	margin: -10px 10px 10px 10px;
+}
+
+.landing-subtitle {
+	font-family: "Raleway", sans-serif;
+	font-weight: 500;
+	font-size: .6em;
 }
 
 .button-nav{
