@@ -33,7 +33,7 @@ _handleReset: function(){
 },
    render: function(){
 
-     if (this.props.currentQuestion <3 || this.props.filteredTrees.length/this.props.treeListData > 70){
+     if (this.props.filteredTrees.length/this.props.treeListData.length > .5){
        return (<div className = "bye"></div>)
      }
     if(this.props.filterChars.length > 0 && this.props.filteredTrees.length === 0){
