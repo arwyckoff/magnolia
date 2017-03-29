@@ -9,7 +9,6 @@ import {RegisterView} from './views/register-view.js'
 import {LoginView} from './views/login-view.js'
 import {LogoutView} from './views/logout-view.js'
 import {BrowseView} from './views/browse-view.js'
-import {LandingView} from './views/landing-view.js'
 import {IdentifyView} from './views/id-view.js'
 import {UserView} from './views/user-view.js';
 import {PreloaderComponent} from "./components/preloader-component.js"
@@ -37,7 +36,6 @@ export const ViewController = React.createClass({
       let newStoreObj = STORE.getStoreData()
       component.setState(newStoreObj)
     })
-    // ACTIONS.fetchAllTrees()
   },
 
   render: function(){
@@ -59,9 +57,9 @@ export const ViewController = React.createClass({
       case "LOGOUT":
         componentToRender = <LogoutView {...this.state}/>
         break;
-        case "IDENTIFY":
-          componentToRender = <IdentifyView {...this.state}/>
-          break;
+      case "IDENTIFY":
+        componentToRender = <IdentifyView {...this.state}/>
+        break;
       case "BROWSE":
         componentToRender = <BrowseView {...this.state}/>
         break;
@@ -74,6 +72,7 @@ export const ViewController = React.createClass({
       <div>
         <NavBar {...this.state}/>
         {componentToRender}
+        <img className="hero-img" src="../../images/mag-rollingback.svg" />
       </div>
     )
   }

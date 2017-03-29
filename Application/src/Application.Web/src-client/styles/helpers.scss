@@ -1,23 +1,21 @@
-
 @import "./mixins.scss";
+
 .question-tree-container{
 	display: block;
 	position: relative;
 }
 
 .hero-img{
-min-height: 100%;
-min-width: 1024px;
-opacity: 50%;
-/* Set up proportionate scaling */
-width: 100%;
-height: auto;
-
-/* Set up positioning */
-position: fixed;
-top: 0;
-left: 0;
+	z-index: -1;
+	min-height: 110%;
+	min-width: 1024px;
+	width: 105%;
+	height: auto;
+	position: fixed;
+	left: -1px;
+	top: 30%;
 }
+
 .home-head{
 	color: #ECF0F1;
 	font-size: 72px;
@@ -25,34 +23,31 @@ left: 0;
 	text-align: center;
 	padding-top: 20%;
 	text-shadow: 0px 3px 5px #E8DCDC;
-color: #2A2B2A;
+	color: #2A2B2A;
 }
 
 .landing-container{
-
-	@include absolute-center;
+	@include playfairDisplay;
+	height: 90vh;
 	width: 100%;
-	background-color:rgba(112, 108, 97, .3);
-	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 2em;
+	font-weight: 700;
 }
-.landing-options {
-	@include xcenter;
-	i{
-		padding-right: 5px;
-		color: white;
-			text-shadow: 0px 3px 5px #5D6D7E;
-	}
-}
-.landing-options button{
-	border-radius: 25px;
-	border: none;
-	padding: 10px 0;
-	background-color: rgba(236, 240, 241, .5);
-	color: rgb(40, 41, 44);
-	.btn-description{
-		display: none;
 
-	}
+.landing-line {
+	width: 275px;
+	border-bottom: 1px solid black;
+	margin: -10px 10px 10px 10px;
+}
+
+.landing-subtitle {
+	font-family: "Raleway", sans-serif;
+	font-weight: 500;
+	font-size: .6em;
 }
 
 .button-nav{
@@ -60,39 +55,24 @@ color: #2A2B2A;
 	font-size: 20px;
 	width: 200px;
 }
-.landing-options button:hover{
-		background-color: rgba(340, 244, 245, .6);
-		padding: 20px 0;
-		.btn-description{
-			display: inherit;
-			color: white;
-				text-shadow: 0px 3px 5px #5D6D7E;
-		}
-		i{
-			display: none;
-		}
-	}
-	.button-login{
-		display: block;
-		margin: 10px auto;
-		width: 200px;
-		font-size: 18px;
-	}
 
-.home-tree{
+.button-login{
+	display: block;
+	margin: 10px auto;
+	width: 200px;
+	font-size: 18px;
+}
+
+.home-tree {
 	padding-top: 80px;
-	p, h4{
+	p, h4 {
 		text-align: center;
 	}
 }
-.cat-active{
-	color: red;
-	background-color: purple;
-}
 
 .fade {
-   opacity: 1;
-   transition: opacity 3s ease-in-out;
-   -moz-transition: opacity 3s ease-in-out;
-   -webkit-transition: opacity 3s ease-in-out;
-   }
+  opacity: 1;
+  transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -webkit-transition: opacity 3s ease-in-out;
+}
