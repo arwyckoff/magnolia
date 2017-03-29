@@ -15,6 +15,7 @@
 .register-box input,
 button {
   display: block;
+  outline:none;
   margin-left: auto;
   margin-right: auto;
   width: 300px;
@@ -24,6 +25,7 @@ button {
 
 .register-box button{
   border: none;
+  outline:none;
   color: white;
   z-index: 100;
   font-size: 18px;
@@ -64,6 +66,7 @@ input 				{
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
+  outline:none;
   width:300px;
   border:none;
   border-bottom:1px solid #D3807E;
@@ -88,6 +91,7 @@ label 				 {
 /* active state */
 input:focus ~ label, input:valid ~ label 		{
   top:-20px;
+  outline:none;
   font-size:14px;
   color:#D3807E;
 }
