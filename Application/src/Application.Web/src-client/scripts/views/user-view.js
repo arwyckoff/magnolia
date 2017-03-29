@@ -7,10 +7,6 @@ export const UserView = React.createClass({
   getInitialState: function(){
     return STORE.getStoreData()
   },
-  componentDidMount: function(){
-        console.log(this.props.currentUser)
-  },
-
   render: function(){
     return(
       <div className = "container-user">

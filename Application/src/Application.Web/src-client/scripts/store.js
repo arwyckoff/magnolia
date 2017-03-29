@@ -63,9 +63,7 @@ export const STORE = {
     currentUser: {id: null,
                   email: null,
                   password: null},
-    userProfile: {id: null,
-                  userName: null,
-                  plants: null},
+    userProfile: {},
     myImage: '',
     preferredChars: [],
     legalChars: [],
@@ -85,6 +83,7 @@ export const STORE = {
     currentQuestion: 1,
     prevQuestions: [],
     allQuestions: {},
+    popupShow: false,
   },
   getStoreData: function(){
 		return this._data

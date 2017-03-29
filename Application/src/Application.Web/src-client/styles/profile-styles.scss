@@ -104,3 +104,101 @@ p{
   }
 }
 }
+
+.tree-user-container{
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 400px;
+  border-radius: 2px;
+  border: 1px rgba(211, 128, 126, 0.8) solid;
+  box-shadow: inset 0px 0px 0px 1px white;
+  justify-content: center;
+  filter: drop-shadow(0px 0px 1px #ffb8b8);
+  background-color: white;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   cursor: pointer;
+  .tree-user-name{
+      font-size: 20px;
+      margin-bottom: 0;
+        @include playfairDisplay;
+    text-align: center;
+  }
+}
+.tree-user-container:hover{
+  		filter: drop-shadow(0px 0px 2px #e07171);
+}
+  .user-name-head{
+    font-size: 20px;
+  }
+  .tree-head{
+        @include playfairDisplay;
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 30px;
+  }
+
+  .comment-head{
+    @include playfairDisplay;
+    font-size: 22px;
+  }
+  .field-notes{
+    font-size: 18px;
+    span{
+      font-weight: 600;
+      padding-right: 20px;
+    }
+  }
+
+  .container-user{
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .user-container{
+    padding-top: 60px;
+
+  }
+  .username-head{
+    font-size: 18px;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .add-tree{
+    @include absolute-center;
+    background-color: white;
+    border: 1px solid gray;
+    display: block;
+    font-size: 18px;
+    padding: 20px;
+    @include pillBox;
+    form{
+      padding: 10px;
+      text-align: center;
+    p{
+      font-size: 20px;
+    }
+    }
+  }
+  .tree-name{
+    text-align: center;
+    @include playfairDisplay;
+    font-size: 24px;
+  }
+  .add-tree form button, .add-tree form textarea{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ .add-tree form button{
+  @include pillBox;
+}
+.add-tree form button:hover{
+    		filter: drop-shadow(0px 0px 2px #e07171);
+}
+.field-input{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: left;
+  padding-left: 5px;
+}
