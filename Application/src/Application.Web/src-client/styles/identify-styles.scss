@@ -1,26 +1,29 @@
 @import './mixins.scss';
 
 .question-container{
+	padding-left: 20px;
+	padding-right: 20px;
 	padding-top: 80px;
 	text-align: center;
 	margin-left: 5%;
 	margin-right: 5%;
 	background-color: white;
-	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 	h4{
 		font-size: 30px;
 		margin-bottom: 25px;
-margin-top: 0;
-@include playfairDisplay;
-font-size: 22px;
+		margin-top: 20px;
+		@include playfairDisplay;
+		font-size: 22px;
 	}
 }
 .question-box{
 	font-size: 16px;
 	display: inline-block;
-	margin: 20px;
-	width: 100%;
-
+}
+.question-box h4{
+	font-size: 36px;
 }
 .question-top{
 	position: relative;
@@ -34,7 +37,6 @@ font-size: 22px;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-
 }
 .question-card:hover{
 		filter: drop-shadow(0px 0px 2px #e07171);
@@ -46,21 +48,21 @@ font-size: 22px;
 	margin: 10px;
 	border: 1px solid #2A2B2A;
 	cursor: pointer;
-background-color: white;
-border-radius: 2px;
-font-size: 16px;
-@include pillBox;
-flex-grow: 0;
-flex-direction: column;
-p {
-margin-bottom: 0;
-font-size: 16px;
-}
+	background-color: white;
+	border-radius: 2px;
+	font-size: 20px;
+	@include pillBox;
+	flex-grow: 0;
+	flex-direction: column;
+	p {
+		margin-bottom: 0;
+		font-size: 22px;
+	}
 }
 .question-center{
 	display: block;
 	text-align: center;
-	width: 170px;
+	width: 265px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -71,8 +73,8 @@ font-size: 16px;
 .tree-one{
 	display: inline-block;
 	width: 50%;
-	padding: 10px;
-	font-size: 16px;
+	padding: 5px;
+	font-size: 22px;
 }
 .one-tree{
 	width: 100%;
@@ -83,20 +85,10 @@ font-size: 16px;
 	padding-left: 5px;
 }
 .question-bc-container .id-bc-container{
-width: 100%;
-position: absolute;
-top: 75px;
-text-align: left;
-}
-.question-bc-container .id-bc-container >*{
-display: inline-block;
-font-size: 14px;
-.filter-select{
-	text-align: left;
-}
-.id-bc-container{
-	z-index: 1;
-}
+	width: 100%;
+	top: 75px;
+	text-align: center;
+	margin-bottom: 10px;
 }
 .make-inline{
 	display: inline-block;
@@ -123,18 +115,20 @@ margin-left: 5px;
 	margin-right: auto;
 	h4{
 		@include playfairDisplay;
-		font-size: 22px;
+		font-size: 28px;
 	}
 }
 .make-cursor{
 	cursor: pointer;
 }
 .filter-select, .select-container{
+	font-size:20px;
 	padding-left: 40px;
 
 }
 .make-reset{
-	margin-left: 50px;
+	//made reset button not centered//
+	// margin-left: 50px;
 	padding: 1px 3px;
 	border-radius: 4px;
 	border: 1px rgba(211, 128, 126, 0.8) solid;
@@ -157,4 +151,116 @@ a{
 }
 .make-cursor{
 	cursor: pointer;
+}
+
+.glossary-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	h3 {
+		@include playfairDisplay;
+	}
+}
+
+.glossary-item {
+	@include pillBox;
+	flex-direction: column;
+	margin: 20px;
+	width: 100%;
+	padding: 20px;
+}
+
+.glossary-term {
+	text-align: center;
+	font-weight: 700;
+}
+
+.glossary-line {
+	width: 95%;
+	border-bottom: 1px solid #e07171;
+	margin: auto;
+	margin-top: -5px;
+}
+
+.glossary-definition {
+	font-weight: 500;
+	margin-top: 20px;
+}
+
+.id-bc-reset-previous-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.id-bc-container {
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.id-bc-previous {
+	font-size: 22px;
+}
+
+.id-reset {
+	@include pillBox;
+	font-size: 22px;
+	flex-grow: 0;
+	width: 47.8%;
+	min-width: 300px;
+}
+
+.id-reset:hover {
+	@include pillBoxHover;
+}
+
+.id-filters-heading {
+	z-index: 1;
+	margin-bottom: -37px;
+	margin-top: 13px;
+	color: #7d7d7d;
+	font-size: 1.5em;
+}
+
+.id-breadcrumbs {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	overflow: auto;
+	height: 45px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	padding-left: 3px;
+	border: 1px solid rgba(211, 128, 126, 0.8);
+	border-radius: 2px;
+	box-shadow: inset 0px 0px 10px -5px black;
+	z-index: 2;
+	width: 97.2%;
+}
+
+.id-breadcrumb-item {
+	@include hoverTextColor;
+	margin-left: 3px;
+	margin-right: 3px;
+	border: 1px solid rgba(211, 128, 126, 0.8);
+	background-color: white;
+	padding: 3px 10px;
+	border-radius: 2px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	white-space: nowrap;
+	max-height: 28px;
+}
+
+.id-breadcrumb-item:hover {
+	@include pillBoxHover;
 }
