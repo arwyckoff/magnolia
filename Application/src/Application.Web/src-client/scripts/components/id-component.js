@@ -63,7 +63,7 @@ export const IdComponent = React.createClass({
 
   _makeGlossary: function (question) {
     let questionDescription
-    if (question.description.length !== "") {
+    if (question.description !== "") {
       questionDescription = (
         <div className="glossary-item">
           <div className="glossary-term">
