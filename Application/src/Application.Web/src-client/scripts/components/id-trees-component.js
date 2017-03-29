@@ -42,6 +42,15 @@ _handleReset: function(){
 
       )
     }
+    else if (this.props.filteredTrees.length===1){
+      let filteredTreeJSX =  this._makeTreeComponents(this.props.filteredTrees)
+      return (
+
+        <div className="all-trees">
+               {filteredTreeJSX}
+        </div>
+      )
+    }
     else {
       let filteredTreeJSX =  this._makeTreeComponents(this.props.filteredTrees)
       return (
