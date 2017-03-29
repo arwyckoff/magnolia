@@ -21,8 +21,8 @@ namespace Magnolia.Api.Models
                 return _characteristicViewModels;
 
             var characteristics = await context.Characteristics.Include(s => s.States)
-                                                    .Include(s => s.Category)
-                                                    .ToListAsync();
+                                                               .Include(s => s.Category)
+                                                               .ToListAsync();
 
             var characteristicViewModels = new Dictionary<string, List<CharacteristicViewModel>>();
 
@@ -42,11 +42,14 @@ namespace Magnolia.Api.Models
                     Permutations = characteristic.Permutations
                 };
 
+                var described = 0;
+
                 foreach (var state in characteristic.States)
                 {
                     if (!context.PlantCharacteristics.Any(s => s.StateId == state.Id))
                         continue;
 
+                    described += context.PlantCharacteristics.Where(s => s.StateId == state.Id).Count();
                     characteristicViewModel.States.Add(new StateViewModel()
                     {
                         Characteristic = characteristic.Value,
@@ -55,7 +58,21 @@ namespace Magnolia.Api.Models
                     });
                 }
 
+                characteristicViewModel.Describes = described;
+
                 characteristicViewModels[category].Add(characteristicViewModel);
+            }
+
+            var categories = new List<string>();
+
+            foreach (var category in characteristicViewModels.Keys)
+            {
+                categories.Add(category);
+            }
+
+            foreach (var category in categories)
+            {
+                characteristicViewModels[category] = characteristicViewModels[category].OrderByDescending(c => c.Describes).ToList();
             }
 
             return _characteristicViewModels = characteristicViewModels;
