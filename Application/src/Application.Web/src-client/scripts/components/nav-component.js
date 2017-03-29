@@ -52,6 +52,8 @@ export const NavBar = React.createClass({
   },
 
   render: function () {
+    let currentNavRouteFirst = this.props.currentNavRoute[0]
+    let currentNavRouteRest = this.props.currentNavRoute.slice(1)
     if (this.props.ready === false) {
       return (
         <PreloaderComponent />
@@ -59,9 +61,9 @@ export const NavBar = React.createClass({
     } else {
       return (
         <nav className="navbar-container navbar navbar-fixed-top navbar-styles">
-          <div className="navbar-text navRoute magnolia">MAGNOLIA TREE ID</div>
-          <div className="navbar-text navRoute current-route">{this.props.currentNavRoute}</div>
-          <ul className="route-options icons">
+          <div className="navbar-text navRoute">M<span className="smallcaps">AGNOLIA</span> T<span className="smallcaps">REE</span> ID</div>
+          <div className="navbar-text navRoute">{currentNavRouteFirst}<span className="smallcaps">{currentNavRouteRest}</span></div>
+          <ul className="route-options">
             {this._showNavOptionsJSX(this.props.appRouteName, this.props.currentUser)}
           </ul>
         </nav>

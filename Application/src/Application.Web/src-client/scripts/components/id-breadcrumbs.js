@@ -42,7 +42,7 @@ if (this.props.filterChars.length >0){
     (obj,i) => {
       return <div
 
-               className='item-bc' key={i}>
+               className='item-bc make-inline' key={i}>
                {this.props.codeList[obj].state}
 
             <i onClick={this._handleBreadcrumbSelect}
@@ -55,11 +55,11 @@ if (this.props.filterChars.length >0){
       <div className="id-bc-container">
   <i className="fa fa-chevron-left makeHand make-pink make-button" aria-hidden="true" onClick = {this._handleBack}>Back</i>
           <h4 className="filter-select selected">Selected Filters</h4>
-          <div className=" select-container">
+            <h4 onClick={this._handleResetButtonSelect} className="reset-btn reset">Reset</h4>
+          <div className="select-container">
 
       <div >{selectedCodeObj} </div>
     </div>
-          <h4 onClick={this._handleResetButtonSelect} className="reset-btn reset hvr-grow">Reset</h4>
       </div>
 
   </div>
