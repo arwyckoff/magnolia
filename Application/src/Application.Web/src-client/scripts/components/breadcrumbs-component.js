@@ -31,7 +31,19 @@ export const BreadcrumbsComponent = React.createClass({
         )
       }
     )
+    if(codeListObj.length === 0){
+      return(
+        <div className="breadcrumb-container">
+          <h4 className="breadcrumb-heading">Selected Filters</h4>
+          <h4 onClick={this._handleResetButtonSelect} className="breadcrumb-heading reset">Reset</h4>
+          <div className="breadcrumb-box">
+              <h4 className="no-filter-msg">Your Filters Will Appear Here</h4>
+          </div>
+        </div>
 
+
+      )
+    } else {
     return (
       <div className="breadcrumb-container">
         <h4 className="breadcrumb-heading">Selected Filters</h4>
@@ -40,6 +52,7 @@ export const BreadcrumbsComponent = React.createClass({
           {selectedCodeObj}
         </div>
       </div>
-    )
+      )
+    }
   }
 })

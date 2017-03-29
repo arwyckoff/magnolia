@@ -39,7 +39,7 @@ export const CharacteristicComponent = React.createClass({
     return (
 
       <div>
-        <h4>Characteristics</h4>
+        <h4 className="text-center">Characteristics</h4>
         {charJSX}
       </div>
 
