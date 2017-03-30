@@ -96,7 +96,7 @@ export const ID_ACTIONS = {
     let commonObj = _getBestBetweenPreferredAndOtherwise(preferredCharObj.preferred, preferredCharObj.otherwise, filteredTrees, .3)
     STORE.setStore('best', commonObj)
     let currentQuestion = STORE.getStoreData().currentQuestion
-    ID_ACTIONS.updateQuestionNumber(currentQuestion)
+    this.updateQuestionNumber(currentQuestion)
     let answeredQuestionArray = STORE.getStoreData().answeredQuestions;
     answeredQuestionArray.push(category);
     STORE.setStore('answeredQuestions', answeredQuestionArray);
@@ -114,6 +114,7 @@ export const ID_ACTIONS = {
     let answeredQuestionArray = STORE.getStoreData().answeredQuestions;
     answeredQuestionArray.push(answeredQuestion);
     STORE.setStore('answeredQuestions', answeredQuestionArray);
+    this.updateQuestionNumber(data.currentQuestion)
     let prevQuesArray = STORE.getStoreData().prevQuestions
     prevQuesArray.push(characteristic)
     STORE.setStore('prevQuestions', prevQuesArray)
