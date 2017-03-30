@@ -7,34 +7,27 @@ export const RegisterComponent = React.createClass({
 
   render: function () {
     return (
-      <div>
-        <div className="auth-form register-box">
-          <form onSubmit={this._handleNewUser}>
-            <div className="group">
-              {/* <p>choose a username</p> */}
-              <input type="text" className="form-control" name="usernameField" placeholder="choose a username" />
-              <span className="highlight"></span>
-              <span className="bar"></span>
-            </div>
-            <div className="group">
-              {/* <p>choose a unique password</p> */}
-              <input type="password" className="form-control" name="passwordField" placeholder="choose a unique password" />
-              <span className="highlight"></span>
-              <span className="bar"></span>
-            </div>
-            <div className="group">
-              {/* <p>confirm password</p> */}
-              <input type="password" className="form-control" name="passwordFieldConfirm" placeholder="confirm password"  />
-              <span className="highlight"></span>
-              <span className="bar"></span>
-            </div>
-            <button type="submit">Start Identifying</button>
-
-          </form>
-
-        </div>
+      <div className="auth-form login-box">
+        <h2>create an account</h2>
+        <form onSubmit={this._handleNewUser}>
+          <div className="group">
+            <input type="text" className="form-control" name="usernameField" placeholder="choose a username" />
+            <span className="highlight"></span>
+            <span className="bar"></span>
+          </div>
+          <div className="group">
+            <input type="password" className="mag-form" name="passwordField" placeholder="choose a unique password" />
+            <span className="highlight"></span>
+            <span className="bar"></span>
+          </div>
+          <div className="group">
+            <input type="password" className="mag-form" name="passwordFieldConfirm" placeholder="confirm password" />
+            <span className="highlight"></span>
+            <span className="bar"></span>
+          </div>
+          <button type="submit" className="loginbut"><img src="../../images/tree-576846_1280.png" className="loginlog" /><span className="label loginarrow_box">Start identifying</span></button>
+        </form>
       </div>
-
     )
   },
 

@@ -40,7 +40,7 @@ _handleReset: function(){
       return (
 
         <div>
-          <h2>No trees match your criteria. Please <a onClick = {this._handleReset}>try again</a> or explore all in <a onClick = {this._handleBrowse}>browse view</a></h2>
+          <h2>No trees match your criteria. Please <a className="landing-link" onClick={this._handleReset}>try again</a> or explore all in <a className="landing-link" onClick={this._handleBrowse}>browse view</a></h2>
         </div>
 
       )
@@ -59,7 +59,7 @@ _handleReset: function(){
       return (
 
         <div className="all-trees">
-          <h4> Possible matches </h4>
+          <h4 className="possible-matches"> Possible matches </h4>
                {filteredTreeJSX}
         </div>
       )
