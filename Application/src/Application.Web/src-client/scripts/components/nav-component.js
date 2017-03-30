@@ -17,7 +17,6 @@ export const NavBar = React.createClass({
         { appRouteName: 'BROWSE', displayText: <i className="fa-2x fa fa-binoculars"><span className="label arrow_box">browse</span></i>, hashRoute: 'browse' },
         { appRouteName: 'LOGIN', displayText: <i className="fa-2x fa fa-sign-in"><span className="label arrow_box">login</span></i>, hashRoute: 'login' },
         { appRouteName: 'REGISTER', displayText: <i className="fa-2x fa fa-user-plus"><span className="label arrow_box">register</span></i>, hashRoute: 'register' },
-
       ]
     } else {
       routeList = [
@@ -51,6 +50,10 @@ export const NavBar = React.createClass({
     }
   },
 
+  _handleBrandClick: function () {
+    ACTIONS.changeCurrentNav('HOME', '')
+  },
+
   render: function () {
     let currentNavRouteFirst = this.props.currentNavRoute[0]
     let currentNavRouteRest = this.props.currentNavRoute.slice(1)
@@ -61,7 +64,7 @@ export const NavBar = React.createClass({
     } else {
       return (
         <nav className="mag-nav navbar-fixed-top navbar-styles">
-          <div className="navbar-text navRoute">M<span className="smallcaps">AGNOLIA</span> T<span className="smallcaps">REE</span> ID</div>
+          <div className="navbar-text navRoute makeHand mag-brand" onClick={this._handleBrandClick} >M<span className="smallcaps">AGNOLIA</span> T<span className="smallcaps">REE</span> ID</div>
           <div className="navbar-text navRoute navbar-current">{currentNavRouteFirst}<span className="smallcaps">{currentNavRouteRest}</span></div>
           <ul className="route-options">
             {this._showNavOptionsJSX(this.props.appRouteName, this.props.currentUser)}
