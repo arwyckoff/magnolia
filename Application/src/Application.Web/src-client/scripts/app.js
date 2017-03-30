@@ -25,6 +25,7 @@ const AppRouter = Backbone.Router.extend({
     'browse': 'showBrowsePage',
     'identify': 'showIdentifyPage',
     'my-profile': 'showUserPage',
+    'resources':  'showResourcesPage',
 },
 
 showHomePage: function(){
@@ -52,6 +53,9 @@ showIdentifyPage: function(){
 },
 showUserPage: function(){
     ReactDOM.render(<ViewController fromRoute = {'MYPROFILE'} />, document.querySelector('#app-container'))
+},
+showResourcesPage: function(){
+    ReactDOM.render(<ViewController fromRoute = {'RESOURCES'} />, document.querySelector('#app-container'))
 },
 })
 
