@@ -62,6 +62,10 @@ export const IdComponent = React.createClass({
   },
 
   _makeGlossary: function (question) {
+    if (question.description === "") {
+      return <div className="bye"></div>
+    }
+
     let questionDescription
     if (question.description !== "") {
       questionDescription = (
@@ -225,7 +229,6 @@ export const PhaseOneQuestionItem = React.createClass({
     let questionText = evt.currentTarget.dataset.question
     let questionChar = evt.currentTarget.dataset.characteristic
     let answerCat = this.props.allProps.categorySelect
-    console.log(questionChar)
     ID_ACTIONS.answerPhaseOneAction(answerCat, answerCode, answerApply, questionText, questionChar)
   },
 
