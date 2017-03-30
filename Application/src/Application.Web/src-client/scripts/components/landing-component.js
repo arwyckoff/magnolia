@@ -23,8 +23,26 @@ export const LandingComponent = React.createClass({
             <em>— or —</em>
           </div>
           <div className="landing-browse-action landing-pill">
-            <a  className="landing-link" data-where="browse" onClick={this._handleLink}>Browse our database</a>
+            <a className="landing-link" data-where="browse" onClick={this._handleLink}>Browse our database</a>
             <p>of trees native to the Southeastern United States</p>
+          </div>
+          <div className="landing-footer landing-pill">
+            <div className="landing-footer-contributors">
+              <h4 className="contributors-heading">Contributors</h4>
+              <div className="contributors-name">
+                <a className="landing-link" href="https://github.com/marymhart">Mary Hart</a>,
+                <br /> 
+                <a className="landing-link" href="http://marcondesian.net">Alexandre Marcondes</a>,
+                <br /> 
+                and <a className="landing-link" href="https://github.com/arwychoff">Andrew Wyckoff</a>
+              </div>
+            </div>
+            <div>
+              <a className="landing-link" data-where="resources" onClick={this._handleLink}>Resources</a>
+            </div>
+            <div>
+              <a className="landing-link" href="https://github.com/MagnoliaTreeID/magnolia">View on GitHub</a>
+            </div>
           </div>
         </div>
       </div>

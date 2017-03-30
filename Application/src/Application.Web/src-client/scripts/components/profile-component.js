@@ -164,7 +164,7 @@ export const GenusItem = React.createClass({
 })
 export const AddTreeComponent = React.createClass({
   _handleProfileAdd: function (evt) {
-    if (this.props.currentUser.id === null){
+    if (this.props.currentUser.id === null){ 
       ACTIONS.changeCurrentNav('LOGIN', 'login')
     }
     else{
