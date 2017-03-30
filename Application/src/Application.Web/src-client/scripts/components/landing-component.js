@@ -16,14 +16,14 @@ export const LandingComponent = React.createClass({
         <div className="landing-subtitle">A polychotomous tree identification engine</div>
         <div className="landing-call-to-action">
           <div className="landing-identify-action landing-pill">
-            <a data-where="identify" onClick={this._handleLink} >Start identifying</a>
+            <a className="landing-link" data-where="identify" onClick={this._handleLink} >Start identifying</a>
             <p>trees based on their characteristics</p>
           </div>
           <div className="landing-or-action">
             <em>— or —</em>
           </div>
           <div className="landing-browse-action landing-pill">
-            <a data-where="browse" onClick={this._handleLink}>Browse our database</a>
+            <a  className="landing-link" data-where="browse" onClick={this._handleLink}>Browse our database</a>
             <p>of trees native to the Southeastern United States</p>
           </div>
         </div>
