@@ -33,6 +33,7 @@
 }
 
 .question-card-container {
+	padding-bottom:40px;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -173,6 +174,7 @@ a{
 	justify-content: center;
 
 	h3 {
+		font-size:36px;
 		@include playfairDisplay;
 	}
 }
@@ -186,6 +188,7 @@ a{
 }
 
 .glossary-term {
+	font-size:26px;
 	text-align: center;
 	font-weight: 700;
 }
@@ -198,6 +201,7 @@ a{
 }
 
 .glossary-definition {
+	font-size:20px;
 	font-weight: 500;
 	margin-top: 20px;
 }
