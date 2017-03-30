@@ -114,7 +114,8 @@ export const IdComponent = React.createClass({
     let catQuestionTrackerEl = this.props.catQuestionTracker[currentCatSelect]
     let catCodeArray = catQuestionTrackerEl["codeArray"]
     let questionObjArray = phaseOneQuestions[currentCatSelect]
-    let nextQuestion = _getNextCategoryQuestion(questionObjArray, catCodeArray, this.props.answeredQuestions)
+    let answeredQuestions = STORE.getStoreData().answeredQuestions
+    let nextQuestion = _getNextCategoryQuestion(questionObjArray, catCodeArray, answeredQuestions)
     let questionText = nextQuestion["question"]
     let answersArray = nextQuestion["answers"]
     let answerEls = this._makeAnswersComponent(answersArray, nextQuestion)
@@ -176,16 +177,17 @@ export const IdComponent = React.createClass({
     let numberOfansweredQuestions = answeredQuestions.length
     let currentQuestion = this.props.currentQuestion
     let filtersLength = STORE.getStoreData().filterChars.length
+    let filteredTrees = STORE.getStoreData().filteredTrees
 
     if (categorySelected === '' || currentQuestion === 1) {
       return this._renderCategoriesQuestion()
     } else {
-      if (filtersLength < 3) {
+      if (filtersLength < 3 && currentQuestion < 3) {
         return this._renderPhaseOne()
-      } else if (filtersLength >= 3 && this.props.best.characteristic !== null && this.props.best.occurrences > 1) {
+      } else if ((filtersLength >= 3 || currentQuestion >= 3) && filteredTrees.length > 1) {
         return this._renderPhaseTwo()
       }
-      else if (this.props.best.occurrences === 1 || this.props.filteredTrees === this.props.best.occurrences) {
+      else if (this.props.filteredTrees.length === 1) {
         return this._renderConfidence()
       } else {
         // ???? Something ain't right
