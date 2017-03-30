@@ -21,7 +21,7 @@ export const NavBar = React.createClass({
     } else {
       routeList = [
         { appRouteName: 'HOME', displayText: <i className="fa fa-2x fa-tree"><span className="label arrow_box">home</span></i>, hashRoute: '' },
-        { appRouteName: 'IDENTIFY', displayText: <i className="fa-2x fa fa-search"><span className="label arrow_box">identify</span></i>, hashRoute: 'identify' },
+        { appRouteName: 'IDENTIFY', displayText: <i className="fa-2x fa fa-leaf"><span className="label arrow_box">identify</span></i>, hashRoute: 'identify' },
         { appRouteName: 'BROWSE', displayText: <i className="fa-2x fa fa-binoculars" aria-hidden="true"><span className="label arrow_box">browse</span></i>, hashRoute: 'browse' },
         { appRouteName: 'MYPROFILE', displayText: <i className="fa-2x fa fa-user-o" aria-hidden="true"><span className="label arrow_box">my profile</span></i>, hashRoute: 'my-profile' },
         { appRouteName: 'LOGOUT', displayText: <i className="fa-2x fa fa-sign-out" aria-hidden="true"><span className="label arrow_box">logout</span></i>, hashRoute: 'logout' }
