@@ -49,11 +49,11 @@ export const IdBreadcrumbsComponent = React.createClass({
   },
 
   _makePreviousQuestion: function () {
-    return <div className="id-reset make-cursor" onClick={this._handleBack}><i className="fa fa-chevron-left" aria-hidden="true"></i>Previous Question</div>
+    return <div className="id-reset make-cursor" onClick={this._handleBack}><i className="fa fa-chevron-left fa-fw" aria-hidden="true"></i>Previous Question</div>
   },
 
   _makeResetButton: function () {
-    return <div onClick={this._handleResetButtonSelect} className="id-reset make-cursor">reset filters</div>
+    return <div onClick={this._handleResetButtonSelect} className="id-reset make-cursor">Reset Filters</div>
   },
 
   render: function () {
