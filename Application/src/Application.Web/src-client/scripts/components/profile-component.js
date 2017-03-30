@@ -150,6 +150,7 @@ export const GenusItem = React.createClass({
     STORE.setStore('genus', latinGenusWord)
     ACTIONS.fetchProfileStuff(latinGenusWord, latinName)
     STORE.setStore('myImage', '')
+    ACTIONS.changeCurrentNav('PROFILE', latinRoute)
   },
   render: function () {
 
@@ -164,15 +165,17 @@ export const GenusItem = React.createClass({
 })
 export const AddTreeComponent = React.createClass({
   _handleProfileAdd: function (evt) {
-    if (this.props.currentUser.id === null){ 
-      ACTIONS.changeCurrentNav('LOGIN', 'login')
-    }
-    else{
     let formEl = evt.target
     let inputComment = formEl.commentField.value
     let newObject = {}
     newObject.plantId = this.props.myTree.id
     newObject.comment = inputComment
+    if (this.props.currentUser.id === null){
+      STORE.setStore('userProfileRedirect', true)
+      ACTIONS.changeCurrentNav('LOGIN', 'login')
+      STORE.setStore('userInfosave', newObject)
+    }
+    else {
       ACTIONS.updateUserPlants(newObject)
       ACTIONS.changeCurrentNav('MYPROFILE', 'my-profile')
     }

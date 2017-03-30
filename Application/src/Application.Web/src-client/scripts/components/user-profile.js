@@ -9,7 +9,6 @@ export const UserProfileComponent = React.createClass({
   _handleBrowse: function(){
     ACTIONS.changeCurrentNav('BROWSE', 'browse')
   },
-
   _makeUserComponents: function (plantList) {
       let arrayOfTreeComponents = plantList.map(
         (smod, i) => {
@@ -22,7 +21,7 @@ export const UserProfileComponent = React.createClass({
     },
    render: function(){
 
-     if ( this.props.userProfile.plants!==null && this.props.userProfile.plants.length >0 ){
+     if ( this.props.userProfile.plants!==null && this.props.userProfile.plants !== undefined && this.props.userProfile.plants.length >0 ){
       //  let userJsx =  this._makeUserComponents(this.props.currentUser.plants)
        return (
          <div className = "user-container">

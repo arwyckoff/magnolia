@@ -85,6 +85,8 @@ export const STORE = {
     allQuestions: {},
     popupShow: false,
     userClickedPrevious: false,
+    userInfosave: {},
+    userProfileRedirect: false,
   },
   getStoreData: function(){
 		return this._data

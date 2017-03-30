@@ -36,6 +36,7 @@ export const ViewController = React.createClass({
       let newStoreObj = STORE.getStoreData()
       component.setState(newStoreObj)
     })
+              ACTIONS.fetchUserInfo()
   },
 
   render: function(){
@@ -71,7 +72,7 @@ export const ViewController = React.createClass({
         break;
         default:
     }
-    
+
     return(
       <div>
         <NavBar {...this.state}/>

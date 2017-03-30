@@ -21,12 +21,6 @@ export const BrowseView = React.createClass({
     ACTIONS.changeCharacteristic("leaf type")
     let component = this;
 
-    // STORE.onStoreChange(function(){
-    //   component.setState( STORE.getStoreData() )
-    // })
-
-    // console.log("FECTHY FETCH??")
-    // ACTIONS.fetchAllTrees()
 
   },
 

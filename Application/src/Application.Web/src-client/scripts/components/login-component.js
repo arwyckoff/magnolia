@@ -1,5 +1,6 @@
 import React from 'react'
 import { ACTIONS } from '../actions.js'
+import { STORE } from '../store.js'
 import { UserModel } from '../models/model-user.js'
 
 export const LoginComponent = React.createClass({
