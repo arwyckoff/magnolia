@@ -11,6 +11,7 @@
 }
 
 body {
+	padding-top:50px;
 	@include raleway;
 	@include mainBackgroundColor;
 }
@@ -179,7 +180,6 @@ body {
 }
 
 .browseCompContainer{
-	margin-top:50px;
 	@include mainTextColor;
 	@include mainBackgroundColor;
 	min-height: 100vh;
@@ -252,4 +252,39 @@ body {
 }
 .container-tree h3{
   font-size:42px;
+}
+// .mag-footer-container {
+//     // background: none repeat scroll 0 0 transparent;
+//     bottom: 0;
+//     position: fixed;
+//     text-align: center;
+//     width: 100%;
+// }
+//
+// .footer {
+//     // background: none repeat scroll 0 0 blue;
+//     height: 100px;
+//     margin: auto;
+//     width: 400px;
+// }
+.footer-container{
+	padding-right:20px;
+	padding-left:20px;
+	display:flex;
+	color:#2A2B2A;
+	background-color: #EF918F;
+	justify-content: space-between;
+}
+.contributors{
+	vertical-align: middle;
+color:#2A2B2A;
+}
+.resources-link{
+	vertical-align: middle;
+	color:#2A2B2A;
+}
+.github-link{
+	vertical-align: middle;
+	color:#2A2B2A;
+
 }

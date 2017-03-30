@@ -37,14 +37,34 @@
 	font-size: 2em;
 	font-weight: 700;
 }
-
+.resource-container{
+	@include playfairDisplay;
+	height: 90vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 2em;
+	font-weight: 700;
+}
 .landing-line {
 	width: 325px;
 	border-bottom: 1px solid black;
 	margin: -10px 10px 10px 10px;
 }
-
+.resource-line{
+	width: 325px;
+	border-bottom: 1px solid black;
+	margin: -10px 10px 10px 10px;
+}
 .landing-subtitle {
+	font-family: "Raleway", sans-serif;
+	font-weight: 500;
+	font-size: .8em;
+}
+
+.resource-subtitle{
 	font-family: "Raleway", sans-serif;
 	font-weight: 500;
 	font-size: .8em;
@@ -62,17 +82,36 @@
 	}
 }
 
+.resource-pill{
+	@include pillBox;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	p {
+		margin-bottom: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
 .landing-or-action {
 	margin: 15px;
 }
-
+.resource-and{
+	margin: 15px;
+}
 .landing-identify-action {
+	margin-top: 15px;
+}
+.resource-action{
 	margin-top: 15px;
 }
 
 .landing-browse-action {
 	margin-top: 15px;
 }
+
+
 
 .landing-call-to-action {
 	margin-top: 10px;
@@ -82,7 +121,14 @@
 	width: 300px;
 	text-align: center;
 }
-
+.resource-call-to-action{
+	margin-top: 10px;
+	font-family: "Raleway", sans-serif;
+	font-weight: 500;
+	font-size: .6em;
+	width: 90%;
+	text-align: center;
+}
 .button-nav{
 	margin: 0 20px 10px 20px;
 	font-size: 20px;
