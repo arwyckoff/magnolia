@@ -27,11 +27,11 @@ export const IdBreadcrumbsComponent = React.createClass({
       let lastFilter = filterChars[filterChars.length - 1]
       BROWSE_ACTIONS.changeFilter(lastFilter)
       ID_ACTIONS.updateQuestionBack(this.props.categorySelect)
-    }
-    else if (this.props.currentQuestion > 2 && this.props.filterChars.length === 0) {
+    } else if (this.props.currentQuestion > 2 && this.props.filterChars.length === 0) {
       ID_ACTIONS.updateQuestionBack(this.props.categorySelect)
+    } else {
+      ID_ACTIONS.resetIDProps()
     }
-    else { ID_ACTIONS.resetIDProps() }
   },
 
   _makeBreadcrumbs: function (codeListObj) {
