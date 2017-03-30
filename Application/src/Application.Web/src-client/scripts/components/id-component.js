@@ -62,8 +62,12 @@ export const IdComponent = React.createClass({
   },
 
   _makeGlossary: function (question) {
+    if (question.description === "") {
+      return <div className="bye"></div>
+    }
+
     let questionDescription
-    if (question.description.length !== "") {
+    if (question.description !== "") {
       questionDescription = (
         <div className="glossary-item">
           <div className="glossary-term">
@@ -168,21 +172,24 @@ export const IdComponent = React.createClass({
     let categorySelected = this.props.categorySelect
     let numberOfansweredQuestions = answeredQuestions.length
     let currentQuestion = this.props.currentQuestion
+    let filtersLength = this.props.filterChars.length
 
-    if (numberOfansweredQuestions === 0) {
+    if (filtersLength === 0 && categorySelected === '') {
       return this._renderCategoriesQuestion()
-    } else if (numberOfansweredQuestions > 0 && numberOfansweredQuestions < 2) {
-      return this._renderPhaseOne()
-    } else if (numberOfansweredQuestions >= 2 && this.props.best.characteristic !== null && this.props.best.occurrences > 1) {
-      return this._renderPhaseTwo()
-    }
-    else if (this.props.best.occurrences === 1 || this.props.filteredTrees === this.props.best.occurrences) {
-      return this._renderConfidence()
-    } else {
-      // ???? Something ain't right
-      return (
-        <div className='bye'></div>
-      )
+    } else if (categorySelected !== '') {
+      if (filtersLength < 3) {
+        return this._renderPhaseOne()
+      } else if (filtersLength >= 3 && this.props.best.characteristic !== null && this.props.best.occurrences > 1) {
+        return this._renderPhaseTwo()
+      }
+      else if (this.props.best.occurrences === 1 || this.props.filteredTrees === this.props.best.occurrences) {
+        return this._renderConfidence()
+      } else {
+        // ???? Something ain't right
+        return (
+          <div className='bye'></div>
+        )
+      }
     }
   }
 })
@@ -222,7 +229,6 @@ export const PhaseOneQuestionItem = React.createClass({
     let questionText = evt.currentTarget.dataset.question
     let questionChar = evt.currentTarget.dataset.characteristic
     let answerCat = this.props.allProps.categorySelect
-    console.log(questionChar)
     ID_ACTIONS.answerPhaseOneAction(answerCat, answerCode, answerApply, questionText, questionChar)
   },
 
