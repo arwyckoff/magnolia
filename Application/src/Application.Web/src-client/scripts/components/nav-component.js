@@ -64,9 +64,9 @@ export const NavBar = React.createClass({
     } else {
       return (
         <nav className="mag-nav navbar-fixed-top navbar-styles">
-          <div className="navbar-text navRoute makeHand mag-brand" onClick={this._handleBrandClick} >M<span className="smallcaps">AGNOLIA</span> T<span className="smallcaps">REE</span> ID</div>
-          <div className="navbar-text navRoute navbar-current">{currentNavRouteFirst}<span className="smallcaps">{currentNavRouteRest}</span></div>
-          <ul className="route-options">
+          <div className="magnolia  navbar-text navRoute makeHand mag-brand mag-nav-item" onClick={this._handleBrandClick} >M<span className="smallcaps">AGNOLIA</span> T<span className="smallcaps">REE</span> ID</div>
+          <div className="navbar-text navRoute navbar-current mag-nav-item">{currentNavRouteFirst}<span className="smallcaps">{currentNavRouteRest}</span></div>
+          <ul className="navbar-text route-options mag-nav-item">
             {this._showNavOptionsJSX(this.props.appRouteName, this.props.currentUser)}
           </ul>
         </nav>
