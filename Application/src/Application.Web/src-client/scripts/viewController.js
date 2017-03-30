@@ -66,7 +66,7 @@ export const ViewController = React.createClass({
         componentToRender = <BrowseView {...this.state}/>
         break;
       case "MYPROFILE":
-        componentToRender = <UserView/>
+        componentToRender = <UserView {...this.state}/>
         break;
         case "RESOURCES":
         componentToRender = <ResourcesView/>
