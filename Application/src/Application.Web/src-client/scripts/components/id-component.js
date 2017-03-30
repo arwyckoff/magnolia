@@ -122,7 +122,7 @@ export const IdComponent = React.createClass({
     let glossary = <div className="bye"></div>
     if (questionText !== "")
       glossary = this._makeGlossary(nextQuestion)
-    
+
     return (
       <div className="question-box col-md-8 col-md-offset-2">
         <h4 className="id-view-header">{questionText}</h4>
@@ -182,9 +182,9 @@ export const IdComponent = React.createClass({
     if (categorySelected === '' || currentQuestion === 1) {
       return this._renderCategoriesQuestion()
     } else {
-      if (filtersLength < 3 && currentQuestion < 3) {
+      if (filtersLength < 3 && currentQuestion < 4) {
         return this._renderPhaseOne()
-      } else if ((filtersLength >= 3 || currentQuestion >= 3) && filteredTrees.length > 1) {
+      } else if ((filtersLength >= 3 || currentQuestion >= 4) && filteredTrees.length > 1) {
         return this._renderPhaseTwo()
       }
       else if (this.props.filteredTrees.length === 1) {

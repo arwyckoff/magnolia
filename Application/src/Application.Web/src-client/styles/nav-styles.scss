@@ -130,8 +130,31 @@
 	.mag-nav-item{
 		width:100%;
 	}
+	.landing-container .landing-title{
+		font-size: 35px;
+	}
+	.landing-container .landing-line{
+width: 250px;
+	}
+	.landing-container .landing-subtitle{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.container-login .login-box{
+		padding-top: 80px;
+	}
+
 }
 
+
+@media (max-width: 350px){
+	.landing-container{
+		padding-top: 30px;
+	}
+	.container-login .login-box{
+		padding-top: 90px;
+	}
+}
 @media (max-width: 917px){
   .navbar-current{
     display:none;

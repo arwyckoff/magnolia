@@ -5,6 +5,7 @@ import {UserProfileComponent} from '../components/user-profile.js'
 
 export const UserView = React.createClass({
   getInitialState: function(){
+    ACTIONS.fetchUserInfo()
     return STORE.getStoreData()
   },
   render: function(){

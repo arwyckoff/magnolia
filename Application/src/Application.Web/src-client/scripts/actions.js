@@ -42,20 +42,15 @@ export const ACTIONS = {
     })
     let GenusCollInstance = new GenusCollection(genusName)
     GenusCollInstance.fetch().then(function (serverRes) {
-      let genusTrees = serverRes
-      let i = -1
-      for (let t = 0, tLen = genusTrees.length; t < tLen; t++) {
-        let tree = genusTrees[t]
-        if (tree.latinName === myTree.latinName) {
-          i = t
+      let genusTrees = serverRes.filter(function(singleTree){
+        let latinGenus = singleTree.latinName.split(' ')
+        let latinGenusWord = latinGenus[0]
+        if (latinName !== singleTree.latinName && genusName === latinGenusWord){
+          return true
         }
-      }
-      if (i === -1) {
-        throw new Error('Tree not found in own genus! What?', myTree)
-      } else {
-        genusTrees.splice(i, 1)
+        else return false
+      })
         STORE.setStore('genusTrees', genusTrees)
-      }
     })
   },
   fetchAllTrees: function () {
@@ -125,7 +120,15 @@ updateUserPlants: function(userObj){
   loginUser: function(email, password){
     UserModel.logIn(email, password).then(function(serverRes){
     STORE.setStore('currentUser', serverRes )
-    ACTIONS.changeCurrentNav('HOME', '')
+    let userRedirect = STORE.getStoreData().userProfileRedirect
+    if (userRedirect === true){
+      let newObject = STORE.getStoreData().userInfosave
+              ACTIONS.updateUserPlants(newObject)
+    ACTIONS.changeCurrentNav('MYPROFILE', 'my-profile')
+    STORE.setStore('userProfileRedirect', false)}
+    else {
+        ACTIONS.changeCurrentNav('HOME', '')
+    }
   })
 },
   fetchCurrentUser: function(){
