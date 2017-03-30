@@ -1,8 +1,5 @@
 @import "./mixins.scss";
 
-.top-space{
-  padding-top: 60px;
-}
 .user-add{
   color: #EF918F;
   font-size: 18px;
@@ -14,6 +11,7 @@
   vertical-align: top;
 }
   .profile-half{
+    margin-top: 20px;
     vertical-align: top;
     font-size: medium;
     padding-bottom: 20px;

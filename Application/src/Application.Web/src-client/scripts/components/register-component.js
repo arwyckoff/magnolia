@@ -11,7 +11,7 @@ export const RegisterComponent = React.createClass({
         <h2>create an account</h2>
         <form onSubmit={this._handleNewUser}>
           <div className="group">
-            <input type="text" className="form-control" name="usernameField" placeholder="choose a username" />
+            <input type="text" className="mag-form" name="usernameField" placeholder="choose a username" />
             <span className="highlight"></span>
             <span className="bar"></span>
           </div>

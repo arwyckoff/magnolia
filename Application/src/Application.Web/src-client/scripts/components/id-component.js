@@ -138,7 +138,7 @@ export const IdComponent = React.createClass({
     let questionStuff = this._makeQuestionComponents(this.props.categories)
     return (
       <div className="question-box col-md-8 col-md-offset-2">
-        <h4 className="id-view-header">Choose part of plant to identify</h4>
+        <div className="mt-minus3"><h4 className="id-view-header">Choose part of plant to identify</h4></div>
         <div className="question-card-container">
           {questionStuff}
         </div>
