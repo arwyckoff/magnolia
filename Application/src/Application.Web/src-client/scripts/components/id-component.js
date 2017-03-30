@@ -169,14 +169,14 @@ export const IdComponent = React.createClass({
 
   render: function () {
     let answeredQuestions = this.props.answeredQuestions
-    let categorySelected = this.props.categorySelect
+    let categorySelected = STORE.getStoreData().categorySelect
     let numberOfansweredQuestions = answeredQuestions.length
     let currentQuestion = this.props.currentQuestion
     let filtersLength = this.props.filterChars.length
 
-    if (filtersLength === 0 || categorySelected === '') {
+    if (categorySelected === '') {
       return this._renderCategoriesQuestion()
-    } else if (categorySelected !== '') {
+    } else {
       if (filtersLength < 3) {
         return this._renderPhaseOne()
       } else if (filtersLength >= 3 && this.props.best.characteristic !== null && this.props.best.occurrences > 1) {
