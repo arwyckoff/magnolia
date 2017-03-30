@@ -3,7 +3,6 @@ import {NavBar} from './components/nav-component.js';
 import {STORE} from './store.js'
 import {ACTIONS} from './actions.js'
 import {ID_ACTIONS} from './id-actions.js'
-import {FooterComponent} from './components/footer-component.js'
 import {HomeView} from './views/home-view.js'
 import {ResourcesView} from './views/resources-view.js'
 import {ProfileView} from './views/profile-view.js'
@@ -14,7 +13,6 @@ import {BrowseView} from './views/browse-view.js'
 import {IdentifyView} from './views/id-view.js'
 import {UserView} from './views/user-view.js';
 import {PreloaderComponent} from './components/preloader-component.js'
-
 
 export const ViewController = React.createClass({
 
@@ -73,11 +71,11 @@ export const ViewController = React.createClass({
         break;
         default:
     }
+    
     return(
       <div>
         <NavBar {...this.state}/>
         {componentToRender}
-        <FooterComponent/>
         <img className="hero-img" src="../../images/mag-rollingback.svg" />
       </div>
     )

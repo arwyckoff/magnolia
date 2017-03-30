@@ -55,9 +55,9 @@
 	margin: -10px 10px 10px 10px;
 }
 .resource-line{
-	width: 325px;
+	width: 150px;
 	border-bottom: 1px solid black;
-	margin: -10px 10px 10px 10px;
+	margin: -10px 10px 0px 10px;
 }
 .landing-subtitle {
 	font-family: "Raleway", sans-serif;
@@ -83,16 +83,27 @@
 	}
 }
 
+.landing-footer {
+	margin-top: 30px;
+	margin-bottom: -10px;
+	font-size: .8em;
+}
+
 .resource-pill{
 	@include pillBox;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-start;
+	justify-content: flex-start;
+	font-size: .8em;
 	p {
-		margin-bottom: 0;
 		padding-left: 10px;
 		padding-right: 10px;
+		text-align: left;
 	}
+}
+
+.mt-2 {
+	margin-top: 40px;
 }
 
 .landing-or-action {
@@ -105,14 +116,12 @@
 	margin-top: 15px;
 }
 .resource-action{
-	margin-top: 15px;
+	margin-top: 30px;
 }
 
 .landing-browse-action {
 	margin-top: 15px;
 }
-
-
 
 .landing-call-to-action {
 	margin-top: 10px;
