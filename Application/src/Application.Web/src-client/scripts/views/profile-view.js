@@ -7,6 +7,7 @@ import { GenusComponent, ProfileComponent, AddTreeComponent } from '../component
 export const ProfileView = React.createClass({
 
   componentWillMount: function () {
+    scroll(0,0)
     let latinName = window.location.hash.slice(6)
     let latinGenus = latinName.split(' ')
     let latinGenusWord = latinGenus[0]
