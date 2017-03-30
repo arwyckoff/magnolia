@@ -16,6 +16,7 @@ export const BrowseView = React.createClass({
   },
 
   componentWillMount: function () {
+    scroll(0,0)
     ACTIONS.changeCategory("LEAF")
     ACTIONS.changeCharacteristic("leaf type")
     let component = this;

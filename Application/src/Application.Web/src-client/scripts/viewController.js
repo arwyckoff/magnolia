@@ -77,7 +77,6 @@ export const ViewController = React.createClass({
       <div>
         <NavBar {...this.state}/>
         {componentToRender}
-        <FooterComponent/>
         <img className="hero-img" src="../../images/mag-rollingback.svg" />
       </div>
     )

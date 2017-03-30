@@ -13,6 +13,7 @@
 
 
 .navbar-styles{
+	border-bottom:thick solid #D3807E;
 	@include navBarBackground;
 	@include navBarTextColor;
 
@@ -68,10 +69,10 @@
   	i {@include newYorkPink}
 
 		.arrow_box {
-			border-color: #EF918F;
+			// border-color: #2A2B2A;
 			@include xcenter;
-			bottom: -20px;
-			@include pinkBackground;
+			bottom: -10px;
+			// @include pinkBackground;
 			display: inherit;
 			text-align: center;
 			margin-left: auto;
@@ -92,7 +93,7 @@
 		width: 0;
 		position: absolute;
 		pointer-events: none;
-		@include navBarHoverInfo;
+		// @include navBarHoverInfo;
 		border-width: 5px;
 		margin-left: -5px;
 	}
