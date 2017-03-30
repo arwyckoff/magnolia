@@ -192,7 +192,10 @@ p{
     padding-right: 10px;
   }
   .add-tree{
-    @include absolute-center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     background-color: white;
     border: 1px solid gray;
     display: block;
