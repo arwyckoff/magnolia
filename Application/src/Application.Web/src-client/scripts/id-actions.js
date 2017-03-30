@@ -66,7 +66,6 @@ export const ID_ACTIONS = {
   },
 
   updateQuestionBack: function (category) {
-    STORE.setStore('userClickedPrevious', true)
     let filterList = STORE.getStoreData().filterChars
     let prevQuesArray = STORE.getStoreData().prevQuestions
     prevQuesArray.pop()
