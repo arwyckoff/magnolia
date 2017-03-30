@@ -174,7 +174,7 @@ export const IdComponent = React.createClass({
     let currentQuestion = this.props.currentQuestion
     let filtersLength = this.props.filterChars.length
 
-    if (filtersLength === 0 && categorySelected === '') {
+    if (filtersLength === 0 || categorySelected === '') {
       return this._renderCategoriesQuestion()
     } else if (categorySelected !== '') {
       if (filtersLength < 3) {
