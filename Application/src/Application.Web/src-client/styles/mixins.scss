@@ -115,6 +115,10 @@
 	filter: drop-shadow(0px 0px 1px #ffb8b8);
 }
 
+@mixin pillBoxHover {
+  filter: drop-shadow(0px 0px 2px #e07171);
+}
+
 @mixin giveSomeSpace {
   margin-left: 3px;
 }

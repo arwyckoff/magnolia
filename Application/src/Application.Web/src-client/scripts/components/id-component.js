@@ -61,6 +61,49 @@ export const IdComponent = React.createClass({
     ID_ACTIONS.getNextBest(evt.currentTarget.dataset.cat, evt.currentTarget.dataset.ch)
   },
 
+  _makeGlossary: function (question) {
+    let questionDescription
+    if (question.description !== "") {
+      questionDescription = (
+        <div className="glossary-item">
+          <div className="glossary-term">
+            General explanation
+            <div className="glossary-line"></div>
+          </div>
+          <div className="glossary-definition">
+            {question.description}
+          </div>
+        </div>
+      )
+    }
+
+    let answerDescriptions = question.answers.map(
+      (answerObj, i) => {
+        if (answerObj.description !== "") {
+          return (
+            <div key={i} className="glossary-item">
+              <div className="glossary-term">
+                {answerObj.answer}
+                <div className="glossary-line"></div>
+              </div>
+              <div className="glossary-definition">
+                {answerObj.description}
+              </div>
+            </div>
+          )
+        }
+      }
+    )
+
+    return (
+      <div className="glossary-container">
+        <h3 className="glossary-heading">Glossary</h3>
+        {questionDescription}
+        {answerDescriptions}
+      </div>
+    )
+  },
+
   _renderPhaseOne: function () {
     let currentCatSelect = this.state.categorySelect
     let phaseOneQuestions = this.props.allQuestions
@@ -71,13 +114,14 @@ export const IdComponent = React.createClass({
     let questionText = nextQuestion["question"]
     let answersArray = nextQuestion["answers"]
     let answerEls = this._makeAnswersComponent(answersArray, nextQuestion)
+    let glossary = this._makeGlossary(nextQuestion)
     return (
-
       <div className="question-box col-md-8 col-md-offset-2">
-          <h4 className="id-view-header">{questionText}</h4>
+        <h4 className="id-view-header">{questionText}</h4>
         <div className="question-card-container">
           {answerEls}
         </div>
+        {glossary}
       </div>
     )
   },
@@ -104,9 +148,9 @@ export const IdComponent = React.createClass({
         <div className="question-card-container">
           {charStuff}
         </div>
-          <div className="question-card question-center" data-ch={this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick={this._handleidontknow}>
-            <p>I don't know/skip</p>
-          </div>
+        <div className="question-card question-center" data-ch={this.props.best.characteristic.characteristic} data-cat={this.props.categorySelect} onClick={this._handleidontknow}>
+          <p>I don't know/skip</p>
+        </div>
       </div>
     )
   },
@@ -124,24 +168,24 @@ export const IdComponent = React.createClass({
     let categorySelected = this.props.categorySelect
     let numberOfansweredQuestions = answeredQuestions.length
     let currentQuestion = this.props.currentQuestion
+    let filtersLength = this.props.filterChars.length
 
-    if (numberOfansweredQuestions === 0) {
+    if (filtersLength === 0 && categorySelected === '') {
       return this._renderCategoriesQuestion()
-
-    } else if (numberOfansweredQuestions > 0 && numberOfansweredQuestions < 2) {
-      console.log('test')
-
-      return this._renderPhaseOne()
-    } else if (numberOfansweredQuestions >= 2 && this.props.best.characteristic !== null && this.props.best.occurrences > 1) {
-      return this._renderPhaseTwo()
-    }
-    else if (this.props.best.occurrences === 1 || this.props.filteredTrees === this.props.best.occurrences) {
-      return this._renderConfidence()
-    } else {
-      // ???? Something ain't right
-      return (
-        <div className='bye'></div>
-      )
+    } else if (categorySelected !== '') {
+      if (filtersLength < 3) {
+        return this._renderPhaseOne()
+      } else if (filtersLength >= 3 && this.props.best.characteristic !== null && this.props.best.occurrences > 1) {
+        return this._renderPhaseTwo()
+      }
+      else if (this.props.best.occurrences === 1 || this.props.filteredTrees === this.props.best.occurrences) {
+        return this._renderConfidence()
+      } else {
+        // ???? Something ain't right
+        return (
+          <div className='bye'></div>
+        )
+      }
     }
   }
 })

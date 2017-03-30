@@ -18,14 +18,14 @@ export const IdentifyView = React.createClass({
     return (
       <div className = "question-container">
         <div className = "question-bc-container">
-        <IdBreadcrumbsComponent {...this.state}/>
+          <IdBreadcrumbsComponent {...this.state}/>
         </div>
         <div className = "question-top">
-        <IdComponent {...this.state}/>
-      </div>
+          <IdComponent {...this.state}/>
+        </div>
         <div className = "question-tree-container">
-        <TreeIDComponent {...this.state}/>
-      </div>
+          <TreeIDComponent {...this.state}/>
+        </div>
       </div>
     )
   }

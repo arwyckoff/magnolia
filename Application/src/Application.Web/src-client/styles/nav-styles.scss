@@ -7,6 +7,10 @@
 	flex-wrap: wrap;
 }
 
+.mag-brand:hover {
+	color: #EF918F;
+}
+
 .navbar-styles{
 	@include navBarBackground;
 	@include navBarTextColor;
@@ -89,7 +93,7 @@
 
 .navRoute{
 	@include navBarTextColor;
-	font-size: 26px;
+	font-size: 32px;
 }
 
 .relative-this{
