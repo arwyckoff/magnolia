@@ -24,8 +24,6 @@ body {
 	font-weight: 700;
 	min-width: 200px;
 	@include pillBox;
-  margin-left:0px;
-  margin-right:0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
