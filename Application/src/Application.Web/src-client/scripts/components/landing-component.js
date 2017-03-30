@@ -34,7 +34,7 @@ export const LandingComponent = React.createClass({
                 <br /> 
                 <a className="landing-link" href="http://marcondesian.net">Alexandre Marcondes</a>,
                 <br /> 
-                and <a className="landing-link" href="https://github.com/arwychoff">Andrew Wyckoff</a>
+                and <a className="landing-link" href="https://github.com/arwyckoff">Andrew Wyckoff</a>
               </div>
             </div>
             <div>
