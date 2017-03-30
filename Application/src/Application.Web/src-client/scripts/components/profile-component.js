@@ -22,6 +22,11 @@ export const ProfileComponent = React.createClass({
     console.log(wholeLink)
     return wholeLink
   },
+
+  componentWillMount: function () {
+    STORE.setStore('popupShow', false)
+  },
+
   render: function () {
     let self = this
     let allTheTrees = this.props.myTree
@@ -133,6 +138,7 @@ export const GenusItem = React.createClass({
 
   _handleGenusProfClick: function (evt) {
     evt.preventDefault()
+    STORE.setStore('popupShow', false)
     ACTIONS.changeReadyState(false)
     scroll(0,0)
     let profileEl = evt.currentTarget
@@ -158,6 +164,10 @@ export const GenusItem = React.createClass({
 })
 export const AddTreeComponent = React.createClass({
   _handleProfileAdd: function (evt) {
+    if (this.props.currentUser.id === null){
+      ACTIONS.changeCurrentNav('LOGIN', 'login')
+    }
+    else{
     let formEl = evt.target
     let inputComment = formEl.commentField.value
     let newObject = {}
@@ -165,11 +175,15 @@ export const AddTreeComponent = React.createClass({
     newObject.comment = inputComment
       ACTIONS.updateUserPlants(newObject)
       ACTIONS.changeCurrentNav('MYPROFILE', 'my-profile')
+    }
   },
-
+_handleCloseOut: function(){
+        STORE.setStore('popupShow', false)
+},
   render: function(){
     return(
       <div className = "add-tree">
+        <div className = "make-relative">
         <form onSubmit = {this._handleProfileAdd}>
           <p className = "tree-name">{this.props.myTree.commonName}<br/><span>
         <em>{this.props.myTree.latinName}</em></span></p>
@@ -177,6 +191,8 @@ export const AddTreeComponent = React.createClass({
           <textarea maxLength='150' name="commentField"></textarea>
           <button type = "submit">Add to my collection</button>
         </form>
+  <i className="fa fa-times-circle make-pink make-cursor x-cornor" aria-hidden="true" onClick = {this._handleCloseOut}></i>
+</div>
       </div>
     )
   }

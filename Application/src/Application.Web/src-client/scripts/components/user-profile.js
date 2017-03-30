@@ -21,10 +21,8 @@ export const UserProfileComponent = React.createClass({
       return arrayOfTreeComponents
     },
    render: function(){
-     if (this.props.currentUser === null ){
-       ACTIONS.changeCurrentNav('LOGIN', 'login')}
 
-     else if ( this.props.userProfile.plants!==null && this.props.userProfile.plants.length >0 ){
+     if ( this.props.userProfile.plants!==null && this.props.userProfile.plants.length >0 ){
       //  let userJsx =  this._makeUserComponents(this.props.currentUser.plants)
        return (
          <div className = "user-container">
@@ -38,7 +36,7 @@ export const UserProfileComponent = React.createClass({
       return(
         <div className = "user-container">
           <h3>Username: {this.props.userProfile.userName}</h3>
-          <h4>You don't have any plants in your profile. <a onClick = {this._handleBrowse}>add some!</a></h4>
+          <h4>You don't have any plants in your profile. <a onClick = {this._handleBrowse} className = "landing-link">add some!</a></h4>
       </div>
 
         )
@@ -59,7 +57,7 @@ export const UserItem = React.createClass({
         <div className = "tree-user-container" onClick = {this._handleProfClick}>
              <p className= "tree-user-name">{this.props.userData.plant.commonName}
             <em> {this.props.userData.plant.latinName}</em></p>
-           <br/><p className = 'field-notes'><span>field notes:</span><em>{this.props.userData.comment}</em></p>
+           <br/><p className = 'field-notes'><span>field notes:</span>{this.props.userData.comment}</p>
         </div>
       )
   }
