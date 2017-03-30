@@ -40,30 +40,45 @@
     width: 100%;
   }
   p{
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size:20px;
     color: black;
     text-align: left;
     letter-spacing: 1.5px;
     vertical-align: top;
     padding-left: 0;
   }
+  a{
+    color: #D3807E;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size:20px;
+  }
 }
 .genus-container{
   width: 100%;
   padding: 10px 15% 10px 15%;
   display: block;
+  h4{
+    text-align:center;
+    font-size:24px;
+  }
 }
 .genus-box{
   display: inline-block;
   width: 30%;
   margin: 10px;
-  border: 1px solid #2A2B2A ;
+  border: 1px solid #2A2B2A;
   padding: 5px;
   font-size: 16px;
-  background-color: white;
+  background-color: #FFF9F9;
   img{
     display: block;
   }
   p{
+    color:#668259;
+    text-align:center;
     margin: 0;
   }
 }
@@ -103,6 +118,17 @@ p{
     margin-right: auto;
   }
 }
+}
+
+.profile-wiki-add .container{
+  flex-wrap:wrap;
+
+}
+
+.profile-wiki-add .item{
+  padding:5px;
+  border: 1px solid #2A2B2A;
+  background-color:#FFF9F9;
 }
 
 .tree-user-container{
@@ -201,4 +227,5 @@ p{
   padding-bottom: 0;
   text-align: left;
   padding-left: 5px;
+
 }
