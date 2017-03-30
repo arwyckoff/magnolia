@@ -36,7 +36,7 @@ export const UserProfileComponent = React.createClass({
       return(
         <div className = "user-container">
           <h3>Username: {this.props.userProfile.userName}</h3>
-          <h4>You don't have any plants in your profile. <a onClick = {this._handleBrowse}>add some!</a></h4>
+          <h4>You don't have any plants in your profile. <a onClick = {this._handleBrowse} className = "landing-link">add some!</a></h4>
       </div>
 
         )
