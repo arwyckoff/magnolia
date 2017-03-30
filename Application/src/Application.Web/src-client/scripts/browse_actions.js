@@ -40,9 +40,5 @@ export const BROWSE_ACTIONS = {
       let filteredTrees = _getFilteredTrees(newChars, allTrees);
       STORE.setStore("filteredTrees", filteredTrees)
     }
-
-    if (STORE.getStoreData().filterChars.length === 0) {
-      STORE.setStore('categorySelect', '')
-    }
   },
 }

@@ -22,6 +22,11 @@ export const ProfileComponent = React.createClass({
     console.log(wholeLink)
     return wholeLink
   },
+
+  componentWillMount: function () {
+    STORE.setStore('popupShow', false)
+  },
+
   render: function () {
     let self = this
     let allTheTrees = this.props.myTree
@@ -133,6 +138,7 @@ export const GenusItem = React.createClass({
 
   _handleGenusProfClick: function (evt) {
     evt.preventDefault()
+    STORE.setStore('popupShow', false)
     ACTIONS.changeReadyState(false)
     scroll(0,0)
     let profileEl = evt.currentTarget
