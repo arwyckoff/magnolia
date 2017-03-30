@@ -158,6 +158,10 @@ export const GenusItem = React.createClass({
 })
 export const AddTreeComponent = React.createClass({
   _handleProfileAdd: function (evt) {
+    if (this.props.currentUser.id === null){
+      ACTIONS.changeCurrentNav('LOGIN', 'login')
+    }
+    else{
     let formEl = evt.target
     let inputComment = formEl.commentField.value
     let newObject = {}
@@ -165,6 +169,7 @@ export const AddTreeComponent = React.createClass({
     newObject.comment = inputComment
       ACTIONS.updateUserPlants(newObject)
       ACTIONS.changeCurrentNav('MYPROFILE', 'my-profile')
+    }
   },
 _handleCloseOut: function(){
         STORE.setStore('popupShow', false)
