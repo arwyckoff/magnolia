@@ -52,7 +52,7 @@ export const FilterComponent = React.createClass({
 
       return (
         <div>
-          <h4 className="text-center">Filters</h4>
+          <h4 className="browse-header text-center">Filters</h4>
           <div>{stateJSX}</div>
         </div>
       )

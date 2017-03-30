@@ -23,6 +23,8 @@ body {
 	font-weight: 700;
 	min-width: 200px;
 	@include pillBox;
+  margin-left:0px;
+  margin-right:0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -177,6 +179,7 @@ body {
 }
 
 .browseCompContainer{
+	margin-top:50px;
 	@include mainTextColor;
 	@include mainBackgroundColor;
 	min-height: 100vh;
@@ -221,7 +224,9 @@ body {
 .smallcaps {
 	font-size: .8em;
 }
-
+.browse-header{
+	font-size:20px;
+}
 
 .no-filter-msg{
   margin-left:auto;
@@ -237,4 +242,14 @@ body {
 
 .landing-title{
   font-size:48px;
+}
+.landing-link{
+  color:#D3807E;
+}
+
+.landing-link:hover{
+  color:#be4341;
+}
+.container-tree h3{
+  font-size:42px;
 }
