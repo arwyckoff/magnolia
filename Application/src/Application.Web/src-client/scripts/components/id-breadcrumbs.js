@@ -27,12 +27,30 @@ export const IdBreadcrumbsComponent = React.createClass({
       let lastFilter = filterChars[filterChars.length - 1]
       BROWSE_ACTIONS.changeFilter(lastFilter)
       ID_ACTIONS.updateQuestionBack(this.props.categorySelect)
-    } else if (this.props.currentQuestion > 2 && this.props.filterChars.length === 0) {
-      ID_ACTIONS.updateQuestionBack(this.props.categorySelect)
-    } else {
-      ID_ACTIONS.resetIDProps()
     }
+    else if (this.props.currentQuestion > 2 && this.props.filterChars.length === 0) {
+      ID_ACTIONS.updateQuestionBack(this.props.categorySelect)
+    }
+    else { ID_ACTIONS.resetIDProps() }
   },
+    // let currentQuestion = STORE.getStoreData().currentQuestion
+    // let filters = this.props.filterChars
+
+    // if (currentQuestion <= 2 || filters.length === 0) {
+    //   ID_ACTIONS.resetIDProps()
+    // } else {
+    //   let lastFilter = filters.pop()
+    //   BROWSE_ACTIONS.changeFilter(lastFilter)
+    //   ID_ACTIONS.updateQuestionBack(this.props.categorySelect)
+    // }
+
+    // if (this.props.currentQuestion > 2 && this.props.filterChars.length > 0) {
+
+    // } else if (this.props.currentQuestion > 2 && this.props.filterChars.length === 0) {
+    //   ID_ACTIONS.updateQuestionBack(this.props.categorySelect)
+    // } else {
+    //   ID_ACTIONS.resetIDProps()
+    // }
 
   _makeBreadcrumbs: function (codeListObj) {
     return codeListObj.map(
@@ -57,7 +75,7 @@ export const IdBreadcrumbsComponent = React.createClass({
   },
 
   render: function () {
-    let codeListObj = this.props.filterChars
+    let codeListObj = STORE.getStoreData().filterChars
     if (this.props.filterChars.length > 0) {
       let selectedCodeObj = this._makeBreadcrumbs(codeListObj)
       return (
