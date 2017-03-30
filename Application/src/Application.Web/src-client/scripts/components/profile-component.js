@@ -166,10 +166,13 @@ export const AddTreeComponent = React.createClass({
       ACTIONS.updateUserPlants(newObject)
       ACTIONS.changeCurrentNav('MYPROFILE', 'my-profile')
   },
-
+_handleCloseOut: function(){
+        STORE.setStore('popupShow', false)
+},
   render: function(){
     return(
       <div className = "add-tree">
+        <div className = "make-relative">
         <form onSubmit = {this._handleProfileAdd}>
           <p className = "tree-name">{this.props.myTree.commonName}<br/><span>
         <em>{this.props.myTree.latinName}</em></span></p>
@@ -177,6 +180,8 @@ export const AddTreeComponent = React.createClass({
           <textarea maxLength='150' name="commentField"></textarea>
           <button type = "submit">Add to my collection</button>
         </form>
+  <i className="fa fa-times-circle make-pink make-cursor x-cornor" aria-hidden="true" onClick = {this._handleCloseOut}></i>
+</div>
       </div>
     )
   }
