@@ -84,6 +84,7 @@ export const STORE = {
     prevQuestions: [],
     allQuestions: {},
     popupShow: false,
+    userClickedPrevious: false,
   },
   getStoreData: function(){
 		return this._data

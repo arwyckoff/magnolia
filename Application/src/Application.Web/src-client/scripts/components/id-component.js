@@ -118,7 +118,10 @@ export const IdComponent = React.createClass({
     let questionText = nextQuestion["question"]
     let answersArray = nextQuestion["answers"]
     let answerEls = this._makeAnswersComponent(answersArray, nextQuestion)
-    let glossary = this._makeGlossary(nextQuestion)
+    let glossary = <div className="bye"></div>
+    if (questionText !== "")
+      glossary = this._makeGlossary(nextQuestion)
+    
     return (
       <div className="question-box col-md-8 col-md-offset-2">
         <h4 className="id-view-header">{questionText}</h4>
@@ -172,9 +175,9 @@ export const IdComponent = React.createClass({
     let categorySelected = STORE.getStoreData().categorySelect
     let numberOfansweredQuestions = answeredQuestions.length
     let currentQuestion = this.props.currentQuestion
-    let filtersLength = this.props.filterChars.length
+    let filtersLength = STORE.getStoreData().filterChars.length
 
-    if (categorySelected === '' || currentQuestion === 0) {
+    if (categorySelected === '' || currentQuestion === 1) {
       return this._renderCategoriesQuestion()
     } else {
       if (filtersLength < 3) {
